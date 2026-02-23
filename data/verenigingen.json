@@ -1,0 +1,727 @@
+{
+  "meta": {
+    "laatst_bijgewerkt": "2026-02-23",
+    "volgende_update": "2026-03-23",
+    "bronnen_gecontroleerd": 24,
+    "bronnen_met_events": 10,
+    "totaal_events": 85,
+    "methode": "Handmatig + iCal feeds + web scraping via Verenigingen Expert superprompt"
+  },
+  "verenigingen": [
+    {
+      "id": "nvlr",
+      "naam": "Nederlandse Vereniging Languedoc-Roussillon",
+      "afkorting": "NVLR",
+      "regio": "Languedoc-Roussillon",
+      "website": "https://www.nvlr.eu",
+      "agenda_url": "https://www.nvlr.eu/agenda/evenementen",
+      "ical_url": "https://www.nvlr.eu/_ical/public.ics",
+      "platform": "Congressus",
+      "fanf_lid": true,
+      "status": "actief",
+      "agenda_toegankelijkheid": "volledig_publiek",
+      "contact": "secretaris@nvlr.eu",
+      "events": [
+        {
+          "datum": "2026-02-22",
+          "titel": "Causerie: Adipositas, oorzaken, gevolgen en oplossingen",
+          "plaats": "Nissan, bij Nienke thuis",
+          "tijd": "14:00-16:00",
+          "type": "informatief",
+          "bron": "https://www.nvlr.eu/agenda/evenementen"
+        },
+        {
+          "datum": "2026-02-25",
+          "titel": "Snertwandeling",
+          "plaats": "Domaine de Villedese, Mourral de las Garouilles, 11220 Val de Dagne (Montlaur)",
+          "tijd": "10:00",
+          "type": "sportief",
+          "bron": "https://www.nvlr.eu/agenda/evenementen"
+        },
+        {
+          "datum": "2026-03-04",
+          "titel": "Bijpraatlunch Brugairolles",
+          "plaats": "Restaurant Côté Resto, Domaine Gayda, Brugairolles (11300)",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.nvlr.eu/agenda/evenementen"
+        },
+        {
+          "datum": "2026-03-06",
+          "titel": "CultuurClub naar Albi",
+          "plaats": "Albi",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://www.nvlr.eu/agenda/evenementen"
+        },
+        {
+          "datum": "2026-03-09",
+          "titel": "Bijpraatlunch Les 3 Petits Cochons",
+          "plaats": "Restaurant Les 3 Petits Cochons",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.nvlr.eu/agenda/evenementen"
+        },
+        {
+          "datum": "2026-03-14",
+          "titel": "Workshop Greffage van fruitbomen",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "informatief",
+          "bron": "https://www.nvlr.eu/agenda/evenementen"
+        },
+        {
+          "datum": "2026-03-18",
+          "titel": "Bijpraatlunch",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.nvlr.eu/agenda/evenementen"
+        },
+        {
+          "datum": "2026-03-21",
+          "titel": "Lezing: Van olijfbomen planten tot olie",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "informatief",
+          "bron": "https://www.nvlr.eu/agenda/evenementen"
+        },
+        {
+          "datum": "2026-03-25",
+          "titel": "Wandeling: In het spoor van de Visigoten",
+          "plaats": "Villarzel-Cabardès, parkeerplaats gemeentehuis",
+          "tijd": "09:15 verzamelen",
+          "type": "sportief",
+          "bron": "https://www.nvlr.eu/agenda/evenementen"
+        },
+        {
+          "datum": "2026-04-01",
+          "titel": "Bijpraatlunch Brugairolles",
+          "plaats": "Restaurant Côté Resto, Domaine Gayda, Brugairolles (11300)",
+          "tijd": "09:00-12:00",
+          "type": "sociaal",
+          "bron": "https://www.nvlr.eu/agenda/evenementen/page/2"
+        },
+        {
+          "datum": "2026-04-18",
+          "titel": "Op bezoek bij keramisten Paula en Ben",
+          "plaats": "Galerie in Seynes (Gard)",
+          "tijd": "09:30-15:00",
+          "type": "cultureel",
+          "bron": "https://www.nvlr.eu/agenda/evenementen/page/2"
+        },
+        {
+          "datum": "2026-05-23",
+          "titel": "Zeilmiddag op Étang de Thau",
+          "plaats": "Le Magasin, 29 Quai de la Résistance, Étang de Thau (34)",
+          "tijd": "13:30-16:30",
+          "type": "sportief",
+          "bron": "https://www.nvlr.eu/agenda/evenementen/page/2"
+        },
+        {
+          "datum": "2026-05-28",
+          "titel": "Mindfulness: een manier om stress te beheersen (5 sessies)",
+          "plaats": "niet vermeld",
+          "tijd": "15:00-16:30",
+          "type": "informatief",
+          "bron": "https://www.nvlr.eu/agenda/evenementen/page/2"
+        },
+        {
+          "datum": "2026-05-31",
+          "titel": "Lazy Sunday In the Garden – concert Blue Note",
+          "plaats": "bij organisator thuis",
+          "tijd": "16:00-19:00",
+          "type": "cultureel",
+          "bron": "https://www.nvlr.eu/agenda/evenementen/page/2"
+        },
+        {
+          "datum": "2026-08-08",
+          "titel": "Zeilmiddag op Étang de Thau",
+          "plaats": "Le Magasin, 29 Quai de la Résistance, Étang de Thau (34)",
+          "tijd": "13:30-16:30",
+          "type": "sportief",
+          "bron": "https://www.nvlr.eu/agenda/evenementen/page/2"
+        }
+      ]
+    },
+    {
+      "id": "nedazur",
+      "naam": "Nederlandse Club Provence-Côte d'Azur",
+      "afkorting": "NedAzur / DNC",
+      "regio": "Provence-Côte d'Azur",
+      "website": "https://www.nedazur.org",
+      "agenda_url": "https://www.nedazur.org/agenda",
+      "ical_url": "https://www.nedazur.org/_ical/public.ics",
+      "platform": "Congressus",
+      "fanf_lid": false,
+      "status": "actief",
+      "agenda_toegankelijkheid": "volledig_publiek",
+      "contact": "contact@nedazur.org",
+      "events": [
+        {
+          "datum": "2026-02-28",
+          "titel": "Holland Huis Borrel",
+          "plaats": "Restaurant Au Relais du Sommelier, 20 Rue Grande, 83600 Les Adrets-de-l'Estérel",
+          "tijd": "17:00-19:00",
+          "type": "sociaal",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-03-02",
+          "titel": "Jeu de boules Saint-Paul",
+          "plaats": "Place du Général de Gaulle, Saint-Paul de Vence",
+          "tijd": "09:30-12:00",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-03-02",
+          "datum_eind": "2026-03-03",
+          "titel": "Skiën in Isola 2000",
+          "plaats": "Isola 2000",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-03-04",
+          "titel": "Jeu de boules Sainte-Maxime",
+          "plaats": "Boulodrome Prince Bertil, 83120 Sainte-Maxime",
+          "tijd": "09:30-12:00",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-03-22",
+          "titel": "Golfwedstrijd",
+          "plaats": "Valescure",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-03-27",
+          "titel": "Algemene Ledenvergadering",
+          "plaats": "Royal Mougins Golf Resort, Royal Conference Center, 424 Avenue du Roi, 06250 Mougins",
+          "tijd": "15:00-17:00",
+          "type": "bestuurlijk",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-04-01",
+          "titel": "Jeu de boules Sainte-Maxime",
+          "plaats": "Boulodrome Prince Bertil, 83120 Sainte-Maxime",
+          "tijd": "09:30-12:00",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-04-06",
+          "titel": "Jeu de boules Saint-Paul",
+          "plaats": "Place du Général de Gaulle, Saint-Paul de Vence",
+          "tijd": "09:30-12:00",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-04-13",
+          "titel": "Golfwedstrijd",
+          "plaats": "Sainte-Maxime",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-05-04",
+          "titel": "Jeu de boules Saint-Paul",
+          "plaats": "Place du Général de Gaulle, Saint-Paul de Vence",
+          "tijd": "09:30-12:00",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-05-06",
+          "titel": "Jeu de boules Sainte-Maxime",
+          "plaats": "Boulodrome Prince Bertil, 83120 Sainte-Maxime",
+          "tijd": "09:30-12:00",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-05-13",
+          "titel": "Padeltoernooi",
+          "plaats": "Tennis municipal de Sainte-Maxime, 3 avenue du Souvenir Français",
+          "tijd": "09:00-15:45",
+          "type": "sportief",
+          "kosten": "€37,50 p.p. (alleen leden)",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-05-18",
+          "titel": "Golfwedstrijd Riviera Golf De Barbossi",
+          "plaats": "Mandelieu-la-Napoule",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-05-20",
+          "titel": "Golfwedstrijd",
+          "plaats": "Taulane",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-05-20",
+          "titel": "Jeu de Boules Toernooi & Clinic",
+          "plaats": "Boulodrome du Prince Bertil, Sainte-Maxime + strandlunch Plage La Rascasse",
+          "tijd": "09:00-15:00",
+          "type": "sportief",
+          "kosten": "€47,50 leden / €60 niet-leden (incl. lunch)",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-05-27",
+          "datum_eind": "2026-05-30",
+          "titel": "Rally delle Colline Toscane",
+          "plaats": "Lucca, Toscane (Italië)",
+          "tijd": "meerdaags",
+          "type": "sociaal",
+          "kosten": "€510 p.p. (2-pers.) / €560 (1-pers.)",
+          "opmerking": "VOLGEBOEKT – wachtlijst via autorally@nedazur.org",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-06-01",
+          "titel": "Jeu de boules Saint-Paul",
+          "plaats": "Place du Général de Gaulle, Saint-Paul de Vence",
+          "tijd": "09:30-12:00",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-06-03",
+          "titel": "Jeu de boules Sainte-Maxime",
+          "plaats": "Boulodrome Prince Bertil, 83120 Sainte-Maxime",
+          "tijd": "09:30-12:00",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        }
+      ]
+    },
+    {
+      "id": "anm",
+      "naam": "Association Néerlandaise du Midi",
+      "afkorting": "ANM",
+      "regio": "Var / Provence",
+      "website": "https://www.a-n-m.nl",
+      "agenda_url": "https://www.a-n-m.nl/ons-programma",
+      "ical_url": "https://www.a-n-m.nl/_ical/public.ics",
+      "platform": "Congressus",
+      "fanf_lid": true,
+      "status": "actief",
+      "agenda_toegankelijkheid": "volledig_publiek",
+      "contact": "contact@a-n-m.com",
+      "events": [
+        {
+          "datum": "2026-02-24",
+          "titel": "ANM Bridge",
+          "plaats": "Hotel Restaurant Les Pins Blancs en Provence, Le Muy",
+          "tijd": "14:30-20:30",
+          "type": "sociaal",
+          "bron": "https://www.a-n-m.nl/ons-programma"
+        },
+        {
+          "datum": "2026-02-28",
+          "titel": "Holland Huis Borrel",
+          "plaats": "La Sentinelle, Les Arcs-sur-Argens",
+          "tijd": "17:00-19:00",
+          "type": "sociaal",
+          "bron": "https://www.a-n-m.nl/ons-programma"
+        },
+        {
+          "datum": "2026-03-12",
+          "titel": "ANM Golf",
+          "plaats": "Golfbaan St. Endréol, La Motte",
+          "tijd": "09:30-16:30",
+          "type": "sportief",
+          "bron": "https://www.a-n-m.nl/ons-programma"
+        },
+        {
+          "datum": "2026-03-19",
+          "titel": "Cultuurgroep: Hoe geven we 20 miljard uit aan defensie",
+          "plaats": "niet vermeld",
+          "tijd": "10:00-15:00",
+          "type": "informatief",
+          "spreker": "Raf Hetzler",
+          "bron": "https://www.a-n-m.nl/ons-programma"
+        },
+        {
+          "datum": "2026-03-24",
+          "titel": "ANM Bridge",
+          "plaats": "Hotel Restaurant Les Pins Blancs en Provence, Le Muy",
+          "tijd": "14:30-20:30",
+          "type": "sociaal",
+          "bron": "https://www.a-n-m.nl/ons-programma"
+        },
+        {
+          "datum": "2026-04-01",
+          "titel": "Paasworkshop",
+          "plaats": "Domaine de la Fouquette, 912 chemin de la Fouquette, 83340 Les Mayons",
+          "tijd": "10:00-16:00",
+          "type": "sociaal",
+          "opmerking": "max 16 personen",
+          "bron": "https://www.a-n-m.nl/ons-programma"
+        },
+        {
+          "datum": "2026-04-16",
+          "titel": "Cultuurgroep: Samarkand en Isfahan – Islamitische architectuur",
+          "plaats": "niet vermeld",
+          "tijd": "10:00-15:00",
+          "type": "cultureel",
+          "spreker": "Andries Koster",
+          "bron": "https://www.a-n-m.nl/ons-programma"
+        }
+      ]
+    },
+    {
+      "id": "nlvp",
+      "naam": "Nederlandse Vereniging voor Parijs en omstreken",
+      "afkorting": "NLVP",
+      "regio": "Parijs / Île-de-France",
+      "website": "https://nlvp.fr",
+      "agenda_url": "https://nlvp.fr/calendar/",
+      "ical_url": null,
+      "platform": "WordPress",
+      "fanf_lid": true,
+      "status": "actief",
+      "agenda_toegankelijkheid": "volledig_publiek",
+      "contact": null,
+      "opmerking": "Publiceert events per maand als blogposts",
+      "events": [
+        {
+          "datum": "2026-03-06",
+          "titel": "Wijn proeven en jazzconcert",
+          "plaats": "Musée du vin, 5 square Charles Dickens, 75016 Paris",
+          "tijd": "18:00 deuren, 19:30 proeverij, 20:30 concert",
+          "type": "cultureel",
+          "kosten": "€20 leden / €40 niet-leden",
+          "bron": "https://nlvp.fr/6-maart-wijn-proeven-en-jazzconcert/"
+        }
+      ]
+    },
+    {
+      "id": "latulipe",
+      "naam": "La Tulipe – Cercle Pays-Bas en Périgord",
+      "afkorting": "La Tulipe",
+      "regio": "Dordogne / Périgord",
+      "website": "https://www.latulipe.net",
+      "agenda_url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/02/23/-.html",
+      "ical_url": null,
+      "platform": "Joomla",
+      "fanf_lid": true,
+      "status": "actief",
+      "agenda_toegankelijkheid": "volledig_publiek",
+      "contact": "secretarislatulipe@gmail.com",
+      "opmerking": "Maandkalender doorbladerbaar via /month.calendar/YYYY/MM/DD/-.html. Veel wekelijks terugkerende activiteiten.",
+      "terugkerende_activiteiten": [
+        {"activiteit": "Golf", "frequentie": "dinsdag en vrijdag", "plaats": "Golf de Lolivarie, Saint-Germain-de-Belvès"},
+        {"activiteit": "Korte wandeling", "frequentie": "donderdag", "plaats": "wisselend"},
+        {"activiteit": "Wandelen (hondenwandeling)", "frequentie": "maandag", "plaats": "wisselend"},
+        {"activiteit": "Petanque", "frequentie": "zondag 14:00", "plaats": "Terrain de petanque Le Bourg, Limeuil"},
+        {"activiteit": "Clubborrel", "frequentie": "elke 2e en 4e donderdag, 17:00", "plaats": "Camping Le Clou, Coux-et-Bigaroque"}
+      ],
+      "events": [
+        {
+          "datum": "2026-04-09",
+          "titel": "Lezing over Michiel de Ruyter",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/04/23/-.html"
+        },
+        {
+          "datum": "2026-04-14",
+          "titel": "Lezing: Overlijden in Frankrijk",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "informatief",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/04/23/-.html"
+        },
+        {
+          "datum": "2026-04-23",
+          "titel": "Algemene Ledenvergadering",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "bestuurlijk",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/04/23/-.html"
+        }
+      ]
+    },
+    {
+      "id": "atelier-neerlandais",
+      "naam": "Atelier Néerlandais",
+      "afkorting": "Atelier Néerlandais",
+      "regio": "Parijs",
+      "website": "https://atelierneerlandais.com",
+      "agenda_url": "https://atelierneerlandais.com/kalender/",
+      "ical_url": null,
+      "platform": "WordPress",
+      "fanf_lid": false,
+      "status": "actief",
+      "agenda_toegankelijkheid": "volledig_publiek",
+      "contact": "info@atelierneerlandais.com",
+      "opmerking": "Platform van de Nederlandse ambassade in Parijs voor creatieve bedrijfstakken. 22 Avenue Victoria, 75001 Paris.",
+      "events": [
+        {"datum": "2026-03-02", "titel": "EIT Culture & Creativity fashion event", "plaats": "Atelier Néerlandais, Parijs", "tijd": "niet vermeld", "type": "zakelijk", "bron": "https://atelierneerlandais.com/kalender/"},
+        {"datum": "2026-03-03", "titel": "ILNI showroom", "plaats": "Atelier Néerlandais, Parijs", "tijd": "niet vermeld", "type": "zakelijk", "opmerking": "Alleen op uitnodiging", "bron": "https://atelierneerlandais.com/kalender/"},
+        {"datum": "2026-03-05", "datum_eind": "2026-03-22", "titel": "Expo Margot van Huijkelom", "plaats": "Atelier Néerlandais, Parijs", "tijd": "niet vermeld", "type": "cultureel", "bron": "https://atelierneerlandais.com/kalender/"},
+        {"datum": "2026-03-13", "titel": "La maison néerlandaise (I) – De la Renaissance à l'âge des Lumières", "plaats": "Atelier Néerlandais, Parijs", "tijd": "niet vermeld", "type": "cultureel", "opmerking": "Lezing Nouveau Centre Néerlandais", "bron": "https://atelierneerlandais.com/kalender/"},
+        {"datum": "2026-03-19", "titel": "Groot Dictee der Nederlandse Taal", "plaats": "Atelier Néerlandais, Parijs", "tijd": "niet vermeld", "type": "cultureel", "bron": "https://atelierneerlandais.com/kalender/"},
+        {"datum": "2026-03-24", "datum_eind": "2026-03-29", "titel": "Expo Iris Kensmil i.s.m. FRAC Picardie", "plaats": "Atelier Néerlandais, Parijs", "tijd": "niet vermeld", "type": "cultureel", "bron": "https://atelierneerlandais.com/kalender/"},
+        {"datum": "2026-04-07", "datum_eind": "2026-04-09", "titel": "Dutch Music Export", "plaats": "Atelier Néerlandais, Parijs", "tijd": "niet vermeld", "type": "cultureel", "bron": "https://atelierneerlandais.com/kalender/"},
+        {"datum": "2026-04-10", "titel": "La maison néerlandaise (II) – Du Romantisme à la modernité", "plaats": "Atelier Néerlandais, Parijs", "tijd": "niet vermeld", "type": "cultureel", "opmerking": "Lezing Nouveau Centre Néerlandais", "bron": "https://atelierneerlandais.com/kalender/"},
+        {"datum": "2026-04-16", "datum_eind": "2026-04-18", "titel": "Expo Hélène Hermans", "plaats": "Atelier Néerlandais, Parijs", "tijd": "niet vermeld", "type": "cultureel", "bron": "https://atelierneerlandais.com/kalender/"},
+        {"datum": "2026-05-22", "titel": "L'Outre-mer des Néerlandais (I) – Les Indes orientales", "plaats": "Atelier Néerlandais, Parijs", "tijd": "niet vermeld", "type": "cultureel", "opmerking": "Lezing Nouveau Centre Néerlandais", "bron": "https://atelierneerlandais.com/kalender/"},
+        {"datum": "2026-05-28", "datum_eind": "2026-05-31", "titel": "Expo Maxime Ansiau", "plaats": "Atelier Néerlandais, Parijs", "tijd": "niet vermeld", "type": "cultureel", "bron": "https://atelierneerlandais.com/kalender/"},
+        {"datum": "2026-06-19", "titel": "L'Outre-mer des Néerlandais (II) – Les Indes occidentales", "plaats": "Atelier Néerlandais, Parijs", "tijd": "niet vermeld", "type": "cultureel", "opmerking": "Lezing Nouveau Centre Néerlandais", "bron": "https://atelierneerlandais.com/kalender/"},
+        {"datum": "2026-06-23", "datum_eind": "2026-06-30", "titel": "Showrooms Fashion Week", "plaats": "Atelier Néerlandais, Parijs", "tijd": "niet vermeld", "type": "zakelijk", "bron": "https://atelierneerlandais.com/kalender/"}
+      ]
+    },
+    {
+      "id": "ern-paris",
+      "naam": "Église Réformée Néerlandaise de Paris",
+      "afkorting": "ERN Paris",
+      "regio": "Parijs",
+      "website": "https://ernparis.fr",
+      "agenda_url": "https://ernparis.fr/agenda/",
+      "ical_url": null,
+      "platform": "WordPress",
+      "fanf_lid": false,
+      "status": "actief",
+      "agenda_toegankelijkheid": "volledig_publiek",
+      "contact": "ern.paris@gmail.com",
+      "opmerking": "Nederlandse Protestantse Kerk, 172 boulevard Vincent Auriol, 75013 Paris. Diensten ook via YouTube.",
+      "events": [
+        {"datum": "2026-03-01", "titel": "Kerkdienst – ds. Ruth van der Waall-Schaeffer", "plaats": "172 boulevard Vincent Auriol, 75013 Paris", "tijd": "09:45", "type": "kerkdienst", "bron": "https://ernparis.fr/agenda/"},
+        {"datum": "2026-03-15", "titel": "Kerkdienst – ds. Aart van Lunteren", "plaats": "172 boulevard Vincent Auriol, 75013 Paris", "tijd": "09:45", "type": "kerkdienst", "bron": "https://ernparis.fr/agenda/"},
+        {"datum": "2026-04-05", "titel": "Kerkdienst – ds. Ben de Bock", "plaats": "172 boulevard Vincent Auriol, 75013 Paris", "tijd": "09:45", "type": "kerkdienst", "bron": "https://ernparis.fr/agenda/"}
+      ]
+    },
+    {
+      "id": "lotgenoten",
+      "naam": "LOTgenoten",
+      "afkorting": "LOTgenoten",
+      "regio": "Lot / Lot-et-Garonne",
+      "website": "https://www.lotgenoten.fr",
+      "agenda_url": "https://www.lotgenoten.fr/agenda/",
+      "ical_url": null,
+      "platform": "WordPress",
+      "fanf_lid": false,
+      "status": "actief",
+      "agenda_toegankelijkheid": "beperkt",
+      "contact": "info@lotgenoten.fr",
+      "opmerking": "Site regelmatig instabiel (server errors). Vrijwilligersnetwerk, geen formele vereniging.",
+      "terugkerende_activiteiten": [
+        {"activiteit": "Zondagmiddag borrel", "frequentie": "elke 2e zondag, 15:00", "plaats": "Bouysset, Saint Martin le Redon (46700)"}
+      ],
+      "events": [
+        {"datum": "2026-02-15", "titel": "KlaverLOTten en biljart", "plaats": "Lot", "tijd": "niet vermeld", "type": "sociaal", "bron": "https://www.lotgenoten.fr/agenda/"},
+        {"datum": "2026-05-31", "titel": "LOTgenoten Puzzelrit", "plaats": "Lot (startlocatie nog onbekend)", "tijd": "niet vermeld", "type": "sociaal", "bron": "https://www.lotgenoten.fr/de-lotgenoten-puzzelrit-2026/"}
+      ]
+    },
+    {
+      "id": "bourgondische-zaken",
+      "naam": "Bourgondische Zaken",
+      "afkorting": "BZ",
+      "regio": "Bourgogne",
+      "website": "https://agendabourgogne.nl",
+      "agenda_url": "https://agendabourgogne.nl",
+      "ical_url": null,
+      "platform": "onbekend",
+      "fanf_lid": false,
+      "status": "actief",
+      "agenda_toegankelijkheid": "beperkt",
+      "contact": null,
+      "opmerking": "Website geeft regelmatig server errors.",
+      "events": [
+        {"datum": "2026-03-14", "titel": "Algemene Ledenvergadering", "plaats": "niet vermeld", "tijd": "niet vermeld", "type": "bestuurlijk", "bron": "eerder gevonden"},
+        {"datum": "2026-11-13", "datum_eind": "2026-11-15", "titel": "Bibracte Ultra-Trail", "plaats": "Bibracte", "tijd": "niet vermeld", "type": "sportief", "bron": "eerder gevonden"}
+      ]
+    },
+    {
+      "id": "nederlanders-fr",
+      "naam": "Nederlanders.fr",
+      "afkorting": "NLFR",
+      "regio": "Nationaal (heel Frankrijk)",
+      "website": "https://www.nederlanders.fr",
+      "agenda_url": "https://www.nederlanders.fr/events/event/listUpcoming",
+      "ical_url": null,
+      "platform": "NING 2.0",
+      "fanf_lid": false,
+      "status": "actief",
+      "agenda_toegankelijkheid": "volledig_publiek",
+      "contact": null,
+      "opmerking": "Forum met 25.000+ leden. Events worden per maand aangekondigd.",
+      "events": [
+        {"datum": "2026-12-31", "titel": "Boekpresentaties (doorlopend, maandelijks op 1e dinsdag)", "plaats": "Online", "tijd": "18:00-19:00", "type": "cultureel", "bron": "https://www.nederlanders.fr/events/event/listUpcoming"}
+      ]
+    },
+    {
+      "id": "dbcra",
+      "naam": "Dutch Business & Culture Rhône-Alpes",
+      "afkorting": "DBCRA",
+      "regio": "Lyon / Auvergne-Rhône-Alpes",
+      "website": "https://dbcra.nl",
+      "agenda_url": "https://dbcra.nl/nederlandse-club-lyon/",
+      "ical_url": null,
+      "platform": "WordPress",
+      "fanf_lid": true,
+      "status": "actief",
+      "agenda_toegankelijkheid": "beperkt",
+      "contact": null,
+      "opmerking": "Geen publieke events na januari 2026. Events via persoonlijke uitnodiging.",
+      "events": []
+    },
+    {
+      "id": "nvso",
+      "naam": "Nederlandse Vereniging voor Straatsburg en Omstreken",
+      "afkorting": "NVSO",
+      "regio": "Straatsburg / Elzas",
+      "website": "https://www.nvso.info",
+      "agenda_url": null,
+      "ical_url": null,
+      "platform": "Statische site",
+      "fanf_lid": true,
+      "status": "actief",
+      "agenda_toegankelijkheid": "geen_online_agenda",
+      "contact": "Hans de Bruin, 19 rue Philippe Grass, 67000 Strasbourg",
+      "opmerking": "Geen online agenda. Info via periodiek 'De Rommelpot' (laatste online editie: december 2020). Maandelijkse borrelavond en excursies worden intern gecommuniceerd. ~100 betalende leden/gezinnen.",
+      "events": []
+    },
+    {
+      "id": "nzgf",
+      "naam": "Nederlandse Zuid-Franse Gemeenschap",
+      "afkorting": "NZGF",
+      "regio": "Midi-Pyrénées",
+      "website": null,
+      "agenda_url": null,
+      "ical_url": null,
+      "platform": null,
+      "fanf_lid": false,
+      "status": "onbekend",
+      "agenda_toegankelijkheid": "geen_online_agenda",
+      "opmerking": "Geen publieke agenda na nieuwjaarsborrel 12 januari 2026.",
+      "events": []
+    },
+    {
+      "id": "neerlandia-toulouse",
+      "naam": "Neerlandia Toulouse",
+      "afkorting": "Neerlandia",
+      "regio": "Toulouse",
+      "website": null,
+      "agenda_url": null,
+      "ical_url": null,
+      "platform": null,
+      "fanf_lid": false,
+      "status": "actief",
+      "agenda_toegankelijkheid": "geen_online_agenda",
+      "opmerking": "Organiseert tweemaandelijkse AfterNetWork borrels. Geen datums gepubliceerd.",
+      "events": []
+    },
+    {
+      "id": "cercle-neerlandais-lille",
+      "naam": "Cercle Néerlandais",
+      "afkorting": "Cercle NL Lille",
+      "regio": "Lille / Noord-Frankrijk",
+      "website": null,
+      "agenda_url": null,
+      "ical_url": null,
+      "platform": null,
+      "fanf_lid": true,
+      "status": "actief",
+      "agenda_toegankelijkheid": "geen_online_agenda",
+      "opmerking": "Gezelligheidsvereniging voor Nederlanders en liefhebbers van Nederland in en om Lille. Alleen generieke activiteitsbeschrijvingen.",
+      "events": []
+    },
+    {
+      "id": "aap",
+      "naam": "Association Alpes – Pays-Bas",
+      "afkorting": "AAP",
+      "regio": "Grenoble / Franse Alpen",
+      "website": "https://alpespaysbas.fr",
+      "agenda_url": null,
+      "ical_url": null,
+      "platform": "Statische site",
+      "fanf_lid": true,
+      "status": "onbekend",
+      "agenda_toegankelijkheid": "geen_online_agenda",
+      "contact": "Louis Jansen, aloysiusjansen@aol.com, T 0670612521",
+      "opmerking": "Website toont alleen oude berichten (2017-2018). Mogelijk nog actief maar geen publieke agenda.",
+      "events": []
+    },
+    {
+      "id": "pays-de-gex",
+      "naam": "Association Néerlandaise du Pays de Gex",
+      "afkorting": "AN Pays de Gex",
+      "regio": "Divonne-les-Bains / Pays de Gex",
+      "website": null,
+      "agenda_url": null,
+      "ical_url": null,
+      "platform": null,
+      "fanf_lid": true,
+      "status": "onbekend",
+      "agenda_toegankelijkheid": "geen_website",
+      "contact": "W. Bakker, 01220 Divonne-les-Bains, wimbakker54@gmail.com",
+      "opmerking": "Geen website.",
+      "events": []
+    },
+    {
+      "id": "perpignan",
+      "naam": "Cercle Néerlandais Catalunya Perpignan",
+      "afkorting": "CN Perpignan",
+      "regio": "Perpignan / Pyrénées-Orientales",
+      "website": null,
+      "agenda_url": null,
+      "ical_url": null,
+      "platform": null,
+      "fanf_lid": true,
+      "status": "onbekend",
+      "agenda_toegankelijkheid": "geen_website",
+      "contact": "cneerlandaisc@neuf.fr",
+      "opmerking": "Kleine vereniging, opgericht 2002. Geen website. Werkt samen met Cercle Néerlandais.",
+      "events": []
+    },
+    {
+      "id": "nvm-montpellier",
+      "naam": "Nederlandse Vereniging Montpellier",
+      "afkorting": "NVM",
+      "regio": "Montpellier",
+      "website": null,
+      "agenda_url": null,
+      "ical_url": null,
+      "platform": "Facebook-only",
+      "fanf_lid": true,
+      "status": "actief",
+      "agenda_toegankelijkheid": "facebook_only",
+      "opmerking": "Alleen Facebook-pagina. Events niet publiek verifieerbaar zonder login.",
+      "events": []
+    },
+    {
+      "id": "praatje",
+      "naam": "Taalcentrum Praatje / De Spijker",
+      "afkorting": "Praatje",
+      "regio": "Toulouse",
+      "website": "https://praatje.fr",
+      "agenda_url": null,
+      "ical_url": null,
+      "platform": null,
+      "fanf_lid": true,
+      "status": "actief",
+      "agenda_toegankelijkheid": "geen_eventkalender",
+      "opmerking": "Nederlands taal- en cultuuronderwijs. Geen eventkalender, lescurriculum.",
+      "events": []
+    }
+  ]
+}
