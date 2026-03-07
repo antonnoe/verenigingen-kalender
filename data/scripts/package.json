@@ -1,0 +1,12 @@
+{
+  "name": "verenigingen-kalender-updater",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automatische event-updater voor de Verenigingen Kalender",
+  "scripts": {
+    "update": "node update-events.js"
+  },
+  "dependencies": {
+    "node-ical": "^0.18.0"
+  }
+}
