@@ -4,7 +4,7 @@
     "volgende_update": "2026-03-14",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 9,
-    "totaal_events": 53,
+    "totaal_events": 51,
     "methode": "Automatisch via GitHub Action (iCal feeds + Gemini AI web-extractie)",
     "warnings": 2
   },
@@ -379,26 +379,10 @@
       "events": [
         {
           "datum": "2026-03-07",
-          "titel": "OpenAI introduceert nieuw GPT-5.4-model dat computers kan bedienen",
+          "titel": "niet vermeld",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "informatief",
-          "bron": "https://nlvp.fr/calendar/"
-        },
-        {
-          "datum": "2026-03-07",
-          "titel": "Video | Ministers duidelijk over Groningen: ‘Gasvelden gaan niet open’",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "informatief",
-          "bron": "https://nlvp.fr/calendar/"
-        },
-        {
-          "datum": "2026-03-07",
-          "titel": "Best Social Awards uitgereikt, Pieter Valley populairste content creator",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
           "bron": "https://nlvp.fr/calendar/"
         }
       ]
@@ -505,7 +489,7 @@
         {
           "datum": "2026-04-05",
           "titel": "Kerkdienst (Kerk+YouTube)",
-          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
+          "plaats": "172 boulevard Vincent Auriol 75013 Paris Métro Place d’Italie",
           "tijd": "9:45",
           "type": "kerkdienst",
           "bron": "https://ernparis.fr/agenda/"
@@ -537,7 +521,7 @@
         {
           "datum": "2026-03-08",
           "titel": "zondagmiddag borrel (Lot)",
-          "plaats": "Saint Martin le Redon",
+          "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -545,7 +529,7 @@
         {
           "datum": "2026-03-27",
           "titel": "Café-avond LOTgenoten (Lot et Garonne)",
-          "plaats": "Villeneuve sur Lot",
+          "plaats": "LA TABLE DU MARCHÉ 18-22 rue Lakanal 47300 Villeneuve sur Lot",
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -553,7 +537,7 @@
         {
           "datum": "2026-04-12",
           "titel": "zondagmiddag borrel (Lot)",
-          "plaats": "Saint Martin le Redon",
+          "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -561,7 +545,7 @@
         {
           "datum": "2026-04-24",
           "titel": "Café-avond LOTgenoten (Lot et Garonne)",
-          "plaats": "Villeneuve sur Lot",
+          "plaats": "LA TABLE DU MARCHÉ 18-22 rue Lakanal 47300 Villeneuve sur Lot",
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -569,7 +553,7 @@
         {
           "datum": "2026-05-10",
           "titel": "zondagmiddag borrel (Lot)",
-          "plaats": "Saint Martin le Redon",
+          "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
