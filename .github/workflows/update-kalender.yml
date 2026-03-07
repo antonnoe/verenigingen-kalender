@@ -1,0 +1,105 @@
+name: Verenigingen Kalender Update
+
+on:
+  schedule:
+    # Elke maandag om 07:00 UTC (09:00 Franse tijd)
+    - cron: '0 7 * * 1'
+  workflow_dispatch:
+    # Handmatig triggeren via GitHub Actions tab
+
+permissions:
+  contents: write
+  issues: write
+
+jobs:
+  update-events:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Installeer dependencies
+        working-directory: scripts
+        run: npm install
+
+      - name: Voer update-script uit
+        id: update
+        working-directory: scripts
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: |
+          node update-events.js 2>&1 | tee output.log
+          echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
+        continue-on-error: true
+
+      - name: Controleer op wijzigingen
+        id: changes
+        run: |
+          git diff --quiet data/verenigingen.json && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+
+      - name: Commit en push wijzigingen
+        if: steps.changes.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/verenigingen.json
+          DATUM=$(date +%Y-%m-%d)
+          git commit -m "Automatische update evenementen ${DATUM}"
+          git push
+
+      - name: Maak Issue aan bij waarschuwingen
+        if: steps.update.outputs.exit_code == '1'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATUM=$(date +%Y-%m-%d)
+          
+          # Bouw issue body
+          BODY="## ⚠️ Kalender Update Waarschuwingen — ${DATUM}\n\n"
+          BODY+="De wekelijkse update is uitgevoerd maar een of meer bronnen gaven fouten.\n\n"
+          
+          if [ -f scripts/warnings.json ]; then
+            BODY+="### Bronnen met fouten:\n\n"
+            BODY+="\`\`\`json\n"
+            BODY+="$(cat scripts/warnings.json)\n"
+            BODY+="\`\`\`\n\n"
+          fi
+          
+          BODY+="### Volledige log:\n\n"
+          BODY+="\`\`\`\n"
+          BODY+="$(cat scripts/output.log)\n"
+          BODY+="\`\`\`\n\n"
+          BODY+="---\n"
+          BODY+="*Dit issue is automatisch aangemaakt door de Kalender Update workflow.*"
+          
+          gh issue create \
+            --title "⚠️ Kalender bronnen omgevallen — ${DATUM}" \
+            --body "$(echo -e "$BODY")" \
+            --label "automatisch,waarschuwing"
+
+      - name: Maak Issue aan bij fatale fout
+        if: steps.update.outputs.exit_code == '2'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          DATUM=$(date +%Y-%m-%d)
+          
+          BODY="## 🔴 Kalender Update FATALE FOUT — ${DATUM}\n\n"
+          BODY+="Het update-script is volledig gecrasht.\n\n"
+          BODY+="### Log:\n\n"
+          BODY+="\`\`\`\n"
+          BODY+="$(cat scripts/output.log)\n"
+          BODY+="\`\`\`\n\n"
+          BODY+="---\n"
+          BODY+="*Dit issue is automatisch aangemaakt door de Kalender Update workflow.*"
+          
+          gh issue create \
+            --title "🔴 Kalender update FATAAL GECRASHT — ${DATUM}" \
+            --body "$(echo -e "$BODY")" \
+            --label "automatisch,fataal"
