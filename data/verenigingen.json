@@ -6,7 +6,7 @@
     "bronnen_met_events": 9,
     "totaal_events": 143,
     "methode": "Automatisch via GitHub Action (iCal feeds + Gemini AI web-extractie)",
-    "warnings": 1
+    "warnings": 0
   },
   "verenigingen": [
     {
@@ -646,7 +646,7 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
-          "datum": "2026-04-09",
+          "datum": "2026-04-08",
           "titel": "Lezing over Mic ...",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
@@ -1225,7 +1225,7 @@
         {
           "datum": "2026-04-05",
           "titel": "Kerkdienst (Kerk+YouTube)",
-          "plaats": "172 boulevard Vincent Auriol 75013 Paris Métro Place d’Italie",
+          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
           "tijd": "9:45",
           "type": "kerkdienst",
           "bron": "https://ernparis.fr/agenda/"
@@ -1257,7 +1257,7 @@
         {
           "datum": "2026-03-08",
           "titel": "zondagmiddag borrel (Lot)",
-          "plaats": "niet vermeld",
+          "plaats": "Saint Martin le Redon",
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -1265,7 +1265,7 @@
         {
           "datum": "2026-03-27",
           "titel": "Café-avond LOTgenoten (Lot et Garonne)",
-          "plaats": "LA TABLE DU MARCHÉ 18-22 rue Lakanal 47300 Villeneuve sur Lot",
+          "plaats": "Villeneuve sur Lot",
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -1273,7 +1273,7 @@
         {
           "datum": "2026-04-12",
           "titel": "zondagmiddag borrel (Lot)",
-          "plaats": "niet vermeld",
+          "plaats": "Saint Martin le Redon",
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -1281,7 +1281,7 @@
         {
           "datum": "2026-04-24",
           "titel": "Café-avond LOTgenoten (Lot et Garonne)",
-          "plaats": "LA TABLE DU MARCHÉ 18-22 rue Lakanal 47300 Villeneuve sur Lot",
+          "plaats": "Villeneuve sur Lot",
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -1289,7 +1289,7 @@
         {
           "datum": "2026-05-10",
           "titel": "zondagmiddag borrel (Lot)",
-          "plaats": "niet vermeld",
+          "plaats": "Saint Martin le Redon",
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -1313,20 +1313,19 @@
       "events": [
         {
           "datum": "2026-03-14",
-          "titel": "Algemene Ledenvergadering",
-          "plaats": "niet vermeld",
+          "titel": "Algemene Ledenvergadering op 14 maart 2026 in het Eco-Parc de la Nièvre",
+          "plaats": "Eco-Parc de la Nièvre",
           "tijd": "niet vermeld",
           "type": "bestuurlijk",
-          "bron": "eerder gevonden"
+          "bron": "https://bourgondischezaken.com/"
         },
         {
           "datum": "2026-11-13",
-          "datum_eind": "2026-11-15",
-          "titel": "Bibracte Ultra-Trail",
-          "plaats": "Bibracte",
+          "titel": "Topo Athletic Bibracte Ultra-Trail®",
+          "plaats": "Parc naturel",
           "tijd": "niet vermeld",
           "type": "sportief",
-          "bron": "eerder gevonden"
+          "bron": "https://bourgondischezaken.com/"
         }
       ]
     },
