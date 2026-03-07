@@ -68,7 +68,7 @@ const WEB_BRONNEN = {
     naam: 'LOTgenoten'
   },
   'bourgondische-zaken': {
-    urls: ['https://agendabourgogne.nl'],
+    urls: ['https://bourgondischezaken.com/'],
     naam: 'Bourgondische Zaken'
   }
 };
