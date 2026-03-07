@@ -4,9 +4,789 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nederlandse Verenigingen in Frankrijk – Evenementenkalender</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Mulish', sans-serif;
+      color: #2a2a2a;
+      background: #faf8f5;
+      line-height: 1.8em;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 24px 16px 40px;
+    }
+
+    /* ── HEADER ── */
+    .site-header {
+      text-align: center;
+      margin-bottom: 24px;
+      padding-bottom: 18px;
+      border-bottom: 2px solid #800000;
+    }
+    .site-header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.45rem;
+      color: #800000;
+      letter-spacing: -.02em;
+      margin-bottom: 2px;
+    }
+    .site-header p {
+      font-size: .85rem;
+      color: #888;
+    }
+
+    /* ── TABS ── */
+    .tab-bar {
+      display: flex;
+      gap: 0;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #e8e0d8;
+    }
+    .tab-btn {
+      padding: 10px 22px;
+      border: none;
+      background: none;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: .9rem;
+      color: #999;
+      cursor: pointer;
+      border-bottom: 2px solid transparent;
+      margin-bottom: -2px;
+      transition: color .2s, border-color .2s;
+    }
+    .tab-btn:hover { color: #800000; }
+    .tab-btn.active {
+      color: #800000;
+      border-bottom-color: #800000;
+    }
+    .tab-panel { display: none; }
+    .tab-panel.active { display: block; }
+
+    /* ── FILTERS ── */
+    .filters {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 20px;
+    }
+    .filter-group {
+      flex: 1;
+      min-width: 150px;
+    }
+    .filter-group label {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: .75rem;
+      font-weight: 600;
+      color: #800000;
+      margin-bottom: 4px;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .filter-group select {
+      width: 100%;
+      padding: 8px 12px;
+      border: 1px solid #e8e0d8;
+      border-radius: 6px;
+      font-family: 'Mulish', sans-serif;
+      font-size: .85rem;
+      color: #2a2a2a;
+      background: #fff;
+      cursor: pointer;
+      transition: border-color .2s;
+    }
+    .filter-group select:focus {
+      outline: none;
+      border-color: #800000;
+      box-shadow: 0 0 0 2px rgba(128,0,0,.1);
+    }
+
+    /* ── MONTH GROUP ── */
+    .month-group { margin-bottom: 24px; }
+    .month-group h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: #800000;
+      padding: 6px 0;
+      margin-bottom: 10px;
+      border-bottom: 1px solid rgba(128,0,0,.12);
+    }
+
+    /* ── EVENT CARD ── */
+    .event-card {
+      display: flex;
+      gap: 14px;
+      padding: 12px 14px;
+      margin-bottom: 6px;
+      background: #fff;
+      border: 1px solid #e8e0d8;
+      border-radius: 6px;
+      transition: border-color .2s, box-shadow .2s;
+      align-items: flex-start;
+    }
+    .event-card:hover {
+      border-color: rgba(128,0,0,.25);
+      box-shadow: 0 2px 8px rgba(128,0,0,.07);
+    }
+
+    /* ── DATE BADGE ── */
+    .event-date {
+      flex-shrink: 0;
+      width: 50px;
+      text-align: center;
+      padding: 6px 0;
+      background: rgba(128,0,0,.06);
+      border-radius: 6px;
+    }
+    .event-date .day-name {
+      display: block;
+      font-size: .65rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .event-date .day-num {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.3rem;
+      color: #800000;
+      line-height: 1.2;
+    }
+    .event-date .month-name {
+      display: block;
+      font-size: .65rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+
+    /* ── EVENT BODY ── */
+    .event-body { flex: 1; min-width: 0; }
+    .event-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: .9rem;
+      color: #2a2a2a;
+      margin-bottom: 3px;
+    }
+    .event-meta {
+      font-size: .78rem;
+      color: #888;
+      line-height: 1.6;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 2px;
+    }
+    .event-meta .separator {
+      margin: 0 5px;
+      color: #ccc;
+    }
+    .type-badge {
+      display: inline-block;
+      padding: 1px 8px;
+      border-radius: 3px;
+      font-size: .7rem;
+      font-weight: 700;
+      color: #fff;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+    }
+
+    /* ── LINK WRAPPER ── */
+    a.event-card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    a.event-card-link .event-card { cursor: pointer; }
+    a.event-card-link:hover .event-card {
+      box-shadow: 0 3px 12px rgba(128,0,0,.12);
+      border-color: rgba(128,0,0,.3);
+    }
+    a.event-card-link:focus {
+      outline: 2px solid #800000;
+      outline-offset: 2px;
+      border-radius: 6px;
+    }
+
+    /* ── VERENIGINGEN TAB ── */
+    .ver-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .ver-card {
+      background: #fff;
+      border: 1px solid #e8e0d8;
+      border-radius: 6px;
+      padding: 16px;
+      transition: box-shadow .2s;
+    }
+    .ver-card:hover {
+      box-shadow: 0 2px 10px rgba(128,0,0,.08);
+    }
+    .ver-card h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: .95rem;
+      color: #800000;
+      margin-bottom: 4px;
+    }
+    .ver-abbr {
+      font-size: .75rem;
+      color: #888;
+      margin-bottom: 8px;
+    }
+    .ver-detail {
+      font-size: .8rem;
+      color: #555;
+      margin-bottom: 3px;
+    }
+    .ver-beschrijving {
+      font-size: .8rem;
+      color: #666;
+      margin-bottom: .4rem;
+      line-height: 1.5;
+    }
+    .ver-link {
+      display: inline-block;
+      margin-top: 8px;
+      font-size: .8rem;
+      font-weight: 700;
+      color: #800000;
+      text-decoration: none;
+    }
+    .ver-link:hover { text-decoration: underline; }
+
+    /* ── ZONDER EVENTS ── */
+    .zonder-events { margin-top: 28px; }
+    .zonder-events h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #800000;
+      margin-bottom: 6px;
+    }
+    .zonder-subtitle {
+      font-size: .85rem;
+      color: #666;
+      margin-bottom: 12px;
+      font-style: italic;
+    }
+    .zonder-list {
+      list-style: none;
+      padding: 0;
+    }
+    .zonder-list li {
+      padding: 8px 12px;
+      border-bottom: 1px solid #e8e0d8;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      align-items: baseline;
+    }
+    .zonder-list li:last-child { border-bottom: none; }
+    .zl-name {
+      font-weight: 600;
+      font-size: .85rem;
+      color: #2a2a2a;
+    }
+    .zl-info {
+      font-size: .8rem;
+      color: #888;
+    }
+
+    /* ── META ── */
+    .meta-info {
+      margin-top: 24px;
+      padding: 12px 16px;
+      background: rgba(128,0,0,.05);
+      border-radius: 6px;
+      font-size: .78rem;
+      color: #888;
+    }
+    .meta-info strong { color: #800000; }
+
+    /* ── CTA ── */
+    .cta-block {
+      background: #800000;
+      color: #fff;
+      padding: 2rem;
+      border-radius: 6px;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    .cta-block h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #fff;
+      font-size: 1.3rem;
+      margin-bottom: .6rem;
+    }
+    .cta-block p {
+      font-family: 'Mulish', sans-serif;
+      font-size: .95rem;
+      line-height: 1.8em;
+      margin-bottom: 1rem;
+    }
+    .cta-block .cta-btn {
+      display: inline-block;
+      background: #fff;
+      color: #800000;
+      font-family: 'Mulish', sans-serif;
+      font-weight: 700;
+      font-size: .9rem;
+      padding: .7rem 1.5rem;
+      border-radius: 6px;
+      text-decoration: none;
+      transition: background .2s;
+    }
+    .cta-block .cta-btn:hover { background: #f0ece8; }
+
+    /* ── EMPTY / LOADING ── */
+    .empty-state {
+      text-align: center;
+      padding: 40px 20px;
+      color: #888;
+      font-size: .9rem;
+    }
+    .loading {
+      text-align: center;
+      padding: 50px 20px;
+      color: #888;
+    }
+    .spinner {
+      display: inline-block;
+      width: 28px; height: 28px;
+      border: 3px solid rgba(128,0,0,.15);
+      border-top-color: #800000;
+      border-radius: 50%;
+      animation: spin .7s linear infinite;
+      margin-bottom: 10px;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 540px) {
+      .filters { flex-direction: column; }
+      .filter-group { min-width: 100%; }
+      .site-header h1 { font-size: 1.2rem; }
+      .tab-btn { padding: 8px 14px; font-size: .82rem; }
+      .ver-grid { grid-template-columns: 1fr; }
+    }
+  </style>
 </head>
 <body>
-  <div id="app"></div>
-  <script src="app.js"></script>
+
+<div class="container">
+
+  <!-- HEADER -->
+  <div class="site-header">
+    <h1>Verenigingen &amp; Evenementen</h1>
+    <p>Nederlandstalige gemeenschap in Frankrijk</p>
+  </div>
+
+  <!-- TABS -->
+  <div class="tab-bar">
+    <button class="tab-btn active" data-tab="evenementen">Evenementenkalender</button>
+    <button class="tab-btn" data-tab="verenigingen">Verenigingen</button>
+  </div>
+
+  <!-- TAB: EVENEMENTEN -->
+  <div id="tab-evenementen" class="tab-panel active">
+
+    <div class="filters">
+      <div class="filter-group">
+        <label for="filter-regio">Regio</label>
+        <select id="filter-regio">
+          <option value="">Alle regio's</option>
+        </select>
+      </div>
+      <!-- Vereniging filter wordt hier dynamisch ingevoegd door JS -->
+      <div class="filter-group">
+        <label for="filter-type">Type</label>
+        <select id="filter-type">
+          <option value="">Alle types</option>
+          <option value="sociaal">Sociaal</option>
+          <option value="sportief">Sportief</option>
+          <option value="cultureel">Cultureel</option>
+          <option value="informatief">Informatief</option>
+          <option value="bestuurlijk">Bestuurlijk</option>
+          <option value="zakelijk">Zakelijk</option>
+          <option value="kerkdienst">Kerkdienst</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="kalender-content">
+      <div class="loading">
+        <div class="spinner"></div>
+        <div>Evenementen laden&hellip;</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB: VERENIGINGEN -->
+  <div id="tab-verenigingen" class="tab-panel">
+    <div id="verenigingen-content">
+      <div class="loading">
+        <div class="spinner"></div>
+        <div>Verenigingen laden&hellip;</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+(function () {
+  'use strict';
+
+  var TYPE_KLEUREN = {
+    sociaal:      '#800000',
+    sportief:     '#a0522d',
+    cultureel:    '#4a1a2e',
+    informatief:  '#2d5a3d',
+    bestuurlijk:  '#555',
+    zakelijk:     '#1a3a5c',
+    kerkdienst:   '#5c4a1a'
+  };
+
+  var MAANDEN_NL = [
+    'januari','februari','maart','april','mei','juni',
+    'juli','augustus','september','oktober','november','december'
+  ];
+
+  var DAGEN_NL = ['zo','ma','di','wo','do','vr','za'];
+
+  var alleVerenigingen = [];
+  var alleEvents = [];
+
+  var kalenderContent     = document.getElementById('kalender-content');
+  var verenigingenContent = document.getElementById('verenigingen-content');
+  var filterRegio         = document.getElementById('filter-regio');
+  var filterType          = document.getElementById('filter-type');
+
+  var filterVereniging = createVerenigingFilter();
+
+  initTabs();
+  loadData();
+
+  // ── VERENIGING FILTER (dynamisch toegevoegd tussen Regio en Type) ──
+  function createVerenigingFilter() {
+    var filterGroup = document.createElement('div');
+    filterGroup.className = 'filter-group';
+
+    var label = document.createElement('label');
+    label.setAttribute('for', 'filter-vereniging');
+    label.textContent = 'Vereniging';
+    filterGroup.appendChild(label);
+
+    var select = document.createElement('select');
+    select.id = 'filter-vereniging';
+
+    var defaultOpt = document.createElement('option');
+    defaultOpt.value = '';
+    defaultOpt.textContent = 'Alle verenigingen';
+    select.appendChild(defaultOpt);
+
+    filterGroup.appendChild(select);
+
+    var filterTypeGroup = filterType.parentElement;
+    filterTypeGroup.parentElement.insertBefore(filterGroup, filterTypeGroup);
+
+    return select;
+  }
+
+  // ── TABS ──
+  function initTabs() {
+    document.querySelectorAll('.tab-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        document.querySelectorAll('.tab-btn').forEach(function (b) { b.classList.remove('active'); });
+        document.querySelectorAll('.tab-panel').forEach(function (p) { p.classList.remove('active'); });
+        btn.classList.add('active');
+        document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+      });
+    });
+  }
+
+  // ── DATA LADEN ──
+  function loadData() {
+    fetch('data/verenigingen.json')
+      .then(function (res) {
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        return res.json();
+      })
+      .then(function (data) {
+        alleVerenigingen = data.verenigingen || [];
+        buildEventsFromVerenigingen();
+        populateRegioFilter();
+        populateVerenigingFilter();
+        renderKalender();
+        renderVerenigingen(data.meta);
+      })
+      .catch(function (err) {
+        kalenderContent.innerHTML = '<div class="empty-state"><p>Fout bij laden: ' + escapeHtml(err.message) + '</p></div>';
+        verenigingenContent.innerHTML = kalenderContent.innerHTML;
+      });
+  }
+
+  // ── EVENTS OPBOUWEN UIT VERENIGINGEN ──
+  function buildEventsFromVerenigingen() {
+    alleEvents = [];
+    alleVerenigingen.forEach(function (ver) {
+      if (!ver.events) return;
+      ver.events.forEach(function (ev) {
+        alleEvents.push({
+          titel:      ev.titel,
+          datum:      ev.datum,
+          tijd:       ev.tijd || '',
+          plaats:     ev.plaats || '',
+          type:       ev.type || 'sociaal',
+          vereniging: ver.naam,
+          afkorting:  ver.afkorting || '',
+          regio:      ver.regio || '',
+          bron:       ev.bron || '',
+          agenda_url: ver.agenda_url || '',
+          website:    ver.website || ''
+        });
+      });
+    });
+  }
+
+  // ── REGIO FILTER VULLEN ──
+  function populateRegioFilter() {
+    var regios = [];
+    alleVerenigingen.forEach(function (ver) {
+      if (ver.regio && regios.indexOf(ver.regio) === -1) {
+        regios.push(ver.regio);
+      }
+    });
+    regios.sort();
+    regios.forEach(function (r) {
+      var opt = document.createElement('option');
+      opt.value = r;
+      opt.textContent = r;
+      filterRegio.appendChild(opt);
+    });
+    filterRegio.addEventListener('change', renderKalender);
+    filterType.addEventListener('change', renderKalender);
+  }
+
+  // ── VERENIGING FILTER VULLEN ──
+  function populateVerenigingFilter() {
+    var namen = [];
+    alleVerenigingen.forEach(function (ver) {
+      if (ver.events && ver.events.length > 0 && namen.indexOf(ver.naam) === -1) {
+        namen.push(ver.naam);
+      }
+    });
+    namen.sort();
+    namen.forEach(function (n) {
+      var opt = document.createElement('option');
+      opt.value = n;
+      opt.textContent = n;
+      filterVereniging.appendChild(opt);
+    });
+    filterVereniging.addEventListener('change', renderKalender);
+  }
+
+  // ── KALENDER RENDEREN ──
+  function renderKalender() {
+    var now = new Date();
+    now.setHours(0, 0, 0, 0);
+
+    var regio      = filterRegio.value;
+    var type       = filterType.value;
+    var vereniging = filterVereniging.value;
+
+    var filtered = alleEvents.filter(function (ev) {
+      var evDate = new Date(ev.datum);
+      if (evDate < now) return false;
+      if (regio && ev.regio !== regio) return false;
+      if (type && ev.type !== type) return false;
+      if (vereniging && ev.vereniging !== vereniging) return false;
+      return true;
+    });
+
+    filtered.sort(function (a, b) {
+      return new Date(a.datum) - new Date(b.datum);
+    });
+
+    if (filtered.length === 0) {
+      kalenderContent.innerHTML = '<div class="empty-state"><p>Geen toekomstige evenementen gevonden voor deze selectie.</p></div>';
+      return;
+    }
+
+    var groups = {};
+    filtered.forEach(function (ev) {
+      var d = new Date(ev.datum);
+      var key = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0');
+      if (!groups[key]) {
+        groups[key] = {
+          label: MAANDEN_NL[d.getMonth()] + ' ' + d.getFullYear(),
+          events: []
+        };
+      }
+      groups[key].events.push(ev);
+    });
+
+    var html = '';
+    Object.keys(groups).sort().forEach(function (key) {
+      var g = groups[key];
+      html += '<div class="month-group">';
+      html += '<h2>' + capitalize(g.label) + '</h2>';
+      g.events.forEach(function (ev) {
+        html += buildEventCard(ev);
+      });
+      html += '</div>';
+    });
+
+    kalenderContent.innerHTML = html;
+  }
+
+  // ── EVENT CARD ──
+  function buildEventCard(ev) {
+    var d = new Date(ev.datum);
+    var dagNaam  = DAGEN_NL[d.getDay()];
+    var dagNum   = d.getDate();
+    var maand    = MAANDEN_NL[d.getMonth()].substring(0, 3);
+    var bgColor  = TYPE_KLEUREN[ev.type] || '#800000';
+
+    var href = ev.bron || ev.agenda_url || ev.website;
+
+    var card = '';
+    if (href) {
+      card += '<a class="event-card-link" href="' + escapeHtml(href) + '" target="_blank" rel="noopener">';
+    }
+    card += '<div class="event-card">';
+    card += '<div class="event-date">';
+    card += '<span class="day-name">' + dagNaam + '</span>';
+    card += '<span class="day-num">' + dagNum + '</span>';
+    card += '<span class="month-name">' + maand + '</span>';
+    card += '</div>';
+    card += '<div class="event-body">';
+    card += '<div class="event-title">' + escapeHtml(ev.titel) + '</div>';
+    card += '<div class="event-meta">';
+    card += '<span class="type-badge" style="background:' + bgColor + '">' + escapeHtml(ev.type) + '</span>';
+    card += '<span class="separator">|</span>';
+    card += '<span>' + escapeHtml(ev.afkorting || ev.vereniging) + '</span>';
+    if (ev.plaats) {
+      card += '<span class="separator">|</span>';
+      card += '<span>' + escapeHtml(ev.plaats) + '</span>';
+    }
+    if (ev.tijd) {
+      card += '<span class="separator">|</span>';
+      card += '<span>' + escapeHtml(ev.tijd) + '</span>';
+    }
+    card += '</div>';
+    card += '</div>';
+    card += '</div>';
+    if (href) {
+      card += '</a>';
+    }
+    return card;
+  }
+
+  // ── VERENIGINGEN RENDEREN ──
+  function renderVerenigingen(meta) {
+    var metEvents = [];
+    var zonderEvents = [];
+
+    alleVerenigingen.forEach(function (ver) {
+      if (ver.events && ver.events.length > 0) {
+        metEvents.push(ver);
+      } else {
+        zonderEvents.push(ver);
+      }
+    });
+
+    metEvents.sort(function (a, b) { return a.naam.localeCompare(b.naam); });
+    zonderEvents.sort(function (a, b) { return a.naam.localeCompare(b.naam); });
+
+    var html = '';
+
+    if (metEvents.length > 0) {
+      html += '<div class="ver-grid">';
+      metEvents.forEach(function (ver) {
+        var eventCount = ver.events.length;
+        html += '<div class="ver-card">';
+        html += '<h3>' + escapeHtml(ver.naam) + '</h3>';
+        if (ver.afkorting) {
+          html += '<div class="ver-abbr">' + escapeHtml(ver.afkorting) + '</div>';
+        }
+        html += '<div class="ver-detail"><strong>Regio:</strong> ' + escapeHtml(ver.regio) + '</div>';
+        if (ver.beschrijving) {
+          html += '<div class="ver-beschrijving">' + escapeHtml(ver.beschrijving) + '</div>';
+        }
+        html += '<div class="ver-detail"><strong>Evenementen:</strong> ' + eventCount + ' gepland</div>';
+        if (ver.website) {
+          html += '<a class="ver-link" href="' + escapeHtml(ver.website) + '" target="_blank" rel="noopener">Website bezoeken &rarr;</a>';
+        }
+        html += '</div>';
+      });
+      html += '</div>';
+    }
+
+    if (zonderEvents.length > 0) {
+      html += '<div class="zonder-events">';
+      html += '<h2>Verenigingen zonder gepubliceerde evenementen</h2>';
+      html += '<p class="zonder-subtitle">Deze verenigingen publiceren hun agenda niet online.</p>';
+      html += '<ul class="zonder-list">';
+      zonderEvents.forEach(function (ver) {
+        html += '<li>';
+        html += '<span class="zl-name">' + escapeHtml(ver.naam) + '</span>';
+        html += '<span class="zl-info">' + escapeHtml(ver.regio) + '</span>';
+        html += '</li>';
+      });
+      html += '</ul>';
+      html += '</div>';
+    }
+
+    if (meta) {
+      html += '<div class="meta-info">';
+      html += '<strong>Laatste update:</strong> ' + escapeHtml(meta.laatst_bijgewerkt || 'onbekend');
+      html += ' &nbsp;&bull;&nbsp; ';
+      html += '<strong>Bronnen gecontroleerd:</strong> ' + (meta.bronnen_gecontroleerd || '?');
+      html += ' &nbsp;&bull;&nbsp; ';
+      html += '<strong>Totaal events:</strong> ' + (meta.totaal_events || '?');
+      html += '</div>';
+    }
+
+    html += '<div class="cta-block">';
+    html += '<h2>Uw vereniging toevoegen?</h2>';
+    html += '<p>Organiseert uw vereniging activiteiten voor Nederlandstaligen in Frankrijk? Wij nemen uw evenementen graag op in dit overzicht.</p>';
+    html += '<a class="cta-btn" href="mailto:info@nederlanders.fr">Contact opnemen</a>';
+    html += '</div>';
+
+    verenigingenContent.innerHTML = html;
+  }
+
+  // ── HELPERS ──
+  function escapeHtml(str) {
+    if (!str) return '';
+    var div = document.createElement('div');
+    div.appendChild(document.createTextNode(String(str)));
+    return div.innerHTML;
+  }
+
+  function capitalize(s) {
+    return s.charAt(0).toUpperCase() + s.slice(1);
+  }
+
+})();
+</script>
+
 </body>
 </html>
