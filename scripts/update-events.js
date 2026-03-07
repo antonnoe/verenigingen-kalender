@@ -328,7 +328,7 @@ ${alleHtml}`;
       contents: [{ parts: [{ text: prompt }] }],
       generationConfig: {
         temperature: 0.1,
-        maxOutputTokens: 4096
+        maxOutputTokens: 8192
       }
     }),
     signal: AbortSignal.timeout(30000)
@@ -349,14 +349,25 @@ ${alleHtml}`;
     throw new Error('Onverwacht Gemini response-formaat');
   }
 
-  // Parse JSON uit response (strip eventuele markdown backticks)
+  // Strip markdown backticks en eventuele tekst voor/na de JSON array
   responseText = responseText.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim();
 
-  let events;
+  // Zoek de JSON array in de response
+  var jsonStart = responseText.indexOf('[');
+  var jsonEnd = responseText.lastIndexOf(']');
+  if (jsonStart === -1 || jsonEnd === -1) {
+    throw new Error('Geen JSON array gevonden in Gemini response');
+  }
+  responseText = responseText.substring(jsonStart, jsonEnd + 1);
+
+  // Fix veelvoorkomende JSON-fouten
+  responseText = responseText.replace(/,\s*]/g, ']').replace(/,\s*}/g, '}');
+
+  var events;
   try {
     events = JSON.parse(responseText);
   } catch (e) {
-    throw new Error(`Gemini gaf geen valide JSON terug: ${responseText.substring(0, 100)}...`);
+    throw new Error('Gemini gaf geen valide JSON terug: ' + responseText.substring(0, 100) + '...');
   }
 
   if (!Array.isArray(events)) {
