@@ -80,8 +80,7 @@ jobs:
           
           gh issue create \
             --title "⚠️ Kalender bronnen omgevallen — ${DATUM}" \
-            --body "$(echo -e "$BODY")" \
-            --label "automatisch,waarschuwing"
+            --body "$(echo -e "$BODY")"
 
       - name: Maak Issue aan bij fatale fout
         if: steps.update.outputs.exit_code == '2'
@@ -101,5 +100,4 @@ jobs:
           
           gh issue create \
             --title "🔴 Kalender update FATAAL GECRASHT — ${DATUM}" \
-            --body "$(echo -e "$BODY")" \
-            --label "automatisch,fataal"
+            --body "$(echo -e "$BODY")"
