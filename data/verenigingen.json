@@ -1,12 +1,12 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-03-07",
-    "volgende_update": "2026-03-14",
+    "laatst_bijgewerkt": "2026-03-09",
+    "volgende_update": "2026-03-16",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 9,
-    "totaal_events": 143,
+    "totaal_events": 153,
     "methode": "Automatisch via GitHub Action (iCal feeds + Gemini AI web-extractie)",
-    "warnings": 0
+    "warnings": 2
   },
   "verenigingen": [
     {
@@ -353,6 +353,14 @@
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         },
         {
+          "datum": "2026-04-23",
+          "titel": "ANM Golf",
+          "plaats": "La Motte",
+          "tijd": "10:30-15:30",
+          "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
           "datum": "2026-05-30",
           "titel": "Lustrumfeest 45 jaar ANM",
           "plaats": "Chateau de Taradel, Taradeau",
@@ -378,11 +386,67 @@
       "opmerking": "Publiceert events per maand als blogposts",
       "events": [
         {
-          "datum": "2026-03-07",
-          "titel": "niet vermeld",
+          "datum": "2026-03-09",
+          "titel": "Oranje matig begonnen aan WK-kwalificatie – voormalig bondscoach kijkt kritisch mee",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-03-09",
+          "titel": "Ondanks felle kritiek van coureurs bood de GP van Australië tóch enig spektakel",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-03-09",
+          "titel": "Video | Bridget Maasland maakt bekend dat haar moeder ernstig ziek is: Ik wil je eren",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "informatief",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-03-09",
+          "titel": "Koeman noemt halve finale als doelstelling Oranje op WK: Maar we willen winnen",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-03-09",
+          "titel": "Vogelgriep vastgesteld in Putten, 23.000 kippen geruimd",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "informatief",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-03-09",
+          "titel": "CDA-lijsttrekker Landgraaf bedreigd tijdens flyeren voor verkiezingen",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "informatief",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-03-25",
+          "titel": "Spelletjesmiddag (voor volwassenen)",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-03-29",
+          "titel": "Paashaas",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
           "bron": "https://nlvp.fr/calendar/"
         }
       ]
@@ -1225,7 +1289,7 @@
         {
           "datum": "2026-04-05",
           "titel": "Kerkdienst (Kerk+YouTube)",
-          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
+          "plaats": "niet vermeld",
           "tijd": "9:45",
           "type": "kerkdienst",
           "bron": "https://ernparis.fr/agenda/"
@@ -1255,17 +1319,9 @@
       ],
       "events": [
         {
-          "datum": "2026-03-08",
-          "titel": "zondagmiddag borrel (Lot)",
-          "plaats": "Saint Martin le Redon",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.lotgenoten.fr/agenda/"
-        },
-        {
           "datum": "2026-03-27",
           "titel": "Café-avond LOTgenoten (Lot et Garonne)",
-          "plaats": "Villeneuve sur Lot",
+          "plaats": "Lotgenotenborrel in Villeneuve sur Lot",
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -1273,7 +1329,7 @@
         {
           "datum": "2026-04-12",
           "titel": "zondagmiddag borrel (Lot)",
-          "plaats": "Saint Martin le Redon",
+          "plaats": "Bouysset, Saint Martin le Redon",
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -1281,7 +1337,7 @@
         {
           "datum": "2026-04-24",
           "titel": "Café-avond LOTgenoten (Lot et Garonne)",
-          "plaats": "Villeneuve sur Lot",
+          "plaats": "Lotgenotenborrel in Villeneuve sur Lot",
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -1289,7 +1345,15 @@
         {
           "datum": "2026-05-10",
           "titel": "zondagmiddag borrel (Lot)",
-          "plaats": "Saint Martin le Redon",
+          "plaats": "Bouysset, Saint Martin le Redon",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.lotgenoten.fr/agenda/"
+        },
+        {
+          "datum": "2026-06-14",
+          "titel": "zondagmiddag borrel (Lot)",
+          "plaats": "Bouysset, Saint Martin le Redon",
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -1314,7 +1378,7 @@
         {
           "datum": "2026-03-14",
           "titel": "Algemene Ledenvergadering op 14 maart 2026 in het Eco-Parc de la Nièvre",
-          "plaats": "Eco-Parc de la Nièvre",
+          "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "bestuurlijk",
           "bron": "https://bourgondischezaken.com/"
@@ -1322,7 +1386,23 @@
         {
           "datum": "2026-11-13",
           "titel": "Topo Athletic Bibracte Ultra-Trail®",
-          "plaats": "Parc naturel",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://bourgondischezaken.com/"
+        },
+        {
+          "datum": "2026-11-14",
+          "titel": "Topo Athletic Bibracte Ultra-Trail®",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://bourgondischezaken.com/"
+        },
+        {
+          "datum": "2026-11-15",
+          "titel": "Topo Athletic Bibracte Ultra-Trail®",
+          "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sportief",
           "bron": "https://bourgondischezaken.com/"
