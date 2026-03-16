@@ -10,6 +10,13 @@
  * 3. Handmatig — bronnen zonder online agenda worden niet aangeraakt
  *
  * Bij fouten: schrijft warnings.json zodat de GitHub Action een Issue aanmaakt.
+ *
+ * v2 — Fixes:
+ * - Gemini-prompt aangescherpt: negeer nieuws/blogs/externe content
+ * - Post-validatie: nieuwskoppen en verdachte titels worden gefilterd
+ * - categoriseerType(): iCal CATEGORIES-veld wordt gebruikt, regex-volgorde
+ *   hersteld zodat bestuurlijk vóór sportief komt, en kerkdienst alleen
+ *   matcht op expliciete kerkgerelateerde woorden (niet "ds." in adressen)
  */
 
 const fs = require('fs');
@@ -41,7 +48,6 @@ const WEB_BRONNEN = {
     naam: 'NLVP'
   },
   'latulipe': {
-    // Dynamische URL per maand — we pakken huidige + volgende 3 maanden
     urlGenerator: function () {
       const urls = [];
       const now = new Date();
@@ -77,28 +83,142 @@ const WEB_BRONNEN = {
 const GELDIGE_TYPES = ['sociaal', 'sportief', 'cultureel', 'informatief', 'bestuurlijk', 'zakelijk', 'kerkdienst'];
 
 // ════════════════════════════════════════════════════════════════
+// POST-VALIDATIE: nieuwskoppen en rommel detecteren
+// ════════════════════════════════════════════════════════════════
+
+// Patronen die erop wijzen dat een "event" eigenlijk een nieuwskop is
+const NIEUWSKOP_PATRONEN = [
+  /\bNU\.NL\b/i,
+  /\bNOS\b/,
+  /\bRTL\s?Nieuws\b/i,
+  /\bAD\.nl\b/i,
+  /\bTelegraaf\b/i,
+  /\bVolkskrant\b/i,
+  /\bNRC\b/,
+  /\bTrouw\b(?!.*(?:borrel|lunch|feest|dienst))/i,
+  /\bReuters\b/i,
+  /\bANP\b/,
+  /\bBBC\b/,
+  /\bCNN\b/,
+  /\bwint\s+(Oscar|prijs|award|goud|zilver|brons)\b/i,
+  /\bslecht\s+voorbereid\b/i,
+  /\bbedrijventerrein/i,
+  /\bverkiezing(?:en|suitslag)/i,
+  /\bkabinets?(?:formatie|val|crisis)\b/i,
+  /\bcoalitie(?:akkoord|overleg)\b/i,
+  /\bopinie\s*stuk\b/i,
+  /\bcolumn\b/i,
+  /\bblog\s*post\b/i,
+  /\bpodcast\s*(?:aflevering|episode)\b/i,
+  /\bnewsletter\b/i,
+  /\bnieuwsbrief\b/i,
+  /\bbreaking\s*news\b/i
+];
+
+// Woorden die in een eventtitel van een Nederlandse vereniging thuishoren
+const VERENIGING_EVENT_WOORDEN = [
+  /borrel/i, /lunch/i, /diner/i, /wandel/i, /golf/i, /petanque/i,
+  /p\u00e9tanque/i, /jeu de boules/i, /excursie/i, /lezing/i, /vergadering/i,
+  /ALV/i, /konings/i, /paas/i, /kerst/i, /nieuwjaar/i, /bridge/i,
+  /cursus/i, /workshop/i, /concert/i, /expo/i, /bezoek/i, /uitstap/i,
+  /feest/i, /viering/i, /spelletjes/i, /quiz/i, /film/i, /koor/i,
+  /yoga/i, /padel/i, /zeil/i, /fiet/i, /zwem/i, /tennis/i,
+  /kerk/i, /dienst/i, /mis\b/i, /bijbel/i, /gebed/i,
+  /markt/i, /beurs/i, /salon/i, /atelier/i, /rondleiding/i,
+  /clubavond/i, /stamtafel/i, /bijpraat/i, /caf\u00e9/i, /aperitief/i,
+  /toernooi/i, /wedstrijd/i, /clinic/i, /trail/i, /rally/i,
+  /lustr/i, /jubile/i, /seizoen/i, /openingsdag/i, /paashaas/i
+];
+
+/**
+ * Controleert of een event-titel waarschijnlijk een nieuwskop is
+ * in plaats van een verenigingsevenement.
+ */
+function detecteerNieuwskop(titel) {
+  if (!titel) return { isNieuws: false, reden: '' };
+
+  // Check 1: titel te lang (>100 tekens is verdacht voor een evenementnaam)
+  if (titel.length > 100) {
+    var heeftEventWoord = VERENIGING_EVENT_WOORDEN.some(function (re) {
+      return re.test(titel);
+    });
+    if (!heeftEventWoord) {
+      return { isNieuws: true, reden: 'titel > 100 tekens zonder event-woorden' };
+    }
+  }
+
+  // Check 2: bekende nieuwsbronpatronen in de titel
+  for (var i = 0; i < NIEUWSKOP_PATRONEN.length; i++) {
+    if (NIEUWSKOP_PATRONEN[i].test(titel)) {
+      return { isNieuws: true, reden: 'bevat nieuwskop-patroon: ' + NIEUWSKOP_PATRONEN[i].source };
+    }
+  }
+
+  // Check 3: titel bevat meerdere zinnen (punt + hoofdletter) — typisch nieuwskop
+  var zinnenMatch = titel.match(/\.\s+[A-Z]/g);
+  if (zinnenMatch && zinnenMatch.length >= 2) {
+    return { isNieuws: true, reden: 'meerdere zinnen in titel (3+ segmenten)' };
+  }
+
+  // Check 4: titel begint als nieuwszin zonder enkel event-woord
+  if (/^(de|het|een|er|dit|dat|deze|hij|zij|we|als|ook|meer|veel|geen|meeste)\s/i.test(titel)) {
+    var heeftEventWoord2 = VERENIGING_EVENT_WOORDEN.some(function (re) {
+      return re.test(titel);
+    });
+    if (!heeftEventWoord2) {
+      return { isNieuws: true, reden: 'begint als nieuwszin zonder event-woorden' };
+    }
+  }
+
+  return { isNieuws: false, reden: '' };
+}
+
+/**
+ * Controleert of een event waarschijnlijk geen NL-verenigingsactiviteit is
+ * maar een lokaal Frans/extern evenement dat per ongeluk is meegenomen.
+ */
+function detecteerExternEvent(titel, plaats) {
+  var tekst = (titel + ' ' + (plaats || '')).toLowerCase();
+
+  // Bekende race-/sportevenementen die niet van de vereniging zelf zijn
+  if (/ultra[\s-]?trail|marathon\b|triathlon\b|ironman\b|tour de france/i.test(tekst)) {
+    // Tenzij het expliciet een groepsdeelname of kijkactiviteit is
+    if (/samen|groep|kijken|supporter|deelname|inschrijving|we gaan/i.test(tekst)) {
+      return { isExtern: false, reden: '' };
+    }
+    return { isExtern: true, reden: 'extern sportevenement (niet van vereniging)' };
+  }
+
+  return { isExtern: false, reden: '' };
+}
+
+// ════════════════════════════════════════════════════════════════
 // MAIN
 // ════════════════════════════════════════════════════════════════
 
 async function main() {
-  console.log('=== Verenigingen Kalender Update ===');
+  console.log('=== Verenigingen Kalender Update v2 ===');
   console.log('Datum:', new Date().toISOString());
   console.log('');
 
-  // Laad huidige data
   const data = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
   const warnings = [];
+  let totaalGefilterd = 0;
 
   // ── 1. iCal-bronnen ──
   console.log('── iCal-bronnen ophalen ──');
   for (const [id, url] of Object.entries(ICAL_BRONNEN)) {
     console.log(`  ${id}: ${url}`);
     try {
-      const events = await fetchIcalEvents(url, id);
-      console.log(`  ✓ ${events.length} toekomstige events gevonden`);
-      updateVereniging(data, id, events);
+      const result = await fetchIcalEvents(url, id);
+      console.log(`  \u2713 ${result.events.length} toekomstige events gevonden`);
+      if (result.gefilterd > 0) {
+        console.log(`    (${result.gefilterd} items gefilterd als extern)`);
+        totaalGefilterd += result.gefilterd;
+      }
+      updateVereniging(data, id, result.events);
     } catch (err) {
-      console.log(`  ✗ FOUT: ${err.message}`);
+      console.log(`  \u2717 FOUT: ${err.message}`);
       warnings.push({
         bron_id: id,
         bron_naam: id.toUpperCase(),
@@ -112,7 +232,7 @@ async function main() {
 
   // ── 2. Web-bronnen via Gemini ──
   if (!GEMINI_API_KEY) {
-    console.log('\n⚠ GEMINI_API_KEY niet gevonden — web-bronnen worden overgeslagen');
+    console.log('\n\u26a0 GEMINI_API_KEY niet gevonden \u2014 web-bronnen worden overgeslagen');
     warnings.push({
       bron_id: 'alle-web-bronnen',
       bron_naam: 'Alle web-bronnen',
@@ -126,11 +246,15 @@ async function main() {
       const urls = config.urlGenerator ? config.urlGenerator() : config.urls;
       console.log(`  ${id}: ${urls.length} pagina('s)`);
       try {
-        const events = await fetchWebEvents(id, config.naam, urls);
-        console.log(`  ✓ ${events.length} toekomstige events geëxtraheerd`);
-        updateVereniging(data, id, events);
+        const result = await fetchWebEvents(id, config.naam, urls);
+        console.log(`  \u2713 ${result.events.length} toekomstige events ge\u00ebxtraheerd`);
+        if (result.gefilterd > 0) {
+          console.log(`    (${result.gefilterd} items gefilterd als nieuws/extern)`);
+          totaalGefilterd += result.gefilterd;
+        }
+        updateVereniging(data, id, result.events);
       } catch (err) {
-        console.log(`  ✗ FOUT: ${err.message}`);
+        console.log(`  \u2717 FOUT: ${err.message}`);
         warnings.push({
           bron_id: id,
           bron_naam: config.naam,
@@ -162,27 +286,29 @@ async function main() {
     bronnen_gecontroleerd: Object.keys(ICAL_BRONNEN).length + Object.keys(WEB_BRONNEN).length,
     bronnen_met_events: bronnenMetEvents,
     totaal_events: totaalEvents,
+    gefilterde_items: totaalGefilterd,
     methode: 'Automatisch via GitHub Action (iCal feeds + Gemini AI web-extractie)',
     warnings: warnings.length
   };
 
   // ── 4. Schrijf data terug ──
   fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2), 'utf-8');
-  console.log(`\n✓ verenigingen.json bijgewerkt: ${totaalEvents} events van ${bronnenMetEvents} bronnen`);
+  console.log(`\n\u2713 verenigingen.json bijgewerkt: ${totaalEvents} events van ${bronnenMetEvents} bronnen`);
+  if (totaalGefilterd > 0) {
+    console.log(`  (${totaalGefilterd} items totaal gefilterd als nieuws/extern)`);
+  }
 
   // ── 5. Warnings ──
   if (warnings.length > 0) {
     fs.writeFileSync(WARNINGS_PATH, JSON.stringify(warnings, null, 2), 'utf-8');
-    console.log(`\n⚠ ${warnings.length} waarschuwing(en) — zie warnings.json`);
+    console.log(`\n\u26a0 ${warnings.length} waarschuwing(en) \u2014 zie warnings.json`);
     warnings.forEach(function (w) {
       console.log(`  - ${w.bron_naam}: ${w.fout}`);
     });
-    // Exit code 1 signaleert aan de workflow dat er warnings zijn
     process.exitCode = 1;
   } else {
-    // Verwijder eventueel oud warnings-bestand
     if (fs.existsSync(WARNINGS_PATH)) fs.unlinkSync(WARNINGS_PATH);
-    console.log('\n✓ Geen waarschuwingen');
+    console.log('\n\u2713 Geen waarschuwingen');
   }
 }
 
@@ -211,6 +337,7 @@ async function fetchIcalEvents(url, bronId) {
   now.setHours(0, 0, 0, 0);
 
   const events = [];
+  let gefilterd = 0;
 
   for (const key in parsed) {
     const item = parsed[key];
@@ -220,14 +347,25 @@ async function fetchIcalEvents(url, bronId) {
     if (!start) continue;
 
     const datum = new Date(start);
-    if (datum < now) continue; // alleen toekomstige events
+    if (datum < now) continue;
+
+    const titel = cleanText(item.summary || 'Onbekend event');
+    const plaats = cleanText(item.location || 'niet vermeld');
+
+    // Post-validatie: extern evenement?
+    var externCheck = detecteerExternEvent(titel, plaats);
+    if (externCheck.isExtern) {
+      console.log(`    \u2717 Gefilterd (iCal): "${titel}" \u2014 ${externCheck.reden}`);
+      gefilterd++;
+      continue;
+    }
 
     const event = {
       datum: formatDate(datum),
-      titel: cleanText(item.summary || 'Onbekend event'),
-      plaats: cleanText(item.location || 'niet vermeld'),
+      titel: titel,
+      plaats: plaats,
       tijd: formatTime(item),
-      type: categoriseerType(item.summary, item.description),
+      type: categoriseerType(item.summary, item.description, item.categories),
       bron: ICAL_BRONNEN[bronId]
     };
 
@@ -243,7 +381,6 @@ async function fetchIcalEvents(url, bronId) {
     events.push(event);
   }
 
-  // Sorteer op datum
   events.sort(function (a, b) {
     return new Date(a.datum) - new Date(b.datum);
   });
@@ -252,7 +389,7 @@ async function fetchIcalEvents(url, bronId) {
     throw new Error('Geen toekomstige events gevonden in iCal-feed (mogelijk leeg of alleen verlopen events)');
   }
 
-  return events;
+  return { events: events, gefilterd: gefilterd };
 }
 
 // ════════════════════════════════════════════════════════════════
@@ -278,17 +415,14 @@ async function fetchWebEvents(bronId, bronNaam, urls) {
 
       const html = await response.text();
 
-      // Basisvalidatie: bevat de pagina überhaupt content?
       if (html.length < 500) {
         throw new Error('Pagina bevat vrijwel geen content');
       }
 
-      // Strip onnodige HTML om tokens te besparen
       const stripped = stripHtml(html);
       alleHtml += `\n\n--- PAGINA: ${url} ---\n${stripped}`;
 
     } catch (err) {
-      // Als één subpagina faalt, proberen we de rest nog
       console.log(`    Subpagina ${url}: ${err.message}`);
     }
   }
@@ -297,26 +431,40 @@ async function fetchWebEvents(bronId, bronNaam, urls) {
     throw new Error(`Geen bruikbare HTML opgehaald van ${urls.length} pagina('s)`);
   }
 
-  // Stuur naar Gemini
+  // ── AANGESCHERPTE GEMINI PROMPT ──
   const vandaag = new Date().toISOString().split('T')[0];
 
-  const prompt = `Je bent een data-extractie assistent voor een Nederlandse evenementenkalender.
+  const prompt = `Je bent een data-extractie assistent voor een kalender van Nederlandse verenigingen in Frankrijk.
 
-OPDRACHT: Extraheer ALLE toekomstige evenementen uit onderstaande HTML van de website van "${bronNaam}".
+OPDRACHT: Extraheer ALLEEN echte KALENDER-EVENEMENTEN die door de vereniging "${bronNaam}" zelf worden georganiseerd uit onderstaande HTML.
 
-REGELS:
+KRITIEKE FILTERREGELS — LEES DEZE ZORGVULDIG:
 - Vandaag is ${vandaag}. Geef ALLEEN events vanaf vandaag.
-- Geef het resultaat als een JSON array (geen markdown, geen backticks, geen uitleg).
-- Elk object heeft exact deze velden:
+- NEGEER VOLLEDIG alle content die GEEN georganiseerd evenement van deze vereniging is:
+  * Nieuwsberichten en nieuwskoppen (bijv. van NU.nl, NOS, RTL, BBC etc.)
+  * Blogposts, artikelen, opiniestukken
+  * Externe evenementen die niet door "${bronNaam}" worden georganiseerd
+  * Nieuwsbrieven, podcasts, social media posts
+  * Advertenties, banners, sidebar-content
+  * Boekrecensies, filmrecensies
+- Een GELDIG evenement heeft ALTIJD:
+  * Een specifieke datum
+  * Een activiteit die door "${bronNaam}" wordt georganiseerd (bijv. borrel, lunch, wandeling, lezing, excursie, vergadering, feest, cursus, concert, kerkdienst, spelletjesmiddag)
+- Als een item geen concrete datum heeft of geen verenigingsactiviteit is: SLAAG HET OVER.
+- Bij twijfel: NIET opnemen. Liever te weinig dan rommel.
+
+OUTPUTFORMAAT:
+- JSON array (geen markdown, geen backticks, geen uitleg).
+- Elk object:
   {
     "datum": "YYYY-MM-DD",
-    "titel": "naam van het event",
+    "titel": "korte naam van het event (max 80 tekens)",
     "plaats": "locatie of 'niet vermeld'",
-    "tijd": "tijdstip of 'niet vermeld'",
+    "tijd": "HH:MM of HH:MM-HH:MM of 'niet vermeld'",
     "type": "sociaal|sportief|cultureel|informatief|bestuurlijk|zakelijk|kerkdienst"
   }
-- Als je GEEN events vindt, geef dan een lege array: []
-- Geef ALLEEN de JSON array terug, niets anders.
+- Geen events? Geef: []
+- ALLEEN de JSON array, niets anders.
 
 HTML CONTENT:
 ${alleHtml}`;
@@ -341,7 +489,6 @@ ${alleHtml}`;
 
   const geminiData = await geminiResponse.json();
 
-  // Extraheer tekst uit Gemini response
   let responseText = '';
   try {
     responseText = geminiData.candidates[0].content.parts[0].text;
@@ -349,18 +496,14 @@ ${alleHtml}`;
     throw new Error('Onverwacht Gemini response-formaat');
   }
 
-  // Strip markdown backticks en eventuele tekst voor/na de JSON array
   responseText = responseText.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim();
 
-  // Zoek de JSON array in de response
   var jsonStart = responseText.indexOf('[');
   var jsonEnd = responseText.lastIndexOf(']');
   if (jsonStart === -1 || jsonEnd === -1) {
     throw new Error('Geen JSON array gevonden in Gemini response');
   }
   responseText = responseText.substring(jsonStart, jsonEnd + 1);
-
-  // Fix veelvoorkomende JSON-fouten
   responseText = responseText.replace(/,\s*]/g, ']').replace(/,\s*}/g, '}');
 
   var events;
@@ -374,11 +517,13 @@ ${alleHtml}`;
     throw new Error('Gemini response is geen array');
   }
 
-  // Valideer en normaliseer events
+  // ── Valideer, normaliseer en filter events ──
   const now = new Date();
   now.setHours(0, 0, 0, 0);
 
   const validated = [];
+  let gefilterd = 0;
+
   events.forEach(function (ev) {
     if (!ev.datum || !ev.titel) return;
 
@@ -386,13 +531,31 @@ ${alleHtml}`;
     if (isNaN(datum.getTime())) return;
     if (datum < now) return;
 
+    const titel = cleanText(ev.titel);
+
+    // Post-validatie: nieuwskop?
+    var nieuwsCheck = detecteerNieuwskop(titel);
+    if (nieuwsCheck.isNieuws) {
+      console.log(`    \u2717 Gefilterd (nieuws): "${titel.substring(0, 60)}..." \u2014 ${nieuwsCheck.reden}`);
+      gefilterd++;
+      return;
+    }
+
+    // Post-validatie: extern evenement?
+    var externCheck = detecteerExternEvent(titel, ev.plaats);
+    if (externCheck.isExtern) {
+      console.log(`    \u2717 Gefilterd (extern): "${titel.substring(0, 60)}..." \u2014 ${externCheck.reden}`);
+      gefilterd++;
+      return;
+    }
+
     validated.push({
       datum: formatDate(datum),
-      titel: cleanText(ev.titel),
+      titel: titel,
       plaats: cleanText(ev.plaats || 'niet vermeld'),
       tijd: cleanText(ev.tijd || 'niet vermeld'),
       type: normaliseType(ev.type),
-      bron: urls[0] // eerste URL als bronvermelding
+      bron: urls[0]
     });
   });
 
@@ -400,7 +563,7 @@ ${alleHtml}`;
     return new Date(a.datum) - new Date(b.datum);
   });
 
-  return validated;
+  return { events: validated, gefilterd: gefilterd };
 }
 
 // ════════════════════════════════════════════════════════════════
@@ -410,7 +573,7 @@ ${alleHtml}`;
 function updateVereniging(data, id, nieuwEvents) {
   const ver = data.verenigingen.find(function (v) { return v.id === id; });
   if (!ver) {
-    console.log(`    ⚠ Vereniging "${id}" niet gevonden in JSON — events overgeslagen`);
+    console.log(`    \u26a0 Vereniging "${id}" niet gevonden in JSON \u2014 events overgeslagen`);
     return;
   }
   ver.events = nieuwEvents;
@@ -430,7 +593,6 @@ function formatTime(icalEvent) {
   const start = icalEvent.start;
   if (!start) return 'niet vermeld';
 
-  // Als het een hele-dag-event is (geen uren)
   if (start.dateOnly) return 'hele dag';
 
   const uur = String(start.getHours()).padStart(2, '0');
@@ -446,16 +608,68 @@ function formatTime(icalEvent) {
   return tijd;
 }
 
-function categoriseerType(summary, description) {
-  const tekst = ((summary || '') + ' ' + (description || '')).toLowerCase();
+/**
+ * Categoriseer het type van een iCal-event.
+ * 
+ * VOLGORDE IS CRUCIAAL — specifiekere checks eerst:
+ * 1. iCal CATEGORIES-veld (als aanwezig, meest betrouwbaar)
+ * 2. Bestuurlijk (ALV, ledenvergadering) — VOOR sportief
+ * 3. Kerkdienst — alleen expliciete kerkwoorden
+ *    NIET "ds." (false positive door adressen)
+ *    NIET los "dienst" (te generiek)
+ * 4. Sportief
+ * 5. Cultureel
+ * 6. Informatief
+ * 7. Zakelijk
+ * 8. Sociaal (default/vangnet)
+ */
+function categoriseerType(summary, description, categories) {
+  // ── Stap 1: probeer iCal CATEGORIES-veld ──
+  if (categories) {
+    var cats = '';
+    if (Array.isArray(categories)) {
+      cats = categories.join(' ').toLowerCase();
+    } else if (typeof categories === 'string') {
+      cats = categories.toLowerCase();
+    }
 
-  if (/kerk|dienst|preek|dominee|ds\./i.test(tekst)) return 'kerkdienst';
-  if (/golf|wandel|jeu de boules|pétanque|petanque|padel|zeil|ski|sport|trail|rally/i.test(tekst)) return 'sportief';
-  if (/ALV|ledenvergadering|bestuur/i.test(tekst)) return 'bestuurlijk';
-  if (/expo|concert|museum|cultuur|lezing|dictee|music|kunst|boek/i.test(tekst)) return 'cultureel';
-  if (/workshop|cursus|info|presentatie|causerie|mindfulness/i.test(tekst)) return 'informatief';
-  if (/showroom|fashion|business|zakelijk/i.test(tekst)) return 'zakelijk';
-  if (/borrel|lunch|diner|bijpraat|paas|nieuwjaar|puzzel|bridge/i.test(tekst)) return 'sociaal';
+    if (cats) {
+      if (/kerk|religie|church|liturgi/i.test(cats)) return 'kerkdienst';
+      if (/sport|golf|wandel|petanque|zeil|padel|tennis|fiet/i.test(cats)) return 'sportief';
+      if (/bestuur|alv|vergadering|board/i.test(cats)) return 'bestuurlijk';
+      if (/cultuur|expo|concert|museum|kunst|music/i.test(cats)) return 'cultureel';
+      if (/info|workshop|cursus|educati/i.test(cats)) return 'informatief';
+      if (/zakelijk|business|netwerk/i.test(cats)) return 'zakelijk';
+      if (/sociaal|borrel|lunch|diner|feest/i.test(cats)) return 'sociaal';
+    }
+  }
+
+  // ── Stap 2: keyword-matching op titel + beschrijving ──
+  var tekst = ((summary || '') + ' ' + (description || '')).toLowerCase();
+
+  // 2a. Bestuurlijk EERST — voorkomt dat "ALV met aansluitend borrel" sociaal wordt
+  //     of dat "ledenvergadering in het golfclubhuis" sportief wordt
+  if (/\balv\b|ledenvergadering|bestuursvergadering/i.test(tekst)) return 'bestuurlijk';
+
+  // 2b. Kerkdienst — STRIKT: alleen ondubbelzinnige kerkwoorden
+  if (/\bkerkdienst\b|\bpreek\b|\bdominee\b|\bliturg/i.test(tekst)) return 'kerkdienst';
+  if (/\b(protestantse?|gereformeerde?|katholieke?|oecumenische?)\s+(dienst|viering|mis)\b/i.test(tekst)) return 'kerkdienst';
+  if (/\bpaas(?:dienst|viering|wake)\b|\bkerst(?:dienst|viering|nachtmis)\b|\bpinkster(?:dienst|viering)\b/i.test(tekst)) return 'kerkdienst';
+
+  // 2c. Sportief
+  if (/\bgolf\b|\bwandel|\bjeu de boules\b|\bp(?:e|\u00e9)tanque\b|\bpadel\b|\bzeil|\bski\b|\bsport|\btrail\b|\brally\b|\bfiet|\btennis\b|\bzwem|\byoga\b|\btoernooi\b/i.test(tekst)) return 'sportief';
+
+  // 2d. Cultureel
+  if (/\bexpo|\bconcert\b|\bmuseum\b|\bcultuur|\blezing\b|\bdictee\b|\bmusic|\bkunst|\bboek(?:en)?\b|\bfilm\b|\bkoor\b|\btheater\b|\brondleiding\b|\bschilder|\bbeeldhouw/i.test(tekst)) return 'cultureel';
+
+  // 2e. Informatief
+  if (/\bworkshop\b|\bcursus|\bpresentatie\b|\bcauserie\b|\bmindfulness\b|\binformatie|\bspreek/i.test(tekst)) return 'informatief';
+
+  // 2f. Zakelijk
+  if (/\bshowroom\b|\bfashion\b|\bbusiness\b|\bzakelijk|\bnetwerk/i.test(tekst)) return 'zakelijk';
+
+  // 2g. Sociaal (ruimer net)
+  if (/\bborrel|\blunch|\bdiner|\bbijpraat|\bpaas|\bnieuwjaar|\bpuzzel|\bbridge\b|\bfeest|\bbbq\b|\bpicknick\b|\bstamtafel\b|\baperiti/i.test(tekst)) return 'sociaal';
 
   return 'sociaal'; // default
 }
@@ -477,13 +691,15 @@ function cleanText(str) {
 }
 
 function stripHtml(html) {
-  // Verwijder scripts, styles, nav, footer — behoud de content
+  // Verwijder scripts, styles, nav, footer, aside, sidebars — behoud alleen content
   return html
     .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
     .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
     .replace(/<nav[^>]*>[\s\S]*?<\/nav>/gi, '')
     .replace(/<footer[^>]*>[\s\S]*?<\/footer>/gi, '')
     .replace(/<header[^>]*>[\s\S]*?<\/header>/gi, '')
+    .replace(/<aside[^>]*>[\s\S]*?<\/aside>/gi, '')
+    .replace(/<div[^>]*class="[^"]*(?:sidebar|widget|news|blog|comment|social|share|cookie|banner|popup|modal|advertisement|ad-)[^"]*"[^>]*>[\s\S]*?<\/div>/gi, '')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&nbsp;/g, ' ')
     .replace(/&amp;/g, '&')
@@ -492,7 +708,7 @@ function stripHtml(html) {
     .replace(/&#\d+;/g, '')
     .replace(/\s+/g, ' ')
     .trim()
-    .substring(0, 15000); // Beperk tokens naar Gemini
+    .substring(0, 15000);
 }
 
 // ════════════════════════════════════════════════════════════════
