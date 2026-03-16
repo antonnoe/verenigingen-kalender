@@ -4,9 +4,10 @@
     "volgende_update": "2026-03-23",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 8,
-    "totaal_events": 133,
+    "totaal_events": 129,
+    "gefilterde_items": 1,
     "methode": "Automatisch via GitHub Action (iCal feeds + Gemini AI web-extractie)",
-    "warnings": 0
+    "warnings": 1
   },
   "verenigingen": [
     {
@@ -44,7 +45,7 @@
           "titel": "Wandeling Villarzel-Cabardès",
           "plaats": "Villarzel-Cabardès",
           "tijd": "08:30-14:45",
-          "type": "kerkdienst",
+          "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
@@ -68,7 +69,7 @@
           "titel": "Pascal Cossin, beeldhouwer en schilder",
           "plaats": "Atelier Planquefer",
           "tijd": "12:00-15:00",
-          "type": "sportief",
+          "type": "cultureel",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
@@ -156,7 +157,7 @@
           "titel": "Algemene Ledenvergadering",
           "plaats": "Mougins",
           "tijd": "14:00-16:00",
-          "type": "sportief",
+          "type": "bestuurlijk",
           "bron": "https://www.nedazur.org/_ical/public.ics"
         },
         {
@@ -164,7 +165,7 @@
           "titel": "Holland Huis Borrel",
           "plaats": "Saint-Raphaël",
           "tijd": "16:00-18:00",
-          "type": "kerkdienst",
+          "type": "informatief",
           "bron": "https://www.nedazur.org/_ical/public.ics"
         },
         {
@@ -244,7 +245,7 @@
           "titel": "Rally delle Colline Toscane",
           "plaats": "Lucca",
           "tijd": "hele dag",
-          "type": "kerkdienst",
+          "type": "sportief",
           "bron": "https://www.nedazur.org/_ical/public.ics",
           "datum_eind": "2026-05-31"
         },
@@ -325,7 +326,7 @@
           "titel": "Cultuurgroep",
           "plaats": "Lorgues",
           "tijd": "08:00-13:00",
-          "type": "bestuurlijk",
+          "type": "cultureel",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         },
         {
@@ -349,7 +350,7 @@
           "titel": "Lustrumfeest 45 jaar ANM",
           "plaats": "Chateau de Taradel, Taradeau",
           "tijd": "14:00-19:00",
-          "type": "informatief",
+          "type": "sociaal",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         }
       ]
@@ -369,30 +370,6 @@
       "contact": null,
       "opmerking": "Publiceert events per maand als blogposts",
       "events": [
-        {
-          "datum": "2026-03-16",
-          "titel": "Als je je boek vergeten bent in mijn les Engels brugklas TTO (tweetalig onderwijs) krijg je een minder leuke opdracht om de les door te komen.",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "informatief",
-          "bron": "https://nlvp.fr/calendar/"
-        },
-        {
-          "datum": "2026-03-16",
-          "titel": "Carolina Trujillo NU.NL Amy Madigan wint Oscar voor beste vrouwelijke bijrol in Weapons",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "informatief",
-          "bron": "https://nlvp.fr/calendar/"
-        },
-        {
-          "datum": "2026-03-16",
-          "titel": "Meeste bedrijventerreinen slecht voorbereid op wateroverlast",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "informatief",
-          "bron": "https://nlvp.fr/calendar/"
-        },
         {
           "datum": "2026-03-25",
           "titel": "Spelletjesmiddag (voor volwassenen)",
@@ -1184,41 +1161,33 @@
         {
           "datum": "2026-03-27",
           "titel": "Café-avond LOTgenoten (Lot et Garonne)",
-          "plaats": "Lotgenotenborrel in Villeneuve sur Lot",
-          "tijd": "niet vermeld",
+          "plaats": "LA TABLE DU MARCHÉ 18-22 rue Lakanal 47300 Villeneuve sur Lot",
+          "tijd": "17:00-20:00",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
         },
         {
           "datum": "2026-04-12",
           "titel": "zondagmiddag borrel (Lot)",
-          "plaats": "Bouysset",
-          "tijd": "niet vermeld",
+          "plaats": "Lieu dit le Bouysset 46700 Saint Martin le Redon",
+          "tijd": "15:00",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
         },
         {
           "datum": "2026-04-24",
           "titel": "Café-avond LOTgenoten (Lot et Garonne)",
-          "plaats": "Lotgenotenborrel in Villeneuve sur Lot",
-          "tijd": "niet vermeld",
+          "plaats": "LA TABLE DU MARCHÉ 18-22 rue Lakanal 47300 Villeneuve sur Lot",
+          "tijd": "17:00-20:00",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
         },
         {
           "datum": "2026-05-10",
           "titel": "zondagmiddag borrel (Lot)",
-          "plaats": "Bouysset",
-          "tijd": "niet vermeld",
+          "plaats": "Lieu dit le Bouysset 46700 Saint Martin le Redon",
+          "tijd": "15:00",
           "type": "sociaal",
-          "bron": "https://www.lotgenoten.fr/agenda/"
-        },
-        {
-          "datum": "2026-06-07",
-          "titel": "Boekenbeurs voor goed doel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
           "bron": "https://www.lotgenoten.fr/agenda/"
         }
       ]
@@ -1239,11 +1208,11 @@
       "opmerking": "Website geeft regelmatig server errors.",
       "events": [
         {
-          "datum": "2026-11-13",
-          "titel": "Topo Athletic Bibracte Ultra-Trail®",
-          "plaats": "Parc naturel",
+          "datum": "2026-03-16",
+          "titel": "Welkom bij Bourgondische Zaken",
+          "plaats": "niet vermeld",
           "tijd": "niet vermeld",
-          "type": "sportief",
+          "type": "informatief",
           "bron": "https://bourgondischezaken.com/"
         }
       ]
