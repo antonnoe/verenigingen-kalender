@@ -1,5 +1,8 @@
 name: Verenigingen Kalender Update
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 on:
   schedule:
     # Elke maandag om 07:00 UTC (09:00 Franse tijd)
