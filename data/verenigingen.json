@@ -4,10 +4,10 @@
     "volgende_update": "2026-03-23",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 8,
-    "totaal_events": 129,
+    "totaal_events": 158,
     "gefilterde_items": 1,
     "methode": "Automatisch via GitHub Action (iCal feeds + Gemini AI web-extractie)",
-    "warnings": 1
+    "warnings": 0
   },
   "verenigingen": [
     {
@@ -463,8 +463,24 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-03-20",
+          "titel": "Golf",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
+          "datum": "2026-03-21",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-03-22",
-          "titel": "14:00 Petanque",
+          "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -488,7 +504,7 @@
         },
         {
           "datum": "2026-03-25",
-          "titel": "Korte wandeling ...",
+          "titel": "niet vermeld",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sportief",
@@ -496,7 +512,7 @@
         },
         {
           "datum": "2026-03-26",
-          "titel": "17:00 Clubborrel",
+          "titel": "Clubborrel",
           "plaats": "niet vermeld",
           "tijd": "17:00",
           "type": "sociaal",
@@ -511,8 +527,16 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-03-28",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-03-29",
-          "titel": "14:00 Petanque",
+          "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -535,6 +559,14 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-04-01",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-04-02",
           "titel": "Korte wandeling ...",
           "plaats": "niet vermeld",
@@ -551,8 +583,16 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-04-04",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-04-05",
-          "titel": "14:00 Petanque",
+          "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -576,7 +616,7 @@
         },
         {
           "datum": "2026-04-08",
-          "titel": "Lezing over Mic ...",
+          "titel": "niet vermeld",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "cultureel",
@@ -592,7 +632,7 @@
         },
         {
           "datum": "2026-04-09",
-          "titel": "17:00 Clubborrel",
+          "titel": "Clubborrel",
           "plaats": "niet vermeld",
           "tijd": "17:00",
           "type": "sociaal",
@@ -607,8 +647,16 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-04-11",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-04-12",
-          "titel": "14:00 Petanque",
+          "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -632,10 +680,18 @@
         },
         {
           "datum": "2026-04-14",
-          "titel": "Lezing Overlij ...",
+          "titel": "niet vermeld",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
-          "type": "cultureel",
+          "type": "informatief",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
+          "datum": "2026-04-15",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
@@ -655,8 +711,16 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-04-18",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-04-19",
-          "titel": "14:00 Petanque",
+          "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -679,8 +743,8 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
-          "datum": "2026-04-23",
-          "titel": "Algemene Ledenv ...",
+          "datum": "2026-04-22",
+          "titel": "niet vermeld",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "bestuurlijk",
@@ -703,8 +767,16 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-04-25",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-04-26",
-          "titel": "14:00 Petanque",
+          "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -727,6 +799,14 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-04-29",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-04-30",
           "titel": "Korte wandeling ...",
           "plaats": "niet vermeld",
@@ -743,8 +823,16 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-05-02",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-05-03",
-          "titel": "14:00 Petanque",
+          "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -767,6 +855,14 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-05-06",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-05-07",
           "titel": "Korte wandeling ...",
           "plaats": "niet vermeld",
@@ -783,8 +879,16 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-05-09",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-05-10",
-          "titel": "14:00 Petanque",
+          "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -807,6 +911,14 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-05-13",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-05-14",
           "titel": "Korte wandeling ...",
           "plaats": "niet vermeld",
@@ -816,6 +928,14 @@
         },
         {
           "datum": "2026-05-15",
+          "titel": "Clubborrel",
+          "plaats": "niet vermeld",
+          "tijd": "17:00",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
+          "datum": "2026-05-16",
           "titel": "Golf",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
@@ -824,14 +944,22 @@
         },
         {
           "datum": "2026-05-17",
-          "titel": "14:00 Petanque",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
+          "datum": "2026-05-18",
+          "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
-          "datum": "2026-05-18",
+          "datum": "2026-05-19",
           "titel": "Wandelen",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
@@ -839,7 +967,7 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
-          "datum": "2026-05-19",
+          "datum": "2026-05-20",
           "titel": "Golf",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
@@ -848,6 +976,14 @@
         },
         {
           "datum": "2026-05-21",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
+          "datum": "2026-05-22",
           "titel": "Korte wandeling ...",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
@@ -855,7 +991,7 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
-          "datum": "2026-05-22",
+          "datum": "2026-05-23",
           "titel": "Golf",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
@@ -864,14 +1000,22 @@
         },
         {
           "datum": "2026-05-24",
-          "titel": "14:00 Petanque",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
+          "datum": "2026-05-25",
+          "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
-          "datum": "2026-05-25",
+          "datum": "2026-05-26",
           "titel": "Wandelen",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
@@ -879,7 +1023,7 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
-          "datum": "2026-05-26",
+          "datum": "2026-05-27",
           "titel": "Golf",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
@@ -888,6 +1032,14 @@
         },
         {
           "datum": "2026-05-28",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
+          "datum": "2026-05-29",
           "titel": "Korte wandeling ...",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
@@ -896,7 +1048,7 @@
         },
         {
           "datum": "2026-05-29",
-          "titel": "17:00 Clubborrel",
+          "titel": "Clubborrel",
           "plaats": "niet vermeld",
           "tijd": "17:00",
           "type": "sociaal",
@@ -907,6 +1059,22 @@
           "titel": "Golf",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
+          "datum": "2026-05-31",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
+          "datum": "2026-06-01",
+          "titel": "Petanque",
+          "plaats": "niet vermeld",
+          "tijd": "14:00",
           "type": "sportief",
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
@@ -927,6 +1095,14 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-06-03",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-06-04",
           "titel": "Korte wandeling ...",
           "plaats": "niet vermeld",
@@ -943,8 +1119,16 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-06-06",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-06-07",
-          "titel": "14:00 Petanque",
+          "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -967,6 +1151,14 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-06-10",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-06-11",
           "titel": "Korte wandeling ...",
           "plaats": "niet vermeld",
@@ -975,8 +1167,8 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
-          "datum": "2026-06-12",
-          "titel": "17:00 Clubborrel",
+          "datum": "2026-06-11",
+          "titel": "Clubborrel",
           "plaats": "niet vermeld",
           "tijd": "17:00",
           "type": "sociaal",
@@ -991,8 +1183,16 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-06-13",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-06-14",
-          "titel": "14:00 Petanque",
+          "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -1015,6 +1215,14 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-06-17",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-06-18",
           "titel": "Korte wandeling ...",
           "plaats": "niet vermeld",
@@ -1031,8 +1239,16 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-06-20",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-06-21",
-          "titel": "14:00 Petanque",
+          "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -1055,6 +1271,14 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-06-24",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-06-25",
           "titel": "Korte wandeling ...",
           "plaats": "niet vermeld",
@@ -1063,8 +1287,8 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
-          "datum": "2026-06-26",
-          "titel": "17:00 Clubborrel",
+          "datum": "2026-06-25",
+          "titel": "Clubborrel",
           "plaats": "niet vermeld",
           "tijd": "17:00",
           "type": "sociaal",
@@ -1079,8 +1303,16 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
         },
         {
+          "datum": "2026-06-27",
+          "titel": "niet vermeld",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/03/15/-.html"
+        },
+        {
           "datum": "2026-06-28",
-          "titel": "14:00 Petanque",
+          "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -1161,7 +1393,7 @@
         {
           "datum": "2026-03-27",
           "titel": "Café-avond LOTgenoten (Lot et Garonne)",
-          "plaats": "LA TABLE DU MARCHÉ 18-22 rue Lakanal 47300 Villeneuve sur Lot",
+          "plaats": "Villeneuve sur Lot",
           "tijd": "17:00-20:00",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -1169,7 +1401,7 @@
         {
           "datum": "2026-04-12",
           "titel": "zondagmiddag borrel (Lot)",
-          "plaats": "Lieu dit le Bouysset 46700 Saint Martin le Redon",
+          "plaats": "Saint Martin le Redon",
           "tijd": "15:00",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -1177,7 +1409,7 @@
         {
           "datum": "2026-04-24",
           "titel": "Café-avond LOTgenoten (Lot et Garonne)",
-          "plaats": "LA TABLE DU MARCHÉ 18-22 rue Lakanal 47300 Villeneuve sur Lot",
+          "plaats": "Villeneuve sur Lot",
           "tijd": "17:00-20:00",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
@@ -1185,7 +1417,7 @@
         {
           "datum": "2026-05-10",
           "titel": "zondagmiddag borrel (Lot)",
-          "plaats": "Lieu dit le Bouysset 46700 Saint Martin le Redon",
+          "plaats": "Saint Martin le Redon",
           "tijd": "15:00",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
