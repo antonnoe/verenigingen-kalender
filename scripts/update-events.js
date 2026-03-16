@@ -479,7 +479,7 @@ ${alleHtml}`;
         maxOutputTokens: 8192
       }
     }),
-    signal: AbortSignal.timeout(30000)
+    signal: AbortSignal.timeout(60000)
   });
 
   if (!geminiResponse.ok) {
