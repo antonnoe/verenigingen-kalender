@@ -1,10 +1,10 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-04-06",
-    "volgende_update": "2026-04-13",
+    "laatst_bijgewerkt": "2026-04-13",
+    "volgende_update": "2026-04-20",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 7,
-    "totaal_events": 140,
+    "bronnen_met_events": 9,
+    "totaal_events": 139,
     "gefilterde_items": 1,
     "methode": "Automatisch via GitHub Action (iCal feeds + Gemini AI web-extractie)",
     "warnings": 0
@@ -24,22 +24,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-04-08",
-          "titel": "Bijpraatlunch regio Pézenas",
-          "plaats": "Le Grand Café, 1, Av. de Cassan, 34320 Roujan",
-          "tijd": "09:30-13:30",
-          "type": "informatief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
-        {
-          "datum": "2026-04-10",
-          "titel": "Pascal Cossin, beeldhouwer en schilder",
-          "plaats": "Atelier Planquefer",
-          "tijd": "12:00-15:00",
-          "type": "cultureel",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-04-13",
           "titel": "Bijpraatlunch Ginestas",
@@ -66,7 +50,7 @@
         },
         {
           "datum": "2026-04-27",
-          "titel": "***Koningsdag / Voorjaarsfeest***",
+          "titel": "Koningsdag / Voorjaarsfeest",
           "plaats": "La Grange in Bize-Minervois",
           "tijd": "12:00-16:00",
           "type": "cultureel",
@@ -115,7 +99,7 @@
         {
           "datum": "2026-05-28",
           "titel": "Mindfulness…een manier om stress te beheersen",
-          "plaats": "42 Avenue du Langedoc 11700 Azille",
+          "plaats": "42 Avenue du Languedoc 11700 Azille",
           "tijd": "13:00-14:30",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
@@ -134,6 +118,14 @@
           "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
           "tijd": "10:00-13:30",
           "type": "sociaal",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-06-19",
+          "titel": "Cultuuruitstapje naar Camon in de Ariège",
+          "plaats": "Camon in de Ariège",
+          "tijd": "hele dag",
+          "type": "cultureel",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
@@ -168,14 +160,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@nedazur.org",
       "events": [
-        {
-          "datum": "2026-04-06",
-          "titel": "Jeu de boules Saint-Paul",
-          "plaats": "Saint-Paul de Vence",
-          "tijd": "07:30-10:00",
-          "type": "sportief",
-          "bron": "https://www.nedazur.org/_ical/public.ics"
-        },
         {
           "datum": "2026-04-14",
           "titel": "Golfwedstrijd Golf Blue Green",
@@ -314,6 +298,14 @@
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         },
         {
+          "datum": "2026-04-24",
+          "titel": "Excursie Tuingroep",
+          "plaats": "La Crau (Var)",
+          "tijd": "12:30-15:00",
+          "type": "sociaal",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
           "datum": "2026-04-26",
           "titel": "ANM Koningsnacht 2026",
           "plaats": "Château Clarettes, 83460 Les Arcs, ​France",
@@ -395,6 +387,14 @@
       "opmerking": "Publiceert events per maand als blogposts",
       "events": [
         {
+          "datum": "2026-04-25",
+          "titel": "Koningsfeest (NL Borrel)",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
           "datum": "2026-04-26",
           "titel": "Koffieochtend",
           "plaats": "niet vermeld",
@@ -447,62 +447,6 @@
       ],
       "events": [
         {
-          "datum": "2026-04-06",
-          "titel": "Wandelen",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
-          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/04/15/-.html"
-        },
-        {
-          "datum": "2026-04-07",
-          "titel": "Golf",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
-          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/04/15/-.html"
-        },
-        {
-          "datum": "2026-04-08",
-          "titel": "Lezing over Mic ...",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/04/15/-.html"
-        },
-        {
-          "datum": "2026-04-09",
-          "titel": "Korte wandeling ...",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
-          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/04/15/-.html"
-        },
-        {
-          "datum": "2026-04-09",
-          "titel": "Clubborrel",
-          "plaats": "niet vermeld",
-          "tijd": "17:00",
-          "type": "sociaal",
-          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/04/15/-.html"
-        },
-        {
-          "datum": "2026-04-10",
-          "titel": "Golf",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
-          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/04/15/-.html"
-        },
-        {
-          "datum": "2026-04-12",
-          "titel": "Petanque",
-          "plaats": "niet vermeld",
-          "tijd": "14:00",
-          "type": "sportief",
-          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/04/15/-.html"
-        },
-        {
           "datum": "2026-04-13",
           "titel": "Wandelen",
           "plaats": "niet vermeld",
@@ -544,7 +488,7 @@
         },
         {
           "datum": "2026-04-19",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -592,7 +536,7 @@
         },
         {
           "datum": "2026-04-26",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -632,7 +576,7 @@
         },
         {
           "datum": "2026-05-03",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -672,7 +616,7 @@
         },
         {
           "datum": "2026-05-10",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -703,6 +647,14 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/04/15/-.html"
         },
         {
+          "datum": "2026-05-14",
+          "titel": "17:00 Clubborrel",
+          "plaats": "niet vermeld",
+          "tijd": "17:00",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/04/15/-.html"
+        },
+        {
           "datum": "2026-05-15",
           "titel": "Golf",
           "plaats": "niet vermeld",
@@ -712,7 +664,7 @@
         },
         {
           "datum": "2026-05-17",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -752,7 +704,7 @@
         },
         {
           "datum": "2026-05-24",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -784,7 +736,7 @@
         },
         {
           "datum": "2026-05-28",
-          "titel": "Clubborrel",
+          "titel": "17:00 Clubborrel",
           "plaats": "niet vermeld",
           "tijd": "17:00",
           "type": "sociaal",
@@ -800,7 +752,7 @@
         },
         {
           "datum": "2026-05-31",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -840,7 +792,7 @@
         },
         {
           "datum": "2026-06-07",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -872,7 +824,7 @@
         },
         {
           "datum": "2026-06-11",
-          "titel": "Clubborrel",
+          "titel": "17:00 Clubborrel",
           "plaats": "niet vermeld",
           "tijd": "17:00",
           "type": "sociaal",
@@ -888,7 +840,7 @@
         },
         {
           "datum": "2026-06-14",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -928,7 +880,7 @@
         },
         {
           "datum": "2026-06-21",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -960,7 +912,7 @@
         },
         {
           "datum": "2026-06-25",
-          "titel": "Clubborrel",
+          "titel": "17:00 Clubborrel",
           "plaats": "niet vermeld",
           "tijd": "17:00",
           "type": "sociaal",
@@ -976,7 +928,7 @@
         },
         {
           "datum": "2026-06-28",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -1016,7 +968,7 @@
         },
         {
           "datum": "2026-07-05",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -1048,7 +1000,7 @@
         },
         {
           "datum": "2026-07-09",
-          "titel": "Clubborrel",
+          "titel": "17:00 Clubborrel",
           "plaats": "niet vermeld",
           "tijd": "17:00",
           "type": "sociaal",
@@ -1064,7 +1016,7 @@
         },
         {
           "datum": "2026-07-12",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -1104,7 +1056,7 @@
         },
         {
           "datum": "2026-07-19",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -1136,7 +1088,7 @@
         },
         {
           "datum": "2026-07-23",
-          "titel": "Clubborrel",
+          "titel": "17:00 Clubborrel",
           "plaats": "niet vermeld",
           "tijd": "17:00",
           "type": "sociaal",
@@ -1152,7 +1104,7 @@
         },
         {
           "datum": "2026-07-26",
-          "titel": "Petanque",
+          "titel": "14:00 Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
           "type": "sportief",
@@ -1214,7 +1166,16 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "info@atelierneerlandais.com",
       "opmerking": "Platform van de Nederlandse ambassade in Parijs voor creatieve bedrijfstakken. 22 Avenue Victoria, 75001 Paris.",
-      "events": []
+      "events": [
+        {
+          "datum": "2026-04-14",
+          "titel": "Expositie Hélène Hermans",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://atelierneerlandais.com/kalender/"
+        }
+      ]
     },
     {
       "id": "ern-paris",
@@ -1230,7 +1191,40 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "ern.paris@gmail.com",
       "opmerking": "Nederlandse Protestantse Kerk, 172 boulevard Vincent Auriol, 75013 Paris. Diensten ook via YouTube.",
-      "events": []
+      "events": [
+        {
+          "datum": "2026-04-19",
+          "titel": "Kerkdienst (Kerk+YouTube)",
+          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
+          "tijd": "09:45",
+          "type": "kerkdienst",
+          "bron": "https://ernparis.fr/agenda/"
+        },
+        {
+          "datum": "2026-05-03",
+          "titel": "Meditatie via YouTube",
+          "plaats": "niet vermeld",
+          "tijd": "09:45",
+          "type": "kerkdienst",
+          "bron": "https://ernparis.fr/agenda/"
+        },
+        {
+          "datum": "2026-05-24",
+          "titel": "Kerkdienst (Kerk+YouTube) Pinksteren",
+          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
+          "tijd": "09:45",
+          "type": "kerkdienst",
+          "bron": "https://ernparis.fr/agenda/"
+        },
+        {
+          "datum": "2026-06-07",
+          "titel": "Kerkdienst (Kerk+YouTube)",
+          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
+          "tijd": "09:45",
+          "type": "kerkdienst",
+          "bron": "https://ernparis.fr/agenda/"
+        }
+      ]
     },
     {
       "id": "lotgenoten",
@@ -1271,15 +1265,15 @@
           "bron": "https://www.lotgenoten.fr/agenda/"
         },
         {
-          "datum": "2026-06-07",
-          "titel": "Boekenbeurs voor goed doel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
+          "datum": "2026-06-14",
+          "titel": "zondagmiddag borrel (Lot)",
+          "plaats": "Lieu dit le Bouysset 46700 Saint Martin le Redon",
+          "tijd": "15:00",
+          "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
         },
         {
-          "datum": "2026-06-14",
+          "datum": "2026-07-12",
           "titel": "zondagmiddag borrel (Lot)",
           "plaats": "Lieu dit le Bouysset 46700 Saint Martin le Redon",
           "tijd": "15:00",
