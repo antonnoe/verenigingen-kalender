@@ -6,13 +6,13 @@
  *
  * Drie methoden:
  * 1. iCal-feeds — direct parsen (NVLR, NedAzur, ANM)
- * 2. Web-scraping via Gemini AI — HTML → events JSON (NLVP, La Tulipe, etc.)
+ * 2. Web-scraping via Claude AI — HTML → events JSON (NLVP, La Tulipe, etc.)
  * 3. Handmatig — bronnen zonder online agenda worden niet aangeraakt
  *
  * Bij fouten: schrijft warnings.json zodat de GitHub Action een Issue aanmaakt.
  *
  * v2 — Fixes:
- * - Gemini-prompt aangescherpt: negeer nieuws/blogs/externe content
+ * - AI-prompt aangescherpt: negeer nieuws/blogs/externe content
  * - Post-validatie: nieuwskoppen en verdachte titels worden gefilterd
  * - categoriseerType(): iCal CATEGORIES-veld wordt gebruikt, regex-volgorde
  *   hersteld zodat bestuurlijk vóór sportief komt, en kerkdienst alleen
@@ -30,9 +30,10 @@ const ical = require('node-ical');
 const DATA_PATH = path.join(__dirname, '..', 'data', 'verenigingen.json');
 const WARNINGS_PATH = path.join(__dirname, 'warnings.json');
 
-const GEMINI_API_KEY = process.env.GEMINI_API_KEY;
-const GEMINI_MODEL = 'gemini-2.0-flash';
-const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent?key=${GEMINI_API_KEY}`;
+const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
+const ANTHROPIC_MODEL = 'claude-haiku-4-5-20251001';
+const ANTHROPIC_URL = 'https://api.anthropic.com/v1/messages';
+const ANTHROPIC_VERSION = '2023-06-01';
 
 // Bronnen met iCal-feed (betrouwbaar, direct parseerbaar)
 const ICAL_BRONNEN = {
@@ -41,7 +42,7 @@ const ICAL_BRONNEN = {
   'anm':     'https://www.a-n-m.nl/_ical/public.ics'
 };
 
-// Bronnen met webpagina-agenda (via Gemini AI geëxtraheerd)
+// Bronnen met webpagina-agenda (via Claude AI geëxtraheerd)
 const WEB_BRONNEN = {
   'nlvp': {
     urls: ['https://nlvp.fr/calendar/'],
@@ -77,7 +78,7 @@ const WEB_BRONNEN = {
     naam: 'LOTgenoten'
   },
   'bourgondische-zaken': {
-    urls: ['https://bourgondischezaken.com/'],
+    urls: ['https://agendabourgogne.nl/'],
     naam: 'Bourgondische Zaken'
   },
   'neerlandia-toulouse': {
@@ -237,18 +238,18 @@ async function main() {
     }
   }
 
-  // ── 2. Web-bronnen via Gemini ──
-  if (!GEMINI_API_KEY) {
-    console.log('\n\u26a0 GEMINI_API_KEY niet gevonden \u2014 web-bronnen worden overgeslagen');
+  // ── 2. Web-bronnen via Claude ──
+  if (!ANTHROPIC_API_KEY) {
+    console.log('\n\u26a0 ANTHROPIC_API_KEY niet gevonden \u2014 web-bronnen worden overgeslagen');
     warnings.push({
       bron_id: 'alle-web-bronnen',
       bron_naam: 'Alle web-bronnen',
       type: 'config',
-      fout: 'GEMINI_API_KEY ontbreekt als environment variable',
+      fout: 'ANTHROPIC_API_KEY ontbreekt als environment variable',
       datum: new Date().toISOString()
     });
   } else {
-    console.log('\n── Web-bronnen ophalen via Gemini ──');
+    console.log('\n── Web-bronnen ophalen via Claude ──');
     for (const [id, config] of Object.entries(WEB_BRONNEN)) {
       const urls = config.urlGenerator ? config.urlGenerator() : config.urls;
       console.log(`  ${id}: ${urls.length} pagina('s)`);
@@ -294,7 +295,7 @@ async function main() {
     bronnen_met_events: bronnenMetEvents,
     totaal_events: totaalEvents,
     gefilterde_items: totaalGefilterd,
-    methode: 'Automatisch via GitHub Action (iCal feeds + Gemini AI web-extractie)',
+    methode: 'Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)',
     warnings: warnings.length
   };
 
@@ -400,7 +401,7 @@ async function fetchIcalEvents(url, bronId) {
 }
 
 // ════════════════════════════════════════════════════════════════
-// WEB-SCRAPING VIA GEMINI
+// WEB-SCRAPING VIA CLAUDE
 // ════════════════════════════════════════════════════════════════
 
 async function fetchWebEvents(bronId, bronNaam, urls) {
@@ -438,7 +439,7 @@ async function fetchWebEvents(bronId, bronNaam, urls) {
     throw new Error(`Geen bruikbare HTML opgehaald van ${urls.length} pagina('s)`);
   }
 
-  // ── AANGESCHERPTE GEMINI PROMPT ──
+  // ── AANGESCHERPTE PROMPT ──
   const vandaag = new Date().toISOString().split('T')[0];
 
   const prompt = `Je bent een data-extractie assistent voor een kalender van Nederlandse verenigingen in Frankrijk.
@@ -476,31 +477,36 @@ OUTPUTFORMAAT:
 HTML CONTENT:
 ${alleHtml}`;
 
-  const geminiResponse = await fetch(GEMINI_URL, {
+  const claudeResponse = await fetch(ANTHROPIC_URL, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': ANTHROPIC_API_KEY,
+      'anthropic-version': ANTHROPIC_VERSION
+    },
     body: JSON.stringify({
-      contents: [{ parts: [{ text: prompt }] }],
-      generationConfig: {
-        temperature: 0.1,
-        maxOutputTokens: 8192
-      }
+      model: ANTHROPIC_MODEL,
+      max_tokens: 8192,
+      temperature: 0.1,
+      messages: [
+        { role: 'user', content: prompt }
+      ]
     }),
     signal: AbortSignal.timeout(60000)
   });
 
-  if (!geminiResponse.ok) {
-    const errText = await geminiResponse.text();
-    throw new Error(`Gemini API fout HTTP ${geminiResponse.status}: ${errText.substring(0, 200)}`);
+  if (!claudeResponse.ok) {
+    const errText = await claudeResponse.text();
+    throw new Error(`Claude API fout HTTP ${claudeResponse.status}: ${errText.substring(0, 200)}`);
   }
 
-  const geminiData = await geminiResponse.json();
+  const claudeData = await claudeResponse.json();
 
   let responseText = '';
   try {
-    responseText = geminiData.candidates[0].content.parts[0].text;
+    responseText = claudeData.content[0].text;
   } catch (e) {
-    throw new Error('Onverwacht Gemini response-formaat');
+    throw new Error('Onverwacht Claude response-formaat');
   }
 
   responseText = responseText.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim();
@@ -508,7 +514,7 @@ ${alleHtml}`;
   var jsonStart = responseText.indexOf('[');
   var jsonEnd = responseText.lastIndexOf(']');
   if (jsonStart === -1 || jsonEnd === -1) {
-    throw new Error('Geen JSON array gevonden in Gemini response');
+    throw new Error('Geen JSON array gevonden in Claude response');
   }
   responseText = responseText.substring(jsonStart, jsonEnd + 1);
   responseText = responseText.replace(/,\s*]/g, ']').replace(/,\s*}/g, '}');
@@ -517,11 +523,11 @@ ${alleHtml}`;
   try {
     events = JSON.parse(responseText);
   } catch (e) {
-    throw new Error('Gemini gaf geen valide JSON terug: ' + responseText.substring(0, 100) + '...');
+    throw new Error('Claude gaf geen valide JSON terug: ' + responseText.substring(0, 100) + '...');
   }
 
   if (!Array.isArray(events)) {
-    throw new Error('Gemini response is geen array');
+    throw new Error('Claude response is geen array');
   }
 
   // ── Valideer, normaliseer en filter events ──

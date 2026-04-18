@@ -35,7 +35,7 @@ jobs:
         id: update
         working-directory: scripts
         env:
-          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
         run: |
           node update-events.js 2>&1 | tee output.log
           echo "exit_code=${PIPESTATUS[0]}" >> $GITHUB_OUTPUT
