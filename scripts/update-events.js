@@ -76,6 +76,10 @@ const WEB_BRONNEN = {
   'bourgondische-zaken': {
     urls: ['https://bourgondischezaken.com/'],
     naam: 'Bourgondische Zaken'
+  },
+  'neerlandia-toulouse': {
+    urls: ['https://www.neerlandia.fr/index.php/nl/agenda'],
+    naam: 'Neerlandia Toulouse'
   }
 };
 
