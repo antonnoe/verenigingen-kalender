@@ -62,7 +62,10 @@ const WEB_BRONNEN = {
     naam: 'La Tulipe'
   },
   'atelier-neerlandais': {
-    urls: ['https://atelierneerlandais.com/kalender/'],
+    urls: [
+      'https://atelierneerlandais.com/kalender/',
+      'https://atelierneerlandais.com/'
+    ],
     naam: 'Atelier Néerlandais'
   },
   'ern-paris': {
