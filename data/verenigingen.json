@@ -11,6 +11,22 @@
   },
   "verenigingen": [
     {
+      "id": "fanf",
+      "naam": "FANF - Federatie van Nederlandse verenigingen in Frankrijk",
+      "afkorting": "FANF",
+      "regio": "Landelijk",
+      "website": "https://www.fanf.fr",
+      "agenda_url": "https://www.fanf.fr/activiteiten/lijst",
+      "ical_url": null,
+      "platform": "Verenigingenweb (Genkgo)",
+      "fanf_lid": false,
+      "status": "actief",
+      "agenda_toegankelijkheid": "beperkt",
+      "contact": null,
+      "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar.",
+      "events": []
+    },
+    {
       "id": "nvlr",
       "naam": "Nederlandse Vereniging Languedoc-Roussillon",
       "afkorting": "NVLR",

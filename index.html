@@ -172,6 +172,61 @@
       line-height: 1.1;
     }
 
+    /* ── CTA ontbrekende verenigingen ── */
+    .missing-cta {
+      margin-top: 28px;
+      padding: 18px 22px;
+      background: rgba(128,0,0,.04);
+      border: 1px solid rgba(128,0,0,.15);
+      border-radius: 6px;
+    }
+    .missing-cta h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: 1rem;
+      color: #800000;
+      margin: 0 0 8px 0;
+    }
+    .missing-cta p {
+      font-size: .85rem;
+      color: #555;
+      line-height: 1.55;
+      margin: 0 0 12px 0;
+    }
+    .missing-cta-btn {
+      display: inline-block;
+      padding: 7px 16px;
+      background: #800000;
+      color: #fff;
+      text-decoration: none;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: .82rem;
+      border-radius: 4px;
+      transition: background .2s;
+    }
+    .missing-cta-btn:hover {
+      background: #a00000;
+    }
+
+    /* ── RECURRING EVENTS (herhalende activiteiten samengevat) ── */
+    .event-card-recurring {
+      background: linear-gradient(90deg, rgba(128,0,0,.04) 0%, #fff 40%);
+      border-color: rgba(128,0,0,.15);
+    }
+    .event-date-recurring {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 8px 0;
+    }
+    .event-date-recurring .day-name {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #800000;
+      letter-spacing: 0;
+    }
+
     /* ── EVENT BODY ── */
     .event-body { flex: 1; min-width: 0; }
     .event-title {
@@ -685,15 +740,119 @@
     var html = '';
     Object.keys(groups).sort().forEach(function (key) {
       var g = groups[key];
+      var merged = mergeRecurringEvents(g.events);
       html += '<div class="month-group">';
       html += '<h2>' + capitalize(g.label) + '</h2>';
-      g.events.forEach(function (ev) {
-        html += buildEventCard(ev);
+      merged.forEach(function (item) {
+        if (item.isRecurring) {
+          html += buildRecurringCard(item);
+        } else {
+          html += buildEventCard(item);
+        }
       });
       html += '</div>';
     });
 
-    kalenderContent.innerHTML = html;
+    kalenderContent.innerHTML = html + buildMissingVerenigingCTA();
+  }
+
+  // ── CTA: verenigingen zonder online agenda ──
+  function buildMissingVerenigingCTA() {
+    var forumUrl = 'https://www.nederlanders.fr/profiles/blogs/overzicht-van-nederlandse-verenigingen-in-frankrijk';
+    return '' +
+      '<div class="missing-cta">' +
+      '<h3>Mist u een vereniging?</h3>' +
+      '<p>Niet alle Nederlandse verenigingen in Frankrijk publiceren hun activiteiten online in een formaat dat automatisch kan worden opgehaald. Is uw vereniging hier niet vertegenwoordigd, of klopt de informatie niet? Reageer op het overzicht-bericht op het forum &mdash; dan nemen we contact op over publicatie van uw agenda.</p>' +
+      '<a href="' + forumUrl + '" target="_blank" rel="noopener" class="missing-cta-btn">Ga naar het verenigingenoverzicht</a>' +
+      '</div>';
+  }
+
+  // ── TERUGKERENDE EVENTS GROEPEREN ──
+  // Events met dezelfde vereniging + titel + type in dezelfde maand (3+ keer)
+  // worden samengevoegd tot één compacte regel met alle datums.
+  function mergeRecurringEvents(events) {
+    var buckets = {};
+    var order = [];
+
+    events.forEach(function (ev) {
+      // Normaliseer titel voor matching (case-insensitive, trim)
+      var titelKey = (ev.titel || '').toLowerCase().trim();
+      var key = ev.vereniging + '||' + titelKey + '||' + ev.type;
+      if (!buckets[key]) {
+        buckets[key] = {
+          vereniging: ev.vereniging,
+          afkorting:  ev.afkorting,
+          titel:      ev.titel,
+          type:       ev.type,
+          regio:      ev.regio,
+          bron:       ev.bron,
+          agenda_url: ev.agenda_url,
+          website:    ev.website,
+          events:     []
+        };
+        order.push(key);
+      }
+      buckets[key].events.push(ev);
+    });
+
+    var result = [];
+    order.forEach(function (key) {
+      var bucket = buckets[key];
+      if (bucket.events.length >= 3) {
+        bucket.isRecurring = true;
+        bucket.events.sort(function (a, b) {
+          return new Date(a.datum) - new Date(b.datum);
+        });
+        result.push(bucket);
+      } else {
+        bucket.events.forEach(function (ev) { result.push(ev); });
+      }
+    });
+
+    // Sorteer: enkelvoudige events op datum, recurring items bij eerste datum
+    result.sort(function (a, b) {
+      var aDate = a.isRecurring ? new Date(a.events[0].datum) : new Date(a.datum);
+      var bDate = b.isRecurring ? new Date(b.events[0].datum) : new Date(b.datum);
+      return aDate - bDate;
+    });
+
+    return result;
+  }
+
+  // ── RECURRING CARD ──
+  function buildRecurringCard(item) {
+    var bgColor = TYPE_KLEUREN[item.type] || '#800000';
+    var href = item.bron || item.agenda_url || item.website;
+    var count = item.events.length;
+
+    // Lijstje datums: "1, 5, 8, 12, 15..."
+    var dagen = item.events.map(function (ev) {
+      return new Date(ev.datum).getDate();
+    }).join(', ');
+
+    var card = '';
+    if (href) {
+      card += '<a class="event-card-link" href="' + escapeHtml(href) + '" target="_blank" rel="noopener">';
+    }
+    card += '<div class="event-card event-card-recurring">';
+    card += '<div class="event-date event-date-recurring">';
+    card += '<span class="day-name">' + count + '×</span>';
+    card += '</div>';
+    card += '<div class="event-body">';
+    card += '<div class="event-title">' + escapeHtml(item.titel) + '</div>';
+    card += '<div class="event-meta">';
+    card += '<span class="type-badge" style="background:' + bgColor + '">' + escapeHtml(item.type) + '</span>';
+    card += '<span class="separator">|</span>';
+    card += '<span>' + escapeHtml(item.afkorting || item.vereniging) + '</span>';
+    card += '<span class="separator">|</span>';
+    card += '<span>op ' + dagen + '</span>';
+    card += '</div>';
+    card += '</div>';
+    card += '</div>';
+    if (href) {
+      card += '</a>';
+    }
+    return card;
   }
 
   // ── EVENT CARD ──

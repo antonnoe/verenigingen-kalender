@@ -78,12 +78,19 @@ const WEB_BRONNEN = {
     naam: 'LOTgenoten'
   },
   'bourgondische-zaken': {
-    urls: ['https://bourgondischezaken.com/nieuws/'],
+    urls: [
+      'https://bourgondischezaken.com/nieuws/',
+      'https://bourgondischezaken.com/'
+    ],
     naam: 'Bourgondische Zaken'
   },
   'neerlandia-toulouse': {
     urls: ['https://www.neerlandia.fr/index.php/nl/agenda'],
     naam: 'Neerlandia Toulouse'
+  },
+  'fanf': {
+    urls: ['https://www.fanf.fr/activiteiten/lijst'],
+    naam: 'FANF'
   }
 };
 
