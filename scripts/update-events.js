@@ -77,13 +77,6 @@ const WEB_BRONNEN = {
     urls: ['https://www.lotgenoten.fr/agenda/'],
     naam: 'LOTgenoten'
   },
-  'bourgondische-zaken': {
-    urls: [
-      'https://bourgondischezaken.com/nieuws/',
-      'https://bourgondischezaken.com/'
-    ],
-    naam: 'Bourgondische Zaken'
-  },
   'neerlandia-toulouse': {
     urls: ['https://www.neerlandia.fr/index.php/nl/agenda'],
     naam: 'Neerlandia Toulouse'
@@ -463,13 +456,14 @@ BELANGRIJK — Zoek events in álle formaten, zoals:
 - Events met datum in verleden opmerkingen worden overgeslagen, maar events met alleen dag+maand horen bij het lopende of volgende jaar
 
 FILTERREGELS:
-- Vandaag is ${vandaag}. Geef ALLEEN events vanaf vandaag.
+- Vandaag is ${vandaag}. Geef ALLE toekomstige events vanaf vandaag, ook events die ver in de toekomst liggen (december, volgend jaar, 2027). Geen maximum horizon — neem álles mee wat op de pagina staat.
 - Als alleen dag en maand genoemd zijn (geen jaar): neem de eerstvolgende datum vanaf vandaag.
 - NEGEER:
   * Nieuwskoppen van NU.nl/NOS/RTL/BBC etc. en algemene blogposts
   * Boekrecensies, filmrecensies zonder specifiek event
   * Archiefitems en al voorbije events
   * Advertenties en navigatie-elementen
+  * Commerciële dienstverlening en cursussen (taallessen, webinars, workshops tegen betaling, coaching, adviesdiensten): deze zijn geen verenigingsactiviteiten
 - Vermeldingen zoals "terugkerende maandelijkse borrel" ZONDER concrete datum: SLAAG OVER.
 
 VOORBEELDEN VAN WÉL OPNEMEN:
@@ -503,7 +497,7 @@ ${alleHtml}`;
     },
     body: JSON.stringify({
       model: ANTHROPIC_MODEL,
-      max_tokens: 8192,
+      max_tokens: 16384,
       temperature: 0.1,
       messages: [
         { role: 'user', content: prompt }
@@ -739,7 +733,7 @@ function stripHtml(html) {
     .replace(/&#\d+;/g, '')
     .replace(/\s+/g, ' ')
     .trim()
-    .substring(0, 15000);
+    .substring(0, 40000);
 }
 
 // ════════════════════════════════════════════════════════════════

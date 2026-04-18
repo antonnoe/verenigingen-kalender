@@ -862,9 +862,9 @@
       "platform": "onbekend",
       "fanf_lid": false,
       "status": "actief",
-      "agenda_toegankelijkheid": "beperkt",
+      "agenda_toegankelijkheid": "geen_online_agenda",
       "contact": null,
-      "opmerking": "Website geeft regelmatig server errors.",
+      "opmerking": "Heeft website bourgondischezaken.com en agenda-platform agendabourgogne.nl. Events zijn echter niet gestructureerd ophaalbaar (regio-agenda met gemengde bron, of inlog-vereisten). Meest recente activiteiten worden via nieuwsbrief en Facebook gedeeld.",
       "events": []
     },
     {
