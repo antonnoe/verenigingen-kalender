@@ -441,25 +441,35 @@ async function fetchWebEvents(bronId, bronNaam, urls) {
 
   // ── AANGESCHERPTE PROMPT ──
   const vandaag = new Date().toISOString().split('T')[0];
+  const huidigJaar = new Date().getFullYear();
 
   const prompt = `Je bent een data-extractie assistent voor een kalender van Nederlandse verenigingen in Frankrijk.
 
-OPDRACHT: Extraheer ALLEEN echte KALENDER-EVENEMENTEN die door de vereniging "${bronNaam}" zelf worden georganiseerd uit onderstaande HTML.
+OPDRACHT: Extraheer ALLE kalender-evenementen die door de vereniging "${bronNaam}" worden georganiseerd uit onderstaande HTML. Wees ruimhartig: verenigingen publiceren hun agenda vaak in onconventionele vormen (jaarkalenders, nieuwsberichten met datum in de titel, tabellen, platte tekst).
 
-KRITIEKE FILTERREGELS — LEES DEZE ZORGVULDIG:
+BELANGRIJK — Zoek events in álle formaten, zoals:
+- Gestructureerde agenda-lijsten met datum, tijd, locatie
+- Jaarkalenders in platte tekst (bijv. "4/1 Wandeling", "27/4 Borrel" — dit zijn DD/M notaties voor ${huidigJaar})
+- Nieuwsberichten waarvan de titel een event met datum aankondigt (bijv. "Expo Maxime Ansiau — 29-30 mei", "Koningsdagreceptie 20 mei")
+- Tabellen, lijsten met data, of opsommingen
+- Meerdaagse events (gebruik de startdatum)
+- Events met datum in verleden opmerkingen worden overgeslagen, maar events met alleen dag+maand horen bij het lopende of volgende jaar
+
+FILTERREGELS:
 - Vandaag is ${vandaag}. Geef ALLEEN events vanaf vandaag.
-- NEGEER VOLLEDIG alle content die GEEN georganiseerd evenement van deze vereniging is:
-  * Nieuwsberichten en nieuwskoppen (bijv. van NU.nl, NOS, RTL, BBC etc.)
-  * Blogposts, artikelen, opiniestukken
-  * Externe evenementen die niet door "${bronNaam}" worden georganiseerd
-  * Nieuwsbrieven, podcasts, social media posts
-  * Advertenties, banners, sidebar-content
-  * Boekrecensies, filmrecensies
-- Een GELDIG evenement heeft ALTIJD:
-  * Een specifieke datum
-  * Een activiteit die door "${bronNaam}" wordt georganiseerd (bijv. borrel, lunch, wandeling, lezing, excursie, vergadering, feest, cursus, concert, kerkdienst, spelletjesmiddag)
-- Als een item geen concrete datum heeft of geen verenigingsactiviteit is: SLAAG HET OVER.
-- Bij twijfel: NIET opnemen. Liever te weinig dan rommel.
+- Als alleen dag en maand genoemd zijn (geen jaar): neem de eerstvolgende datum vanaf vandaag.
+- NEGEER:
+  * Nieuwskoppen van NU.nl/NOS/RTL/BBC etc. en algemene blogposts
+  * Boekrecensies, filmrecensies zonder specifiek event
+  * Archiefitems en al voorbije events
+  * Advertenties en navigatie-elementen
+- Vermeldingen zoals "terugkerende maandelijkse borrel" ZONDER concrete datum: SLAAG OVER.
+
+VOORBEELDEN VAN WÉL OPNEMEN:
+- "27/4 AfterNetwork borrel" → datum: ${huidigJaar}-04-27, titel: "AfterNetwork borrel"
+- "Expo Maxime Ansiau – 29-30 mei" → datum: ${huidigJaar}-05-29, titel: "Expo Maxime Ansiau"
+- "Koningsdagreceptie woensdag 20 mei, 18:30" → datum: ${huidigJaar}-05-20, tijd: "18:30"
+- "8, 9 en 10 juni 2026 Paspoort pop-up" → datum: 2026-06-08, titel: "Paspoort pop-up"
 
 OUTPUTFORMAAT:
 - JSON array (geen markdown, geen backticks, geen uitleg).

@@ -110,28 +110,28 @@
     }
 
     /* ── MONTH GROUP ── */
-    .month-group { margin-bottom: 24px; }
+    .month-group { margin-bottom: 16px; }
     .month-group h2 {
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      font-size: 1.05rem;
+      font-size: .95rem;
       color: #800000;
-      padding: 6px 0;
-      margin-bottom: 10px;
+      padding: 4px 0;
+      margin-bottom: 6px;
       border-bottom: 1px solid rgba(128,0,0,.12);
     }
 
     /* ── EVENT CARD ── */
     .event-card {
       display: flex;
-      gap: 14px;
-      padding: 12px 14px;
-      margin-bottom: 6px;
+      gap: 10px;
+      padding: 7px 10px;
+      margin-bottom: 3px;
       background: #fff;
       border: 1px solid #e8e0d8;
-      border-radius: 6px;
+      border-radius: 5px;
       transition: border-color .2s, box-shadow .2s;
-      align-items: flex-start;
+      align-items: center;
     }
     .event-card:hover {
       border-color: rgba(128,0,0,.25);
@@ -141,33 +141,35 @@
     /* ── DATE BADGE ── */
     .event-date {
       flex-shrink: 0;
-      width: 50px;
+      width: 42px;
       text-align: center;
-      padding: 6px 0;
+      padding: 3px 0;
       background: rgba(128,0,0,.06);
-      border-radius: 6px;
+      border-radius: 5px;
     }
     .event-date .day-name {
       display: block;
-      font-size: .65rem;
+      font-size: .58rem;
       color: #888;
       text-transform: uppercase;
       letter-spacing: .04em;
+      line-height: 1.1;
     }
     .event-date .day-num {
       display: block;
       font-family: 'Poppins', sans-serif;
       font-weight: 700;
-      font-size: 1.3rem;
+      font-size: 1.05rem;
       color: #800000;
-      line-height: 1.2;
+      line-height: 1.15;
     }
     .event-date .month-name {
       display: block;
-      font-size: .65rem;
+      font-size: .58rem;
       color: #888;
       text-transform: uppercase;
       letter-spacing: .04em;
+      line-height: 1.1;
     }
 
     /* ── EVENT BODY ── */
@@ -175,28 +177,29 @@
     .event-title {
       font-family: 'Poppins', sans-serif;
       font-weight: 600;
-      font-size: .9rem;
+      font-size: .85rem;
       color: #2a2a2a;
-      margin-bottom: 3px;
+      margin-bottom: 1px;
+      line-height: 1.3;
     }
     .event-meta {
-      font-size: .78rem;
+      font-size: .72rem;
       color: #888;
-      line-height: 1.6;
+      line-height: 1.4;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
       gap: 2px;
     }
     .event-meta .separator {
-      margin: 0 5px;
+      margin: 0 4px;
       color: #ccc;
     }
     .type-badge {
       display: inline-block;
-      padding: 1px 8px;
+      padding: 1px 6px;
       border-radius: 3px;
-      font-size: .7rem;
+      font-size: .62rem;
       font-weight: 700;
       color: #fff;
       text-transform: uppercase;
@@ -415,6 +418,12 @@
       </div>
       <!-- Vereniging filter wordt hier dynamisch ingevoegd door JS -->
       <div class="filter-group">
+        <label for="filter-maand">Maand</label>
+        <select id="filter-maand">
+          <option value="">Alle maanden</option>
+        </select>
+      </div>
+      <div class="filter-group">
         <label for="filter-type">Type</label>
         <select id="filter-type">
           <option value="">Alle types</option>
@@ -476,6 +485,7 @@
   var kalenderContent     = document.getElementById('kalender-content');
   var verenigingenContent = document.getElementById('verenigingen-content');
   var filterRegio         = document.getElementById('filter-regio');
+  var filterMaand         = document.getElementById('filter-maand');
   var filterType          = document.getElementById('filter-type');
 
   var filterVereniging = createVerenigingFilter();
@@ -533,6 +543,7 @@
         buildEventsFromVerenigingen();
         populateRegioFilter();
         populateVerenigingFilter();
+        populateMaandFilter();
         renderKalender();
         renderVerenigingen(data.meta);
       })
@@ -602,6 +613,30 @@
     filterVereniging.addEventListener('change', renderKalender);
   }
 
+  // ── MAAND FILTER VULLEN ──
+  function populateMaandFilter() {
+    var now = new Date();
+    now.setHours(0, 0, 0, 0);
+
+    var maanden = [];
+    alleEvents.forEach(function (ev) {
+      var d = new Date(ev.datum);
+      if (d < now) return;
+      var key = d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0');
+      if (maanden.indexOf(key) === -1) maanden.push(key);
+    });
+    maanden.sort();
+    maanden.forEach(function (key) {
+      var parts = key.split('-');
+      var d = new Date(parseInt(parts[0], 10), parseInt(parts[1], 10) - 1, 1);
+      var opt = document.createElement('option');
+      opt.value = key;
+      opt.textContent = capitalize(MAANDEN_NL[d.getMonth()] + ' ' + d.getFullYear());
+      filterMaand.appendChild(opt);
+    });
+    filterMaand.addEventListener('change', renderKalender);
+  }
+
   // ── KALENDER RENDEREN ──
   function renderKalender() {
     var now = new Date();
@@ -610,6 +645,7 @@
     var regio      = filterRegio.value;
     var type       = filterType.value;
     var vereniging = filterVereniging.value;
+    var maand      = filterMaand.value;
 
     var filtered = alleEvents.filter(function (ev) {
       var evDate = new Date(ev.datum);
@@ -617,6 +653,10 @@
       if (regio && ev.regio !== regio) return false;
       if (type && ev.type !== type) return false;
       if (vereniging && ev.vereniging !== vereniging) return false;
+      if (maand) {
+        var evKey = evDate.getFullYear() + '-' + String(evDate.getMonth() + 1).padStart(2, '0');
+        if (evKey !== maand) return false;
+      }
       return true;
     });
 
