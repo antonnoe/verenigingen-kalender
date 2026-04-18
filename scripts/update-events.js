@@ -78,7 +78,7 @@ const WEB_BRONNEN = {
     naam: 'LOTgenoten'
   },
   'bourgondische-zaken': {
-    urls: ['https://agendabourgogne.nl/'],
+    urls: ['https://bourgondischezaken.com/nieuws/'],
     naam: 'Bourgondische Zaken'
   },
   'neerlandia-toulouse': {
@@ -714,15 +714,16 @@ function cleanText(str) {
 }
 
 function stripHtml(html) {
-  // Verwijder scripts, styles, nav, footer, aside, sidebars — behoud alleen content
+  // Verwijder scripts, styles, nav, footer, sidebars — behoud content én nieuwsstream-posts
+  // NB: <header> en class="news"/"blog" worden NIET meer verwijderd, want WordPress-sites
+  // zoals Atelier Néerlandais plaatsen events in nieuws-articles en blog-wrappers.
   return html
     .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')
     .replace(/<style[^>]*>[\s\S]*?<\/style>/gi, '')
     .replace(/<nav[^>]*>[\s\S]*?<\/nav>/gi, '')
     .replace(/<footer[^>]*>[\s\S]*?<\/footer>/gi, '')
-    .replace(/<header[^>]*>[\s\S]*?<\/header>/gi, '')
     .replace(/<aside[^>]*>[\s\S]*?<\/aside>/gi, '')
-    .replace(/<div[^>]*class="[^"]*(?:sidebar|widget|news|blog|comment|social|share|cookie|banner|popup|modal|advertisement|ad-)[^"]*"[^>]*>[\s\S]*?<\/div>/gi, '')
+    .replace(/<div[^>]*class="[^"]*(?:sidebar|widget|comment|social|share|cookie|banner|popup|modal|advertisement|ad-)[^"]*"[^>]*>[\s\S]*?<\/div>/gi, '')
     .replace(/<[^>]+>/g, ' ')
     .replace(/&nbsp;/g, ' ')
     .replace(/&amp;/g, '&')
