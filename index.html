@@ -41,6 +41,18 @@
       font-size: .85rem;
       color: #888;
     }
+    .site-header .versie {
+      display: inline-block;
+      margin-left: 8px;
+      padding: 1px 7px;
+      font-size: .68rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      background: rgba(128,0,0,.08);
+      color: #800000;
+      border-radius: 3px;
+      letter-spacing: .02em;
+    }
 
     /* ── TABS ── */
     .tab-bar {
@@ -492,7 +504,7 @@
   <!-- HEADER -->
   <div class="site-header">
     <h1>Verenigingen &amp; Evenementen</h1>
-    <p>Nederlandstalige gemeenschap in Frankrijk</p>
+    <p>Nederlandstalige gemeenschap in Frankrijk <span class="versie">v2026-04-19</span></p>
   </div>
 
   <!-- TABS -->
@@ -628,7 +640,8 @@
 
   // ── DATA LADEN ──
   function loadData() {
-    fetch('data/verenigingen.json')
+    // Cache-busting: voeg timestamp toe zodat browser/CDN geen oude JSON serveert
+    fetch('data/verenigingen.json?t=' + Date.now())
       .then(function (res) {
         if (!res.ok) throw new Error('HTTP ' + res.status);
         return res.json();
