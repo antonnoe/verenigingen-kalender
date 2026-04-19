@@ -140,7 +140,7 @@
   "nederlands-ondersteuningsfonds": {
     "lat": 44.0,
     "lon": 4.0,
-    "radius_km": 250,
+    "radius_km": 150,
     "locatie_label": "Zuid-Frankrijk"
   }
 }
