@@ -202,7 +202,9 @@
       font-family: 'Poppins', sans-serif;
       font-weight: 500;
       font-size: .82rem;
+      border: none;
       border-radius: 4px;
+      cursor: pointer;
       transition: background .2s;
     }
     .missing-cta-btn:hover {
@@ -758,12 +760,11 @@
 
   // ── CTA: verenigingen zonder online agenda ──
   function buildMissingVerenigingCTA() {
-    var forumUrl = 'https://www.nederlanders.fr/profiles/blogs/overzicht-van-nederlandse-verenigingen-in-frankrijk';
     return '' +
       '<div class="missing-cta">' +
       '<h3>Mist u een vereniging?</h3>' +
-      '<p>Niet alle Nederlandse verenigingen in Frankrijk publiceren hun activiteiten online in een formaat dat automatisch kan worden opgehaald. Is uw vereniging hier niet vertegenwoordigd, of klopt de informatie niet? Reageer op het overzicht-bericht op het forum &mdash; dan nemen we contact op over publicatie van uw agenda.</p>' +
-      '<a href="' + forumUrl + '" target="_blank" rel="noopener" class="missing-cta-btn">Ga naar het verenigingenoverzicht</a>' +
+      '<p>Niet alle Nederlandse verenigingen in Frankrijk publiceren hun activiteiten online in een formaat dat automatisch kan worden opgehaald. Bekijk het tabblad Verenigingen voor een compleet overzicht. Staat uw vereniging er niet bij, of klopt de informatie niet? Neem dan contact op.</p>' +
+      '<button type="button" class="missing-cta-btn" onclick="document.querySelector(\'.tab-btn[data-tab=&quot;verenigingen&quot;]\').click(); window.scrollTo({top:0,behavior:\'smooth\'});">Bekijk alle verenigingen</button>' +
       '</div>';
   }
 

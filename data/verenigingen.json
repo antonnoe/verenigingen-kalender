@@ -1230,6 +1230,22 @@
       "agenda_toegankelijkheid": "geen_eventkalender",
       "opmerking": "Nederlands taal- en cultuuronderwijs. Geen eventkalender, lescurriculum.",
       "events": []
+    },
+    {
+      "id": "crefnec-combrailles",
+      "naam": "Crefnec (Combrailles)",
+      "afkorting": "Crefnec",
+      "regio": "Combrailles / Allier",
+      "website": "https://www.facebook.com/profile.php?id=61586878481465",
+      "agenda_url": null,
+      "ical_url": null,
+      "platform": "Facebook",
+      "fanf_lid": false,
+      "status": "actief",
+      "agenda_toegankelijkheid": "facebook_only",
+      "contact": null,
+      "opmerking": "Vereniging ter bevordering van integratie niet-Fransen in hun Franse omgeving in de Combrailles (Allier). Gemengd lidmaatschap (Nederlanders, Fransen, Engelsen, Belgen). Per 1 maart 2026 overgestapt van eigen website naar Facebook-pagina.",
+      "events": []
     }
   ]
 }
