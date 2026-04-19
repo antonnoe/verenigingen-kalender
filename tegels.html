@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacttegels — Nederlandse verenigingen in Frankrijk</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Mulish:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Mulish', Arial, sans-serif;
+      line-height: 1.8em;
+      background: #fff;
+      color: #2a2a2a;
+      padding: 15px;
+    }
+    h2 {
+      font-family: 'Poppins', sans-serif;
+      color: #800000;
+      margin-top: 24px;
+      margin-bottom: 12px;
+      font-size: 1.35rem;
+      font-weight: 700;
+      border-bottom: 2px solid rgba(128,0,0,.15);
+      padding-bottom: 6px;
+    }
+    h2:first-child { margin-top: 0; }
+
+    .rubrieken-tabel {
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 12px;
+      margin-bottom: 20px;
+    }
+    .rubrieken-tabel td {
+      width: 50%;
+      vertical-align: top;
+      padding: 0;
+    }
+
+    .knop-duo-kader {
+      background: #faf8f6;
+      border: 1px solid #e8e0d8;
+      border-radius: 6px;
+      padding: 14px;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    .knop-duo-kader h3 {
+      font-family: 'Poppins', sans-serif;
+      color: #800000;
+      font-size: 1rem;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+    .knop-duo-kader p {
+      font-size: .82rem;
+      line-height: 1.55;
+      color: #555;
+      margin-bottom: 12px;
+      flex: 1;
+    }
+    .knop-duo-kader-invite {
+      background: #800000;
+      color: white;
+    }
+    .knop-duo-kader-invite h3,
+    .knop-duo-kader-invite p {
+      color: white;
+    }
+
+    .knop {
+      display: inline-block;
+      background: #800000;
+      color: #fff;
+      padding: 6px 13px;
+      border-radius: 3px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: .78rem;
+      text-decoration: none;
+      margin-right: 5px;
+      margin-top: 4px;
+      transition: background .15s;
+    }
+    .knop:hover { background: #a00000; }
+    .knop-secondary {
+      background: transparent;
+      color: #800000;
+      border: 1px solid #800000;
+      padding: 5px 12px;
+    }
+    .knop-secondary:hover {
+      background: rgba(128,0,0,.08);
+      color: #800000;
+    }
+    .knop-duo-kader-invite .knop {
+      background: white;
+      color: #800000;
+    }
+
+    .versie {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 1px 7px;
+      font-size: .62rem;
+      background: rgba(128,0,0,.05);
+      color: #800000;
+      border-radius: 3px;
+      letter-spacing: .02em;
+    }
+
+    .loading {
+      text-align: center;
+      padding: 40px 20px;
+      color: #888;
+      font-size: .9rem;
+    }
+
+    @media (max-width: 600px) {
+      .rubrieken-tabel td {
+        display: block;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<div id="tegels-content">
+  <div class="loading">Verenigingen laden&hellip;</div>
+</div>
+
+<div style="text-align:center;">
+  <span class="versie">v2026-04-19</span>
+</div>
+
+<script>
+(function () {
+  var RUBRIEK_LABELS = {
+    'regionaal':       'Regionale Verenigingen',
+    'zakelijk':        'Zakelijke Verenigingen',
+    'hulporganisatie': 'Hulporganisaties & Koepelorganisaties',
+    'collectiviteit':  'Collectiviteitsvoordeel'
+  };
+  var RUBRIEK_VOLGORDE = ['regionaal', 'zakelijk', 'hulporganisatie', 'collectiviteit'];
+
+  var container = document.getElementById('tegels-content');
+
+  fetch('data/verenigingen.json?t=' + Date.now())
+    .then(function (res) {
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      return res.json();
+    })
+    .then(function (data) {
+      render(data.verenigingen || []);
+    })
+    .catch(function (err) {
+      container.innerHTML = '<div class="loading">Fout bij laden: ' + escapeHtml(err.message) + '</div>';
+    });
+
+  function render(verenigingen) {
+    // Groepeer per rubriek
+    var groepen = {};
+    verenigingen.forEach(function (ver) {
+      var r = ver.rubriek || 'regionaal';
+      if (!groepen[r]) groepen[r] = [];
+      groepen[r].push(ver);
+    });
+
+    // Sorteer binnen elke rubriek: actief+met events eerst, dan alfabetisch
+    Object.keys(groepen).forEach(function (r) {
+      groepen[r].sort(function (a, b) {
+        var aHeeft = (a.events && a.events.length > 0) ? 0 : 1;
+        var bHeeft = (b.events && b.events.length > 0) ? 0 : 1;
+        if (aHeeft !== bHeeft) return aHeeft - bHeeft;
+        return a.naam.localeCompare(b.naam);
+      });
+    });
+
+    var html = '';
+
+    // Render per rubriek
+    RUBRIEK_VOLGORDE.forEach(function (rubriek) {
+      var items = groepen[rubriek];
+      if (!items || items.length === 0) return;
+
+      html += '<h2>' + escapeHtml(RUBRIEK_LABELS[rubriek] || rubriek) + '</h2>';
+      html += renderRubriekTabel(items, rubriek);
+    });
+
+    // Speciale "Vereniging toevoegen" tegel aan het einde (losse rubriek)
+    html += '<h2>Uw vereniging toevoegen?</h2>';
+    html += '<table class="rubrieken-tabel"><tbody><tr>';
+    html += '<td>' + buildInviteKader() + '</td>';
+    html += '<td></td>';
+    html += '</tr></tbody></table>';
+
+    container.innerHTML = html;
+  }
+
+  function renderRubriekTabel(items, rubriek) {
+    var html = '<table class="rubrieken-tabel"><tbody>';
+    for (var i = 0; i < items.length; i += 2) {
+      html += '<tr>';
+      html += '<td>' + buildKader(items[i]) + '</td>';
+      html += '<td>' + (items[i + 1] ? buildKader(items[i + 1]) : '') + '</td>';
+      html += '</tr>';
+    }
+    html += '</tbody></table>';
+    return html;
+  }
+
+  function buildKader(ver) {
+    var html = '<div class="knop-duo-kader">';
+    html += '<h3>' + escapeHtml(ver.naam) + '</h3>';
+
+    // Beschrijving: opmerking of fallback op regio-info
+    var desc = ver.opmerking || '';
+    if (desc) {
+      html += '<p>' + escapeHtml(desc) + '</p>';
+    } else if (ver.regio) {
+      html += '<p>Regio: ' + escapeHtml(ver.regio) + '</p>';
+    }
+
+    // Event-count indicatie als beschikbaar
+    var eventCount = (ver.events && ver.events.length) || 0;
+    if (eventCount > 0) {
+      html += '<p style="font-size:.75rem; color:#800000; font-weight:600; margin-bottom:8px;">' +
+              eventCount + ' evenement' + (eventCount > 1 ? 'en' : '') + ' in de kalender</p>';
+    }
+
+    // Knoppen
+    html += '<div>';
+    if (ver.website) {
+      var isFacebook = /facebook\.com/i.test(ver.website);
+      var label = isFacebook ? 'Facebook-pagina' : 'Website bezoeken';
+      html += '<a href="' + escapeAttr(ver.website) + '" class="knop" target="_blank" rel="noopener">' + label + '</a>';
+    }
+    if (ver.contact) {
+      html += '<a href="mailto:' + escapeAttr(ver.contact) + '" class="knop knop-secondary">Contact opnemen</a>';
+    }
+    if (!ver.website && !ver.contact) {
+      html += '<span style="color:#aaa; font-size:.75rem; font-style:italic;">Geen publieke contactgegevens</span>';
+    }
+    html += '</div>';
+
+    html += '</div>';
+    return html;
+  }
+
+  function buildInviteKader() {
+    return '<div class="knop-duo-kader knop-duo-kader-invite">' +
+      '<h3>Vereniging toevoegen</h3>' +
+      '<p>Indien u een vereniging mist en u deze wil toevoegen aan dit overzicht. We zijn u erkentelijk voor uw hulp.</p>' +
+      '<div>' +
+      '<a href="https://www.nederlanders.fr/profiles/message/newFromProfile?screenName=3pjypz5h1ilpc&amp;target=https%3A%2F%2Fwww.nederlanders.fr%2Fprofiles%2Fprofile%2Fshow%3Fid%3DAntonNoe%26" class="knop" target="_blank" rel="noopener" style="font-size:.72rem;">Bericht naar Moderator</a>' +
+      '</div>' +
+      '</div>';
+  }
+
+  function escapeHtml(s) {
+    if (s == null) return '';
+    return String(s)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#039;');
+  }
+  function escapeAttr(s) {
+    return escapeHtml(s);
+  }
+})();
+</script>
+
+</body>
+</html>

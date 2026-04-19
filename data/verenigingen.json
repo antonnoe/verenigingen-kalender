@@ -24,7 +24,8 @@
       "agenda_toegankelijkheid": "beperkt",
       "contact": null,
       "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar.",
-      "events": []
+      "events": [],
+      "rubriek": "hulporganisatie"
     },
     {
       "id": "nvlr",
@@ -136,7 +137,8 @@
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         }
-      ]
+      ],
+      "rubriek": "regionaal"
     },
     {
       "id": "nedazur",
@@ -241,7 +243,8 @@
           "type": "sportief",
           "bron": "https://www.nedazur.org/_ical/public.ics"
         }
-      ]
+      ],
+      "rubriek": "regionaal"
     },
     {
       "id": "anm",
@@ -345,7 +348,8 @@
           "type": "informatief",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         }
-      ]
+      ],
+      "rubriek": "regionaal"
     },
     {
       "id": "nlvp",
@@ -378,7 +382,8 @@
           "type": "sociaal",
           "bron": "https://nlvp.fr/calendar/"
         }
-      ]
+      ],
+      "rubriek": "regionaal"
     },
     {
       "id": "latulipe",
@@ -838,7 +843,8 @@
           "type": "sportief",
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/04/15/-.html"
         }
-      ]
+      ],
+      "rubriek": "regionaal"
     },
     {
       "id": "atelier-neerlandais",
@@ -887,7 +893,8 @@
           "type": "zakelijk",
           "bron": "https://atelierneerlandais.com/kalender/"
         }
-      ]
+      ],
+      "rubriek": "regionaal"
     },
     {
       "id": "ern-paris",
@@ -936,7 +943,8 @@
           "type": "kerkdienst",
           "bron": "https://ernparis.fr/agenda/"
         }
-      ]
+      ],
+      "rubriek": "regionaal"
     },
     {
       "id": "lotgenoten",
@@ -1000,7 +1008,8 @@
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
         }
-      ]
+      ],
+      "rubriek": "regionaal"
     },
     {
       "id": "bourgondische-zaken",
@@ -1016,7 +1025,8 @@
       "agenda_toegankelijkheid": "geen_online_agenda",
       "contact": null,
       "opmerking": "Heeft website bourgondischezaken.com en agenda-platform agendabourgogne.nl. Events zijn echter niet gestructureerd ophaalbaar (regio-agenda met gemengde bron, of inlog-vereisten). Meest recente activiteiten worden via nieuwsbrief en Facebook gedeeld.",
-      "events": []
+      "events": [],
+      "rubriek": "regionaal"
     },
     {
       "id": "nederlanders-fr",
@@ -1041,7 +1051,8 @@
           "type": "cultureel",
           "bron": "https://www.nederlanders.fr/events/event/listUpcoming"
         }
-      ]
+      ],
+      "rubriek": "hulporganisatie"
     },
     {
       "id": "dbcra",
@@ -1057,7 +1068,8 @@
       "agenda_toegankelijkheid": "beperkt",
       "contact": null,
       "opmerking": "Geen publieke events na januari 2026. Events via persoonlijke uitnodiging.",
-      "events": []
+      "events": [],
+      "rubriek": "zakelijk"
     },
     {
       "id": "nvso",
@@ -1073,7 +1085,8 @@
       "agenda_toegankelijkheid": "geen_online_agenda",
       "contact": "Hans de Bruin, 19 rue Philippe Grass, 67000 Strasbourg",
       "opmerking": "Geen online agenda. Info via periodiek 'De Rommelpot' (laatste online editie: december 2020). Maandelijkse borrelavond en excursies worden intern gecommuniceerd. ~100 betalende leden/gezinnen.",
-      "events": []
+      "events": [],
+      "rubriek": "regionaal"
     },
     {
       "id": "nzgf",
@@ -1088,7 +1101,8 @@
       "status": "onbekend",
       "agenda_toegankelijkheid": "geen_online_agenda",
       "opmerking": "Geen publieke agenda na nieuwjaarsborrel 12 januari 2026.",
-      "events": []
+      "events": [],
+      "rubriek": "zakelijk"
     },
     {
       "id": "neerlandia-toulouse",
@@ -1136,7 +1150,8 @@
           "type": "sociaal",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         }
-      ]
+      ],
+      "rubriek": "regionaal"
     },
     {
       "id": "cercle-neerlandais-lille",
@@ -1152,7 +1167,8 @@
       "agenda_toegankelijkheid": "geen_online_agenda",
       "opmerking": "Gezelligheidsvereniging voor Nederlanders en liefhebbers van Nederland in en om Lille. Alleen generieke activiteitsbeschrijvingen.",
       "events": [],
-      "contact": "info@cercleneerlandais.com"
+      "contact": "info@cercleneerlandais.com",
+      "rubriek": "regionaal"
     },
     {
       "id": "aap",
@@ -1168,7 +1184,8 @@
       "agenda_toegankelijkheid": "geen_online_agenda",
       "contact": "Louis Jansen, aloysiusjansen@aol.com, T 0670612521",
       "opmerking": "Website toont alleen oude berichten (2017-2018). Mogelijk nog actief maar geen publieke agenda.",
-      "events": []
+      "events": [],
+      "rubriek": "regionaal"
     },
     {
       "id": "pays-de-gex",
@@ -1184,7 +1201,8 @@
       "agenda_toegankelijkheid": "geen_website",
       "contact": "W. Bakker, 01220 Divonne-les-Bains, wimbakker54@gmail.com",
       "opmerking": "Geen website.",
-      "events": []
+      "events": [],
+      "rubriek": "regionaal"
     },
     {
       "id": "perpignan",
@@ -1200,7 +1218,8 @@
       "agenda_toegankelijkheid": "geen_website",
       "contact": "cneerlandaisc@neuf.fr",
       "opmerking": "Kleine vereniging, opgericht 2002. Geen website. Werkt samen met Cercle Néerlandais.",
-      "events": []
+      "events": [],
+      "rubriek": "regionaal"
     },
     {
       "id": "nvm-montpellier",
@@ -1216,7 +1235,8 @@
       "agenda_toegankelijkheid": "facebook_only",
       "opmerking": "Alleen Facebook-pagina. Events niet publiek verifieerbaar zonder login.",
       "events": [],
-      "contact": "cnm.nvm@orange.fr"
+      "contact": "cnm.nvm@orange.fr",
+      "rubriek": "regionaal"
     },
     {
       "id": "praatje",
@@ -1231,7 +1251,8 @@
       "status": "actief",
       "agenda_toegankelijkheid": "geen_eventkalender",
       "opmerking": "Nederlands taal- en cultuuronderwijs. Geen eventkalender, lescurriculum.",
-      "events": []
+      "events": [],
+      "rubriek": "regionaal"
     },
     {
       "id": "crefnec-combrailles",
@@ -1247,7 +1268,8 @@
       "agenda_toegankelijkheid": "facebook_only",
       "contact": null,
       "opmerking": "Vereniging ter bevordering van integratie niet-Fransen in hun Franse omgeving in de Combrailles (Allier). Gemengd lidmaatschap (Nederlanders, Fransen, Engelsen, Belgen). Per 1 maart 2026 overgestapt van eigen website naar Facebook-pagina.",
-      "events": []
+      "events": [],
+      "rubriek": "regionaal"
     }
   ]
 }
