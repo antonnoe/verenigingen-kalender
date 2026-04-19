@@ -293,9 +293,15 @@
       border-radius: 6px;
       padding: 16px;
       transition: box-shadow .2s;
+      display: flex;
+      flex-direction: column;
     }
     .ver-card:hover {
       box-shadow: 0 2px 10px rgba(128,0,0,.08);
+    }
+    .ver-card-stil {
+      background: #fafafa;
+      border-color: #ececec;
     }
     .ver-card h3 {
       font-family: 'Poppins', sans-serif;
@@ -315,20 +321,52 @@
       margin-bottom: 3px;
     }
     .ver-beschrijving {
-      font-size: .8rem;
+      font-size: .78rem;
       color: #666;
       margin-bottom: .4rem;
       line-height: 1.5;
     }
+    .ver-events-count {
+      color: #800000;
+      font-weight: 500;
+    }
+    .ver-buttons {
+      margin-top: auto;
+      padding-top: 10px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
     .ver-link {
       display: inline-block;
-      margin-top: 8px;
-      font-size: .8rem;
-      font-weight: 700;
-      color: #800000;
+      font-size: .78rem;
+      font-weight: 600;
+      color: #fff;
+      background: #800000;
+      padding: 5px 11px;
+      border-radius: 3px;
+      text-decoration: none;
+      transition: background .15s;
+    }
+    .ver-link:hover {
+      background: #a00000;
       text-decoration: none;
     }
-    .ver-link:hover { text-decoration: underline; }
+    .ver-link-contact {
+      background: transparent;
+      color: #800000;
+      border: 1px solid #800000;
+      padding: 4px 10px;
+    }
+    .ver-link-contact:hover {
+      background: rgba(128,0,0,.08);
+      color: #800000;
+    }
+    .ver-geen-info {
+      font-size: .72rem;
+      color: #aaa;
+      font-style: italic;
+    }
 
     /* ── ZONDER EVENTS ── */
     .zonder-events { margin-top: 28px; }
@@ -901,58 +939,20 @@
 
   // ── VERENIGINGEN RENDEREN ──
   function renderVerenigingen(meta) {
-    var metEvents = [];
-    var zonderEvents = [];
-
-    alleVerenigingen.forEach(function (ver) {
-      if (ver.events && ver.events.length > 0) {
-        metEvents.push(ver);
-      } else {
-        zonderEvents.push(ver);
-      }
+    // Sorteer: verenigingen met events eerst (op naam), daarna zonder (op naam)
+    var sorted = alleVerenigingen.slice().sort(function (a, b) {
+      var aHeeft = (a.events && a.events.length > 0) ? 0 : 1;
+      var bHeeft = (b.events && b.events.length > 0) ? 0 : 1;
+      if (aHeeft !== bHeeft) return aHeeft - bHeeft;
+      return a.naam.localeCompare(b.naam);
     });
 
-    metEvents.sort(function (a, b) { return a.naam.localeCompare(b.naam); });
-    zonderEvents.sort(function (a, b) { return a.naam.localeCompare(b.naam); });
-
     var html = '';
-
-    if (metEvents.length > 0) {
-      html += '<div class="ver-grid">';
-      metEvents.forEach(function (ver) {
-        var eventCount = ver.events.length;
-        html += '<div class="ver-card">';
-        html += '<h3>' + escapeHtml(ver.naam) + '</h3>';
-        if (ver.afkorting) {
-          html += '<div class="ver-abbr">' + escapeHtml(ver.afkorting) + '</div>';
-        }
-        html += '<div class="ver-detail"><strong>Regio:</strong> ' + escapeHtml(ver.regio) + '</div>';
-        if (ver.beschrijving) {
-          html += '<div class="ver-beschrijving">' + escapeHtml(ver.beschrijving) + '</div>';
-        }
-        html += '<div class="ver-detail"><strong>Evenementen:</strong> ' + eventCount + ' gepland</div>';
-        if (ver.website) {
-          html += '<a class="ver-link" href="' + escapeHtml(ver.website) + '" target="_blank" rel="noopener">Website bezoeken &rarr;</a>';
-        }
-        html += '</div>';
-      });
-      html += '</div>';
-    }
-
-    if (zonderEvents.length > 0) {
-      html += '<div class="zonder-events">';
-      html += '<h2>Verenigingen zonder gepubliceerde evenementen</h2>';
-      html += '<p class="zonder-subtitle">Deze verenigingen publiceren hun agenda niet online.</p>';
-      html += '<ul class="zonder-list">';
-      zonderEvents.forEach(function (ver) {
-        html += '<li>';
-        html += '<span class="zl-name">' + escapeHtml(ver.naam) + '</span>';
-        html += '<span class="zl-info">' + escapeHtml(ver.regio) + '</span>';
-        html += '</li>';
-      });
-      html += '</ul>';
-      html += '</div>';
-    }
+    html += '<div class="ver-grid">';
+    sorted.forEach(function (ver) {
+      html += buildVerenigingCard(ver);
+    });
+    html += '</div>';
 
     if (meta) {
       html += '<div class="meta-info">';
@@ -971,6 +971,49 @@
     html += '</div>';
 
     verenigingenContent.innerHTML = html;
+  }
+
+  // ── VERENIGING-CARD ──
+  function buildVerenigingCard(ver) {
+    var eventCount = (ver.events && ver.events.length) || 0;
+    var heeftEvents = eventCount > 0;
+
+    // Detecteer website-type voor passende knop-tekst
+    var isFacebook = ver.website && /facebook\.com/i.test(ver.website);
+    var websiteLabel = isFacebook ? 'Facebook-pagina' : 'Website bezoeken';
+
+    var cardClass = heeftEvents ? 'ver-card' : 'ver-card ver-card-stil';
+    var html = '<div class="' + cardClass + '">';
+    html += '<h3>' + escapeHtml(ver.naam) + '</h3>';
+
+    if (ver.afkorting && ver.afkorting !== ver.naam) {
+      html += '<div class="ver-abbr">' + escapeHtml(ver.afkorting) + '</div>';
+    }
+    if (ver.regio) {
+      html += '<div class="ver-detail"><strong>Regio:</strong> ' + escapeHtml(ver.regio) + '</div>';
+    }
+    if (ver.opmerking) {
+      html += '<div class="ver-beschrijving">' + escapeHtml(ver.opmerking) + '</div>';
+    }
+    if (heeftEvents) {
+      html += '<div class="ver-detail ver-events-count"><strong>Evenementen:</strong> ' + eventCount + ' gepland</div>';
+    }
+
+    // Knoppen
+    html += '<div class="ver-buttons">';
+    if (ver.website) {
+      html += '<a class="ver-link" href="' + escapeHtml(ver.website) + '" target="_blank" rel="noopener">' + websiteLabel + ' &rarr;</a>';
+    }
+    if (ver.contact) {
+      html += '<a class="ver-link ver-link-contact" href="mailto:' + escapeHtml(ver.contact) + '">Contact opnemen</a>';
+    }
+    if (!ver.website && !ver.contact) {
+      html += '<span class="ver-geen-info">Geen contactgegevens beschikbaar</span>';
+    }
+    html += '</div>';
+
+    html += '</div>';
+    return html;
   }
 
   // ── HELPERS ──
