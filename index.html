@@ -54,6 +54,52 @@
       letter-spacing: .02em;
     }
 
+    /* ── KAART ── */
+    .kaart-intro {
+      font-size: .82rem;
+      color: #555;
+      margin-bottom: 12px;
+      line-height: 1.5;
+    }
+    .kaart-container {
+      width: 100%;
+      height: 560px;
+      border: 1px solid #e8e0d8;
+      border-radius: 6px;
+      overflow: hidden;
+      position: relative;
+    }
+    .leaflet-popup-content-wrapper {
+      border-radius: 4px;
+    }
+    .leaflet-popup-content {
+      font-family: 'Mulish', sans-serif;
+      font-size: .85rem;
+      margin: 10px 14px;
+      line-height: 1.5;
+    }
+    .leaflet-popup-content strong {
+      font-family: 'Poppins', sans-serif;
+      color: #800000;
+      font-size: .9rem;
+      display: block;
+      margin-bottom: 3px;
+    }
+    .leaflet-popup-content .popup-locatie {
+      font-size: .75rem;
+      color: #888;
+      margin-bottom: 6px;
+    }
+    .leaflet-popup-content a {
+      color: #800000;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: .8rem;
+    }
+    .leaflet-popup-content a:hover {
+      text-decoration: underline;
+    }
+
     /* ── TABS ── */
     .tab-bar {
       display: flex;
@@ -511,6 +557,7 @@
   <div class="tab-bar">
     <button class="tab-btn active" data-tab="evenementen">Evenementenkalender</button>
     <button class="tab-btn" data-tab="verenigingen">Verenigingen</button>
+    <button class="tab-btn" data-tab="kaart">Kaart</button>
   </div>
 
   <!-- TAB: EVENEMENTEN -->
@@ -559,6 +606,17 @@
       <div class="loading">
         <div class="spinner"></div>
         <div>Verenigingen laden&hellip;</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB: KAART -->
+  <div id="tab-kaart" class="tab-panel">
+    <p class="kaart-intro">Geografisch overzicht van Nederlandse verenigingen in Frankrijk. Elke cirkel toont het werkgebied: 100 km rond een stad, 50–80 km rond een departement, ruimere cirkel voor regio's. Landelijke organisaties zoals FANF, ANEAS, CMUnf, Nederlanders.fr en France Advies staan niet op de kaart.</p>
+    <div id="kaart" class="kaart-container">
+      <div class="loading">
+        <div class="spinner"></div>
+        <div>Kaart laden&hellip;</div>
       </div>
     </div>
   </div>
@@ -634,7 +692,110 @@
         document.querySelectorAll('.tab-panel').forEach(function (p) { p.classList.remove('active'); });
         btn.classList.add('active');
         document.getElementById('tab-' + btn.dataset.tab).classList.add('active');
+
+        // Kaart lazy-loaden: pas bij eerste klik op Kaart-tab
+        if (btn.dataset.tab === 'kaart' && !kaartGeinitialiseerd) {
+          initKaart();
+        }
       });
+    });
+  }
+
+  // ── KAART (Leaflet) ──
+  var kaartGeinitialiseerd = false;
+  var LANDELIJK_IDS = {
+    'fanf':             true,
+    'aneas':            true,
+    'cmunf':            true,
+    'nederlanders-fr':  true,
+    'france-advies':    true
+  };
+
+  function initKaart() {
+    kaartGeinitialiseerd = true;
+    var container = document.getElementById('kaart');
+
+    // Leaflet CSS dynamisch inladen
+    var css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+    css.integrity = 'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
+    css.crossOrigin = '';
+    document.head.appendChild(css);
+
+    // Leaflet JS dynamisch inladen
+    var script = document.createElement('script');
+    script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
+    script.crossOrigin = '';
+    script.onload = function () {
+      buildKaart();
+    };
+    script.onerror = function () {
+      container.innerHTML = '<div class="loading"><p style="color:#b00">Kaart kon niet geladen worden. Controleer uw internetverbinding.</p></div>';
+    };
+    document.head.appendChild(script);
+  }
+
+  function buildKaart() {
+    var container = document.getElementById('kaart');
+    container.innerHTML = ''; // Verwijder loading-spinner
+
+    // Initialiseer kaart, gecentreerd op Frankrijk
+    var map = L.map('kaart').setView([46.5, 2.5], 6);
+
+    // OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    // Haal locaties + verenigingen op
+    fetch('data/locaties.json?t=' + Date.now())
+      .then(function (res) { return res.json(); })
+      .then(function (locaties) {
+        plaatsCirkels(map, locaties);
+      })
+      .catch(function (err) {
+        container.innerHTML = '<div class="loading"><p style="color:#b00">Locaties konden niet geladen worden: ' + escapeHtml(err.message) + '</p></div>';
+      });
+  }
+
+  function plaatsCirkels(map, locaties) {
+    alleVerenigingen.forEach(function (ver) {
+      if (LANDELIJK_IDS[ver.id]) return; // Landelijk = geen cirkel
+      var loc = locaties[ver.id];
+      if (!loc) return; // Geen coördinaten bekend
+
+      // Cirkel toevoegen (radius in meters)
+      var cirkel = L.circle([loc.lat, loc.lon], {
+        color: '#800000',
+        weight: 1,
+        fillColor: '#800000',
+        fillOpacity: 0.18,
+        radius: loc.radius_km * 1000
+      }).addTo(map);
+
+      // Popup met vereniging-info
+      var popupHtml = '<strong>' + escapeHtml(ver.naam) + '</strong>';
+      popupHtml += '<div class="popup-locatie">Werkgebied: ' + escapeHtml(loc.locatie_label) + ' (' + loc.radius_km + ' km)</div>';
+      if (ver.opmerking) {
+        var kort = ver.opmerking.length > 140 ? ver.opmerking.substring(0, 140) + '…' : ver.opmerking;
+        popupHtml += '<div style="margin-bottom:8px; font-size:.78rem; color:#555;">' + escapeHtml(kort) + '</div>';
+      }
+      var eventCount = (ver.events && ver.events.length) || 0;
+      if (eventCount > 0) {
+        popupHtml += '<div style="font-size:.75rem; color:#800000; margin-bottom:6px;">📅 ' + eventCount + ' evenement' + (eventCount > 1 ? 'en' : '') + ' in de kalender</div>';
+      }
+      if (ver.website) {
+        var isFacebook = /facebook\.com/i.test(ver.website);
+        popupHtml += '<a href="' + escapeHtml(ver.website) + '" target="_blank" rel="noopener">' +
+                     (isFacebook ? 'Facebook-pagina' : 'Website bezoeken') + ' →</a>';
+      }
+      if (ver.contact) {
+        popupHtml += '<br><a href="mailto:' + escapeHtml(ver.contact) + '">Contact: ' + escapeHtml(ver.contact) + '</a>';
+      }
+      cirkel.bindPopup(popupHtml);
     });
   }
 

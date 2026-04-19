@@ -1,0 +1,146 @@
+{
+  "nvlr": {
+    "lat": 43.6,
+    "lon": 3.87,
+    "radius_km": 120,
+    "locatie_label": "Languedoc-Roussillon"
+  },
+  "nedazur": {
+    "lat": 43.7,
+    "lon": 7.26,
+    "radius_km": 100,
+    "locatie_label": "Provence-Côte d'Azur"
+  },
+  "bourgondische-zaken": {
+    "lat": 47.32,
+    "lon": 5.04,
+    "radius_km": 120,
+    "locatie_label": "Bourgogne"
+  },
+  "anm": {
+    "lat": 43.46,
+    "lon": 5.71,
+    "radius_km": 80,
+    "locatie_label": "Var / Provence"
+  },
+  "latulipe": {
+    "lat": 45.18,
+    "lon": 0.72,
+    "radius_km": 80,
+    "locatie_label": "Dordogne / Périgord"
+  },
+  "lotgenoten": {
+    "lat": 44.45,
+    "lon": 1.44,
+    "radius_km": 80,
+    "locatie_label": "Lot / Lot-et-Garonne"
+  },
+  "dbcra": {
+    "lat": 45.76,
+    "lon": 4.84,
+    "radius_km": 100,
+    "locatie_label": "Lyon / Rhône-Alpes"
+  },
+  "nzgf": {
+    "lat": 43.6,
+    "lon": 1.44,
+    "radius_km": 120,
+    "locatie_label": "Midi-Pyrénées"
+  },
+  "aap": {
+    "lat": 45.19,
+    "lon": 5.72,
+    "radius_km": 80,
+    "locatie_label": "Grenoble / Alpen"
+  },
+  "clcv": {
+    "lat": 46.67,
+    "lon": -1.43,
+    "radius_km": 60,
+    "locatie_label": "Vendée"
+  },
+  "crefnec-combrailles": {
+    "lat": 46.0,
+    "lon": 2.9,
+    "radius_km": 50,
+    "locatie_label": "Combrailles / Allier"
+  },
+  "club-normandie": {
+    "lat": 49.08,
+    "lon": 1.25,
+    "radius_km": 70,
+    "locatie_label": "Normandië"
+  },
+  "rdv-bergerac": {
+    "lat": 44.85,
+    "lon": 0.48,
+    "radius_km": 50,
+    "locatie_label": "Bergerac"
+  },
+  "nlvp": {
+    "lat": 48.86,
+    "lon": 2.35,
+    "radius_km": 100,
+    "locatie_label": "Parijs / Île-de-France"
+  },
+  "atelier-neerlandais": {
+    "lat": 48.86,
+    "lon": 2.35,
+    "radius_km": 100,
+    "locatie_label": "Parijs"
+  },
+  "ern-paris": {
+    "lat": 48.86,
+    "lon": 2.35,
+    "radius_km": 100,
+    "locatie_label": "Parijs"
+  },
+  "nvso": {
+    "lat": 48.58,
+    "lon": 7.75,
+    "radius_km": 100,
+    "locatie_label": "Straatsburg"
+  },
+  "neerlandia-toulouse": {
+    "lat": 43.6,
+    "lon": 1.44,
+    "radius_km": 100,
+    "locatie_label": "Toulouse"
+  },
+  "cercle-neerlandais-lille": {
+    "lat": 50.63,
+    "lon": 3.06,
+    "radius_km": 100,
+    "locatie_label": "Lille / Noord-Frankrijk"
+  },
+  "nvm-montpellier": {
+    "lat": 43.61,
+    "lon": 3.88,
+    "radius_km": 100,
+    "locatie_label": "Montpellier"
+  },
+  "praatje": {
+    "lat": 43.6,
+    "lon": 1.44,
+    "radius_km": 100,
+    "locatie_label": "Toulouse"
+  },
+  "perpignan": {
+    "lat": 42.7,
+    "lon": 2.89,
+    "radius_km": 100,
+    "locatie_label": "Perpignan"
+  },
+  "pays-de-gex": {
+    "lat": 46.36,
+    "lon": 6.14,
+    "radius_km": 50,
+    "locatie_label": "Divonne-les-Bains / Pays de Gex"
+  },
+  "nederlands-ondersteuningsfonds": {
+    "lat": 44.0,
+    "lon": 4.0,
+    "radius_km": 250,
+    "locatie_label": "Zuid-Frankrijk"
+  }
+}
