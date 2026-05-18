@@ -1,10 +1,10 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-05-11",
-    "volgende_update": "2026-05-18",
+    "laatst_bijgewerkt": "2026-05-18",
+    "volgende_update": "2026-05-25",
     "bronnen_gecontroleerd": 10,
-    "bronnen_met_events": 11,
-    "totaal_events": 102,
+    "bronnen_met_events": 10,
+    "totaal_events": 112,
     "gefilterde_items": 0,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 0
@@ -24,16 +24,7 @@
       "agenda_toegankelijkheid": "beperkt",
       "contact": null,
       "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar.",
-      "events": [
-        {
-          "datum": "2026-05-13",
-          "titel": "FANF ZOOM-sessie Mantelzorg voor ouderen in Frankrijk",
-          "plaats": "niet vermeld",
-          "tijd": "19:30-21:00",
-          "type": "informatief",
-          "bron": "https://www.fanf.fr/activiteiten/lijst"
-        }
-      ],
+      "events": [],
       "rubriek": "hulporganisatie"
     },
     {
@@ -50,14 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-05-13",
-          "titel": "Bijpraatlunch regio Pézenas",
-          "plaats": "Le Grand Café, 1, Av. de Cassan, 34320 Roujan.",
-          "tijd": "09:30-13:30",
-          "type": "informatief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-05-20",
           "titel": "Bijpraatlunch regio Carcassonne, Carcassonne",
@@ -161,6 +144,14 @@
           "tijd": "08:00-15:00",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-01",
+          "titel": "Lamalou les Bains",
+          "plaats": "Lamalou les Bains",
+          "tijd": "07:30-15:00",
+          "type": "informatief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
         }
       ],
       "rubriek": "regionaal"
@@ -179,14 +170,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@nedazur.org",
       "events": [
-        {
-          "datum": "2026-05-13",
-          "titel": "Padeltoernooi",
-          "plaats": "Sainte-Maxime",
-          "tijd": "07:00-13:30",
-          "type": "sportief",
-          "bron": "https://www.nedazur.org/_ical/public.ics"
-        },
         {
           "datum": "2026-05-20",
           "titel": "Jeu de Boules Toernooi &amp; Clinic",
@@ -392,11 +375,35 @@
       "opmerking": "Publiceert events per maand als blogposts",
       "events": [
         {
-          "datum": "2026-05-12",
+          "datum": "2026-05-19",
+          "titel": "Algemene ledenvergadering",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "bestuurlijk",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-05-27",
+          "titel": "Theateravond",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-05-31",
           "titel": "Koffieochtend",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sociaal",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-06-10",
+          "titel": "Rondleiding Jardin Du Breuil",
+          "plaats": "Jardin Du Breuil",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
           "bron": "https://nlvp.fr/calendar/"
         }
       ],
@@ -445,7 +452,7 @@
       ],
       "events": [
         {
-          "datum": "2026-05-14",
+          "datum": "2026-05-19",
           "titel": "Petanque",
           "plaats": "niet vermeld",
           "tijd": "14:00",
@@ -453,16 +460,8 @@
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/05/15/-.html"
         },
         {
-          "datum": "2026-05-14",
-          "titel": "Clubborrel",
-          "plaats": "niet vermeld",
-          "tijd": "17:00",
-          "type": "sociaal",
-          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/05/15/-.html"
-        },
-        {
-          "datum": "2026-05-18",
-          "titel": "Wandelen",
+          "datum": "2026-05-21",
+          "titel": "Golfcompetitie",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sportief",
@@ -490,6 +489,14 @@
           "plaats": "niet vermeld",
           "tijd": "17:00",
           "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/05/15/-.html"
+        },
+        {
+          "datum": "2026-05-28",
+          "titel": "Korte wandeling",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
           "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/05/15/-.html"
         },
         {
@@ -527,6 +534,22 @@
         {
           "datum": "2026-06-08",
           "titel": "Wandelen",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/05/15/-.html"
+        },
+        {
+          "datum": "2026-06-11",
+          "titel": "Golfcompetitie",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/05/15/-.html"
+        },
+        {
+          "datum": "2026-06-11",
+          "titel": "Korte wandeling",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sportief",
@@ -582,6 +605,14 @@
         },
         {
           "datum": "2026-06-25",
+          "titel": "Korte wandeling",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/05/15/-.html"
+        },
+        {
+          "datum": "2026-06-25",
           "titel": "Clubborrel",
           "plaats": "niet vermeld",
           "tijd": "17:00",
@@ -606,6 +637,14 @@
         },
         {
           "datum": "2026-07-02",
+          "titel": "Golfcompetitie",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/05/15/-.html"
+        },
+        {
+          "datum": "2026-07-02",
           "titel": "Korte wandeling",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
@@ -623,6 +662,14 @@
         {
           "datum": "2026-07-06",
           "titel": "Wandelen",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/05/15/-.html"
+        },
+        {
+          "datum": "2026-07-09",
+          "titel": "Korte wandeling",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sportief",
@@ -671,6 +718,22 @@
         {
           "datum": "2026-07-20",
           "titel": "Wandelen",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/05/15/-.html"
+        },
+        {
+          "datum": "2026-07-23",
+          "titel": "Golfcompetitie",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/05/15/-.html"
+        },
+        {
+          "datum": "2026-07-23",
+          "titel": "Korte wandeling",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sportief",
@@ -758,6 +821,14 @@
         },
         {
           "datum": "2026-08-13",
+          "titel": "Korte wandeling",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/05/15/-.html"
+        },
+        {
+          "datum": "2026-08-13",
           "titel": "Clubborrel",
           "plaats": "niet vermeld",
           "tijd": "17:00",
@@ -799,6 +870,14 @@
         {
           "datum": "2026-08-24",
           "titel": "Wandelen",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/05/15/-.html"
+        },
+        {
+          "datum": "2026-08-27",
+          "titel": "Korte wandeling",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sportief",
@@ -950,7 +1029,7 @@
           "titel": "Boekenbeurs voor goed doel",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
-          "type": "cultureel",
+          "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/agenda/"
         },
         {
@@ -1105,7 +1184,7 @@
         },
         {
           "datum": "2026-06-08",
-          "titel": "Paspoort pop-up van de Nederlandse ambassade uit Parijs",
+          "titel": "Paspoort pop-up van de Nederlandse ambassade",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "informatief",
