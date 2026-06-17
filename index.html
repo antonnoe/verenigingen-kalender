@@ -6,6 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nederlandse Verenigingen in Frankrijk – Evenementenkalender</title>
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700&family=Mulish:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Leaflet 1.9.4 CSS — zelf gehost in /vendor/leaflet/ (geen externe CDN/SRI-afhankelijkheid).
+       Statisch in <head> geladen zodat de stijlen gegarandeerd aanwezig zijn vóór kaart-init. -->
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -551,7 +554,7 @@
   <!-- HEADER -->
   <div class="site-header">
     <h1>Verenigingen &amp; Evenementen</h1>
-    <p>Nederlandstalige gemeenschap in Frankrijk <span class="versie">v2026-04-19-4</span></p>
+    <p>Nederlandstalige gemeenschap in Frankrijk <span class="versie">v2026-06-17</span></p>
   </div>
 
   <!-- TABS -->
@@ -716,24 +719,21 @@
     kaartGeinitialiseerd = true;
     var container = document.getElementById('kaart');
 
-    // Leaflet CSS dynamisch inladen
-    var css = document.createElement('link');
-    css.rel = 'stylesheet';
-    css.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-    css.integrity = 'sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=';
-    css.crossOrigin = '';
-    document.head.appendChild(css);
+    // Leaflet al geladen? (defensief, mocht het script al binnen zijn)
+    if (window.L) {
+      buildKaart();
+      return;
+    }
 
-    // Leaflet JS dynamisch inladen
+    // Leaflet JS lokaal inladen uit /vendor/leaflet/ — geen externe CDN,
+    // geen SRI-integrity die kan verlopen. De CSS staat al statisch in <head>.
     var script = document.createElement('script');
-    script.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-    script.integrity = 'sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=';
-    script.crossOrigin = '';
+    script.src = 'vendor/leaflet/leaflet.js';
     script.onload = function () {
       buildKaart();
     };
     script.onerror = function () {
-      container.innerHTML = '<div class="loading"><p style="color:#b00">Kaart kon niet geladen worden. Controleer uw internetverbinding.</p></div>';
+      container.innerHTML = '<div class="loading"><p style="color:#b00">Kaart kon niet geladen worden.</p></div>';
     };
     document.head.appendChild(script);
   }
@@ -745,12 +745,13 @@
     // Initialiseer kaart, gecentreerd op Frankrijk
     var map = L.map('kaart').setView([46.5, 2.5], 6);
 
-    // OpenStreetMap France tiles: Franstalige labels, embed-vriendelijk
-    // Geen Referer-eisen, gratis, beheerd door OSM France community
-    L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
-      maxZoom: 18,
-      subdomains: 'abc',
-      attribution: '&copy; <a href="https://www.openstreetmap.fr/">OpenStreetMap France</a> | &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    // Standaard OpenStreetMap-tiles (canonieke server tile.openstreetmap.org).
+    // De OSM-France server (tile.openstreetmap.fr) blokkeert hotlinking en is
+    // regelmatig onbereikbaar; de canonieke server toont lokale (Franse) labels
+    // en is de door Leaflet aanbevolen bron.
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>-bijdragers'
     }).addTo(map);
 
     // Haal locaties + verenigingen op
