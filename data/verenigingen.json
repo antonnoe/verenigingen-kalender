@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-06-15",
-    "volgende_update": "2026-06-22",
+    "laatst_bijgewerkt": "2026-06-17",
+    "volgende_update": "2026-06-24",
     "bronnen_gecontroleerd": 10,
     "bronnen_met_events": 10,
-    "totaal_events": 81,
+    "totaal_events": 84,
     "gefilterde_items": 0,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 4
+    "warnings": 0
   },
   "verenigingen": [
     {
@@ -148,7 +148,7 @@
       "events": [
         {
           "datum": "2026-06-19",
-          "titel": "Golfwedstrijd Riviera Golf De Barbossi",
+          "titel": "Golfwedstrijd Riviera Golf De Barbossi - 19 juni",
           "plaats": "Mandelieu-la-Napoule",
           "tijd": "07:00-13:00",
           "type": "sportief",
@@ -157,23 +157,39 @@
         {
           "datum": "2026-06-20",
           "titel": "Samenkomen voor WK Voetbal en Formule 1",
-          "plaats": "Locatie volgt",
+          "plaats": "Stars &amp; Beers, Cannes (20 juni)",
           "tijd": "hele dag",
           "type": "sportief",
           "bron": "https://www.nedazur.org/_ical/public.ics",
           "datum_eind": "2026-07-06"
         },
         {
+          "datum": "2026-06-27",
+          "titel": "Oranje Borrel",
+          "plaats": "Taiga Bar - Fréjus",
+          "tijd": "15:00-17:00",
+          "type": "sociaal",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
           "datum": "2026-07-05",
-          "titel": "Haring Party 2026",
+          "titel": "Haring Party 2026 - 5 juli",
           "plaats": "Jimbaran Plage – Golfe Juan",
-          "tijd": "16:00-19:00",
-          "type": "informatief",
+          "tijd": "15:00-18:00",
+          "type": "sociaal",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-07-25",
+          "titel": "Delftse Studenten Big Band - 25 juli",
+          "plaats": "Le Ponton - Tanneron",
+          "tijd": "17:30-21:59",
+          "type": "cultureel",
           "bron": "https://www.nedazur.org/_ical/public.ics"
         },
         {
           "datum": "2026-09-11",
-          "titel": "Dutch Open Golftoernooi",
+          "titel": "Dutch Open Golftoernooi - 11 september",
           "plaats": "Grasse",
           "tijd": "hele dag",
           "type": "sportief",
@@ -686,14 +702,6 @@
       "opmerking": "Platform van de Nederlandse ambassade in Parijs voor creatieve bedrijfstakken. 22 Avenue Victoria, 75001 Paris.",
       "events": [
         {
-          "datum": "2026-06-12",
-          "titel": "Members Only — but you're invited!",
-          "plaats": "Atelier Néerlandais",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://atelierneerlandais.com/kalender/"
-        },
-        {
           "datum": "2026-06-19",
           "titel": "L'Outre-mer des Néerlandais (ii) — Les Indes occidentales",
           "plaats": "niet vermeld",
@@ -769,14 +777,6 @@
       ],
       "events": [
         {
-          "datum": "2026-06-14",
-          "titel": "zondagmiddag borrel (Lot)",
-          "plaats": "Bouysset, Saint Martin le Redon",
-          "tijd": "15:00",
-          "type": "sociaal",
-          "bron": "https://www.lotgenoten.fr/agenda/"
-        },
-        {
           "datum": "2026-07-12",
           "titel": "zondagmiddag borrel (Lot)",
           "plaats": "Bouysset, Saint Martin le Redon",
@@ -802,6 +802,14 @@
         },
         {
           "datum": "2026-10-11",
+          "titel": "zondagmiddag borrel (Lot)",
+          "plaats": "Bouysset, Saint Martin le Redon",
+          "tijd": "15:00",
+          "type": "sociaal",
+          "bron": "https://www.lotgenoten.fr/agenda/"
+        },
+        {
+          "datum": "2026-11-08",
           "titel": "zondagmiddag borrel (Lot)",
           "plaats": "Bouysset, Saint Martin le Redon",
           "tijd": "15:00",
@@ -919,31 +927,47 @@
       "opmerking": "Agenda-pagina bevat jaarkalender en uitgewerkte event-blokken (AfterNetWork borrels, Koningsdag, wandelingen, leesclub, paspoort pop-up).",
       "events": [
         {
-          "datum": "2026-06-08",
-          "titel": "Paspoort pop-up van de Nederlandse ambassade uit Parijs",
+          "datum": "2026-10-01",
+          "titel": "Koninklijk bezoek Toulouse",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
-          "type": "informatief",
+          "type": "sociaal",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         },
         {
-          "datum": "2026-06-09",
-          "titel": "Netwerkborrel",
-          "plaats": "Le Comptoir Saint Sernin, 2 Rue Saint-Bernard, 31000 Toulouse",
+          "datum": "2026-10-02",
+          "titel": "Leesclub",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2026-10-12",
+          "titel": "Appelpluk uitje",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2026-10-23",
+          "titel": "AfterNetwork borrel",
+          "plaats": "La Maison du Vélo, 12 Bd Bonrepos, 31000 Toulouse",
           "tijd": "18:00-20:00",
           "type": "zakelijk",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         },
         {
-          "datum": "2026-06-11",
-          "titel": "Leesclub",
+          "datum": "2026-11-18",
+          "titel": "ALV",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
-          "type": "cultureel",
+          "type": "bestuurlijk",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         },
         {
-          "datum": "2026-12-06",
+          "datum": "2026-12-14",
           "titel": "Sinterklaasfeest",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
