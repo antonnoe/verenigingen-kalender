@@ -44,14 +44,16 @@ jobs:
       - name: Controleer op wijzigingen
         id: changes
         run: |
-          git diff --quiet data/verenigingen.json && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
+          # health.json krijgt elke run een nieuwe heartbeat-timestamp, dus er is
+          # vrijwel altijd iets te committen (gewenst: dat is de heartbeat).
+          git diff --quiet data/verenigingen.json data/health.json && echo "changed=false" >> $GITHUB_OUTPUT || echo "changed=true" >> $GITHUB_OUTPUT
 
       - name: Commit en push wijzigingen
         if: steps.changes.outputs.changed == 'true'
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/verenigingen.json
+          git add data/verenigingen.json data/health.json
           DATUM=$(date +%Y-%m-%d)
           git commit -m "Automatische update evenementen ${DATUM}"
           git push

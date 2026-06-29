@@ -29,6 +29,10 @@ const ical = require('node-ical');
 
 const DATA_PATH = path.join(__dirname, '..', 'data', 'verenigingen.json');
 const WARNINGS_PATH = path.join(__dirname, 'warnings.json');
+// Machine-leesbare gezondheidsstatus voor externe dashboards (bv. de Cockpit).
+// Wordt elke run geschreven en meegecommit; bevat per bron de status + een
+// heartbeat-timestamp zodat een dashboard ook kan zien of de workflow zélf nog draait.
+const HEALTH_PATH = path.join(__dirname, '..', 'data', 'health.json');
 
 const ANTHROPIC_API_KEY = process.env.ANTHROPIC_API_KEY;
 const ANTHROPIC_MODEL = 'claude-haiku-4-5-20251001';
@@ -301,6 +305,10 @@ async function main() {
 
   // ── 4. Schrijf data terug ──
   fs.writeFileSync(DATA_PATH, JSON.stringify(data, null, 2), 'utf-8');
+
+  // Gezondheidsstatus voor externe dashboards (Cockpit): per-bron status +
+  // heartbeat. Afgeleid van warnings + de werkelijke event-tellingen.
+  writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents);
   console.log(`\n\u2713 verenigingen.json bijgewerkt: ${totaalEvents} events van ${bronnenMetEvents} bronnen`);
   if (totaalGefilterd > 0) {
     console.log(`  (${totaalGefilterd} items totaal gefilterd als nieuws/extern)`);
@@ -739,6 +747,84 @@ function stripHtml(html) {
 // ════════════════════════════════════════════════════════════════
 // RUN
 // ════════════════════════════════════════════════════════════════
+
+// ════════════════════════════════════════════════════════════════
+// HEALTH / STATUS voor externe dashboards (Cockpit)
+// ════════════════════════════════════════════════════════════════
+
+/**
+ * Schrijft data/health.json met een machine-leesbare gezondheidsstatus.
+ * Een dashboard kan dit pollen:
+ *   - ok=false / status="degraded"  -> minstens één koppeling is gebroken
+ *   - kapotte_koppelingen[]         -> welke bron, welke URL, welke fout
+ *   - generated_at                  -> heartbeat; als dit > ~8 dagen oud is,
+ *                                      draait de wekelijkse workflow zelf niet meer
+ */
+function writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents) {
+  var downMap = {};
+  var alleWebDown = null;
+  warnings.forEach(function (w) {
+    if (w.bron_id === 'alle-web-bronnen') { alleWebDown = w; return; }
+    downMap[w.bron_id] = w;
+  });
+
+  function eventsVoor(id) {
+    var ver = data.verenigingen.find(function (v) { return v.id === id; });
+    return (ver && ver.events) ? ver.events.length : 0;
+  }
+
+  var bronnen = [];
+
+  Object.keys(ICAL_BRONNEN).forEach(function (id) {
+    var w = downMap[id];
+    bronnen.push({
+      id: id,
+      naam: id.toUpperCase(),
+      type: 'ical',
+      status: w ? 'down' : 'ok',
+      events: w ? 0 : eventsVoor(id),
+      url: ICAL_BRONNEN[id],
+      fout: w ? w.fout : null
+    });
+  });
+
+  Object.keys(WEB_BRONNEN).forEach(function (id) {
+    var config = WEB_BRONNEN[id];
+    var urls = config.urlGenerator ? config.urlGenerator() : config.urls;
+    var w = downMap[id] || alleWebDown;
+    bronnen.push({
+      id: id,
+      naam: config.naam,
+      type: 'web-scraping',
+      status: w ? 'down' : 'ok',
+      events: w ? 0 : eventsVoor(id),
+      url: (urls || []).join(', '),
+      fout: w ? w.fout : null
+    });
+  });
+
+  var kapot = bronnen.filter(function (b) { return b.status === 'down'; });
+
+  var health = {
+    generated_at: new Date().toISOString(),
+    ok: kapot.length === 0,
+    status: kapot.length === 0 ? 'ok' : 'degraded',
+    laatst_bijgewerkt: vandaag,
+    volgende_update: volgendeWeek,
+    totaal_events: totaalEvents,
+    bronnen_totaal: bronnen.length,
+    bronnen_ok: bronnen.length - kapot.length,
+    bronnen_down: kapot.length,
+    kapotte_koppelingen: kapot.map(function (b) {
+      return { id: b.id, naam: b.naam, type: b.type, url: b.url, fout: b.fout };
+    }),
+    bronnen: bronnen
+  };
+
+  fs.writeFileSync(HEALTH_PATH, JSON.stringify(health, null, 2), 'utf-8');
+  console.log('\nhealth.json: ' + health.status + ' (' + health.bronnen_down +
+              ' kapot van ' + health.bronnen_totaal + ' bronnen)');
+}
 
 main().catch(function (err) {
   console.error('FATALE FOUT:', err);

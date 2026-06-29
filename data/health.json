@@ -1,0 +1,104 @@
+{
+  "generated_at": "2026-06-29T07:27:52.826Z",
+  "ok": true,
+  "status": "ok",
+  "laatst_bijgewerkt": "2026-06-17",
+  "volgende_update": "2026-06-24",
+  "totaal_events": 84,
+  "bronnen_totaal": 10,
+  "bronnen_ok": 10,
+  "bronnen_down": 0,
+  "kapotte_koppelingen": [],
+  "bronnen": [
+    {
+      "id": "nvlr",
+      "naam": "NVLR",
+      "type": "ical",
+      "status": "ok",
+      "events": 11,
+      "url": "https://www.nvlr.eu/_ical/public.ics",
+      "fout": null
+    },
+    {
+      "id": "nedazur",
+      "naam": "NEDAZUR",
+      "type": "ical",
+      "status": "ok",
+      "events": 6,
+      "url": "https://www.nedazur.org/_ical/public.ics",
+      "fout": null
+    },
+    {
+      "id": "anm",
+      "naam": "ANM",
+      "type": "ical",
+      "status": "ok",
+      "events": 7,
+      "url": "https://www.a-n-m.nl/_ical/public.ics",
+      "fout": null
+    },
+    {
+      "id": "nlvp",
+      "naam": "NLVP",
+      "type": "web-scraping",
+      "status": "ok",
+      "events": 1,
+      "url": "https://nlvp.fr/calendar/",
+      "fout": null
+    },
+    {
+      "id": "latulipe",
+      "naam": "La Tulipe",
+      "type": "web-scraping",
+      "status": "ok",
+      "events": 43,
+      "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/",
+      "fout": null
+    },
+    {
+      "id": "atelier-neerlandais",
+      "naam": "Atelier Néerlandais",
+      "type": "web-scraping",
+      "status": "ok",
+      "events": 3,
+      "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
+      "fout": null
+    },
+    {
+      "id": "ern-paris",
+      "naam": "ERN Paris",
+      "type": "web-scraping",
+      "status": "ok",
+      "events": 1,
+      "url": "https://ernparis.fr/agenda/",
+      "fout": null
+    },
+    {
+      "id": "lotgenoten",
+      "naam": "LOTgenoten",
+      "type": "web-scraping",
+      "status": "ok",
+      "events": 5,
+      "url": "https://www.lotgenoten.fr/agenda/",
+      "fout": null
+    },
+    {
+      "id": "neerlandia-toulouse",
+      "naam": "Neerlandia Toulouse",
+      "type": "web-scraping",
+      "status": "ok",
+      "events": 6,
+      "url": "https://www.neerlandia.fr/index.php/nl/agenda",
+      "fout": null
+    },
+    {
+      "id": "fanf",
+      "naam": "FANF",
+      "type": "web-scraping",
+      "status": "ok",
+      "events": 0,
+      "url": "https://www.fanf.fr/activiteiten/lijst",
+      "fout": null
+    }
+  ]
+}
