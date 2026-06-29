@@ -1,10 +1,10 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-06-22",
-    "volgende_update": "2026-06-29",
+    "laatst_bijgewerkt": "2026-06-29",
+    "volgende_update": "2026-07-06",
     "bronnen_gecontroleerd": 10,
-    "bronnen_met_events": 9,
-    "totaal_events": 47,
+    "bronnen_met_events": 8,
+    "totaal_events": 56,
     "gefilterde_items": 0,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
@@ -42,14 +42,6 @@
       "contact": "secretaris@nvlr.eu",
       "events": [
         {
-          "datum": "2026-06-24",
-          "titel": "Strandwandeling",
-          "plaats": "nnb",
-          "tijd": "08:00-13:30",
-          "type": "sportief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
-        {
           "datum": "2026-06-30",
           "titel": "Bijpraatlunch Aigne",
           "plaats": "Restaurant Lo Cagarol, Aigne.",
@@ -82,10 +74,26 @@
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
+          "datum": "2026-07-15",
+          "titel": "Bijpraatlunch regio Carcassonne, Capendu",
+          "plaats": "Capendu: Café-restaurant de la Terrasse.",
+          "tijd": "09:30-12:30",
+          "type": "sociaal",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
           "datum": "2026-07-16",
           "titel": "Petanque in Siran",
           "plaats": "Rondom de kerk in Siran",
           "tijd": "07:30-12:00",
+          "type": "sportief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-07-28",
+          "titel": "Bijpraatlunch Aigne",
+          "plaats": "Restaurant Lo Cagarol, Aigne.",
+          "tijd": "10:00-13:00",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -103,6 +111,22 @@
           "plaats": "Marseillan",
           "tijd": "11:30-14:30",
           "type": "sportief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-08-12",
+          "titel": "Bijpraatlunch regio Pézenas",
+          "plaats": "Le Grand Café, 1, Av. de Cassan, 34320 Roujan.",
+          "tijd": "09:30-12:30",
+          "type": "informatief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-08-19",
+          "titel": "Bijpraatlunch regio Carcassonne, Capendu",
+          "plaats": "Capendu: Café-restaurant de la Terrasse.",
+          "tijd": "09:30-12:30",
+          "type": "sociaal",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
@@ -138,14 +162,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@nedazur.org",
       "events": [
-        {
-          "datum": "2026-06-27",
-          "titel": "Oranje Borrel",
-          "plaats": "Taiga Bar - Fréjus",
-          "tijd": "15:00-17:00",
-          "type": "sociaal",
-          "bron": "https://www.nedazur.org/_ical/public.ics"
-        },
         {
           "datum": "2026-07-05",
           "titel": "Haring Party 2026 - 5 juli",
@@ -188,30 +204,6 @@
       "contact": "contact@a-n-m.com",
       "events": [
         {
-          "datum": "2026-06-23",
-          "titel": "ANM Bridge",
-          "plaats": "Le Muy",
-          "tijd": "12:30-18:30",
-          "type": "informatief",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
-        {
-          "datum": "2026-06-26",
-          "titel": "RAF Boules",
-          "plaats": "Flayosc",
-          "tijd": "12:00-15:00",
-          "type": "sportief",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
-        {
-          "datum": "2026-06-26",
-          "titel": "Holland Apéro Provence (HAP) borrel",
-          "plaats": "Salernes",
-          "tijd": "15:00-17:00",
-          "type": "sociaal",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
-        {
           "datum": "2026-06-29",
           "titel": "Golfclinic Barbaroux",
           "plaats": "Brignoles",
@@ -246,7 +238,111 @@
       "opmerking": "Publiceert events per maand als blogposts",
       "events": [
         {
-          "datum": "2026-06-28",
+          "datum": "2026-07-04",
+          "titel": "Dodenherdenking",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "informatief",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-07-06",
+          "titel": "Wijn proeven en jazzconcert",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-07-10",
+          "titel": "Rondleiding door Le Marais",
+          "plaats": "Le Marais",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-07-12",
+          "titel": "Tentoonstelling M.C. Escher",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-07-19",
+          "titel": "Algemene ledenvergadering",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "bestuurlijk",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-07-22",
+          "titel": "Koffieochtend met spelletijes",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-07-25",
+          "titel": "Koningsfeest",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-07-25",
+          "titel": "Spelletjesmiddag (voor volwassenen)",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-07-25",
+          "titel": "Koffieochtend",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-07-26",
+          "titel": "Koffieochtend",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-07-27",
+          "titel": "Theateravond",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-07-29",
+          "titel": "Koffieochtend",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-07-29",
+          "titel": "Paashaas",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://nlvp.fr/calendar/"
+        },
+        {
+          "datum": "2026-07-31",
           "titel": "Koffieochtend",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
@@ -298,14 +394,6 @@
         }
       ],
       "events": [
-        {
-          "datum": "2026-06-27",
-          "titel": "Marché Nocturne",
-          "plaats": "niet vermeld",
-          "tijd": "17:00",
-          "type": "sociaal",
-          "bron": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/06/15/-.html"
-        },
         {
           "datum": "2026-07-02",
           "titel": "Golfcompetitie",
@@ -419,24 +507,7 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "info@atelierneerlandais.com",
       "opmerking": "Platform van de Nederlandse ambassade in Parijs voor creatieve bedrijfstakken. 22 Avenue Victoria, 75001 Paris.",
-      "events": [
-        {
-          "datum": "2026-06-23",
-          "titel": "Showrooms Fashion Week",
-          "plaats": "Atelier Néerlandais",
-          "tijd": "niet vermeld",
-          "type": "zakelijk",
-          "bron": "https://atelierneerlandais.com/kalender/"
-        },
-        {
-          "datum": "2026-06-24",
-          "titel": "Boeklancering: Capitalisms Favorite Child",
-          "plaats": "Atelier Néerlandais",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://atelierneerlandais.com/kalender/"
-        }
-      ],
+      "events": [],
       "rubriek": "regionaal"
     },
     {
