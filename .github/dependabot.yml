@@ -1,0 +1,19 @@
+# Dependabot — veilige, voorspelbare updates voor verenigingen-kalender.
+#
+# Doel: stabiliteit. Kleine updates (patch + minor) komen wekelijks
+# gebundeld in één PR. Grote (major) updates blijven zichtbaar als losse
+# PR, zodat je ze bewust kunt beoordelen i.p.v. dat ze de boel verrassen.
+#
+# De npm-dependencies van dit project staan in /scripts (het update-scriptje).
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/scripts"
+    schedule:
+      interval: "weekly"
+    open-pull-requests-limit: 5
+    groups:
+      safe-updates:
+        update-types:
+          - "minor"
+          - "patch"
