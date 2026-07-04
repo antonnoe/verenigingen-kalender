@@ -3,8 +3,8 @@
     "laatst_bijgewerkt": "2026-06-29",
     "volgende_update": "2026-07-06",
     "bronnen_gecontroleerd": 10,
-    "bronnen_met_events": 8,
-    "totaal_events": 56,
+    "bronnen_met_events": 9,
+    "totaal_events": 62,
     "gefilterde_items": 0,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
@@ -983,9 +983,93 @@
       "status": "actief",
       "agenda_toegankelijkheid": "geen_online_agenda",
       "contact": "meetbergerac@gmail.com",
-      "opmerking": "Informele groep voor maandelijkse ontmoetingen met maaltijd. Lijst van 100+ personen, ca. 25 komen elke maand.",
+      "opmerking": "Informele groep (geen vereniging: geen bestuur, geen contributie, geen deelnameverplichting) voor Nederlandstaligen binnen ca. 45 km rond Bergerac. Maandelijkse ontmoeting op de eerste donderdag in Restaurant l'Estela, Saint-Nexans: okt-mrt overdag (lunch, aanvang ca. 12:00 uur), apr-sep 's avonds (borrel + diner, aanvang ca. 18:00 uur). Reserveren voor de ontmoeting zelf is niet nodig; voor de afsluitende maaltijd (ca. €20 incl. wijn) wel, via een mail die in het voorafgaande weekend wordt rondgestuurd. Aanmelden en informatie: mail naar meetbergerac@gmail.com (contactpersoon Hans van Driel).",
       "rubriek": "regionaal",
-      "events": []
+      "events": [
+        {
+          "titel": "Maandelijkse ontmoeting met diner",
+          "datum": "2026-08-06",
+          "tijd": "ca. 18:00 uur",
+          "plaats": "Restaurant l'Estela, Saint-Nexans",
+          "type": "sociaal",
+          "bron": "vast ritme (automatisch gegenereerd)"
+        },
+        {
+          "titel": "Maandelijkse ontmoeting met diner",
+          "datum": "2026-09-03",
+          "tijd": "ca. 18:00 uur",
+          "plaats": "Restaurant l'Estela, Saint-Nexans",
+          "type": "sociaal",
+          "bron": "vast ritme (automatisch gegenereerd)"
+        },
+        {
+          "titel": "Maandelijkse ontmoeting met lunch",
+          "datum": "2026-10-01",
+          "tijd": "ca. 12:00 uur",
+          "plaats": "Restaurant l'Estela, Saint-Nexans",
+          "type": "sociaal",
+          "bron": "vast ritme (automatisch gegenereerd)"
+        },
+        {
+          "titel": "Maandelijkse ontmoeting met lunch",
+          "datum": "2026-11-05",
+          "tijd": "ca. 12:00 uur",
+          "plaats": "Restaurant l'Estela, Saint-Nexans",
+          "type": "sociaal",
+          "bron": "vast ritme (automatisch gegenereerd)"
+        },
+        {
+          "titel": "Maandelijkse ontmoeting met lunch",
+          "datum": "2026-12-03",
+          "tijd": "ca. 12:00 uur",
+          "plaats": "Restaurant l'Estela, Saint-Nexans",
+          "type": "sociaal",
+          "bron": "vast ritme (automatisch gegenereerd)"
+        },
+        {
+          "titel": "Maandelijkse ontmoeting met lunch",
+          "datum": "2027-01-07",
+          "tijd": "ca. 12:00 uur",
+          "plaats": "Restaurant l'Estela, Saint-Nexans",
+          "type": "sociaal",
+          "bron": "vast ritme (automatisch gegenereerd)"
+        }
+      ],
+      "vast_ritme": {
+        "patroon": "maandelijks",
+        "weekdag": 4,
+        "week_van_maand": 1,
+        "aantal_maanden": 6,
+        "plaats": "Restaurant l'Estela, Saint-Nexans",
+        "type": "sociaal",
+        "omschrijving": "eerste donderdag van de maand",
+        "seizoenen": [
+          {
+            "maanden": [
+              10,
+              11,
+              12,
+              1,
+              2,
+              3
+            ],
+            "tijd": "ca. 12:00 uur",
+            "titel": "Maandelijkse ontmoeting met lunch"
+          },
+          {
+            "maanden": [
+              4,
+              5,
+              6,
+              7,
+              8,
+              9
+            ],
+            "tijd": "ca. 18:00 uur",
+            "titel": "Maandelijkse ontmoeting met diner"
+          }
+        ]
+      }
     }
   ]
 }

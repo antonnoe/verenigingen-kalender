@@ -74,7 +74,7 @@
   "rdv-bergerac": {
     "lat": 44.85,
     "lon": 0.48,
-    "radius_km": 50,
+    "radius_km": 45,
     "locatie_label": "Bergerac"
   },
   "nlvp": {

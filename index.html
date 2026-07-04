@@ -104,6 +104,35 @@
       text-decoration: underline;
     }
 
+    /* ── KAART-LABELS ── */
+    .kaart-label {
+      background: none;
+      border: none;
+      box-shadow: none;
+    }
+    .kaart-label .label-regel {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 1.5;
+      white-space: nowrap;
+      cursor: pointer;
+      text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 5px #fff, 1px 1px 2px #fff;
+      transition: opacity .2s;
+    }
+    .kaart-label .label-regel .label-icoon {
+      font-size: 9px;
+      opacity: .55;
+      margin-left: 3px;
+    }
+    .kaart-label .label-regel:hover {
+      text-decoration: underline;
+    }
+    .kaart-label.gedimd .label-regel {
+      opacity: .35;
+    }
+
     /* ── TABS ── */
     .tab-bar {
       display: flex;
@@ -766,40 +795,154 @@
   }
 
   function plaatsCirkels(map, locaties) {
+    // ── Palet: gedempte tinten passend bij huisstijl; bordeaux eerst ──
+    var KLEUREN = ['#800000', '#1d5c63', '#2e6b34', '#b8860b',
+                   '#3f4d8f', '#7b3fa0', '#3a7ca5', '#6e4b1f'];
+
+    // Verzamel kaart-items (vereniging + locatie), grootste cirkels eerst
+    // zodat kleine cirkels bovenop komen en klikbaar blijven.
+    var items = [];
     alleVerenigingen.forEach(function (ver) {
       if (LANDELIJK_IDS[ver.id]) return; // Landelijk = geen cirkel
       var loc = locaties[ver.id];
-      if (!loc) return; // Geen coördinaten bekend
+      if (!loc) return;
+      items.push({ ver: ver, loc: loc });
+    });
+    items.sort(function (a, b) { return b.loc.radius_km - a.loc.radius_km; });
 
-      // Cirkel toevoegen (radius in meters)
+    // ── Overlap-graaf: welke cirkels raken elkaar? ──
+    function afstandKm(a, b) {
+      var dLat = (a.lat - b.lat) * 111;
+      var dLon = (a.lon - b.lon) * 111 * Math.cos(46 * Math.PI / 180);
+      return Math.sqrt(dLat * dLat + dLon * dLon);
+    }
+    items.forEach(function (it) { it.buren = []; });
+    for (var i = 0; i < items.length; i++) {
+      for (var j = i + 1; j < items.length; j++) {
+        if (afstandKm(items[i].loc, items[j].loc) <
+            items[i].loc.radius_km + items[j].loc.radius_km) {
+          items[i].buren.push(items[j]);
+          items[j].buren.push(items[i]);
+        }
+      }
+    }
+
+    // ── Greedy graafkleuring: meeste buren eerst, laagste vrije kleur ──
+    items.slice().sort(function (a, b) {
+      return b.buren.length - a.buren.length;
+    }).forEach(function (it) {
+      var bezet = {};
+      it.buren.forEach(function (buur) {
+        if (buur.kleur) bezet[buur.kleur] = true;
+      });
+      it.kleur = KLEUREN.find(function (k) { return !bezet[k]; }) ||
+                 KLEUREN[0]; // >8 wederzijdse overlaps: val terug op bordeaux
+    });
+
+    // ── Cirkels tekenen + popups binden ──
+    var cirkels = {};   // id → L.circle
+    var labelMarkers = []; // voor dim-effect bij focus
+    var focusId = null;
+    var STANDAARD_VIEW = { center: [46.5, 2.5], zoom: 6 };
+
+    items.forEach(function (it) {
+      var ver = it.ver, loc = it.loc;
       var cirkel = L.circle([loc.lat, loc.lon], {
-        color: '#800000',
-        weight: 1,
-        fillColor: '#800000',
-        fillOpacity: 0.18,
+        color: it.kleur,
+        weight: 1.5,
+        opacity: 0.75,
+        fillColor: it.kleur,
+        fillOpacity: 0.15,
         radius: loc.radius_km * 1000
       }).addTo(map);
+      cirkels[ver.id] = cirkel;
+      it.cirkel = cirkel;
 
-      // Popup met vereniging-info
       var popupHtml = '<strong>' + escapeHtml(ver.naam) + '</strong>';
       popupHtml += '<div class="popup-locatie">Werkgebied: ' + escapeHtml(loc.locatie_label) + ' (' + loc.radius_km + ' km)</div>';
       if (ver.opmerking) {
-        var kort = ver.opmerking.length > 140 ? ver.opmerking.substring(0, 140) + '…' : ver.opmerking;
+        var kort = ver.opmerking.length > 140 ? ver.opmerking.substring(0, 140) + '\u2026' : ver.opmerking;
         popupHtml += '<div style="margin-bottom:8px; font-size:.78rem; color:#555;">' + escapeHtml(kort) + '</div>';
       }
       var eventCount = (ver.events && ver.events.length) || 0;
       if (eventCount > 0) {
-        popupHtml += '<div style="font-size:.75rem; color:#800000; margin-bottom:6px;">📅 ' + eventCount + ' evenement' + (eventCount > 1 ? 'en' : '') + ' in de kalender</div>';
+        popupHtml += '<div style="font-size:.75rem; color:' + it.kleur + '; margin-bottom:6px;">\ud83d\udcc5 ' + eventCount + ' evenement' + (eventCount > 1 ? 'en' : '') + ' in de kalender</div>';
       }
       if (ver.website) {
         var isFacebook = /facebook\.com/i.test(ver.website);
         popupHtml += '<a href="' + escapeHtml(ver.website) + '" target="_blank" rel="noopener">' +
-                     (isFacebook ? 'Facebook-pagina' : 'Website bezoeken') + ' →</a>';
+                     (isFacebook ? 'Facebook-pagina' : 'Website bezoeken') + ' \u2192</a>';
       }
       if (ver.contact) {
         popupHtml += '<br><a href="mailto:' + escapeHtml(ver.contact) + '">Contact: ' + escapeHtml(ver.contact) + '</a>';
       }
       cirkel.bindPopup(popupHtml);
+    });
+
+    // ── Focus: klik op label \u2192 inzoomen op die cirkel, rest vervaagt ──
+    function zetFocus(id) {
+      if (focusId === id) { resetFocus(); return; }
+      focusId = id;
+      items.forEach(function (it) {
+        var actief = it.ver.id === id;
+        it.cirkel.setStyle({
+          fillOpacity: actief ? 0.28 : 0.04,
+          opacity: actief ? 0.9 : 0.15,
+          weight: actief ? 2.5 : 1
+        });
+      });
+      labelMarkers.forEach(function (m) {
+        var el = m.getElement();
+        if (el) el.classList.toggle('gedimd', m._verIds.indexOf(id) === -1);
+      });
+      var c = cirkels[id];
+      map.fitBounds(c.getBounds().pad(0.25));
+      c.openPopup();
+    }
+    function resetFocus() {
+      focusId = null;
+      items.forEach(function (it) {
+        it.cirkel.setStyle({ fillOpacity: 0.15, opacity: 0.75, weight: 1.5 });
+      });
+      labelMarkers.forEach(function (m) {
+        var el = m.getElement();
+        if (el) el.classList.remove('gedimd');
+      });
+      map.closePopup();
+      map.setView(STANDAARD_VIEW.center, STANDAARD_VIEW.zoom);
+    }
+
+    // ── Labels: gegroepeerd per (vrijwel) gelijk middelpunt, zodat
+    //    concentrische cirkels (Parijs, Montpellier) leesbaar stapelen ──
+    var groepen = {};
+    items.forEach(function (it) {
+      var key = it.loc.lat.toFixed(1) + ',' + it.loc.lon.toFixed(1);
+      (groepen[key] = groepen[key] || []).push(it);
+    });
+    Object.keys(groepen).forEach(function (key) {
+      var groep = groepen[key];
+      var html = '';
+      groep.forEach(function (it) {
+        var tekst = it.ver.afkorting || it.ver.naam;
+        html += '<span class="label-regel" data-ver-id="' + escapeHtml(it.ver.id) + '" style="color:' + it.kleur + ';">' +
+                escapeHtml(tekst) + '<span class="label-icoon">\u26f6</span></span>';
+      });
+      var marker = L.marker([groep[0].loc.lat, groep[0].loc.lon], {
+        icon: L.divIcon({ className: 'kaart-label', html: html, iconSize: null }),
+        interactive: true,
+        keyboard: false
+      }).addTo(map);
+      marker._verIds = groep.map(function (it) { return it.ver.id; });
+      labelMarkers.push(marker);
+      var el = marker.getElement();
+      if (el) {
+        el.addEventListener('click', function (e) {
+          var regel = e.target.closest('.label-regel');
+          if (!regel) return;
+          e.stopPropagation();
+          zetFocus(regel.getAttribute('data-ver-id'));
+        });
+      }
     });
   }
 
@@ -938,7 +1081,7 @@
     });
 
     if (filtered.length === 0) {
-      kalenderContent.innerHTML = '<div class="empty-state"><p>Geen toekomstige evenementen gevonden voor deze selectie.</p></div>';
+      kalenderContent.innerHTML = renderEmptyStateMetFallback(regio, vereniging);
       return;
     }
 
@@ -972,6 +1115,44 @@
     });
 
     kalenderContent.innerHTML = html + buildMissingVerenigingCTA();
+  }
+
+  // ── EMPTY STATE MET FALLBACK ──
+  // Geen events voor deze selectie? Toon dan de verenigingen die in de
+  // gekozen regio actief zijn, met contactgegevens. Zo loopt een bezoeker
+  // nooit dood: clubs zonder online agenda blijven vindbaar.
+  function renderEmptyStateMetFallback(regio, verenigingNaam) {
+    var kandidaten = alleVerenigingen.filter(function (ver) {
+      if (ver.status && ver.status !== 'actief') return false;
+      if (regio && ver.regio !== regio) return false;
+      if (verenigingNaam && ver.naam !== verenigingNaam) return false;
+      return true;
+    });
+
+    var html = '<div class="empty-state"><p>Geen toekomstige evenementen gevonden voor deze selectie.</p></div>';
+
+    if ((regio || verenigingNaam) && kandidaten.length > 0) {
+      html += '<div class="missing-cta">';
+      html += '<h3>Wel actief in ' + escapeHtml(regio || 'deze selectie') + '</h3>';
+      html += '<p>De volgende organisatie' + (kandidaten.length > 1 ? 's zijn' : ' is') + ' hier actief maar publiceert geen (volledige) online agenda. Neem rechtstreeks contact op:</p>';
+      kandidaten.forEach(function (ver) {
+        html += '<div style="margin:0.8em 0 0;padding:0.8em 1em;background:rgba(128,0,0,0.04);border-radius:8px;">';
+        html += '<strong>' + escapeHtml(ver.naam) + '</strong>';
+        if (ver.opmerking) html += '<br><span style="font-size:0.92em;">' + escapeHtml(ver.opmerking) + '</span>';
+        if (ver.website) {
+          html += '<br><a href="' + escapeHtml(ver.website) + '" target="_blank" rel="noopener">Website bezoeken →</a>';
+        }
+        if (ver.contact) {
+          html += '<br><a href="mailto:' + escapeHtml(ver.contact) + '">Contact: ' + escapeHtml(ver.contact) + '</a>';
+        }
+        html += '</div>';
+      });
+      html += '</div>';
+    } else {
+      html += buildMissingVerenigingCTA();
+    }
+
+    return html;
   }
 
   // ── CTA: verenigingen zonder online agenda ──

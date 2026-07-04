@@ -279,7 +279,27 @@ async function main() {
     }
   }
 
-  // ── 3. Meta bijwerken ──
+  // ── 3. Vast-ritme-bronnen (clubs zonder online agenda maar met vast schema) ──
+  console.log('\n── Vast-ritme-events genereren ──');
+  data.verenigingen.forEach(function (ver) {
+    if (!ver.vast_ritme) return;
+    try {
+      const events = genereerRitmeEvents(ver.vast_ritme);
+      ver.events = events;
+      console.log(`  \u2713 ${ver.id}: ${events.length} events gegenereerd (${ver.vast_ritme.omschrijving || 'vast ritme'})`);
+    } catch (err) {
+      console.log(`  \u2717 ${ver.id}: FOUT bij ritme-generatie: ${err.message}`);
+      warnings.push({
+        bron_id: ver.id,
+        bron_naam: ver.naam,
+        type: 'vast-ritme',
+        fout: err.message,
+        datum: new Date().toISOString()
+      });
+    }
+  });
+
+  // ── 4. Meta bijwerken ──
   const vandaag = new Date().toISOString().split('T')[0];
   const volgendeWeek = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
 
@@ -326,6 +346,86 @@ async function main() {
     if (fs.existsSync(WARNINGS_PATH)) fs.unlinkSync(WARNINGS_PATH);
     console.log('\n\u2713 Geen waarschuwingen');
   }
+}
+
+// ════════════════════════════════════════════════════════════════
+// VAST-RITME GENERATIE
+// ════════════════════════════════════════════════════════════════
+
+/**
+ * Genereert events voor verenigingen met een vast, voorspelbaar ritme
+ * maar zonder online agenda (bv. RDVBergerac: elke eerste donderdag).
+ *
+ * Configuratie via veld `vast_ritme` in verenigingen.json:
+ * {
+ *   "patroon": "maandelijks",
+ *   "weekdag": 4,              // 0=zo, 1=ma, ... 4=do
+ *   "week_van_maand": 1,       // 1 = eerste <weekdag> van de maand
+ *   "aantal_maanden": 6,       // hoeveel maanden vooruit genereren
+ *   "plaats": "…",
+ *   "type": "sociaal",
+ *   "omschrijving": "…",       // alleen voor logging
+ *   "seizoenen": [             // optioneel: titel/tijd per maandbereik
+ *     { "maanden": [10,11,12,1,2,3], "tijd": "ca. 12:00", "titel": "…" },
+ *     { "maanden": [4,5,6,7,8,9],    "tijd": "ca. 18:00", "titel": "…" }
+ *   ],
+ *   "titel": "…", "tijd": "…"  // fallback als er geen seizoenen zijn
+ * }
+ */
+function genereerRitmeEvents(ritme) {
+  if (ritme.patroon !== 'maandelijks') {
+    throw new Error(`Onbekend patroon: ${ritme.patroon}`);
+  }
+  const weekdag = ritme.weekdag;
+  const weekVanMaand = ritme.week_van_maand || 1;
+  const aantalMaanden = ritme.aantal_maanden || 6;
+
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+
+  const events = [];
+  // Start in de huidige maand; is de datum al voorbij, dan valt hij eruit
+  // en vullen we aan tot `aantalMaanden` toekomstige events.
+  let jaar = now.getFullYear();
+  let maandIdx = now.getMonth(); // 0-based
+
+  while (events.length < aantalMaanden) {
+    const eersteDag = new Date(jaar, maandIdx, 1);
+    const offset = (weekdag - eersteDag.getDay() + 7) % 7;
+    const dag = 1 + offset + (weekVanMaand - 1) * 7;
+    const eventDatum = new Date(jaar, maandIdx, dag);
+
+    if (eventDatum >= now) {
+      const maandNr = maandIdx + 1; // 1-based voor seizoensconfig
+      let titel = ritme.titel || 'Maandelijkse ontmoeting';
+      let tijd = ritme.tijd || '';
+      if (Array.isArray(ritme.seizoenen)) {
+        const seizoen = ritme.seizoenen.find(function (s) {
+          return s.maanden.indexOf(maandNr) !== -1;
+        });
+        if (seizoen) {
+          if (seizoen.titel) titel = seizoen.titel;
+          if (seizoen.tijd) tijd = seizoen.tijd;
+        }
+      }
+      const y = eventDatum.getFullYear();
+      const m = String(eventDatum.getMonth() + 1).padStart(2, '0');
+      const d = String(eventDatum.getDate()).padStart(2, '0');
+      events.push({
+        titel: titel,
+        datum: `${y}-${m}-${d}`,
+        tijd: tijd,
+        plaats: ritme.plaats || '',
+        type: ritme.type || 'sociaal',
+        bron: 'vast ritme (automatisch gegenereerd)'
+      });
+    }
+
+    maandIdx++;
+    if (maandIdx > 11) { maandIdx = 0; jaar++; }
+  }
+
+  return events;
 }
 
 // ════════════════════════════════════════════════════════════════
