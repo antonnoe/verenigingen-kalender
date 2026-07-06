@@ -1,29 +1,21 @@
 {
-  "generated_at": "2026-06-29T08:38:28.626Z",
-  "ok": false,
-  "status": "degraded",
-  "laatst_bijgewerkt": "2026-06-29",
-  "volgende_update": "2026-07-06",
-  "totaal_events": 56,
+  "generated_at": "2026-07-06T08:31:07.640Z",
+  "ok": true,
+  "status": "ok",
+  "laatst_bijgewerkt": "2026-07-06",
+  "volgende_update": "2026-07-13",
+  "totaal_events": 144,
   "bronnen_totaal": 10,
-  "bronnen_ok": 9,
-  "bronnen_down": 1,
-  "kapotte_koppelingen": [
-    {
-      "id": "neerlandia-toulouse",
-      "naam": "Neerlandia Toulouse",
-      "type": "web-scraping",
-      "url": "https://www.neerlandia.fr/index.php/nl/agenda",
-      "fout": "Geen bruikbare HTML opgehaald van 1 pagina('s)"
-    }
-  ],
+  "bronnen_ok": 10,
+  "bronnen_down": 0,
+  "kapotte_koppelingen": [],
   "bronnen": [
     {
       "id": "nvlr",
       "naam": "NVLR",
       "type": "ical",
       "status": "ok",
-      "events": 13,
+      "events": 14,
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null
     },
@@ -32,7 +24,7 @@
       "naam": "NEDAZUR",
       "type": "ical",
       "status": "ok",
-      "events": 3,
+      "events": 2,
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null
     },
@@ -50,7 +42,7 @@
       "naam": "NLVP",
       "type": "web-scraping",
       "status": "ok",
-      "events": 14,
+      "events": 17,
       "url": "https://nlvp.fr/calendar/",
       "fout": null
     },
@@ -59,8 +51,8 @@
       "naam": "La Tulipe",
       "type": "web-scraping",
       "status": "ok",
-      "events": 12,
-      "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/06/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/07/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/08/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html",
+      "events": 96,
+      "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/07/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/08/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/10/15/-.html",
       "fout": null
     },
     {
@@ -94,10 +86,10 @@
       "id": "neerlandia-toulouse",
       "naam": "Neerlandia Toulouse",
       "type": "web-scraping",
-      "status": "down",
-      "events": 0,
+      "status": "ok",
+      "events": 1,
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
-      "fout": "Geen bruikbare HTML opgehaald van 1 pagina('s)"
+      "fout": null
     },
     {
       "id": "fanf",
