@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-13T08:04:11.290Z",
+  "generated_at": "2026-07-15T19:28:37.449Z",
   "ok": true,
   "status": "ok",
-  "laatst_bijgewerkt": "2026-07-13",
-  "volgende_update": "2026-07-20",
-  "totaal_events": 136,
+  "laatst_bijgewerkt": "2026-07-15",
+  "volgende_update": "2026-07-22",
+  "totaal_events": 27,
   "bronnen_totaal": 10,
   "bronnen_ok": 10,
   "bronnen_down": 0,
@@ -15,7 +15,7 @@
       "naam": "NVLR",
       "type": "ical",
       "status": "ok",
-      "events": 13,
+      "events": 12,
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null
     },
@@ -40,10 +40,10 @@
     {
       "id": "nlvp",
       "naam": "NLVP",
-      "type": "web-scraping",
+      "type": "wordpress-api",
       "status": "ok",
-      "events": 15,
-      "url": "https://nlvp.fr/calendar/",
+      "events": 0,
+      "url": "https://nlvp.fr",
       "fout": null
     },
     {
@@ -51,7 +51,7 @@
       "naam": "La Tulipe",
       "type": "web-scraping",
       "status": "ok",
-      "events": 88,
+      "events": 0,
       "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/07/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/08/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/10/15/-.html",
       "fout": null
     },
@@ -78,7 +78,7 @@
       "naam": "LOTgenoten",
       "type": "web-scraping",
       "status": "ok",
-      "events": 5,
+      "events": 0,
       "url": "https://www.lotgenoten.fr/agenda/",
       "fout": null
     },
