@@ -1,13 +1,13 @@
 {
   "meta": {
     "laatst_bijgewerkt": "2026-07-15",
-    "volgende_update": "2026-07-22",
+    "volgende_update": "2026-07-17",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 7,
     "totaal_events": 27,
-    "gefilterde_items": 93,
+    "gefilterde_items": 5,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 0
+    "warnings": 1
   },
   "verenigingen": [
     {

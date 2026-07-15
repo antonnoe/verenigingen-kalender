@@ -1,14 +1,21 @@
 {
-  "generated_at": "2026-07-15T19:28:37.449Z",
+  "generated_at": "2026-07-15T20:26:18.291Z",
   "ok": true,
   "status": "ok",
   "laatst_bijgewerkt": "2026-07-15",
-  "volgende_update": "2026-07-22",
+  "volgende_update": "2026-07-17",
   "totaal_events": 27,
   "bronnen_totaal": 10,
   "bronnen_ok": 10,
   "bronnen_down": 0,
+  "bronnen_verdacht": 0,
   "kapotte_koppelingen": [],
+  "observaties": [],
+  "nieuws": {
+    "status": "degraded",
+    "items": 18,
+    "bronnen_down": 1
+  },
   "bronnen": [
     {
       "id": "nvlr",
@@ -16,8 +23,11 @@
       "type": "ical",
       "status": "ok",
       "events": 12,
+      "stale": false,
+      "laatste_succes": "2026-07-15",
       "url": "https://www.nvlr.eu/_ical/public.ics",
-      "fout": null
+      "fout": null,
+      "diagnose": null
     },
     {
       "id": "nedazur",
@@ -25,8 +35,11 @@
       "type": "ical",
       "status": "ok",
       "events": 2,
+      "stale": false,
+      "laatste_succes": "2026-07-15",
       "url": "https://www.nedazur.org/_ical/public.ics",
-      "fout": null
+      "fout": null,
+      "diagnose": null
     },
     {
       "id": "anm",
@@ -34,8 +47,11 @@
       "type": "ical",
       "status": "ok",
       "events": 3,
+      "stale": false,
+      "laatste_succes": "2026-07-15",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
-      "fout": null
+      "fout": null,
+      "diagnose": null
     },
     {
       "id": "nlvp",
@@ -43,8 +59,11 @@
       "type": "wordpress-api",
       "status": "ok",
       "events": 0,
+      "stale": false,
+      "laatste_succes": "2026-07-15",
       "url": "https://nlvp.fr",
-      "fout": null
+      "fout": null,
+      "diagnose": null
     },
     {
       "id": "latulipe",
@@ -52,8 +71,11 @@
       "type": "web-scraping",
       "status": "ok",
       "events": 0,
+      "stale": false,
+      "laatste_succes": "2026-07-15",
       "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/07/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/08/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/10/15/-.html",
-      "fout": null
+      "fout": null,
+      "diagnose": null
     },
     {
       "id": "atelier-neerlandais",
@@ -61,8 +83,11 @@
       "type": "web-scraping",
       "status": "ok",
       "events": 0,
+      "stale": false,
+      "laatste_succes": "2026-07-15",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
-      "fout": null
+      "fout": null,
+      "diagnose": null
     },
     {
       "id": "ern-paris",
@@ -70,8 +95,11 @@
       "type": "web-scraping",
       "status": "ok",
       "events": 2,
+      "stale": false,
+      "laatste_succes": "2026-07-15",
       "url": "https://ernparis.fr/agenda/",
-      "fout": null
+      "fout": null,
+      "diagnose": null
     },
     {
       "id": "lotgenoten",
@@ -79,8 +107,11 @@
       "type": "web-scraping",
       "status": "ok",
       "events": 0,
+      "stale": false,
+      "laatste_succes": "2026-07-15",
       "url": "https://www.lotgenoten.fr/agenda/",
-      "fout": null
+      "fout": null,
+      "diagnose": null
     },
     {
       "id": "neerlandia-toulouse",
@@ -88,8 +119,11 @@
       "type": "web-scraping",
       "status": "ok",
       "events": 1,
+      "stale": false,
+      "laatste_succes": "2026-07-15",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
-      "fout": null
+      "fout": null,
+      "diagnose": null
     },
     {
       "id": "fanf",
@@ -97,8 +131,11 @@
       "type": "web-scraping",
       "status": "ok",
       "events": 0,
+      "stale": false,
+      "laatste_succes": "2026-07-15",
       "url": "https://www.fanf.fr/activiteiten/lijst",
-      "fout": null
+      "fout": null,
+      "diagnose": null
     }
   ]
 }
