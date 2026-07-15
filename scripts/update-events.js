@@ -566,6 +566,7 @@ BELANGRIJK — Zoek events in álle formaten, zoals:
 FILTERREGELS:
 - Vandaag is ${vandaag}. Geef ALLE toekomstige events vanaf vandaag, ook events die ver in de toekomst liggen (december, volgend jaar, 2027). Geen maximum horizon — neem álles mee wat op de pagina staat.
 - Als alleen dag en maand genoemd zijn (geen jaar): neem de eerstvolgende datum vanaf vandaag.
+- KRITIEK — VERZIN NOOIT DATUMS: Als een event een volledige datum heeft (met jaar) die in het verleden ligt, dan is dat event VOORBIJ. Sla het over. Verschuif de datum NOOIT naar een latere maand of een later jaar om er een toekomstig event van te maken. Een pagina die alleen voorbije events bevat levert een lege array [] op. Een lege array is een correct en gewenst antwoord.
 - NEGEER:
   * Nieuwskoppen van NU.nl/NOS/RTL/BBC etc. en algemene blogposts
   * Boekrecensies, filmrecensies zonder specifiek event
@@ -588,8 +589,10 @@ OUTPUTFORMAAT:
     "titel": "korte naam van het event (max 80 tekens)",
     "plaats": "locatie of 'niet vermeld'",
     "tijd": "HH:MM of HH:MM-HH:MM of 'niet vermeld'",
-    "type": "sociaal|sportief|cultureel|informatief|bestuurlijk|zakelijk|kerkdienst"
+    "type": "sociaal|sportief|cultureel|informatief|bestuurlijk|zakelijk|kerkdienst",
+    "bron_tekst": "LETTERLIJK citaat uit de HTML hierboven (max 150 tekens) waarin de datum van dit event staat. Kopieer exact, karakter voor karakter, inclusief de datumnotatie zoals die op de pagina staat. Niet parafraseren, niet vertalen, niet herformatteren."
   }
+- Events zonder aanwijsbaar letterlijk datumcitaat: NIET opnemen.
 - Geen events? Geef: []
 - ALLEEN de JSON array, niets anders.
 
@@ -665,6 +668,15 @@ ${alleHtml}`;
 
     const titel = cleanText(ev.titel);
 
+    // Post-validatie: bronanker — de datum moet verifieerbaar in de bron staan.
+    // Dit blokkeert gehallucineerde/verschoven datums (bijv. 25 april → 25 augustus).
+    var ankerCheck = verifieerEventTegenBron(ev, alleHtml, now);
+    if (!ankerCheck.ok) {
+      console.log(`    \u2717 Afgekeurd (bronanker): "${titel.substring(0, 50)}" (${ev.datum}) \u2014 ${ankerCheck.reden}`);
+      gefilterd++;
+      return;
+    }
+
     // Post-validatie: nieuwskop?
     var nieuwsCheck = detecteerNieuwskop(titel);
     if (nieuwsCheck.isNieuws) {
@@ -719,6 +731,124 @@ function formatDate(d) {
   return d.getFullYear() + '-' +
     String(d.getMonth() + 1).padStart(2, '0') + '-' +
     String(d.getDate()).padStart(2, '0');
+}
+
+// ════════════════════════════════════════════════════════════════
+// BRONANKER-VERIFICATIE
+// Vertrouw het model niet: elke geëxtraheerde datum moet
+// deterministisch herleidbaar zijn tot letterlijke brontekst.
+// ════════════════════════════════════════════════════════════════
+
+function normaliseerVoorAnker(s) {
+  return String(s || '')
+    .toLowerCase()
+    .replace(/[\u2010-\u2015\u2212]/g, '-')   // alle streepjes → '-'
+    .replace(/[\u2018\u2019\u201c\u201d]/g, "'")
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+var MAAND_NAMEN = {
+  // Nederlands
+  'januari': 1, 'februari': 2, 'maart': 3, 'april': 4, 'mei': 5, 'juni': 6,
+  'juli': 7, 'augustus': 8, 'september': 9, 'oktober': 10, 'november': 11, 'december': 12,
+  'jan': 1, 'feb': 2, 'mrt': 3, 'apr': 4, 'jun': 6, 'jul': 7, 'aug': 8,
+  'sep': 9, 'sept': 9, 'okt': 10, 'nov': 11, 'dec': 12,
+  // Frans
+  'janvier': 1, 'f\u00e9vrier': 2, 'fevrier': 2, 'mars': 3, 'avril': 4,
+  'juin': 6, 'juillet': 7, 'ao\u00fbt': 8, 'aout': 8, 'septembre': 9,
+  'octobre': 10, 'novembre': 11, 'd\u00e9cembre': 12, 'decembre': 12
+};
+
+/**
+ * Haal alle herkenbare datums uit een stukje tekst.
+ * Retourneert [{dag, maand, jaar|null}, ...]
+ * Ondersteunt: 2026-04-25 | 25-04-2026 | 25/4 | 25/04/2026 | 25 april (2026)
+ */
+function parseDatumsUitTekst(tekst) {
+  var t = normaliseerVoorAnker(tekst);
+  var gevonden = [];
+  var m;
+
+  // ISO: YYYY-MM-DD
+  var reIso = /(\d{4})-(\d{1,2})-(\d{1,2})/g;
+  while ((m = reIso.exec(t)) !== null) {
+    gevonden.push({ jaar: +m[1], maand: +m[2], dag: +m[3] });
+  }
+
+  // Numeriek Europees: DD-MM-YYYY, DD/MM/YYYY, DD/MM, DD-MM
+  var reEu = /(?:^|[^\d-])(\d{1,2})[\/\-](\d{1,2})(?:[\/\-](\d{2,4}))?(?![\d\-])/g;
+  while ((m = reEu.exec(t)) !== null) {
+    var dag = +m[1], maand = +m[2];
+    var jaar = m[3] ? +m[3] : null;
+    if (jaar !== null && jaar < 100) jaar += 2000;
+    // Sla ISO-matches over die hier nogmaals matchen (jaar op dag-positie)
+    if (dag >= 1 && dag <= 31 && maand >= 1 && maand <= 12) {
+      gevonden.push({ jaar: jaar, maand: maand, dag: dag });
+    }
+  }
+
+  // Tekstueel: "25 april", "25 april 2026", "1er avril"
+  var maandAlt = Object.keys(MAAND_NAMEN).join('|');
+  var reTxt = new RegExp('(\\d{1,2})(?:er|e)?\\s+(' + maandAlt + ')\\.?(?:\\s+(\\d{4}))?', 'g');
+  while ((m = reTxt.exec(t)) !== null) {
+    gevonden.push({
+      jaar: m[3] ? +m[3] : null,
+      maand: MAAND_NAMEN[m[2]],
+      dag: +m[1]
+    });
+  }
+
+  return gevonden;
+}
+
+/**
+ * Controleer een door het model geëxtraheerd event tegen de brontekst.
+ * Eisen:
+ *  1. bron_tekst is aanwezig en komt letterlijk voor in de bron-HTML.
+ *  2. Uit bron_tekst is minstens één datum te parsen die qua dag+maand
+ *     overeenkomt met ev.datum (jaar alleen gecheckt als de bron het noemt).
+ *  3. Een brondatum mét jaar die in het verleden ligt → afkeuren
+ *     (het model mag voorbije events niet naar de toekomst schuiven).
+ */
+function verifieerEventTegenBron(ev, bronHtml, vandaag) {
+  if (!ev.bron_tekst || String(ev.bron_tekst).trim().length < 3) {
+    return { ok: false, reden: 'geen bron_tekst meegeleverd' };
+  }
+
+  var anker = normaliseerVoorAnker(ev.bron_tekst);
+  var bron = normaliseerVoorAnker(bronHtml);
+
+  if (bron.indexOf(anker) === -1) {
+    return { ok: false, reden: 'bron_tekst niet letterlijk in bron gevonden' };
+  }
+
+  var evDatum = new Date(ev.datum);
+  var evDag = evDatum.getDate();
+  var evMaand = evDatum.getMonth() + 1;
+  var evJaar = evDatum.getFullYear();
+
+  var datums = parseDatumsUitTekst(anker);
+  if (datums.length === 0) {
+    return { ok: false, reden: 'geen parseerbare datum in bron_tekst' };
+  }
+
+  for (var i = 0; i < datums.length; i++) {
+    var d = datums[i];
+    if (d.dag !== evDag || d.maand !== evMaand) continue;
+    if (d.jaar !== null && d.jaar !== evJaar) continue;
+    // Dag+maand (en evt. jaar) matchen. Laatste check: als de bron een
+    // volledig jaar noemt en die datum ligt in het verleden → afkeuren.
+    if (d.jaar !== null) {
+      var bronDatum = new Date(d.jaar, d.maand - 1, d.dag);
+      if (bronDatum < vandaag) {
+        return { ok: false, reden: 'brondatum ligt in het verleden' };
+      }
+    }
+    return { ok: true, reden: null };
+  }
+
+  return { ok: false, reden: 'event-datum (' + ev.datum + ') komt niet overeen met datum(s) in bron_tekst' };
 }
 
 function formatTime(icalEvent) {
