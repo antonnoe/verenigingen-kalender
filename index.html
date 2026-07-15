@@ -354,6 +354,95 @@
       letter-spacing: .03em;
     }
 
+    /* ── NIEUWS ── */
+    .nieuws-intro {
+      font-size: .85rem;
+      color: #666;
+      margin-bottom: 16px;
+      line-height: 1.8;
+    }
+    a.nieuws-card-link {
+      text-decoration: none;
+      color: inherit;
+      display: block;
+    }
+    .nieuws-card {
+      display: flex;
+      gap: 12px;
+      padding: 10px 12px;
+      margin-bottom: 4px;
+      background: #fff;
+      border: 1px solid #e8e0d8;
+      border-radius: 5px;
+      transition: border-color .2s, box-shadow .2s;
+      align-items: flex-start;
+      cursor: pointer;
+    }
+    a.nieuws-card-link:hover .nieuws-card {
+      border-color: rgba(128,0,0,.25);
+      box-shadow: 0 3px 12px rgba(128,0,0,.12);
+    }
+    .nieuws-date {
+      flex-shrink: 0;
+      width: 42px;
+      text-align: center;
+      padding: 3px 0;
+      background: rgba(128,0,0,.06);
+      border-radius: 5px;
+    }
+    .nieuws-date .day-num {
+      display: block;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: 1.05rem;
+      color: #800000;
+      line-height: 1.15;
+    }
+    .nieuws-date .month-name {
+      display: block;
+      font-size: .58rem;
+      color: #888;
+      text-transform: uppercase;
+      letter-spacing: .04em;
+    }
+    .nieuws-body { flex: 1; min-width: 0; }
+    .nieuws-titel {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      font-size: .9rem;
+      color: #2a2a2a;
+      line-height: 1.4;
+      margin-bottom: 2px;
+    }
+    .nieuws-bron-badge {
+      display: inline-block;
+      padding: 1px 6px;
+      border-radius: 3px;
+      font-size: .62rem;
+      font-weight: 700;
+      color: #fff;
+      background: #800000;
+      text-transform: uppercase;
+      letter-spacing: .03em;
+      margin-right: 6px;
+      vertical-align: 1px;
+    }
+    .nieuws-excerpt {
+      font-size: .8rem;
+      color: #666;
+      line-height: 1.6;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+    }
+    .nieuws-leeg {
+      text-align: center;
+      color: #888;
+      padding: 32px 0;
+      font-size: .9rem;
+    }
+
     /* ── LINK WRAPPER ── */
     a.event-card-link {
       text-decoration: none;
@@ -591,6 +680,7 @@
     <button class="tab-btn active" data-tab="evenementen">Evenementenkalender</button>
     <button class="tab-btn" data-tab="verenigingen">Verenigingen</button>
     <button class="tab-btn" data-tab="kaart">Kaart</button>
+    <button class="tab-btn" data-tab="nieuws">Nieuws</button>
   </div>
 
   <!-- TAB: EVENEMENTEN -->
@@ -650,6 +740,25 @@
       <div class="loading">
         <div class="spinner"></div>
         <div>Kaart laden&hellip;</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TAB: NIEUWS -->
+  <div id="tab-nieuws" class="tab-panel">
+    <p class="nieuws-intro">Recente berichten van de Nederlandse verenigingen in Frankrijk, automatisch verzameld uit hun nieuwsfeeds. Niet elke vereniging publiceert een nieuwsfeed; dit overzicht toont de verenigingen die dat wel doen.</p>
+    <div class="filters">
+      <div class="filter-group">
+        <label for="filter-nieuws-bron">Vereniging</label>
+        <select id="filter-nieuws-bron">
+          <option value="">Alle verenigingen</option>
+        </select>
+      </div>
+    </div>
+    <div id="nieuws-content">
+      <div class="loading">
+        <div class="spinner"></div>
+        <div>Nieuws laden&hellip;</div>
       </div>
     </div>
   </div>
@@ -729,6 +838,10 @@
         // Kaart lazy-loaden: pas bij eerste klik op Kaart-tab
         if (btn.dataset.tab === 'kaart' && !kaartGeinitialiseerd) {
           initKaart();
+        }
+        // Nieuws lazy-loaden: pas bij eerste klik op Nieuws-tab
+        if (btn.dataset.tab === 'nieuws' && !nieuwsGeladen) {
+          initNieuws();
         }
       });
     });
@@ -1376,6 +1489,76 @@
   }
 
   // ── HELPERS ──
+  // ── NIEUWS VAN DE VERENIGINGEN ──
+  // Leest data/nieuws.json (same-origin; door het update-script gevuld,
+  // want de RSS-feeds zelf zijn vanuit de browser niet bereikbaar door CORS).
+  var nieuwsGeladen = false;
+  var nieuwsItems = [];
+
+  function initNieuws() {
+    nieuwsGeladen = true;
+    fetch('data/nieuws.json?t=' + Date.now())
+      .then(function (r) { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+      .then(function (n) {
+        nieuwsItems = n.items || [];
+        vulNieuwsBronFilter(nieuwsItems);
+        renderNieuws();
+      })
+      .catch(function () {
+        document.getElementById('nieuws-content').innerHTML =
+          '<div class="nieuws-leeg">Het nieuwsoverzicht kon niet worden geladen. Probeer het later opnieuw.</div>';
+      });
+
+    document.getElementById('filter-nieuws-bron').addEventListener('change', renderNieuws);
+  }
+
+  function vulNieuwsBronFilter(items) {
+    var select = document.getElementById('filter-nieuws-bron');
+    var gezien = {};
+    items.forEach(function (it) {
+      if (gezien[it.bron_id]) return;
+      gezien[it.bron_id] = true;
+      var opt = document.createElement('option');
+      opt.value = it.bron_id;
+      opt.textContent = it.bron_naam;
+      select.appendChild(opt);
+    });
+  }
+
+  function renderNieuws() {
+    var bron = document.getElementById('filter-nieuws-bron').value;
+    var items = nieuwsItems.filter(function (it) { return !bron || it.bron_id === bron; });
+
+    if (items.length === 0) {
+      document.getElementById('nieuws-content').innerHTML =
+        '<div class="nieuws-leeg">Geen recente nieuwsberichten gevonden.</div>';
+      return;
+    }
+
+    var html = items.map(function (it) {
+      var d = new Date(it.datum);
+      var dag = isNaN(d.getTime()) ? '' : d.getDate();
+      var maand = isNaN(d.getTime()) ? '' : MAANDEN_NL[d.getMonth()].substring(0, 3);
+      var jaar = isNaN(d.getTime()) ? '' : String(d.getFullYear());
+      return '<a class="nieuws-card-link" href="' + escapeHtml(it.link) + '" target="_blank" rel="noopener">' +
+        '<div class="nieuws-card">' +
+          '<div class="nieuws-date">' +
+            '<span class="day-num">' + dag + '</span>' +
+            '<span class="month-name">' + escapeHtml(maand) + '</span>' +
+            '<span class="month-name">' + jaar + '</span>' +
+          '</div>' +
+          '<div class="nieuws-body">' +
+            '<div class="nieuws-titel"><span class="nieuws-bron-badge">' + escapeHtml(it.bron_naam) + '</span>' +
+              escapeHtml(it.titel) + '</div>' +
+            (it.excerpt ? '<div class="nieuws-excerpt">' + escapeHtml(it.excerpt) + '</div>' : '') +
+          '</div>' +
+        '</div>' +
+      '</a>';
+    }).join('');
+
+    document.getElementById('nieuws-content').innerHTML = html;
+  }
+
   function escapeHtml(str) {
     if (!str) return '';
     var div = document.createElement('div');
