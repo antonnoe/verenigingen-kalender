@@ -68,6 +68,11 @@ jobs:
           # Bouw issue body
           BODY="## ⚠️ Kalender Update Waarschuwingen — ${DATUM}\n\n"
           BODY+="De geplande update is uitgevoerd maar een of meer bronnen gaven fouten.\n\n"
+          BODY+="**Lees eerst het veld 'diagnose' per bron hieronder.** Daarin staat de oorzaak-categorie "
+          BODY+="(verplaatst/geblokkeerd/netwerk/formaat/ai/intern) met uitleg en advies. Categorieen als "
+          BODY+="*verplaatst* en *formaat* betekenen dat de vereniging haar site heeft gewijzigd - dat is "
+          BODY+="geen bug in dit script. Alleen categorie *intern* wijst op een mogelijke scriptbug. "
+          BODY+="Eerder opgehaalde events blijven zichtbaar (veld 'events_behouden').\n\n"
           
           if [ -f scripts/warnings.json ]; then
             BODY+="### Bronnen met fouten:\n\n"
