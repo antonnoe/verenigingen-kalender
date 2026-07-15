@@ -81,8 +81,11 @@ const NIEUWS_BRONNEN = {
   // tagFilter: Ning's tag-parameter in de feed-URL is onbetrouwbaar (levert
   // vaak álle blogposts). Daarom filtert het script zelf op de <category>-tags
   // van elk item; alleen items met deze rubriek komen door.
+  // userAgent-override: Ning weert verkeer met bot-achtige User-Agents (5xx);
+  // met een volledige browser-UA maakt de fetch mogelijk wel kans.
   'nederlanders-fr':     { naam: 'Nederlanders.fr', type: 'rss',
     tagFilter: 'clubs, verenigingen en bij\u00e9\u00e9nkomsten',
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
     feed: 'https://www.nederlanders.fr/profiles/blog/feed?tag=Clubs%2C+Verenigingen+en+Bij%C3%A9%C3%A9nkomsten&xn_auth=no' }
 };
 const NIEUWS_MAX_LEEFTIJD_DAGEN = 60;
@@ -633,6 +636,30 @@ async function main() {
  * }
  */
 function genereerRitmeEvents(ritme) {
+  // ── Wekelijks patroon: elke <weekdag>, <aantal_weken> vooruit ──
+  if (ritme.patroon === 'wekelijks') {
+    const weekdagW = ritme.weekdag; // 0=zo .. 6=za
+    const aantalWeken = ritme.aantal_weken || 8;
+    const nu = new Date();
+    nu.setHours(0, 0, 0, 0);
+    const eerste = new Date(nu);
+    eerste.setDate(nu.getDate() + ((weekdagW - nu.getDay() + 7) % 7)); // vandaag telt mee
+    const eventsW = [];
+    for (let w = 0; w < aantalWeken; w++) {
+      const d = new Date(eerste);
+      d.setDate(eerste.getDate() + w * 7);
+      eventsW.push({
+        titel: ritme.titel || 'Wekelijkse ontmoeting',
+        datum: d.getFullYear() + '-' + String(d.getMonth() + 1).padStart(2, '0') + '-' + String(d.getDate()).padStart(2, '0'),
+        tijd: ritme.tijd || '',
+        plaats: ritme.plaats || '',
+        type: ritme.type || 'sociaal',
+        bron: ritme.bron_url || 'vast ritme (automatisch gegenereerd)'
+      });
+    }
+    return eventsW;
+  }
+
   if (ritme.patroon !== 'maandelijks') {
     throw new Error(`Onbekend patroon: ${ritme.patroon}`);
   }
@@ -1100,7 +1127,7 @@ async function verzamelNieuws(warnings) {
     console.log(`  ${id}: ${cfg.feed}`);
     try {
       const response = await fetchMetRetry(cfg.feed, {
-        headers: { 'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)' },
+        headers: { 'User-Agent': cfg.userAgent || 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)' },
         signal: AbortSignal.timeout(15000)
       });
       const body = await response.text();
