@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T20:26:18.291Z",
+  "generated_at": "2026-07-15T20:33:04.187Z",
   "ok": true,
   "status": "ok",
   "laatst_bijgewerkt": "2026-07-15",
@@ -12,9 +12,9 @@
   "kapotte_koppelingen": [],
   "observaties": [],
   "nieuws": {
-    "status": "degraded",
+    "status": "ok",
     "items": 18,
-    "bronnen_down": 1
+    "bronnen_down": 0
   },
   "bronnen": [
     {

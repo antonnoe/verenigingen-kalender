@@ -5,9 +5,9 @@
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 7,
     "totaal_events": 27,
-    "gefilterde_items": 5,
+    "gefilterde_items": 92,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 1
+    "warnings": 0
   },
   "verenigingen": [
     {
