@@ -1,12 +1,13 @@
 {
-  "generated_at": "2026-07-15T20:58:34.417Z",
-  "totaal": 37,
+  "generated_at": "2026-07-15T21:24:29.911Z",
+  "totaal": 31,
   "bronnen": [
     {
       "id": "nlvp",
       "naam": "NLVP",
       "status": "ok",
       "items": 1,
+      "spam_geweerd": 0,
       "feed": "https://nlvp.fr/feed/",
       "diagnose": null
     },
@@ -15,6 +16,7 @@
       "naam": "La Tulipe",
       "status": "ok",
       "items": 0,
+      "spam_geweerd": 0,
       "feed": "https://www.latulipe.net/?format=feed&type=rss",
       "diagnose": null
     },
@@ -23,6 +25,7 @@
       "naam": "Atelier Néerlandais",
       "status": "ok",
       "items": 3,
+      "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
       "diagnose": null
     },
@@ -31,28 +34,25 @@
       "naam": "ERN Paris",
       "status": "ok",
       "items": 6,
+      "spam_geweerd": 0,
       "feed": "https://ernparis.fr/feed/",
       "diagnose": null
     },
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "down",
+      "status": "ok",
       "items": 6,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": {
-        "categorie": "server",
-        "oorzaak": "Server van de vereniging geeft een foutmelding (HTTP 5xx).",
-        "advies": "Probleem ligt bij de vereniging; geen actie nodig tenzij het aanhoudt.",
-        "technisch": "HTTP 503 bij https://www.lotgenoten.fr/feed/"
-      }
+      "diagnose": null
     },
     {
       "id": "neerlandia-toulouse",
       "naam": "Neerlandia Toulouse",
       "status": "ok",
       "items": 2,
+      "spam_geweerd": 0,
       "feed": "https://www.neerlandia.fr/?format=feed&type=rss",
       "diagnose": null
     },
@@ -61,6 +61,7 @@
       "naam": "NVLR",
       "status": "ok",
       "items": 4,
+      "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
     },
@@ -69,6 +70,7 @@
       "naam": "NEDAZUR",
       "status": "ok",
       "items": 0,
+      "spam_geweerd": 0,
       "feed": "https://www.nedazur.org/nieuws",
       "diagnose": null
     },
@@ -77,6 +79,7 @@
       "naam": "ANM",
       "status": "ok",
       "items": 4,
+      "spam_geweerd": 0,
       "feed": "https://www.a-n-m.nl/nieuws",
       "diagnose": null
     },
@@ -85,6 +88,7 @@
       "naam": "Bourgondische Zaken",
       "status": "ok",
       "items": 4,
+      "spam_geweerd": 0,
       "feed": "https://bourgondischezaken.com/feed/",
       "diagnose": null
     },
@@ -93,15 +97,8 @@
       "naam": "DBCRA",
       "status": "ok",
       "items": 0,
+      "spam_geweerd": 0,
       "feed": "https://dbcra.nl/feed/",
-      "diagnose": null
-    },
-    {
-      "id": "aap",
-      "naam": "Alpes–Pays-Bas",
-      "status": "ok",
-      "items": 6,
-      "feed": "https://alpespaysbas.fr/?feed=rss2",
       "diagnose": null
     },
     {
@@ -109,6 +106,7 @@
       "naam": "Praatje",
       "status": "ok",
       "items": 0,
+      "spam_geweerd": 0,
       "feed": "https://praatje.fr/feed/",
       "diagnose": null
     },
@@ -117,6 +115,7 @@
       "naam": "CMUnf",
       "status": "ok",
       "items": 1,
+      "spam_geweerd": 0,
       "feed": "https://cmunf.fr/nieuws?format=feed&type=rss",
       "diagnose": null
     },
@@ -125,6 +124,7 @@
       "naam": "FANF",
       "status": "ok",
       "items": 0,
+      "spam_geweerd": 0,
       "feed": "https://www.fanf.fr/informatie/nieuws/fanf-nieuws",
       "diagnose": null
     },
@@ -144,54 +144,6 @@
     }
   ],
   "items": [
-    {
-      "bron_id": "aap",
-      "bron_naam": "Alpes–Pays-Bas",
-      "datum": "2026-07-15",
-      "titel": "Seguridad y Confianza Gratogana casino",
-      "link": "https://alpespaysbas.fr/index.php/2026/07/15/seguridad-y-confianza-gratogana-casino-377481/",
-      "excerpt": "En el entorno digital actual, la seguridad es tan esencial como el juego mismo. Plataforma de juego Gratogana se compromete a proteger la información de sus usuarios mediante protocolos avanzados de verificación y encriptación. Los jugadores confían en la robusta gestión de…"
-    },
-    {
-      "bron_id": "aap",
-      "bron_naam": "Alpes–Pays-Bas",
-      "datum": "2026-07-15",
-      "titel": "Stortingsopties en soepele betalingen bij Rainbetcasino",
-      "link": "https://alpespaysbas.fr/index.php/2026/07/15/stortingsopties-en-soepele-betalingen-bij-rainbetcasino-373956/",
-      "excerpt": "Allereerst willen we het belang van een betrouwbare stortingsprocedure onder de aandacht brengen. Veel spelers kiezen het Rainbet casino online omdat het een breed scala aan veilige en snelle betaalmethoden aanbiedt. In dit artikel gaan we dieper in op de verschillende…"
-    },
-    {
-      "bron_id": "aap",
-      "bron_naam": "Alpes–Pays-Bas",
-      "datum": "2026-07-15",
-      "titel": "Funbet casino: Slotgame selectie & strategie",
-      "link": "https://alpespaysbas.fr/index.php/2026/07/15/funbet-casino-slotgame-selectie-and-strategie-372566/",
-      "excerpt": "Als je een fan bent van slotmachines, wil je niet alleen de nieuwste bonussen, maar ook de beste return-to-player (RTP) en spannende thema’s. Funbet casino biedt een breed aanbod, regelmatige nieuwe releases en een intuïtief overzicht waardoor je eenvoudig de perfecte slot…"
-    },
-    {
-      "bron_id": "aap",
-      "bron_naam": "Alpes–Pays-Bas",
-      "datum": "2026-07-15",
-      "titel": "Legiano kaszinó befizetési lehetőségei",
-      "link": "https://alpespaysbas.fr/index.php/2026/07/15/legiano-kaszino-befizetesi-lehetosegei-369968/",
-      "excerpt": "Abban a gyors digitális világban, ahol a játékosok új addikciójukat otthonról élvezhetik, a befizetési folyamatok egyszerűsége és biztonsága kulcsfontosságú. A Legiano kaszinó kiemelkedő figyelmet fordít arra, hogy a felhasználók minél könnyebben és gyorsabban…"
-    },
-    {
-      "bron_id": "aap",
-      "bron_naam": "Alpes–Pays-Bas",
-      "datum": "2026-07-15",
-      "titel": "OnlySpins Καζίνο: Οι Έγκυρες Μεθόδοι Εισφοράς",
-      "link": "https://alpespaysbas.fr/index.php/2026/07/15/onlyspins-kazino-oi-egkyres-methodoi-eisforas-364750/",
-      "excerpt": "Οι παίκτες of ο ιστότοπος του OnlySpins καζίνο επιλέγουν την εμπειρία τους, θέτοντας τον προτεραιότητά τους στην ευκολία και την ασφάλεια των επενδύσεων. Το OnlySpins καζίνο προσφέρει μια ποικιλία μεθόδων κατάθεσης, ενσωματώνοντας τόσο παραδοσιακά τραπεζικά μέσα όσο και…"
-    },
-    {
-      "bron_id": "aap",
-      "bron_naam": "Alpes–Pays-Bas",
-      "datum": "2026-07-15",
-      "titel": "Wild Tokyo Καζίνο: Μέθοδοι Κατάθεσης",
-      "link": "https://alpespaysbas.fr/index.php/2026/07/15/wild-tokyo-kazino-methodoi-katathesis-362332/",
-      "excerpt": "Η Wild Tokyo καζίνο συνεχίζει να αισθάνεται τη δημοτικότητα του στο ελληνικό online gaming τοπικό, εστιάζοντας όχι μόνο στην εκλεπτυσμένη εμπειρία παιχνιδιού αλλά και στον πρωτοποριακό τρόπο καταθέσεων που προσφέρει. Καθώς πολλοί παίκτες αναζητούν την ταχύτητα, την ευκολία…"
-    },
     {
       "bron_id": "nvlr",
       "bron_naam": "NVLR",
