@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T20:37:23.198Z",
-  "totaal": 26,
+  "generated_at": "2026-07-15T20:58:34.417Z",
+  "totaal": 37,
   "bronnen": [
     {
       "id": "nlvp",
@@ -37,10 +37,16 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "ok",
+      "status": "down",
       "items": 6,
+      "stale": true,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "server",
+        "oorzaak": "Server van de vereniging geeft een foutmelding (HTTP 5xx).",
+        "advies": "Probleem ligt bij de vereniging; geen actie nodig tenzij het aanhoudt.",
+        "technisch": "HTTP 503 bij https://www.lotgenoten.fr/feed/"
+      }
     },
     {
       "id": "neerlandia-toulouse",
@@ -73,9 +79,119 @@
       "items": 4,
       "feed": "https://www.a-n-m.nl/nieuws",
       "diagnose": null
+    },
+    {
+      "id": "bourgondische-zaken",
+      "naam": "Bourgondische Zaken",
+      "status": "ok",
+      "items": 4,
+      "feed": "https://bourgondischezaken.com/feed/",
+      "diagnose": null
+    },
+    {
+      "id": "dbcra",
+      "naam": "DBCRA",
+      "status": "ok",
+      "items": 0,
+      "feed": "https://dbcra.nl/feed/",
+      "diagnose": null
+    },
+    {
+      "id": "aap",
+      "naam": "Alpes–Pays-Bas",
+      "status": "ok",
+      "items": 6,
+      "feed": "https://alpespaysbas.fr/?feed=rss2",
+      "diagnose": null
+    },
+    {
+      "id": "praatje",
+      "naam": "Praatje",
+      "status": "ok",
+      "items": 0,
+      "feed": "https://praatje.fr/feed/",
+      "diagnose": null
+    },
+    {
+      "id": "cmunf",
+      "naam": "CMUnf",
+      "status": "ok",
+      "items": 1,
+      "feed": "https://cmunf.fr/nieuws?format=feed&type=rss",
+      "diagnose": null
+    },
+    {
+      "id": "fanf",
+      "naam": "FANF",
+      "status": "ok",
+      "items": 0,
+      "feed": "https://www.fanf.fr/informatie/nieuws/fanf-nieuws",
+      "diagnose": null
+    },
+    {
+      "id": "nederlanders-fr",
+      "naam": "Nederlanders.fr",
+      "status": "down",
+      "items": 0,
+      "stale": false,
+      "feed": "https://www.nederlanders.fr/profiles/blog/feed?tag=Clubs%2C+Verenigingen+en+Bij%C3%A9%C3%A9nkomsten&xn_auth=no",
+      "diagnose": {
+        "categorie": "server",
+        "oorzaak": "Server van de vereniging geeft een foutmelding (HTTP 5xx).",
+        "advies": "Probleem ligt bij de vereniging; geen actie nodig tenzij het aanhoudt.",
+        "technisch": "HTTP 503 bij https://www.nederlanders.fr/profiles/blog/feed?tag=Clubs%2C+Verenigingen+en+Bij%C3%A9%C3%A9nkomsten&xn_auth=no"
+      }
     }
   ],
   "items": [
+    {
+      "bron_id": "aap",
+      "bron_naam": "Alpes–Pays-Bas",
+      "datum": "2026-07-15",
+      "titel": "Seguridad y Confianza Gratogana casino",
+      "link": "https://alpespaysbas.fr/index.php/2026/07/15/seguridad-y-confianza-gratogana-casino-377481/",
+      "excerpt": "En el entorno digital actual, la seguridad es tan esencial como el juego mismo. Plataforma de juego Gratogana se compromete a proteger la información de sus usuarios mediante protocolos avanzados de verificación y encriptación. Los jugadores confían en la robusta gestión de…"
+    },
+    {
+      "bron_id": "aap",
+      "bron_naam": "Alpes–Pays-Bas",
+      "datum": "2026-07-15",
+      "titel": "Stortingsopties en soepele betalingen bij Rainbetcasino",
+      "link": "https://alpespaysbas.fr/index.php/2026/07/15/stortingsopties-en-soepele-betalingen-bij-rainbetcasino-373956/",
+      "excerpt": "Allereerst willen we het belang van een betrouwbare stortingsprocedure onder de aandacht brengen. Veel spelers kiezen het Rainbet casino online omdat het een breed scala aan veilige en snelle betaalmethoden aanbiedt. In dit artikel gaan we dieper in op de verschillende…"
+    },
+    {
+      "bron_id": "aap",
+      "bron_naam": "Alpes–Pays-Bas",
+      "datum": "2026-07-15",
+      "titel": "Funbet casino: Slotgame selectie & strategie",
+      "link": "https://alpespaysbas.fr/index.php/2026/07/15/funbet-casino-slotgame-selectie-and-strategie-372566/",
+      "excerpt": "Als je een fan bent van slotmachines, wil je niet alleen de nieuwste bonussen, maar ook de beste return-to-player (RTP) en spannende thema’s. Funbet casino biedt een breed aanbod, regelmatige nieuwe releases en een intuïtief overzicht waardoor je eenvoudig de perfecte slot…"
+    },
+    {
+      "bron_id": "aap",
+      "bron_naam": "Alpes–Pays-Bas",
+      "datum": "2026-07-15",
+      "titel": "Legiano kaszinó befizetési lehetőségei",
+      "link": "https://alpespaysbas.fr/index.php/2026/07/15/legiano-kaszino-befizetesi-lehetosegei-369968/",
+      "excerpt": "Abban a gyors digitális világban, ahol a játékosok új addikciójukat otthonról élvezhetik, a befizetési folyamatok egyszerűsége és biztonsága kulcsfontosságú. A Legiano kaszinó kiemelkedő figyelmet fordít arra, hogy a felhasználók minél könnyebben és gyorsabban…"
+    },
+    {
+      "bron_id": "aap",
+      "bron_naam": "Alpes–Pays-Bas",
+      "datum": "2026-07-15",
+      "titel": "OnlySpins Καζίνο: Οι Έγκυρες Μεθόδοι Εισφοράς",
+      "link": "https://alpespaysbas.fr/index.php/2026/07/15/onlyspins-kazino-oi-egkyres-methodoi-eisforas-364750/",
+      "excerpt": "Οι παίκτες of ο ιστότοπος του OnlySpins καζίνο επιλέγουν την εμπειρία τους, θέτοντας τον προτεραιότητά τους στην ευκολία και την ασφάλεια των επενδύσεων. Το OnlySpins καζίνο προσφέρει μια ποικιλία μεθόδων κατάθεσης, ενσωματώνοντας τόσο παραδοσιακά τραπεζικά μέσα όσο και…"
+    },
+    {
+      "bron_id": "aap",
+      "bron_naam": "Alpes–Pays-Bas",
+      "datum": "2026-07-15",
+      "titel": "Wild Tokyo Καζίνο: Μέθοδοι Κατάθεσης",
+      "link": "https://alpespaysbas.fr/index.php/2026/07/15/wild-tokyo-kazino-methodoi-katathesis-362332/",
+      "excerpt": "Η Wild Tokyo καζίνο συνεχίζει να αισθάνεται τη δημοτικότητα του στο ελληνικό online gaming τοπικό, εστιάζοντας όχι μόνο στην εκλεπτυσμένη εμπειρία παιχνιδιού αλλά και στον πρωτοποριακό τρόπο καταθέσεων που προσφέρει. Καθώς πολλοί παίκτες αναζητούν την ταχύτητα, την ευκολία…"
+    },
     {
       "bron_id": "nvlr",
       "bron_naam": "NVLR",
@@ -93,12 +209,28 @@
       "excerpt": "Van 26 september tot 4 oktober wordt in Fréjus het 8e Festival International de la Photographie Surréaliste et Créative georganiseerd. De ANM-fotoclub zal op woensdag 30 september of vrijdag 2..."
     },
     {
+      "bron_id": "bourgondische-zaken",
+      "bron_naam": "Bourgondische Zaken",
+      "datum": "2026-07-12",
+      "titel": "Les Étoiles du Morvan 2026",
+      "link": "https://bourgondischezaken.com/les-etoiles-du-morvan-2026/",
+      "excerpt": "waar muziek tot de verbeelding spreekt Van 9 tot 13 augustus 2026 is de Morvan het decor voor de vierde editie van Les Étoiles du Morvan, het internationale kamermuziekfestival dat muziekliefhebbers uit heel Europa trekt. Vijf avonden lang kun je ervaren hoe muziek verhalen…"
+    },
+    {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
       "datum": "2026-07-10",
       "titel": "Te koop wegens overcompleet; Tondeuse/debroussailleuse, cyclomaaier.",
       "link": "https://www.lotgenoten.fr/te-koop-wegens-overcompleet-tondeuse-debroussailleuse-cyclomaaier/",
       "excerpt": "2e eigenaar en weinig gebruikt. Briggs & Stratton 190 cc, 6pk. De machine heeft een winterbeurt gehad bij Florimont Motoculture. Aankoopnota (€ 620,=) en gebruiksaanwijzing aanwezig. Vraagprijs € 190,= Verdere info en afspraak op locatie; Simon Schutte 0031653895649 Puy lEveque"
+    },
+    {
+      "bron_id": "bourgondische-zaken",
+      "bron_naam": "Bourgondische Zaken",
+      "datum": "2026-07-09",
+      "titel": "BZ-dag op 8 augustus 2026",
+      "link": "https://bourgondischezaken.com/bz-dag-op-8-augustus-2026/",
+      "excerpt": "Mis het niet: de BZ-ledendag komt eraan! Reserveer alvast zaterdag 8 augustus in je agenda, want dan organiseren we opnieuw onze gezellige BZ-ledendag. Dit jaar zijn we te gast bij De Oude School in Larochemillay, waar de eigenaren samen met BZ een gevarieerd programma hebben…"
     },
     {
       "bron_id": "ern-paris",
@@ -173,6 +305,14 @@
       "excerpt": "Op een groot aantal plaatsen over de wereld wordt jaarlijks omstreeks 26 november het moedige verzet van prof. R. Cleveringa tegen het gedwongen ontslag van joodse medewerkers aan de Leidse..."
     },
     {
+      "bron_id": "bourgondische-zaken",
+      "bron_naam": "Bourgondische Zaken",
+      "datum": "2026-06-29",
+      "titel": "Parasols in de wijngaarden",
+      "link": "https://bourgondischezaken.com/parasols-in-de-wijngaarden/",
+      "excerpt": "Misschien heb je ze al gezien: midden tussen de wijnranken staan op sommige percelen opvallende constructies die doen denken aan grote parasols. Geen kunstproject en ook geen tijdelijke zomerattractie, maar een nieuwe techniek om druiven te beschermen tegen de steeds…"
+    },
+    {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
       "datum": "2026-06-24",
@@ -235,6 +375,22 @@
       "titel": "Arozzo Services beheer en onderhoud van uw (tweede) woning",
       "link": "https://www.lotgenoten.fr/arozzo-services-beheer-en-onderhoud-van-uw-tweede-woning/",
       "excerpt": "Wij zijn Ashley (24) en Renzo (26), een Nederlands stel dat zich vanaf september permanent vestigt in Lavercantière, in het hart van de Lot. Na jarenlang te hebben gedroomd van een leven in Frankrijk maken wij nu de stap om onze toekomst op te bouwen in deze prachtige regio.…"
+    },
+    {
+      "bron_id": "cmunf",
+      "bron_naam": "CMUnf",
+      "datum": "2026-06-03",
+      "titel": "Security incident Almerys",
+      "link": "https://cmunf.fr/nieuws/security-incident-almerys.html",
+      "excerpt": "Parijs, 2 juni 2026 Goedendag, Het bedrijf Almerys, specialist op het gebied van directe betaling van zorgkosten die werkt voor APRIL International Care France en talrijke spelers in de verzekerings- en mutualiteitssector, is onlangs het doelwit geworden van een cyberaanval."
+    },
+    {
+      "bron_id": "bourgondische-zaken",
+      "bron_naam": "Bourgondische Zaken",
+      "datum": "2026-06-02",
+      "titel": "Excursie Cité des présents Château-Chinon",
+      "link": "https://bourgondischezaken.com/excursie-cite-des-present-chateau-chinon/",
+      "excerpt": "Op 19 juli organiseert BZ een uitstap naar het net geopende museum Cité des Présents - François Mitterand in Château-Chinon. In deze vernieuwde ruimte zijn 2 musea opgenomen: de kadoos die Mitterrand ontving tijdens zijn presidentschap en het kostuummuseum. De collectie biedt…"
     },
     {
       "bron_id": "atelier-neerlandais",
