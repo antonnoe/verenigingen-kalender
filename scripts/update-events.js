@@ -102,6 +102,171 @@ const WEB_BRONNEN = {
 const GELDIGE_TYPES = ['sociaal', 'sportief', 'cultureel', 'informatief', 'bestuurlijk', 'zakelijk', 'kerkdienst'];
 
 // ════════════════════════════════════════════════════════════════
+// ROBUUSTHEID: retry, foutclassificatie, data-retentie
+// ════════════════════════════════════════════════════════════════
+
+/**
+ * fetch met automatische retry bij tijdelijke fouten (netwerk, timeout,
+ * HTTP 429/5xx). Backoff: 2s, dan 6s. Definitieve fouten (404, 403, formaat)
+ * worden NIET opnieuw geprobeerd — die zijn niet tijdelijk.
+ * Gooide fouten dragen .categorie en .httpStatus voor classificatie.
+ */
+async function fetchMetRetry(url, options, maxPogingen) {
+  maxPogingen = maxPogingen || 3;
+  var laatsteFout;
+  for (var poging = 1; poging <= maxPogingen; poging++) {
+    try {
+      const response = await fetch(url, options);
+      if (response.ok) return response;
+
+      var err = new Error('HTTP ' + response.status + ' bij ' + url);
+      err.httpStatus = response.status;
+      if (response.status === 404 || response.status === 410) {
+        err.categorie = 'verplaatst';
+        throw err; // definitief — retry is zinloos
+      }
+      if (response.status === 401 || response.status === 403) {
+        err.categorie = 'geblokkeerd';
+        throw err; // definitief
+      }
+      err.categorie = (response.status === 429) ? 'geblokkeerd' : 'server';
+      laatsteFout = err; // 429/5xx: mogelijk tijdelijk → retry
+    } catch (e) {
+      if (e.categorie === 'verplaatst' || (e.categorie === 'geblokkeerd' && e.httpStatus !== 429)) throw e;
+      if (!e.categorie) e.categorie = 'netwerk'; // DNS, timeout, connectie
+      laatsteFout = e;
+    }
+    if (poging < maxPogingen) {
+      var wacht = poging === 1 ? 2000 : 6000;
+      console.log(`    \u21bb poging ${poging} mislukt (${laatsteFout.message}) \u2014 retry over ${wacht / 1000}s`);
+      await new Promise(function (r) { setTimeout(r, wacht); });
+    }
+  }
+  throw laatsteFout;
+}
+
+/**
+ * Vertaalt een fout naar een mensleesbare diagnose met oorzaak-categorie.
+ * Doel: in health.json en GitHub-issues staat WAT er aan de hand is
+ * ("site verbouwd", "bot-blokkade") in plaats van een kale stacktrace
+ * die op een scriptbug lijkt.
+ */
+function classificeerFout(err) {
+  var cat = err.categorie || 'intern';
+  var msg = String(err.message || err);
+
+  // Nadere detectie als de categorie nog niet gezet is
+  if (cat === 'intern') {
+    if (/ENOTFOUND|ECONNREFUSED|ECONNRESET|ETIMEDOUT|abort|timeout|fetch failed/i.test(msg)) cat = 'netwerk';
+    else if (/geen geldige iCal|geen array|ander formaat|titelpatroon/i.test(msg)) cat = 'formaat';
+    else if (/Claude|Anthropic|API/i.test(msg)) cat = 'ai';
+  }
+
+  var UITLEG = {
+    'netwerk':    { oorzaak: 'Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).',
+                    advies: 'Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.' },
+    'verplaatst': { oorzaak: 'Pagina of feed bestaat niet meer (HTTP 404/410) \u2014 de vereniging heeft haar site-inrichting gewijzigd.',
+                    advies: 'GEEN scriptbug. Zoek de nieuwe agenda-URL op de site van de vereniging en pas de bronconfiguratie aan.' },
+    'geblokkeerd':{ oorzaak: 'Toegang geweigerd (HTTP 401/403/429) \u2014 de site blokkeert geautomatiseerde toegang of beperkt het tempo.',
+                    advies: 'GEEN scriptbug. Vraag de vereniging om een iCal-feed, of accepteer dat deze bron wegvalt.' },
+    'server':     { oorzaak: 'Server van de vereniging geeft een foutmelding (HTTP 5xx).',
+                    advies: 'Probleem ligt bij de vereniging; geen actie nodig tenzij het aanhoudt.' },
+    'formaat':    { oorzaak: 'Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen \u2014 vrijwel zeker een gewijzigde site-inrichting.',
+                    advies: 'GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.' },
+    'inhoud':     { oorzaak: 'Pagina is bereikbaar maar er zijn geen events meer herkend waar dat eerder wel lukte \u2014 vermoedelijk gewijzigde pagina-opbouw.',
+                    advies: 'Waarschijnlijk GEEN scriptbug. Bekijk de bron handmatig; mogelijk is de agenda verplaatst binnen de site.' },
+    'ai':         { oorzaak: 'De AI-extractiedienst (Anthropic API) gaf een fout of was overbelast.',
+                    advies: 'Tijdelijk; volgende run herstelt dit meestal vanzelf. Check anders de API-key en het tegoed.' },
+    'config':     { oorzaak: 'Configuratieprobleem in de eigen omgeving (bv. ontbrekende API-key of secret).',
+                    advies: 'Controleer de repository-secrets en workflow-instellingen; dit ligt niet aan de bronnen.' },
+    'intern':     { oorzaak: 'Onverwachte fout in het script zelf.',
+                    advies: 'Dit KAN een scriptbug zijn \u2014 bekijk de log hieronder.' }
+  };
+
+  var u = UITLEG[cat] || UITLEG['intern'];
+  return { categorie: cat, oorzaak: u.oorzaak, advies: u.advies, technisch: msg.substring(0, 300) };
+}
+
+/** Houdt van bestaande events alleen de toekomstige over (voor data-retentie bij uitval). */
+function filterToekomstig(events) {
+  if (!Array.isArray(events)) return [];
+  var now = new Date(); now.setHours(0, 0, 0, 0);
+  return events.filter(function (e) {
+    var d = new Date(e.datum);
+    return !isNaN(d.getTime()) && d >= now;
+  });
+}
+
+/** Leest de health.json van de vorige run als baseline (event-aantallen, laatste succes). */
+function leesVorigeHealth() {
+  try {
+    var h = JSON.parse(fs.readFileSync(HEALTH_PATH, 'utf-8'));
+    var map = {};
+    (h.bronnen || []).forEach(function (b) { map[b.id] = b; });
+    return map;
+  } catch (e) {
+    return {};
+  }
+}
+
+/**
+ * Uniforme afhandeling van een uitgevallen bron:
+ * 1. classificeer de oorzaak (site verbouwd? blokkade? scriptbug?)
+ * 2. behoud de laatst-goede toekomstige events i.p.v. de bron leeg te publiceren
+ * 3. registreer een rijke waarschuwing voor health.json en het GitHub-issue
+ */
+function registreerBronFout(warnings, vorigeHealth, data, id, naam, type, url, err) {
+  var diagnose = classificeerFout(err);
+  var ver = data.verenigingen.find(function (v) { return v.id === id; });
+  var behouden = 0;
+  if (ver && Array.isArray(ver.events)) {
+    ver.events = filterToekomstig(ver.events);
+    behouden = ver.events.length;
+  }
+  var vorig = vorigeHealth[id] || {};
+  console.log(`  \u2717 FOUT [${diagnose.categorie}]: ${diagnose.oorzaak}`);
+  console.log(`    \u2192 ${diagnose.advies}`);
+  if (behouden > 0) {
+    console.log(`    \u2192 ${behouden} eerder opgehaalde toekomstige events blijven zichtbaar`);
+  }
+  warnings.push({
+    bron_id: id,
+    bron_naam: naam,
+    type: type,
+    url: url,
+    fout: err.message,
+    diagnose: diagnose,
+    events_behouden: behouden,
+    laatste_succes: vorig.laatste_succes || null,
+    datum: new Date().toISOString()
+  });
+}
+
+/**
+ * Verdacht-detectie: bron is technisch bereikbaar maar levert plots 0 events
+ * waar de vorige run er meerdere had. Dat is geen storing (geen rood) maar
+ * verdient observatie: seizoensstop óf stilletjes gewijzigde site-inrichting.
+ */
+function checkVerdacht(observaties, vorigeHealth, id, naam, type, url, aantalNieuw) {
+  var vorig = vorigeHealth[id];
+  if (!vorig || aantalNieuw > 0) return;
+
+  if (vorig.status === 'ok' && (vorig.events || 0) >= 2) {
+    var melding = 'Bron bereikbaar maar 0 events herkend, waar de vorige run er ' + vorig.events +
+      ' had. Mogelijke oorzaken: seizoensstop (onschuldig) of stilletjes gewijzigde site-inrichting. Even handmatig kijken.';
+    console.log(`  \u26a0 OBSERVATIE: ${melding}`);
+    observaties.push({ bron_id: id, bron_naam: naam, type: type, url: url, melding: melding, baseline: vorig.events });
+  } else if (vorig.status === 'verdacht') {
+    // Observatie houdt aan totdat de bron weer events levert of iemand ingrijpt.
+    var vorigeMelding = (vorig.diagnose && vorig.diagnose.oorzaak) || '';
+    var melding2 = 'Observatie houdt aan: bron levert nog steeds 0 events. ' +
+      (vorigeMelding.indexOf('houdt aan') === -1 ? vorigeMelding : '');
+    console.log(`  \u26a0 OBSERVATIE (aanhoudend): ${id}`);
+    observaties.push({ bron_id: id, bron_naam: naam, type: type, url: url, melding: melding2.trim(), baseline: null });
+  }
+}
+
+// ════════════════════════════════════════════════════════════════
 // POST-VALIDATIE: nieuwskoppen en rommel detecteren
 // ════════════════════════════════════════════════════════════════
 
@@ -222,6 +387,8 @@ async function main() {
 
   const data = JSON.parse(fs.readFileSync(DATA_PATH, 'utf-8'));
   const warnings = [];
+  const observaties = [];
+  const vorigeHealth = leesVorigeHealth();
   let totaalGefilterd = 0;
 
   // ── 1. iCal-bronnen ──
@@ -236,16 +403,9 @@ async function main() {
         totaalGefilterd += result.gefilterd;
       }
       updateVereniging(data, id, result.events);
+      checkVerdacht(observaties, vorigeHealth, id, id.toUpperCase(), 'ical', url, result.events.length);
     } catch (err) {
-      console.log(`  \u2717 FOUT: ${err.message}`);
-      warnings.push({
-        bron_id: id,
-        bron_naam: id.toUpperCase(),
-        type: 'ical',
-        url: url,
-        fout: err.message,
-        datum: new Date().toISOString()
-      });
+      registreerBronFout(warnings, vorigeHealth, data, id, id.toUpperCase(), 'ical', url, err);
     }
   }
 
@@ -255,30 +415,31 @@ async function main() {
     console.log(`  ${id}: ${config.site}`);
     try {
       const result = await fetchWordpressEvents(id, config.naam, config);
-      console.log(`  \u2713 ${result.events.length} toekomstige events (datums deterministisch uit posttitels)`);
+      console.log(`  \u2713 ${result.events.length} toekomstige events via ${result.kanaal} (datums deterministisch uit posttitels)`);
       updateVereniging(data, id, result.events);
+      checkVerdacht(observaties, vorigeHealth, id, config.naam, 'wordpress-api', config.site, result.events.length);
     } catch (err) {
-      console.log(`  \u2717 FOUT: ${err.message}`);
-      warnings.push({
-        bron_id: id,
-        bron_naam: config.naam,
-        type: 'wordpress-api',
-        url: config.site,
-        fout: err.message,
-        datum: new Date().toISOString()
-      });
+      registreerBronFout(warnings, vorigeHealth, data, id, config.naam, 'wordpress-api', config.site, err);
     }
   }
 
   // ── 2. Web-bronnen via Claude ──
   if (!ANTHROPIC_API_KEY) {
     console.log('\n\u26a0 ANTHROPIC_API_KEY niet gevonden \u2014 web-bronnen worden overgeslagen');
+    var keyErr = new Error('ANTHROPIC_API_KEY ontbreekt als environment variable');
+    keyErr.categorie = 'config';
     warnings.push({
       bron_id: 'alle-web-bronnen',
       bron_naam: 'Alle web-bronnen',
       type: 'config',
-      fout: 'ANTHROPIC_API_KEY ontbreekt als environment variable',
+      fout: keyErr.message,
+      diagnose: classificeerFout(keyErr),
       datum: new Date().toISOString()
+    });
+    // Retentie ook hier: behoud laatst-goede toekomstige events per web-bron
+    Object.keys(WEB_BRONNEN).forEach(function (wid) {
+      var ver = data.verenigingen.find(function (v) { return v.id === wid; });
+      if (ver && Array.isArray(ver.events)) ver.events = filterToekomstig(ver.events);
     });
   } else {
     console.log('\n── Web-bronnen ophalen via Claude ──');
@@ -293,16 +454,9 @@ async function main() {
           totaalGefilterd += result.gefilterd;
         }
         updateVereniging(data, id, result.events);
+        checkVerdacht(observaties, vorigeHealth, id, config.naam, 'web-scraping', urls.join(', '), result.events.length);
       } catch (err) {
-        console.log(`  \u2717 FOUT: ${err.message}`);
-        warnings.push({
-          bron_id: id,
-          bron_naam: config.naam,
-          type: 'web-scraping',
-          url: urls.join(', '),
-          fout: err.message,
-          datum: new Date().toISOString()
-        });
+        registreerBronFout(warnings, vorigeHealth, data, id, config.naam, 'web-scraping', urls.join(', '), err);
       }
     }
   }
@@ -362,7 +516,7 @@ async function main() {
 
   // Gezondheidsstatus voor externe dashboards (Cockpit): per-bron status +
   // heartbeat. Afgeleid van warnings + de werkelijke event-tellingen.
-  writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents);
+  writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents, observaties, vorigeHealth);
   console.log(`\n\u2713 verenigingen.json bijgewerkt: ${totaalEvents} events van ${bronnenMetEvents} bronnen`);
   if (totaalGefilterd > 0) {
     console.log(`  (${totaalGefilterd} items totaal gefilterd als nieuws/extern)`);
@@ -467,19 +621,17 @@ function genereerRitmeEvents(ritme) {
 // ════════════════════════════════════════════════════════════════
 
 async function fetchIcalEvents(url, bronId) {
-  const response = await fetch(url, {
+  const response = await fetchMetRetry(url, {
     headers: { 'User-Agent': 'VerenigingenKalender/1.0' },
     signal: AbortSignal.timeout(15000)
   });
 
-  if (!response.ok) {
-    throw new Error(`HTTP ${response.status} bij ophalen ${url}`);
-  }
-
   const text = await response.text();
 
   if (!text.includes('BEGIN:VCALENDAR')) {
-    throw new Error('Antwoord is geen geldige iCal-data');
+    var err = new Error('Antwoord is geen geldige iCal-data (BEGIN:VCALENDAR ontbreekt)');
+    err.categorie = 'formaat';
+    throw err;
   }
 
   const parsed = ical.parseICS(text);
@@ -535,10 +687,8 @@ async function fetchIcalEvents(url, bronId) {
     return new Date(a.datum) - new Date(b.datum);
   });
 
-  if (events.length === 0) {
-    throw new Error('Geen toekomstige events gevonden in iCal-feed (mogelijk leeg of alleen verlopen events)');
-  }
-
+  // Een geldige maar lege feed (seizoensstop) is GEEN fout; de
+  // verdacht-detectie in main() signaleert het als de bron eerder wél events had.
   return { events: events, gefilterd: gefilterd };
 }
 
@@ -596,20 +746,45 @@ function parseEventUitPostTitel(titelRaw, postDatum) {
 }
 
 async function fetchWordpressEvents(bronId, bronNaam, config) {
-  const apiUrl = config.site.replace(/\/$/, '') +
-    '/wp-json/wp/v2/posts?per_page=30&_fields=date,title,link,content';
+  const site = config.site.replace(/\/$/, '');
+  let posts = null;
+  let kanaal = 'wp-json';
 
-  const response = await fetch(apiUrl, {
-    headers: {
-      'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)',
-      'Accept': 'application/json'
-    },
-    signal: AbortSignal.timeout(15000)
-  });
-  if (!response.ok) throw new Error(`HTTP ${response.status} op ${apiUrl}`);
-
-  const posts = await response.json();
-  if (!Array.isArray(posts)) throw new Error('REST API gaf geen array terug');
+  // ── Primair kanaal: REST API ──
+  try {
+    const apiUrl = site + '/wp-json/wp/v2/posts?per_page=30&_fields=date,title,link,content';
+    const response = await fetchMetRetry(apiUrl, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)',
+        'Accept': 'application/json'
+      },
+      signal: AbortSignal.timeout(15000)
+    });
+    const json = await response.json();
+    if (!Array.isArray(json)) {
+      var fErr = new Error('REST API gaf geen array terug \u2014 ander formaat dan verwacht');
+      fErr.categorie = 'formaat';
+      throw fErr;
+    }
+    posts = json.map(function (p) {
+      return {
+        date: p.date,
+        titel: (p.title && p.title.rendered) || '',
+        link: p.link || site,
+        content: (p.content && p.content.rendered) || ''
+      };
+    });
+  } catch (apiErr) {
+    // ── Noodkanaal: RSS-feed (standaard aanwezig op elke WordPress-site) ──
+    console.log(`    \u26a0 REST API faalde (${apiErr.message}) \u2014 val terug op RSS-feed`);
+    try {
+      posts = await fetchWordpressViaRss(site);
+      kanaal = 'rss';
+    } catch (rssErr) {
+      // Beide kanalen dood → de oorspronkelijke (meest informatieve) fout gooien
+      throw apiErr;
+    }
+  }
 
   const now = new Date();
   now.setHours(0, 0, 0, 0);
@@ -617,31 +792,39 @@ async function fetchWordpressEvents(bronId, bronNaam, config) {
   // ── Stap 1: deterministisch datum + titel uit posttitels ──
   const kandidaten = [];
   const gezien = {};
+  let herkend = 0;
   posts.forEach(function (post) {
-    var titelRaw = post.title && post.title.rendered ? post.title.rendered : '';
-    titelRaw = cleanText(decodeEntities(titelRaw));
+    var titelRaw = cleanText(decodeEntities(post.titel));
     var parsed = parseEventUitPostTitel(titelRaw, post.date);
     if (!parsed) return;                 // geen event-aankondiging (bv. "Fijne feestdagen !")
+    herkend++;
     if (parsed.datum < now) return;      // voorbij
 
     var sleutel = formatDate(parsed.datum) + '|' + parsed.titel.toLowerCase();
     if (gezien[sleutel]) return;         // dubbele aankondiging
     gezien[sleutel] = true;
 
-    var content = post.content && post.content.rendered
-      ? decodeEntities(stripHtml(post.content.rendered)) : '';
+    var content = post.content ? decodeEntities(stripHtml(post.content)) : '';
     kandidaten.push({
       datum: parsed.datum,
       titel: parsed.titel,
       content: content.substring(0, 1500),
-      link: post.link || config.site
+      link: post.link
     });
   });
+
+  // Structuurbewaking: veel posts maar nul herkende titels betekent dat het
+  // titelpatroon ("28 juni – Koffieochtend") is losgelaten → site-inrichting gewijzigd.
+  if (posts.length >= 10 && herkend === 0) {
+    var pErr = new Error('Titelpatroon niet meer herkend in ' + posts.length + ' posts \u2014 aankondigingsformaat gewijzigd');
+    pErr.categorie = 'formaat';
+    throw pErr;
+  }
 
   if (kandidaten.length === 0) {
     // Geen toekomstige aankondigingen is een geldig resultaat (bv. zomerstop),
     // géén fout — de bron werkt, er is alleen niets aangekondigd.
-    return { events: [], gefilterd: 0 };
+    return { events: [], gefilterd: 0, kanaal: kanaal };
   }
 
   // ── Stap 2: plaats/tijd/type-verrijking via Claude (optioneel) ──
@@ -668,7 +851,50 @@ async function fetchWordpressEvents(bronId, bronNaam, config) {
   });
 
   events.sort(function (a, b) { return new Date(a.datum) - new Date(b.datum); });
-  return { events: events, gefilterd: 0 };
+  return { events: events, gefilterd: 0, kanaal: kanaal };
+}
+
+/**
+ * Noodkanaal: leest events uit de standaard WordPress RSS-feed (/feed/).
+ * Levert hetzelfde post-formaat als het REST API-pad, zodat de
+ * deterministische titelparser ongewijzigd werkt.
+ */
+async function fetchWordpressViaRss(site) {
+  const response = await fetchMetRetry(site + '/feed/', {
+    headers: { 'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)' },
+    signal: AbortSignal.timeout(15000)
+  });
+  const xml = await response.text();
+  if (xml.indexOf('<rss') === -1 && xml.indexOf('<feed') === -1) {
+    var err = new Error('RSS-feed levert geen geldige XML');
+    err.categorie = 'formaat';
+    throw err;
+  }
+
+  const posts = [];
+  const items = xml.split(/<item[\s>]/).slice(1);
+  items.forEach(function (blok) {
+    function pak(tag) {
+      var m = blok.match(new RegExp('<' + tag + '[^>]*>([\\s\\S]*?)</' + tag + '>'));
+      if (!m) return '';
+      return m[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1').trim();
+    }
+    var pub = new Date(pak('pubDate'));
+    if (isNaN(pub.getTime())) return;
+    posts.push({
+      date: pub.toISOString(),
+      titel: pak('title'),
+      link: pak('link') || site,
+      content: pak('content:encoded') || pak('description')
+    });
+  });
+
+  if (posts.length === 0) {
+    var leeg = new Error('RSS-feed bevat geen items');
+    leeg.categorie = 'formaat';
+    throw leeg;
+  }
+  return posts;
 }
 
 /**
@@ -695,7 +921,9 @@ OUTPUT: alleen een JSON array, één object per event, in dezelfde volgorde:
 
 ${lijst}`;
 
-  const resp = await fetch(ANTHROPIC_URL, {
+  let resp;
+  try {
+    resp = await fetchMetRetry(ANTHROPIC_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -709,8 +937,12 @@ ${lijst}`;
       messages: [{ role: 'user', content: prompt }]
     }),
     signal: AbortSignal.timeout(60000)
-  });
-  if (!resp.ok) throw new Error(`Claude API HTTP ${resp.status}`);
+    });
+  } catch (e) {
+    e.categorie = 'ai';
+    e.message = 'Claude API: ' + e.message;
+    throw e;
+  }
 
   const data = await resp.json();
   let txt = (data.content && data.content[0] && data.content[0].text) || '';
@@ -747,10 +979,11 @@ ${lijst}`;
 
 async function fetchWebEvents(bronId, bronNaam, urls) {
   let alleHtml = '';
+  let laatstePaginaFout = null;
 
   for (const url of urls) {
     try {
-      const response = await fetch(url, {
+      const response = await fetchMetRetry(url, {
         headers: {
           'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)',
           'Accept': 'text/html'
@@ -758,26 +991,28 @@ async function fetchWebEvents(bronId, bronNaam, urls) {
         signal: AbortSignal.timeout(15000)
       });
 
-      if (!response.ok) {
-        throw new Error(`HTTP ${response.status}`);
-      }
-
       const html = await response.text();
 
       if (html.length < 500) {
-        throw new Error('Pagina bevat vrijwel geen content');
+        var kErr = new Error('Pagina bevat vrijwel geen content');
+        kErr.categorie = 'formaat';
+        throw kErr;
       }
 
       const stripped = stripHtml(html);
       alleHtml += `\n\n--- PAGINA: ${url} ---\n${stripped}`;
 
     } catch (err) {
+      laatstePaginaFout = err;
       console.log(`    Subpagina ${url}: ${err.message}`);
     }
   }
 
   if (alleHtml.trim().length < 100) {
-    throw new Error(`Geen bruikbare HTML opgehaald van ${urls.length} pagina('s)`);
+    var gErr = new Error(`Geen bruikbare HTML opgehaald van ${urls.length} pagina('s)` +
+      (laatstePaginaFout ? ` \u2014 laatste fout: ${laatstePaginaFout.message}` : ''));
+    gErr.categorie = laatstePaginaFout && laatstePaginaFout.categorie ? laatstePaginaFout.categorie : 'netwerk';
+    throw gErr;
   }
 
   // ── AANGESCHERPTE PROMPT ──
@@ -832,7 +1067,9 @@ OUTPUTFORMAAT:
 HTML CONTENT:
 ${alleHtml}`;
 
-  const claudeResponse = await fetch(ANTHROPIC_URL, {
+  let claudeResponse;
+  try {
+    claudeResponse = await fetchMetRetry(ANTHROPIC_URL, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -848,11 +1085,11 @@ ${alleHtml}`;
       ]
     }),
     signal: AbortSignal.timeout(60000)
-  });
-
-  if (!claudeResponse.ok) {
-    const errText = await claudeResponse.text();
-    throw new Error(`Claude API fout HTTP ${claudeResponse.status}: ${errText.substring(0, 200)}`);
+    });
+  } catch (e) {
+    e.categorie = 'ai';
+    e.message = 'Claude API: ' + e.message;
+    throw e;
   }
 
   const claudeData = await claudeResponse.json();
@@ -1223,84 +1460,97 @@ function stripHtml(html) {
  *   - generated_at                  -> heartbeat; als dit > ~4 dagen oud is (schema: ma/wo/vr),
  *                                      draait de workflow zelf niet meer
  */
-function writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents) {
+function writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents, observaties, vorigeHealth) {
+  observaties = observaties || [];
+  vorigeHealth = vorigeHealth || {};
+
   var downMap = {};
   var alleWebDown = null;
   warnings.forEach(function (w) {
     if (w.bron_id === 'alle-web-bronnen') { alleWebDown = w; return; }
     downMap[w.bron_id] = w;
   });
+  var verdachtMap = {};
+  observaties.forEach(function (o) { verdachtMap[o.bron_id] = o; });
 
   function eventsVoor(id) {
     var ver = data.verenigingen.find(function (v) { return v.id === id; });
     return (ver && ver.events) ? ver.events.length : 0;
   }
 
+  /**
+   * Bouwt één bron-regel. Semantiek:
+   *  - status 'down'     : bron faalde; 'diagnose' vertelt de OORZAAK-categorie
+   *                        (verplaatst/geblokkeerd/netwerk/... — dus site-wijziging
+   *                        wordt als zodanig benoemd, niet als scriptbug).
+   *  - status 'verdacht' : bron werkt maar leverde plots 0 events (observatie).
+   *  - stale: true       : getoonde events zijn behouden uit een eerdere run.
+   *  - laatste_succes    : laatste dag waarop deze bron succesvol is gelezen.
+   */
+  function bronRegel(id, naam, type, url) {
+    var w = downMap[id] || (type === 'web-scraping' ? alleWebDown : null);
+    var o = verdachtMap[id];
+    var vorig = vorigeHealth[id] || {};
+    var status = w ? 'down' : (o ? 'verdacht' : 'ok');
+    return {
+      id: id,
+      naam: naam,
+      type: type,
+      status: status,
+      events: eventsVoor(id),
+      stale: !!w && eventsVoor(id) > 0,
+      laatste_succes: w ? (vorig.laatste_succes || null) : vandaag,
+      url: url,
+      fout: w ? w.fout : null,
+      diagnose: w ? (w.diagnose || classificeerFout(new Error(w.fout || 'onbekende fout')))
+                  : (o ? { categorie: 'inhoud', oorzaak: o.melding,
+        advies: 'Bekijk de bron handmatig; bij seizoensstop is geen actie nodig.' } : null)
+    };
+  }
+
   var bronnen = [];
 
   Object.keys(ICAL_BRONNEN).forEach(function (id) {
-    var w = downMap[id];
-    bronnen.push({
-      id: id,
-      naam: id.toUpperCase(),
-      type: 'ical',
-      status: w ? 'down' : 'ok',
-      events: w ? 0 : eventsVoor(id),
-      url: ICAL_BRONNEN[id],
-      fout: w ? w.fout : null
-    });
+    bronnen.push(bronRegel(id, id.toUpperCase(), 'ical', ICAL_BRONNEN[id]));
   });
 
   Object.keys(WORDPRESS_BRONNEN).forEach(function (id) {
-    var config = WORDPRESS_BRONNEN[id];
-    var w = downMap[id];
-    bronnen.push({
-      id: id,
-      naam: config.naam,
-      type: 'wordpress-api',
-      status: w ? 'down' : 'ok',
-      events: w ? 0 : eventsVoor(id),
-      url: config.site,
-      fout: w ? w.fout : null
-    });
+    bronnen.push(bronRegel(id, WORDPRESS_BRONNEN[id].naam, 'wordpress-api', WORDPRESS_BRONNEN[id].site));
   });
 
   Object.keys(WEB_BRONNEN).forEach(function (id) {
     var config = WEB_BRONNEN[id];
     var urls = config.urlGenerator ? config.urlGenerator() : config.urls;
-    var w = downMap[id] || alleWebDown;
-    bronnen.push({
-      id: id,
-      naam: config.naam,
-      type: 'web-scraping',
-      status: w ? 'down' : 'ok',
-      events: w ? 0 : eventsVoor(id),
-      url: (urls || []).join(', '),
-      fout: w ? w.fout : null
-    });
+    bronnen.push(bronRegel(id, config.naam, 'web-scraping', (urls || []).join(', ')));
   });
 
   var kapot = bronnen.filter(function (b) { return b.status === 'down'; });
+  var verdacht = bronnen.filter(function (b) { return b.status === 'verdacht'; });
 
   var health = {
     generated_at: new Date().toISOString(),
     ok: kapot.length === 0,
-    status: kapot.length === 0 ? 'ok' : 'degraded',
+    status: kapot.length > 0 ? 'degraded' : (verdacht.length > 0 ? 'attention' : 'ok'),
     laatst_bijgewerkt: vandaag,
     volgende_update: volgendeWeek,
     totaal_events: totaalEvents,
     bronnen_totaal: bronnen.length,
-    bronnen_ok: bronnen.length - kapot.length,
+    bronnen_ok: bronnen.length - kapot.length - verdacht.length,
     bronnen_down: kapot.length,
+    bronnen_verdacht: verdacht.length,
     kapotte_koppelingen: kapot.map(function (b) {
-      return { id: b.id, naam: b.naam, type: b.type, url: b.url, fout: b.fout };
+      return { id: b.id, naam: b.naam, type: b.type, url: b.url, fout: b.fout,
+               diagnose: b.diagnose, laatste_succes: b.laatste_succes };
+    }),
+    observaties: verdacht.map(function (b) {
+      return { id: b.id, naam: b.naam, type: b.type, url: b.url, diagnose: b.diagnose };
     }),
     bronnen: bronnen
   };
 
   fs.writeFileSync(HEALTH_PATH, JSON.stringify(health, null, 2), 'utf-8');
   console.log('\nhealth.json: ' + health.status + ' (' + health.bronnen_down +
-              ' kapot van ' + health.bronnen_totaal + ' bronnen)');
+              ' kapot, ' + health.bronnen_verdacht + ' verdacht, van ' + health.bronnen_totaal + ' bronnen)');
 }
 
 main().catch(function (err) {
