@@ -1,0 +1,272 @@
+{
+  "generated_at": "2026-07-15T20:07:03.027Z",
+  "totaal": 27,
+  "bronnen": [
+    {
+      "id": "nlvp",
+      "naam": "NLVP",
+      "status": "ok",
+      "items": 6,
+      "feed": "https://nlvp.fr/feed/",
+      "diagnose": null
+    },
+    {
+      "id": "latulipe",
+      "naam": "La Tulipe",
+      "status": "ok",
+      "items": 0,
+      "feed": "https://www.latulipe.net/?format=feed&type=rss",
+      "diagnose": null
+    },
+    {
+      "id": "atelier-neerlandais",
+      "naam": "Atelier Néerlandais",
+      "status": "ok",
+      "items": 6,
+      "feed": "https://atelierneerlandais.com/feed/",
+      "diagnose": null
+    },
+    {
+      "id": "ern-paris",
+      "naam": "ERN Paris",
+      "status": "ok",
+      "items": 6,
+      "feed": "https://ernparis.fr/feed/",
+      "diagnose": null
+    },
+    {
+      "id": "lotgenoten",
+      "naam": "LOTgenoten",
+      "status": "ok",
+      "items": 6,
+      "feed": "https://www.lotgenoten.fr/feed/",
+      "diagnose": null
+    },
+    {
+      "id": "neerlandia-toulouse",
+      "naam": "Neerlandia Toulouse",
+      "status": "ok",
+      "items": 3,
+      "feed": "https://www.neerlandia.fr/?format=feed&type=rss",
+      "diagnose": null
+    }
+  ],
+  "items": [
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-07-10",
+      "titel": "Te koop wegens overcompleet; Tondeuse/debroussailleuse, cyclomaaier.",
+      "link": "https://www.lotgenoten.fr/te-koop-wegens-overcompleet-tondeuse-debroussailleuse-cyclomaaier/",
+      "excerpt": "2e eigenaar en weinig gebruikt. Briggs & Stratton 190 cc, 6pk. De machine heeft een winterbeurt gehad bij Florimont Motoculture. Aankoopnota (€ 620,=) en gebruiksaanwijzing aanwezig. Vraagprijs € 190,= Verdere info en afspraak op locatie; Simon Schutte 0031653895649 Puy lEveque"
+    },
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-07-08",
+      "titel": "Uitzicht op woensdag 8 juli",
+      "link": "https://ernparis.fr/uitzicht-op-woensdag-8-juli/",
+      "excerpt": "Ruth van der Waall-Schaeffer Kijk niet te ver"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-07-07",
+      "titel": "Wijnactiviteiten in de Lot-vallei deze zomer ’26",
+      "link": "https://www.lotgenoten.fr/wijnactiviteiten-in-de-lot-vallei/",
+      "excerpt": "Elke wijnmakerij in de streek opent haar deuren voor het publiek met activiteiten, vooral rond rondleidingen en proeverijen. Zo ontvangen Lyse en Benjamin Gayraud u op afspraak in het Château Lamartine in Soturac, waar zij 38 hectare biologische wijngaarden beheren. Ook in…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-07-06",
+      "titel": "Uw vakantiewoning verhuren",
+      "link": "https://www.lotgenoten.fr/uw-vakantiewoning-verhuren/",
+      "excerpt": "Gepubliceerd op: 17 juni 2025 op: https://financialfocus.abnamro.nl/ Het verhuren van uw vakantiewoning kan een mooie manier zijn om extra inkomsten te krijgen en anderen te laten genieten van uw vakantiewoning. Maar er komt wel meer bij kijken dan alleen huurders vinden.…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-07-04",
+      "titel": "Frankrijk bereidt zich voor op drukte bij laadpalen: zelfs wachtruimtes voor elektrische auto’s",
+      "link": "https://www.lotgenoten.fr/frankrijk-bereidt-zich-voor-op-drukte-bij-laadpalen-zelfs-wachtruimtes-voor-elektrische-autos/",
+      "excerpt": "Wie deze zomer met een elektrische auto over de Franse snelwegen reist, doet er goed aan rekening te houden met mogelijke wachtrijen bij laadstations. Over het hele land worden maatregelen genomen om opstoppingen rond laadpalen te beperken. “We verwachten op sommige momenten…"
+    },
+    {
+      "bron_id": "neerlandia-toulouse",
+      "bron_naam": "Neerlandia Toulouse",
+      "datum": "2026-07-04",
+      "titel": "Zomers etentje",
+      "link": "https://www.neerlandia.fr/index.php/nl/agenda/359-zomers-etentje",
+      "excerpt": "Gezellig zomers etentje. Ga je toevallig ook naar Nederland of Belgie of ben je er onlangs geweest ? Kom even bijkletsen over de zomervakantie. Geef je wel even tijdig op voor dit etentje, en hoeveel personen je meebrengt, want we moeten op 13 juli de reservering doorgeven.…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-06-30",
+      "titel": "Sanne Bink, nagelstyliste met mobiele nagelstudio (Salviac eo)",
+      "link": "https://www.lotgenoten.fr/eclat-des-ongles-mobiele-nagelstudio-salviac-eo/",
+      "excerpt": "Éclat des ongles is mijn mobiele nagelstudio. Ik ben Sanne en werk als nagelstyliste aan huis. Ik kom bij mijn klanten thuis in een straal van ongeveer 20 km rondom Salviac (Lot 46). Zo kunnen zij in hun eigen vertrouwde omgeving genieten van een professionele…"
+    },
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-06-24",
+      "titel": "Uitzicht op woensdag 24 juni",
+      "link": "https://ernparis.fr/uitzicht-op-woensdag-24-juni/",
+      "excerpt": "Ruth van der Waall-Schaeffer Lichaamstaal"
+    },
+    {
+      "bron_id": "atelier-neerlandais",
+      "bron_naam": "Atelier Néerlandais",
+      "datum": "2026-06-22",
+      "titel": "Boeklancering: Capitalism’s Favorite Child, 24 juni",
+      "link": "https://atelierneerlandais.com/boeklancering-capitalisms-favorite-child-24-juni/",
+      "excerpt": "Ter gelegenheid van Paris Fashion Week verwelkomt lAtelier Néerlandais de boeklancering van Capitalisms Favorite Child — een nieuw perspectief op de bedrijfsgeschiedenis van de mode sinds het midden van de negentiende eeuw. AN lid Ben Wubs en zijn co-auteur Pierre-Yves Donzé…"
+    },
+    {
+      "bron_id": "atelier-neerlandais",
+      "bron_naam": "Atelier Néerlandais",
+      "datum": "2026-06-22",
+      "titel": "Showrooms Paris Fashion Week, 23 – 29 juni",
+      "link": "https://atelierneerlandais.com/showrooms-paris-fashion-week/",
+      "excerpt": "Rondom Paris Fashion Week zullen verschillende leden hun showrooms houden op het Atelier Néerlandais, waaronder Pien Studios, Rhea en Hul Le Kes. De showrooms zijn op uitnodiging te bezoeken. Showrooms op uitnodiging: 23–26 juni Pien Studios 25-29 juni Hul le Kes 26–29 juni…"
+    },
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-06-13",
+      "titel": "28 juni – Koffieochtend",
+      "link": "https://nlvp.fr/28-juni-koffieochtend/",
+      "excerpt": "Zin in een gezellige ochtend met een lekker kopje koffie en even nederlands kletsen ? Zondag 28 juni is het weer tijd voor onze maandelijkse koffieochtend, van 10.30 tot 12.00 uur, op de eerste etage van café-brasserie Au Père Tranquille. Een mooie gelegenheid om andere…"
+    },
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-06-10",
+      "titel": "Uitzicht op woensdag 10 juni",
+      "link": "https://ernparis.fr/uitzicht-op-woensdag-10-juni/",
+      "excerpt": "Ruth van der Waall-Schaeffer Tot je kern"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-06-10",
+      "titel": "Arozzo Services beheer en onderhoud van uw (tweede) woning",
+      "link": "https://www.lotgenoten.fr/arozzo-services-beheer-en-onderhoud-van-uw-tweede-woning/",
+      "excerpt": "Wij zijn Ashley (24) en Renzo (26), een Nederlands stel dat zich vanaf september permanent vestigt in Lavercantière, in het hart van de Lot. Na jarenlang te hebben gedroomd van een leven in Frankrijk maken wij nu de stap om onze toekomst op te bouwen in deze prachtige regio.…"
+    },
+    {
+      "bron_id": "atelier-neerlandais",
+      "bron_naam": "Atelier Néerlandais",
+      "datum": "2026-06-01",
+      "titel": "Members Only — but you’re invited! 12 – 14 juni",
+      "link": "https://atelierneerlandais.com/members-only-but-youre-invited/",
+      "excerpt": "Onder de noemer Members Only — but you’re invited! tonen 32 leden van het Atelier Néerlandais van 12 tot en met 14 juni een selectie van hun werk. De expositie viert de verscheidenheid en het talent van onze vereniging. Van fotografie tot weefkunst, van mode tot audio en…"
+    },
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-06-01",
+      "titel": "Zomerstop",
+      "link": "https://ernparis.fr/zomerstop-2026/",
+      "excerpt": "In juli en augustus vinden er geen vieringen plaats in de kerk.Op 19 juli is er een meditatieve viering die via Zoom en YouTube uitgezonden wordt. Aanvang 9u45. U kunt via KerkdienstGemist een kerkdienst in Nederland bijwonen, zowel rechtstreeks als later."
+    },
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-05-31",
+      "titel": "Woorden doen er toe",
+      "link": "https://ernparis.fr/woorden-doen-er-toe/",
+      "excerpt": "Ds. Rienk Lanooy Ik moet u iets bekennen: al vele jaren moet ik het uit zien te houden met een vorm van apodophoria. Het is dragelijk moet ik zeggen en als het opspeelt dan vooral in de loop van de"
+    },
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-05-27",
+      "titel": "Uitzicht op woensdag 27 mei",
+      "link": "https://ernparis.fr/uitzicht-op-woensdag-27-mei/",
+      "excerpt": "Ruth van der Waall-Schaeffer Beweging"
+    },
+    {
+      "bron_id": "neerlandia-toulouse",
+      "bron_naam": "Neerlandia Toulouse",
+      "datum": "2026-05-23",
+      "titel": "2026 Koningsdag",
+      "link": "https://www.neerlandia.fr/index.php/nl/agenda/361-2026-koningsdag",
+      "excerpt": "{gallery}foto/2026_koningsdag{/gallery} Foto's: Eelco de Lange"
+    },
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-05-15",
+      "titel": "10 juni – Rondleiding Jardin Du Breuil",
+      "link": "https://nlvp.fr/10-juni-rondleiding-jardin-du-breuil/",
+      "excerpt": "Tuinliefhebbers Opgelet ! Wanneer het bloeiseizoen op z’n mooist is, organiseren wij op 10 juni a.s. een rondleiding in de schitterende tuinen van de ‘École Du Breuil’ , gelegen aan de rand van Parijs, in de buurt van de drafsportrenbaan van Vincennes. De tuinen vormen het…"
+    },
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-05-12",
+      "titel": "31 mei – Koffieochtend",
+      "link": "https://nlvp.fr/31-mei-koffieochtend/",
+      "excerpt": "Zin in een gezellige ochtend met een lekker kopje koffie? Zondag 31 mei is het weer tijd voor onze maandelijkse koffieochtend. Kom gezellig even Nederlands kletsen op het terras van café-brasserie Au Père Tranquille (of op de eerste etage als het regent). Een mooie…"
+    },
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-05-12",
+      "titel": "27 mei – Theateravond",
+      "link": "https://nlvp.fr/27-mei-theateravond/",
+      "excerpt": "MON JOUR DE CHANCE Sébastien brengt een weekend door met jeugdvrienden . In het verleden werd gedobbeld. Het dobbelspel bepaalde welke beslissingen genomen werden. Kan dit weer gespeeld worden om het lot van Sébastien te veranderen? Prijs leden 15€ Niet-leden 30€ Inschrijven…"
+    },
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-05-12",
+      "titel": "19 mei – Algemene ledenvergadering",
+      "link": "https://nlvp.fr/19-mei-algemene-ledenvergadering/",
+      "excerpt": "Algemene ledenvergadering NLVP Dinsdag 19 mei 2025 om 19 uur Le Standard Rive Gauche 1 Boulevard du Montparnasse, 75006 Paris Beste leden, Graag nodigen wij u uit voor de Algemene Ledenvergadering die plaatsvindt op dinsdag 19 mei 2026 om 19 uur bij Le Standard Rive Gauche, 1…"
+    },
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-04-12",
+      "titel": "26 april – Koffieochtend",
+      "link": "https://nlvp.fr/26-april-koffieochtend/",
+      "excerpt": "Zondag 26 april van half elf tot twaalf uur is het weer tijd voor een gezellige kop koffie in het Nederlands , in café-brasserie Au Père Tranquille. U vindt ons op de eerste etage of, bij mooi weer, op het terras. Iedereen is van harte welkom! Adres: 16 rue Pierre Lescot –…"
+    },
+    {
+      "bron_id": "atelier-neerlandais",
+      "bron_naam": "Atelier Néerlandais",
+      "datum": "2026-04-09",
+      "titel": "Expo « Found Footage » Maxime Ansiau – 29-30 mei",
+      "link": "https://atelierneerlandais.com/maxime-ansiau-retrospective/",
+      "excerpt": "Maxime Ansiau is een Franse kunstenaar die in Nederland woont. Al meer dan 25 jaar verzamelt hij voorwerpen en materialen die langzaam betekenis krijgen, totdat ze de aanleiding vormen voor een nieuw werk. Het verzamelen, bewaren en nadenken over deze objecten kan twee tot…"
+    },
+    {
+      "bron_id": "atelier-neerlandais",
+      "bron_naam": "Atelier Néerlandais",
+      "datum": "2026-04-02",
+      "titel": "Expo “Where Silence Moves” Hélène Hermans – 17 & 18 april",
+      "link": "https://atelierneerlandais.com/expo-where-silence-moves-helene-hermans-17-18-april/",
+      "excerpt": "Tijdens deze tweedaagse expositie toont de Nederlandse beeldend kunstenaar Hélène Hermans hoe beweging en verstilling elkaar ontmoeten; in de natuur, in het lichaam, in de ruimte die we innemen. Soms staan we even stil. In zon bevroren moment nemen we de tijd om de balans op…"
+    },
+    {
+      "bron_id": "atelier-neerlandais",
+      "bron_naam": "Atelier Néerlandais",
+      "datum": "2026-03-09",
+      "titel": "Expo Iris Kensmil, 24 t/m 29 maart",
+      "link": "https://atelierneerlandais.com/expo-iris-kensmil/",
+      "excerpt": "Op uitnodiging van de Nederlandse ambassade in Frankrijk presenteert Frac Picardie in het Atelier Néerlandais een tentoonstelling rond Iris Kensmil, in het kader van Drawing Now en Printemps du dessin. In haar werk verkent Kensmil verschillende themas, waaronder feministische…"
+    },
+    {
+      "bron_id": "neerlandia-toulouse",
+      "bron_naam": "Neerlandia Toulouse",
+      "datum": "2026-01-24",
+      "titel": "Nederlandse paspoort pop-up in Toulouse",
+      "link": "https://www.neerlandia.fr/index.php/nl/agenda/360-nederlandse-paspoort-pop-up-in-toulouse",
+      "excerpt": "De Nederlandse ambassade komt weer naar Toulouse . U kunt hier tijdelijk een Nederlands paspoort aanvragen. Let op: Er zijn een beperkt aantal plekken beschikbaar. Ouderen en minder valide personen krijgen voorrang op een afspraak. Wanneer? 8, 9 en 10 juni 2026 Waar? Toulouse…"
+    }
+  ]
+}
