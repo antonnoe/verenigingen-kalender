@@ -50,12 +50,18 @@ const ICAL_BRONNEN = {
 // werkende feed (NVLR, NEDAZUR, ANM, FANF — websitebuilders) staan er bewust niet in.
 const NIEUWS_PATH = path.join(__dirname, '..', 'data', 'nieuws.json');
 const NIEUWS_BRONNEN = {
-  'nlvp':                { naam: 'NLVP',                feed: 'https://nlvp.fr/feed/' },
-  'latulipe':            { naam: 'La Tulipe',           feed: 'https://www.latulipe.net/?format=feed&type=rss' },
-  'atelier-neerlandais': { naam: 'Atelier N\u00e9erlandais', feed: 'https://atelierneerlandais.com/feed/' },
-  'ern-paris':           { naam: 'ERN Paris',           feed: 'https://ernparis.fr/feed/' },
-  'lotgenoten':          { naam: 'LOTgenoten',          feed: 'https://www.lotgenoten.fr/feed/' },
-  'neerlandia-toulouse': { naam: 'Neerlandia Toulouse', feed: 'https://www.neerlandia.fr/?format=feed&type=rss' }
+  // type 'rss': standaard RSS-feed
+  'nlvp':                { naam: 'NLVP',                type: 'rss', feed: 'https://nlvp.fr/feed/' },
+  'latulipe':            { naam: 'La Tulipe',           type: 'rss', feed: 'https://www.latulipe.net/?format=feed&type=rss' },
+  'atelier-neerlandais': { naam: 'Atelier N\u00e9erlandais', type: 'rss', feed: 'https://atelierneerlandais.com/feed/' },
+  'ern-paris':           { naam: 'ERN Paris',           type: 'rss', feed: 'https://ernparis.fr/feed/' },
+  'lotgenoten':          { naam: 'LOTgenoten',          type: 'rss', feed: 'https://www.lotgenoten.fr/feed/' },
+  'neerlandia-toulouse': { naam: 'Neerlandia Toulouse', type: 'rss', feed: 'https://www.neerlandia.fr/?format=feed&type=rss' },
+  // type 'congressus': verenigingsplatform zonder RSS maar met uniforme
+  // /nieuws-pagina (publication-items met machine-leesbare datums)
+  'nvlr':                { naam: 'NVLR',    type: 'congressus', feed: 'https://www.nvlr.eu/nieuws' },
+  'nedazur':             { naam: 'NEDAZUR', type: 'congressus', feed: 'https://www.nedazur.org/nieuws' },
+  'anm':                 { naam: 'ANM',     type: 'congressus', feed: 'https://www.a-n-m.nl/nieuws' }
 };
 const NIEUWS_MAX_LEEFTIJD_DAGEN = 60;
 const NIEUWS_MAX_PER_BRON = 6;
@@ -946,8 +952,35 @@ function parseRssItems(xml) {
   return result;
 }
 
+/**
+ * Parser voor Congressus-nieuwspagina's (NVLR, NEDAZUR, ANM).
+ * Volledig deterministisch: datum uit <time data-datetime>, titel/link uit <h3>,
+ * excerpt uit de eerste paragraaf. Geen AI nodig.
+ */
+function parseCongressusNieuws(html, basisUrl) {
+  const result = [];
+  const blokken = html.split(/class="row publication-item"/).slice(1);
+  blokken.forEach(function (blok) {
+    var mTijd = blok.match(/data-datetime="(\d{4}-\d{2}-\d{2})[^"]*"/);
+    var mTitel = blok.match(/<h3>\s*<a href="([^"]+)"[^>]*>([\s\S]*?)<\/a>\s*<\/h3>/);
+    if (!mTijd || !mTitel) return;
+    var mExcerpt = blok.match(/<\/h3>\s*<p>([\s\S]*?)<\/p>/);
+    var link = mTitel[1];
+    if (link.indexOf('http') !== 0) {
+      link = basisUrl.replace(/\/nieuws\/?$/, '') + link;
+    }
+    result.push({
+      date: mTijd[1] + 'T12:00:00.000Z',
+      titel: mTitel[2],
+      link: link,
+      content: mExcerpt ? mExcerpt[1] : ''
+    });
+  });
+  return result;
+}
+
 // ════════════════════════════════════════════════════════════════
-// NIEUWS VAN DE VERENIGINGEN (RSS → data/nieuws.json)
+// NIEUWS VAN DE VERENIGINGEN (RSS + Congressus → data/nieuws.json)
 // ════════════════════════════════════════════════════════════════
 
 /**
@@ -978,14 +1011,26 @@ async function verzamelNieuws(warnings) {
         headers: { 'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)' },
         signal: AbortSignal.timeout(15000)
       });
-      const xml = await response.text();
-      if (xml.indexOf('<rss') === -1 && xml.indexOf('<feed') === -1) {
-        var fErr = new Error('Feed levert geen geldige RSS/XML \u2014 formaat gewijzigd');
-        fErr.categorie = 'formaat';
-        throw fErr;
+      const body = await response.text();
+
+      var ruweItems;
+      if (cfg.type === 'congressus') {
+        ruweItems = parseCongressusNieuws(body, cfg.feed);
+        if (ruweItems.length === 0) {
+          var cErr = new Error('Geen publication-items herkend \u2014 pagina-opbouw gewijzigd');
+          cErr.categorie = 'formaat';
+          throw cErr;
+        }
+      } else {
+        if (body.indexOf('<rss') === -1 && body.indexOf('<feed') === -1) {
+          var fErr = new Error('Feed levert geen geldige RSS/XML \u2014 formaat gewijzigd');
+          fErr.categorie = 'formaat';
+          throw fErr;
+        }
+        ruweItems = parseRssItems(body);
       }
 
-      var items = parseRssItems(xml)
+      var items = ruweItems
         .filter(function (it) { return new Date(it.date).getTime() >= grens; })
         .filter(function (it) {
           // Nationale nieuwskoppen (NOS/NU.nl-embeds) weren, net als bij events
