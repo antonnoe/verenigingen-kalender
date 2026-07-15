@@ -46,12 +46,19 @@ const ICAL_BRONNEN = {
   'anm':     'https://www.a-n-m.nl/_ical/public.ics'
 };
 
+// Bronnen met WordPress REST API (posts als event-aankondiging).
+// Datum + titel worden DETERMINISTISCH uit de posttitel geparseerd
+// (patroon "28 juni – Koffieochtend"); AI wordt alleen gebruikt voor
+// plaats/tijd/type-verrijking en kan de datum niet beïnvloeden.
+const WORDPRESS_BRONNEN = {
+  'nlvp': {
+    site: 'https://nlvp.fr',
+    naam: 'NLVP'
+  }
+};
+
 // Bronnen met webpagina-agenda (via Claude AI geëxtraheerd)
 const WEB_BRONNEN = {
-  'nlvp': {
-    urls: ['https://nlvp.fr/calendar/'],
-    naam: 'NLVP'
-  },
   'latulipe': {
     urlGenerator: function () {
       const urls = [];
@@ -236,6 +243,27 @@ async function main() {
         bron_naam: id.toUpperCase(),
         type: 'ical',
         url: url,
+        fout: err.message,
+        datum: new Date().toISOString()
+      });
+    }
+  }
+
+  // ── 1b. WordPress REST API-bronnen ──
+  console.log('\n── WordPress-bronnen ophalen ──');
+  for (const [id, config] of Object.entries(WORDPRESS_BRONNEN)) {
+    console.log(`  ${id}: ${config.site}`);
+    try {
+      const result = await fetchWordpressEvents(id, config.naam, config);
+      console.log(`  \u2713 ${result.events.length} toekomstige events (datums deterministisch uit posttitels)`);
+      updateVereniging(data, id, result.events);
+    } catch (err) {
+      console.log(`  \u2717 FOUT: ${err.message}`);
+      warnings.push({
+        bron_id: id,
+        bron_naam: config.naam,
+        type: 'wordpress-api',
+        url: config.site,
         fout: err.message,
         datum: new Date().toISOString()
       });
@@ -509,6 +537,205 @@ async function fetchIcalEvents(url, bronId) {
 }
 
 // ════════════════════════════════════════════════════════════════
+// WORDPRESS REST API (posts als event-aankondiging)
+// ════════════════════════════════════════════════════════════════
+
+/**
+ * Decodeert HTML-entities zoals de WordPress REST API die teruggeeft
+ * (bv. "&#8211;" voor het streepje in "28 juni – Koffieochtend").
+ * Zonder deze stap matcht de titelparser niet.
+ */
+function decodeEntities(str) {
+  var NAMED = {
+    'amp': '&', 'lt': '<', 'gt': '>', 'quot': '"', 'apos': "'",
+    'nbsp': ' ', 'eacute': '\u00e9', 'egrave': '\u00e8', 'ecirc': '\u00ea',
+    'agrave': '\u00e0', 'ccedil': '\u00e7', 'ucirc': '\u00fb', 'ocirc': '\u00f4',
+    'ndash': '\u2013', 'mdash': '\u2014', 'hellip': '\u2026',
+    'lsquo': '\u2018', 'rsquo': '\u2019', 'ldquo': '\u201c', 'rdquo': '\u201d'
+  };
+  return String(str || '')
+    .replace(/&#x([0-9a-fA-F]+);/g, function (_, h) { return String.fromCodePoint(parseInt(h, 16)); })
+    .replace(/&#(\d+);/g, function (_, d) { return String.fromCodePoint(parseInt(d, 10)); })
+    .replace(/&([a-zA-Z]+);/g, function (m, naam) { return NAMED[naam] !== undefined ? NAMED[naam] : m; });
+}
+
+/**
+ * Parseert een event uit een WordPress-posttitel volgens het patroon
+ * "28 juni – Koffieochtend" (streepje-variaties en hoofdletters toegestaan).
+ * Het jaar wordt afgeleid van de publicatiedatum: de eerstvolgende
+ * dag+maand op of na de publicatiedatum. Retourneert null bij geen match.
+ */
+function parseEventUitPostTitel(titelRaw, postDatum) {
+  var titel = String(titelRaw || '').trim();
+  // Ondersteunt ook bereiken: "24 en 25 mei – ...", "17->28 juli – ..." (startdag telt)
+  var m = titel.match(/^(\d{1,2})(?:\s*(?:->|\u2192|t\/m|tot(?:\s+en\s+met)?|en|et|,|[\u2013\u2014-])\s*\d{1,2})?\s+([a-zA-Z\u00e0-\u00fc]+)\s*[\u2013\u2014-]\s*(.+)$/);
+  if (!m) return null;
+
+  var dag = parseInt(m[1], 10);
+  var maand = MAAND_NAMEN[m[2].toLowerCase()];
+  var eventTitel = m[3].trim();
+  if (!maand || dag < 1 || dag > 31 || !eventTitel) return null;
+
+  // Jaar: eerstvolgende voorkomen op of (vlak) na de publicatiedatum.
+  var pub = new Date(postDatum);
+  if (isNaN(pub.getTime())) return null;
+  var slack = new Date(pub); slack.setDate(slack.getDate() - 1);
+
+  var kandidaat = new Date(pub.getFullYear(), maand - 1, dag);
+  if (kandidaat < slack) {
+    kandidaat = new Date(pub.getFullYear() + 1, maand - 1, dag);
+  }
+
+  return { datum: kandidaat, titel: eventTitel };
+}
+
+async function fetchWordpressEvents(bronId, bronNaam, config) {
+  const apiUrl = config.site.replace(/\/$/, '') +
+    '/wp-json/wp/v2/posts?per_page=30&_fields=date,title,link,content';
+
+  const response = await fetch(apiUrl, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)',
+      'Accept': 'application/json'
+    },
+    signal: AbortSignal.timeout(15000)
+  });
+  if (!response.ok) throw new Error(`HTTP ${response.status} op ${apiUrl}`);
+
+  const posts = await response.json();
+  if (!Array.isArray(posts)) throw new Error('REST API gaf geen array terug');
+
+  const now = new Date();
+  now.setHours(0, 0, 0, 0);
+
+  // ── Stap 1: deterministisch datum + titel uit posttitels ──
+  const kandidaten = [];
+  const gezien = {};
+  posts.forEach(function (post) {
+    var titelRaw = post.title && post.title.rendered ? post.title.rendered : '';
+    titelRaw = cleanText(decodeEntities(titelRaw));
+    var parsed = parseEventUitPostTitel(titelRaw, post.date);
+    if (!parsed) return;                 // geen event-aankondiging (bv. "Fijne feestdagen !")
+    if (parsed.datum < now) return;      // voorbij
+
+    var sleutel = formatDate(parsed.datum) + '|' + parsed.titel.toLowerCase();
+    if (gezien[sleutel]) return;         // dubbele aankondiging
+    gezien[sleutel] = true;
+
+    var content = post.content && post.content.rendered
+      ? decodeEntities(stripHtml(post.content.rendered)) : '';
+    kandidaten.push({
+      datum: parsed.datum,
+      titel: parsed.titel,
+      content: content.substring(0, 1500),
+      link: post.link || config.site
+    });
+  });
+
+  if (kandidaten.length === 0) {
+    // Geen toekomstige aankondigingen is een geldig resultaat (bv. zomerstop),
+    // géén fout — de bron werkt, er is alleen niets aangekondigd.
+    return { events: [], gefilterd: 0 };
+  }
+
+  // ── Stap 2: plaats/tijd/type-verrijking via Claude (optioneel) ──
+  // De datum staat al vast en is voor het model onbereikbaar.
+  var verrijking = {};
+  if (ANTHROPIC_API_KEY) {
+    try {
+      verrijking = await verrijkWordpressEvents(kandidaten);
+    } catch (err) {
+      console.log(`    \u26a0 Verrijking mislukt (${err.message}) \u2014 events zonder plaats/tijd gepubliceerd`);
+    }
+  }
+
+  const events = kandidaten.map(function (k, i) {
+    var v = verrijking[i] || {};
+    return {
+      datum: formatDate(k.datum),
+      titel: k.titel,
+      plaats: cleanText(v.plaats || 'niet vermeld'),
+      tijd: cleanText(v.tijd || 'niet vermeld'),
+      type: normaliseType(v.type),
+      bron: k.link
+    };
+  });
+
+  events.sort(function (a, b) { return new Date(a.datum) - new Date(b.datum); });
+  return { events: events, gefilterd: 0 };
+}
+
+/**
+ * Vraagt Claude per kandidaat-event plaats, tijd en type uit de posttekst.
+ * Elke claim moet vergezeld gaan van een letterlijk citaat (bron_tekst) dat
+ * tegen de tekst van de betreffende post wordt geverifieerd. Niet-verifieerbare
+ * claims worden genegeerd; het event zelf blijft altijd staan.
+ */
+async function verrijkWordpressEvents(kandidaten) {
+  const lijst = kandidaten.map(function (k, i) {
+    return `### EVENT ${i}\nTitel: ${k.titel}\nDatum: ${formatDate(k.datum)}\nPosttekst:\n${k.content}`;
+  }).join('\n\n');
+
+  const prompt = `Je krijgt aankondigingen van verenigingsevents. Per event: haal locatie, tijd en type uit de posttekst.
+
+REGELS:
+- De datum en titel staan al vast; die geef je NIET terug en wijzig je NIET.
+- "bron_tekst": letterlijk citaat (max 150 tekens) uit de posttekst van DAT event waarin de plaats en/of tijd staat. Exact kopiëren, niet herformuleren.
+- Staat er geen plaats of tijd in de tekst: gebruik "niet vermeld" en laat bron_tekst leeg.
+- Tijd noteren als HH:MM of HH:MM-HH:MM ("half elf" = 10:30).
+
+OUTPUT: alleen een JSON array, één object per event, in dezelfde volgorde:
+[{"index": 0, "plaats": "...", "tijd": "...", "type": "sociaal|sportief|cultureel|informatief|bestuurlijk|zakelijk|kerkdienst", "bron_tekst": "..."}]
+
+${lijst}`;
+
+  const resp = await fetch(ANTHROPIC_URL, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': ANTHROPIC_API_KEY,
+      'anthropic-version': ANTHROPIC_VERSION
+    },
+    body: JSON.stringify({
+      model: ANTHROPIC_MODEL,
+      max_tokens: 4096,
+      temperature: 0.1,
+      messages: [{ role: 'user', content: prompt }]
+    }),
+    signal: AbortSignal.timeout(60000)
+  });
+  if (!resp.ok) throw new Error(`Claude API HTTP ${resp.status}`);
+
+  const data = await resp.json();
+  let txt = (data.content && data.content[0] && data.content[0].text) || '';
+  txt = txt.replace(/```json\s*/g, '').replace(/```\s*/g, '').trim();
+  const s = txt.indexOf('['), e = txt.lastIndexOf(']');
+  if (s === -1 || e === -1) throw new Error('geen JSON array in response');
+  const arr = JSON.parse(txt.substring(s, e + 1).replace(/,\s*]/g, ']').replace(/,\s*}/g, '}'));
+
+  const result = {};
+  arr.forEach(function (item) {
+    var i = item.index;
+    if (typeof i !== 'number' || !kandidaten[i]) return;
+
+    var heeftClaim = (item.plaats && item.plaats !== 'niet vermeld') ||
+                     (item.tijd && item.tijd !== 'niet vermeld');
+    if (heeftClaim) {
+      // Anker-check: citaat moet letterlijk in de posttekst van dít event staan.
+      var anker = normaliseerVoorAnker(item.bron_tekst || '');
+      var bron = normaliseerVoorAnker(kandidaten[i].content);
+      if (anker.length < 3 || bron.indexOf(anker) === -1) {
+        console.log(`    \u2717 Verrijking afgekeurd voor "${kandidaten[i].titel}": citaat niet in posttekst`);
+        result[i] = { type: item.type };
+        return;
+      }
+    }
+    result[i] = { plaats: item.plaats, tijd: item.tijd, type: item.type };
+  });
+  return result;
+}
+
+// ════════════════════════════════════════════════════════════════
 // WEB-SCRAPING VIA CLAUDE
 // ════════════════════════════════════════════════════════════════
 
@@ -755,7 +982,7 @@ var MAAND_NAMEN = {
   'jan': 1, 'feb': 2, 'mrt': 3, 'apr': 4, 'jun': 6, 'jul': 7, 'aug': 8,
   'sep': 9, 'sept': 9, 'okt': 10, 'nov': 11, 'dec': 12,
   // Frans
-  'janvier': 1, 'f\u00e9vrier': 2, 'fevrier': 2, 'mars': 3, 'avril': 4,
+  'janvier': 1, 'f\u00e9vrier': 2, 'fevrier': 2, 'mars': 3, 'avril': 4, 'mai': 5,
   'juin': 6, 'juillet': 7, 'ao\u00fbt': 8, 'aout': 8, 'septembre': 9,
   'octobre': 10, 'novembre': 11, 'd\u00e9cembre': 12, 'decembre': 12
 };
@@ -1014,6 +1241,20 @@ function writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents) {
       status: w ? 'down' : 'ok',
       events: w ? 0 : eventsVoor(id),
       url: ICAL_BRONNEN[id],
+      fout: w ? w.fout : null
+    });
+  });
+
+  Object.keys(WORDPRESS_BRONNEN).forEach(function (id) {
+    var config = WORDPRESS_BRONNEN[id];
+    var w = downMap[id];
+    bronnen.push({
+      id: id,
+      naam: config.naam,
+      type: 'wordpress-api',
+      status: w ? 'down' : 'ok',
+      events: w ? 0 : eventsVoor(id),
+      url: config.site,
       fout: w ? w.fout : null
     });
   });
