@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-15T20:33:04.186Z",
-  "totaal": 18,
+  "generated_at": "2026-07-15T20:37:23.198Z",
+  "totaal": 26,
   "bronnen": [
     {
       "id": "nlvp",
@@ -49,9 +49,49 @@
       "items": 2,
       "feed": "https://www.neerlandia.fr/?format=feed&type=rss",
       "diagnose": null
+    },
+    {
+      "id": "nvlr",
+      "naam": "NVLR",
+      "status": "ok",
+      "items": 4,
+      "feed": "https://www.nvlr.eu/nieuws",
+      "diagnose": null
+    },
+    {
+      "id": "nedazur",
+      "naam": "NEDAZUR",
+      "status": "ok",
+      "items": 0,
+      "feed": "https://www.nedazur.org/nieuws",
+      "diagnose": null
+    },
+    {
+      "id": "anm",
+      "naam": "ANM",
+      "status": "ok",
+      "items": 4,
+      "feed": "https://www.a-n-m.nl/nieuws",
+      "diagnose": null
     }
   ],
   "items": [
+    {
+      "bron_id": "nvlr",
+      "bron_naam": "NVLR",
+      "datum": "2026-07-13",
+      "titel": "Exposition 17-19 juillet 2026, Miriam Janssen",
+      "link": "https://www.nvlr.eu/nieuws/exposition-17-19-juillet-2026-miriam-janssen",
+      "excerpt": "Bonjour, hi, hallo, heehee, Exposition 17-19 juillet 2026, Vernissage le 18 juillet 18.00 h. Presbytère de Montolieu Ik heet jullie allemaal van harte welkom om deze tentoonstelling te komen..."
+    },
+    {
+      "bron_id": "anm",
+      "bron_naam": "ANM",
+      "datum": "2026-07-12",
+      "titel": "Fotofestival Fréjus",
+      "link": "https://www.a-n-m.nl/nieuws/fotofestival-frejus",
+      "excerpt": "Van 26 september tot 4 oktober wordt in Fréjus het 8e Festival International de la Photographie Surréaliste et Créative georganiseerd. De ANM-fotoclub zal op woensdag 30 september of vrijdag 2..."
+    },
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
@@ -67,6 +107,14 @@
       "titel": "Uitzicht op woensdag 8 juli",
       "link": "https://ernparis.fr/uitzicht-op-woensdag-8-juli/",
       "excerpt": "Ruth van der Waall-Schaeffer Kijk niet te ver"
+    },
+    {
+      "bron_id": "nvlr",
+      "bron_naam": "NVLR",
+      "datum": "2026-07-08",
+      "titel": "Bosbranden in de regio, wees voorbereid",
+      "link": "https://www.nvlr.eu/nieuws/bosbranden-in-de-regio-wees-voorbereid",
+      "excerpt": "Wat te doen bij een bosbrand in de buurt? In de Hérault en Aude hebben we te maken gehad met hevige branden. In Pouzols waar ook leden van onze vereniging wonen, moest men hals over kop de woning..."
     },
     {
       "bron_id": "lotgenoten",
@@ -101,12 +149,28 @@
       "excerpt": "Gezellig zomers etentje. Ga je toevallig ook naar Nederland of Belgie of ben je er onlangs geweest ? Kom even bijkletsen over de zomervakantie. Geef je wel even tijdig op voor dit etentje, en hoeveel personen je meebrengt, want we moeten op 13 juli de reservering doorgeven.…"
     },
     {
+      "bron_id": "nvlr",
+      "bron_naam": "NVLR",
+      "datum": "2026-07-02",
+      "titel": "Grote natuurbrand in de Minervois",
+      "link": "https://www.nvlr.eu/nieuws/grote-brand-in-de-minervois",
+      "excerpt": "Zoals jullie wellicht uit het nieuws hebben vernomen, woedt er sinds 1 juli een grote natuurbrand in onze directe omgeving. Met name de dorpen Pouzols-Minervois en Mailhac zijn zwaar getroffen...."
+    },
+    {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
       "datum": "2026-06-30",
       "titel": "Sanne Bink, nagelstyliste met mobiele nagelstudio (Salviac eo)",
       "link": "https://www.lotgenoten.fr/eclat-des-ongles-mobiele-nagelstudio-salviac-eo/",
       "excerpt": "Éclat des ongles is mijn mobiele nagelstudio. Ik ben Sanne en werk als nagelstyliste aan huis. Ik kom bij mijn klanten thuis in een straal van ongeveer 20 km rondom Salviac (Lot 46). Zo kunnen zij in hun eigen vertrouwde omgeving genieten van een professionele…"
+    },
+    {
+      "bron_id": "anm",
+      "bron_naam": "ANM",
+      "datum": "2026-06-30",
+      "titel": "Cleveringalezing op zaterdag 28 november",
+      "link": "https://www.a-n-m.nl/nieuws/cleveringalezing-op-zaterdag-28-november",
+      "excerpt": "Op een groot aantal plaatsen over de wereld wordt jaarlijks omstreeks 26 november het moedige verzet van prof. R. Cleveringa tegen het gedwongen ontslag van joodse medewerkers aan de Leidse..."
     },
     {
       "bron_id": "ern-paris",
@@ -131,6 +195,22 @@
       "titel": "Showrooms Paris Fashion Week, 23 – 29 juni",
       "link": "https://atelierneerlandais.com/showrooms-paris-fashion-week/",
       "excerpt": "Rondom Paris Fashion Week zullen verschillende leden hun showrooms houden op het Atelier Néerlandais, waaronder Pien Studios, Rhea en Hul Le Kes. De showrooms zijn op uitnodiging te bezoeken. Showrooms op uitnodiging: 23–26 juni Pien Studios 25-29 juni Hul le Kes 26–29 juni…"
+    },
+    {
+      "bron_id": "anm",
+      "bron_naam": "ANM",
+      "datum": "2026-06-19",
+      "titel": "Wereldkampioenschap Voetbal",
+      "link": "https://www.a-n-m.nl/nieuws/wereldkampioenschap-voetbal",
+      "excerpt": "Ben je voetballiefhebber, en wil je de wedstrijden van Nederland samen beleven met andere Nederlanders? Onze zustervereniging DNC biedt daarvoor de mogelijkheid in het centrum van Cannes. Kijk..."
+    },
+    {
+      "bron_id": "nvlr",
+      "bron_naam": "NVLR",
+      "datum": "2026-06-14",
+      "titel": "Expositie Marike Koot in Carcassonne",
+      "link": "https://www.nvlr.eu/nieuws/expositie-marike-koot-in-carcassonne",
+      "excerpt": "Exclusieve vernissage van de schilderijen van Marike Koot. Donderdag 25 juni van 18.00 tot 20.00 uur. Kom de werken van Marike ontdekken en geniet van een gezellige bijeenkomst met een drankje. De..."
     },
     {
       "bron_id": "nlvp",
@@ -179,6 +259,14 @@
       "titel": "Woorden doen er toe",
       "link": "https://ernparis.fr/woorden-doen-er-toe/",
       "excerpt": "Ds. Rienk Lanooy Ik moet u iets bekennen: al vele jaren moet ik het uit zien te houden met een vorm van apodophoria. Het is dragelijk moet ik zeggen en als het opspeelt dan vooral in de loop van de"
+    },
+    {
+      "bron_id": "anm",
+      "bron_naam": "ANM",
+      "datum": "2026-05-31",
+      "titel": "Golfclinic op 29 juni",
+      "link": "https://www.a-n-m.nl/nieuws/golfclinic-op-29-juni",
+      "excerpt": "De ANM Golfgroep organiseert op maandag 29 juni een leerzame eerste golfclinic voor ANM leden. Onder leiding van een ervaren Nederlandse Golfpro (Jan Bos) word je meegenomen in alle facetten die..."
     },
     {
       "bron_id": "ern-paris",
