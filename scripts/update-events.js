@@ -329,7 +329,13 @@ async function main() {
 
   // ── 4. Meta bijwerken ──
   const vandaag = new Date().toISOString().split('T')[0];
-  const volgendeWeek = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000).toISOString().split('T')[0];
+  // Volgende geplande run: eerstvolgende maandag (1), woensdag (3) of vrijdag (5)
+  // conform het cron-schema in .github/workflows/update-kalender.yml.
+  const volgendeWeek = (function () {
+    const d = new Date();
+    do { d.setDate(d.getDate() + 1); } while ([1, 3, 5].indexOf(d.getDay()) === -1);
+    return d.toISOString().split('T')[0];
+  })();
 
   let totaalEvents = 0;
   let bronnenMetEvents = 0;
@@ -1214,8 +1220,8 @@ function stripHtml(html) {
  * Een dashboard kan dit pollen:
  *   - ok=false / status="degraded"  -> minstens één koppeling is gebroken
  *   - kapotte_koppelingen[]         -> welke bron, welke URL, welke fout
- *   - generated_at                  -> heartbeat; als dit > ~8 dagen oud is,
- *                                      draait de wekelijkse workflow zelf niet meer
+ *   - generated_at                  -> heartbeat; als dit > ~4 dagen oud is (schema: ma/wo/vr),
+ *                                      draait de workflow zelf niet meer
  */
 function writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents) {
   var downMap = {};
