@@ -57,7 +57,7 @@ const NIEUWS_BRONNEN = {
   'lotgenoten':          { naam: 'LOTgenoten',          feed: 'https://www.lotgenoten.fr/feed/' },
   'neerlandia-toulouse': { naam: 'Neerlandia Toulouse', feed: 'https://www.neerlandia.fr/?format=feed&type=rss' }
 };
-const NIEUWS_MAX_LEEFTIJD_DAGEN = 180;
+const NIEUWS_MAX_LEEFTIJD_DAGEN = 60;
 const NIEUWS_MAX_PER_BRON = 6;
 
 // Bronnen met WordPress REST API (posts als event-aankondiging).
@@ -908,6 +908,22 @@ async function fetchWordpressViaRss(site) {
   return posts;
 }
 
+/**
+ * Verwijdert CMS-shortcodes die als platte tekst in feeds lekken,
+ * zoals Joomla "{gallery}foto/x{/gallery}" en WordPress "[caption]...[/caption]".
+ */
+function stripShortcodes(tekst) {
+  return String(tekst || '')
+    // Gepaarde blokken inclusief inhoud: {gallery}foto/x{/gallery}, [caption]...[/caption]
+    .replace(/\{(\w+)[^{}]*\}[\s\S]*?\{\/\1\}/g, ' ')
+    .replace(/\[(\w+)[^\[\]]*\][\s\S]*?\[\/\1\]/g, ' ')
+    // Losse resten: {loadposition x}, [embed x]
+    .replace(/\{\/?[a-zA-Z][^{}]*\}/g, ' ')
+    .replace(/\[\/?[a-zA-Z][^\[\]]*\]/g, ' ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
 /** Generieke RSS-item-parser (WordPress- en Joomla-feeds). */
 function parseRssItems(xml) {
   const result = [];
@@ -978,7 +994,7 @@ async function verzamelNieuws(warnings) {
         })
         .slice(0, NIEUWS_MAX_PER_BRON)
         .map(function (it) {
-          var excerpt = cleanText(decodeEntities(stripHtml(it.content || '')));
+          var excerpt = stripShortcodes(cleanText(decodeEntities(stripHtml(it.content || ''))));
           if (excerpt.length > 280) excerpt = excerpt.substring(0, 277).replace(/\s+\S*$/, '') + '\u2026';
           return {
             bron_id: id,
