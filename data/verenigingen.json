@@ -380,7 +380,7 @@
       "status": "actief",
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": null,
-      "opmerking": "Forum met 25.000+ leden. Events worden per maand aangekondigd.",
+      "opmerking": "Forum met 25.000+ leden. Café Jeudi is een wekelijkse, ongedwongen bijeenkomst via Google Meet, iedere donderdag van 18:00 tot 19:30 — toegang via de banner bovenaan het forum of de link in de nieuwsbrief. Al meer dan 5 jaar delen we verhalen en tips over wonen in Frankrijk; wat tijdens de covid-periode begon als sociaal moment, is inmiddels een vaste traditie geworden.",
       "events": [
         {
           "datum": "2026-12-31",
@@ -391,7 +391,18 @@
           "bron": "https://www.nederlanders.fr/events/event/listUpcoming"
         }
       ],
-      "rubriek": "hulporganisatie"
+      "rubriek": "hulporganisatie",
+      "vast_ritme": {
+        "patroon": "wekelijks",
+        "weekdag": 4,
+        "aantal_weken": 8,
+        "titel": "Café Jeudi — virtueel samenzijn",
+        "tijd": "18:00-19:30",
+        "plaats": "Online (Google Meet, link op het forum)",
+        "type": "sociaal",
+        "bron_url": "https://www.nederlanders.fr/profiles/blogs/uitnodiging-cafe-jeudi-een-warm-virtueel-samenzijn-voor-nederland",
+        "omschrijving": "iedere donderdag"
+      }
     },
     {
       "id": "dbcra",
