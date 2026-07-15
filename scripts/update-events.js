@@ -61,7 +61,22 @@ const NIEUWS_BRONNEN = {
   // /nieuws-pagina (publication-items met machine-leesbare datums)
   'nvlr':                { naam: 'NVLR',    type: 'congressus', feed: 'https://www.nvlr.eu/nieuws' },
   'nedazur':             { naam: 'NEDAZUR', type: 'congressus', feed: 'https://www.nedazur.org/nieuws' },
-  'anm':                 { naam: 'ANM',     type: 'congressus', feed: 'https://www.a-n-m.nl/nieuws' }
+  'anm':                 { naam: 'ANM',     type: 'congressus', feed: 'https://www.a-n-m.nl/nieuws' },
+  // Aanvullende RSS-bronnen (geverifieerd juli 2026)
+  'bourgondische-zaken': { naam: 'Bourgondische Zaken', type: 'rss', feed: 'https://bourgondischezaken.com/feed/' },
+  'dbcra':               { naam: 'DBCRA',               type: 'rss', feed: 'https://dbcra.nl/feed/' },
+  'aap':                 { naam: 'Alpes\u2013Pays-Bas',     type: 'rss', feed: 'https://alpespaysbas.fr/?feed=rss2' },
+  'praatje':             { naam: 'Praatje',             type: 'rss', feed: 'https://praatje.fr/feed/' },
+  'cmunf':               { naam: 'CMUnf',               type: 'rss', feed: 'https://cmunf.fr/nieuws?format=feed&type=rss' },
+  // type 'fanf': Joomla-site met uitgeschakelde feeds; deterministische
+  // HTML-parser op de o-card-blokken van de nieuwsrubriek
+  'fanf':                { naam: 'FANF', type: 'fanf', feed: 'https://www.fanf.fr/informatie/nieuws/fanf-nieuws' },
+  // Ning-rubriek "Clubs, Verenigingen en Bijeenkomsten" op Nederlanders.fr.
+  // NB: niet verifieerbaar vanuit de ontwikkelomgeving (netwerkblokkade richting
+  // dit domein); de eerste workflow-run bevestigt. Faalt de URL, dan meldt
+  // health.json dat met oorzaak-categorie — verwijder dan deze regel of pas de URL aan.
+  'nederlanders-fr':     { naam: 'Nederlanders.fr', type: 'rss',
+    feed: 'https://www.nederlanders.fr/profiles/blog/feed?tag=Clubs%2C+Verenigingen+en+Bij%C3%A9%C3%A9nkomsten&xn_auth=no' }
 };
 const NIEUWS_MAX_LEEFTIJD_DAGEN = 60;
 const NIEUWS_MAX_PER_BRON = 6;
@@ -979,8 +994,52 @@ function parseCongressusNieuws(html, basisUrl) {
   return result;
 }
 
+/**
+ * Parser voor de FANF-nieuwsrubriek (Joomla, feeds uitgeschakeld).
+ * Deterministisch: o-card-blokken met titel in h2 en een Nederlandse
+ * datum ("5 mei 2026") aan het begin van de beschrijving.
+ */
+function parseFanfNieuws(html, basisUrl) {
+  const result = [];
+  const basis = basisUrl.match(/^https?:\/\/[^\/]+/)[0];
+  const blokken = html.split(/<article class="o-card/).slice(1);
+  const maandAlt = Object.keys(MAAND_NAMEN).join('|');
+  const reDatum = new RegExp('(\\d{1,2})\\s+(' + maandAlt + ')\\s+(\\d{4})', 'i');
+
+  blokken.forEach(function (blok) {
+    var mTitel = blok.match(/o-card__title">([\s\S]*?)<\/h2>/);
+    if (!mTitel) return;
+    var mBeschr = blok.match(/o-card__description">([\s\S]*?)<\/section>/);
+    var beschrijving = mBeschr ? stripHtml(mBeschr[1]) : '';
+    var mDatum = beschrijving.match(reDatum);
+    if (!mDatum) return; // zonder datum geen betrouwbaar nieuwsitem
+    var maand = MAAND_NAMEN[mDatum[2].toLowerCase()];
+    if (!maand) return;
+    var iso = mDatum[3] + '-' + String(maand).padStart(2, '0') + '-' + String(+mDatum[1]).padStart(2, '0');
+
+    // Link: de "lees meer"-knop is het artikel zelf; links ín de tekst
+    // verwijzen vaak extern (monumentenregisters, nieuwsbrief-CDN's)
+    var mLink = blok.match(/<a[^>]*class="button"[^>]*href="([^"]+)"/) ||
+                blok.match(/<a[^>]*href="([^"]*nieuws[^"]*)"/) ||
+                blok.match(/<a[^>]*href="([^"]+)"/);
+    var link = mLink ? mLink[1] : basisUrl;
+    if (link.indexOf('http') !== 0) link = basis + '/' + link.replace(/^\//, '');
+
+    // Datumregel uit de excerpt knippen; die staat al in het datumblok
+    var excerpt = beschrijving.replace(reDatum, '').trim();
+
+    result.push({
+      date: iso + 'T12:00:00.000Z',
+      titel: stripHtml(mTitel[1]),
+      link: link,
+      content: excerpt
+    });
+  });
+  return result;
+}
+
 // ════════════════════════════════════════════════════════════════
-// NIEUWS VAN DE VERENIGINGEN (RSS + Congressus → data/nieuws.json)
+// NIEUWS VAN DE VERENIGINGEN (RSS + Congressus + FANF → data/nieuws.json)
 // ════════════════════════════════════════════════════════════════
 
 /**
@@ -1020,6 +1079,13 @@ async function verzamelNieuws(warnings) {
           var cErr = new Error('Geen publication-items herkend \u2014 pagina-opbouw gewijzigd');
           cErr.categorie = 'formaat';
           throw cErr;
+        }
+      } else if (cfg.type === 'fanf') {
+        ruweItems = parseFanfNieuws(body, cfg.feed);
+        if (ruweItems.length === 0) {
+          var fnErr = new Error('Geen o-card-nieuwsitems herkend \u2014 pagina-opbouw gewijzigd');
+          fnErr.categorie = 'formaat';
+          throw fnErr;
         }
       } else {
         if (body.indexOf('<rss') === -1 && body.indexOf('<feed') === -1) {
