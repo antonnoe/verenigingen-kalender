@@ -65,7 +65,10 @@ const NIEUWS_BRONNEN = {
   // Aanvullende RSS-bronnen (geverifieerd juli 2026)
   'bourgondische-zaken': { naam: 'Bourgondische Zaken', type: 'rss', feed: 'https://bourgondischezaken.com/feed/' },
   'dbcra':               { naam: 'DBCRA',               type: 'rss', feed: 'https://dbcra.nl/feed/' },
-  'aap':                 { naam: 'Alpes\u2013Pays-Bas',     type: 'rss', feed: 'https://alpespaysbas.fr/?feed=rss2' },
+  // 'aap' UITGESCHAKELD 15-07-2026: alpespaysbas.fr is gecompromitteerd
+  // (casino-spam in meerdere talen via hun WordPress). Pas heractiveren
+  // nadat de vereniging haar site heeft opgeschoond.
+  // 'aap':              { naam: 'Alpes\u2013Pays-Bas',     type: 'rss', feed: 'https://alpespaysbas.fr/?feed=rss2' },
   'praatje':             { naam: 'Praatje',             type: 'rss', feed: 'https://praatje.fr/feed/' },
   'cmunf':               { naam: 'CMUnf',               type: 'rss', feed: 'https://cmunf.fr/nieuws?format=feed&type=rss' },
   // type 'fanf': Joomla-site met uitgeschakelde feeds; deterministische
@@ -75,11 +78,34 @@ const NIEUWS_BRONNEN = {
   // NB: niet verifieerbaar vanuit de ontwikkelomgeving (netwerkblokkade richting
   // dit domein); de eerste workflow-run bevestigt. Faalt de URL, dan meldt
   // health.json dat met oorzaak-categorie — verwijder dan deze regel of pas de URL aan.
+  // tagFilter: Ning's tag-parameter in de feed-URL is onbetrouwbaar (levert
+  // vaak álle blogposts). Daarom filtert het script zelf op de <category>-tags
+  // van elk item; alleen items met deze rubriek komen door.
   'nederlanders-fr':     { naam: 'Nederlanders.fr', type: 'rss',
+    tagFilter: 'clubs, verenigingen en bij\u00e9\u00e9nkomsten',
     feed: 'https://www.nederlanders.fr/profiles/blog/feed?tag=Clubs%2C+Verenigingen+en+Bij%C3%A9%C3%A9nkomsten&xn_auth=no' }
 };
 const NIEUWS_MAX_LEEFTIJD_DAGEN = 60;
 const NIEUWS_MAX_PER_BRON = 6;
+
+// Spamdetectie voor nieuwsitems. Vrijwilligerssites worden geregeld gehackt
+// (casino/gok/pharma-injecties); dit filter voorkomt dat zulke berichten in
+// de nieuws-tab belanden. Meertalig, want spam-campagnes zijn dat ook.
+const NIEUWS_SPAM_PATRONEN = [
+  /casino/i, /kaszin\u00f3/i, /\u03ba\u03b1\u03b6\u03af\u03bd\u03bf/i, /kasyno/i,
+  /\bslots\b/i, /slotgame/i, /\bjackpot\b/i, /\bgokk(en|ast)/i,
+  /\bbonus\s?code/i, /free\s?spins/i, /\bwedden\b/i, /\bbookmaker/i, /\bbetting\b/i,
+  /\bviagra\b/i, /\bcialis\b/i, /\bpayday\s?loan/i, /\bcrypto\s?(casino|betting)/i,
+  /\u0431\u0443\u043a\u043c\u0435\u043a\u0435\u0440/i, /\u043a\u0430\u0437\u0438\u043d\u043e/i
+];
+
+function isNieuwsSpam(titel, excerpt) {
+  var t = (titel + ' ' + (excerpt || '')).substring(0, 500);
+  for (var i = 0; i < NIEUWS_SPAM_PATRONEN.length; i++) {
+    if (NIEUWS_SPAM_PATRONEN[i].test(t)) return true;
+  }
+  return false;
+}
 
 // Bronnen met WordPress REST API (posts als event-aankondiging).
 // Datum + titel worden DETERMINISTISCH uit de posttitel geparseerd
@@ -957,11 +983,18 @@ function parseRssItems(xml) {
     }
     var pub = new Date(pak('pubDate'));
     if (isNaN(pub.getTime())) return;
+    // Alle <category>-elementen (Ning/WordPress zetten tags hierin)
+    var categorieen = [];
+    var reCat = /<category[^>]*>([\s\S]*?)<\/category>/g, cm;
+    while ((cm = reCat.exec(blok)) !== null) {
+      categorieen.push(cm[1].replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1').trim());
+    }
     result.push({
       date: pub.toISOString(),
       titel: pak('title'),
       link: pak('link'),
-      content: pak('content:encoded') || pak('description')
+      content: pak('content:encoded') || pak('description'),
+      categorieen: categorieen
     });
   });
   return result;
@@ -1097,6 +1130,18 @@ async function verzamelNieuws(warnings) {
       }
 
       var items = ruweItems
+        .filter(function (it) {
+          // Rubriekfilter (indien geconfigureerd): item moet de tag dragen.
+          if (!cfg.tagFilter) return true;
+          var doel = cfg.tagFilter.toLowerCase();
+          return (it.categorieen || []).some(function (c) {
+            var cat = cleanText(decodeEntities(c)).toLowerCase();
+            // accent-tolerant: 'bijeenkomsten' vs 'bij\u00e9\u00e9nkomsten'
+            return cat === doel ||
+                   cat.normalize('NFD').replace(/[\u0300-\u036f]/g, '') ===
+                   doel.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+          });
+        })
         .filter(function (it) { return new Date(it.date).getTime() >= grens; })
         .filter(function (it) {
           // Nationale nieuwskoppen (NOS/NU.nl-embeds) weren, net als bij events
@@ -1117,9 +1162,26 @@ async function verzamelNieuws(warnings) {
           };
         });
 
+      // Spamfilter: gehackte bron mag nooit doorlekken naar de nieuws-tab.
+      var voorSpam = items.length;
+      items = items.filter(function (it) { return !isNieuwsSpam(it.titel, it.excerpt); });
+      var spamGeweerd = voorSpam - items.length;
+
       alleItems = alleItems.concat(items);
-      bronStatus.push({ id: id, naam: cfg.naam, status: 'ok', items: items.length, feed: cfg.feed, diagnose: null });
-      console.log(`  \u2713 ${items.length} nieuwsberichten`);
+
+      // Veel spam = bron vrijwel zeker gecompromitteerd → als verdacht markeren
+      if (spamGeweerd >= 3 || (spamGeweerd > 0 && items.length === 0)) {
+        var spamDiag = { categorie: 'formaat',
+          oorzaak: spamGeweerd + ' van ' + voorSpam + ' items geweerd als spam \u2014 de site van deze vereniging is vermoedelijk gehackt.',
+          advies: 'Informeer de vereniging (WordPress/Joomla-injectie). Overweeg de bron tijdelijk uit te schakelen.' };
+        bronStatus.push({ id: id, naam: cfg.naam, status: 'verdacht', items: items.length,
+                          spam_geweerd: spamGeweerd, feed: cfg.feed, diagnose: spamDiag });
+        console.log(`  \u26a0 ${spamGeweerd} spam-items geweerd \u2014 bron vermoedelijk gecompromitteerd`);
+      } else {
+        bronStatus.push({ id: id, naam: cfg.naam, status: 'ok', items: items.length,
+                          spam_geweerd: spamGeweerd, feed: cfg.feed, diagnose: null });
+        console.log(`  \u2713 ${items.length} nieuwsberichten` + (spamGeweerd ? ` (${spamGeweerd} spam geweerd)` : ''));
+      }
     } catch (err) {
       var diagnose = classificeerFout(err);
       var behouden = vorig[id] || [];
