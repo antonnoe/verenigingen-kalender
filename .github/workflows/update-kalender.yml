@@ -5,8 +5,8 @@ env:
 
 on:
   schedule:
-    # Elke maandag om 07:00 UTC (09:00 Franse tijd)
-    - cron: '0 7 * * 1'
+    # Maandag, woensdag en vrijdag om 07:00 UTC (09:00 Franse tijd)
+    - cron: '0 7 * * 1,3,5'
   workflow_dispatch:
     # Handmatig triggeren via GitHub Actions tab
 
@@ -67,7 +67,7 @@ jobs:
           
           # Bouw issue body
           BODY="## ⚠️ Kalender Update Waarschuwingen — ${DATUM}\n\n"
-          BODY+="De wekelijkse update is uitgevoerd maar een of meer bronnen gaven fouten.\n\n"
+          BODY+="De geplande update is uitgevoerd maar een of meer bronnen gaven fouten.\n\n"
           
           if [ -f scripts/warnings.json ]; then
             BODY+="### Bronnen met fouten:\n\n"
