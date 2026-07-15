@@ -46,6 +46,20 @@ const ICAL_BRONNEN = {
   'anm':     'https://www.a-n-m.nl/_ical/public.ics'
 };
 
+// Nieuwsfeeds van verenigingen (RSS). Gevalideerd juli 2026; bronnen zonder
+// werkende feed (NVLR, NEDAZUR, ANM, FANF — websitebuilders) staan er bewust niet in.
+const NIEUWS_PATH = path.join(__dirname, '..', 'data', 'nieuws.json');
+const NIEUWS_BRONNEN = {
+  'nlvp':                { naam: 'NLVP',                feed: 'https://nlvp.fr/feed/' },
+  'latulipe':            { naam: 'La Tulipe',           feed: 'https://www.latulipe.net/?format=feed&type=rss' },
+  'atelier-neerlandais': { naam: 'Atelier N\u00e9erlandais', feed: 'https://atelierneerlandais.com/feed/' },
+  'ern-paris':           { naam: 'ERN Paris',           feed: 'https://ernparis.fr/feed/' },
+  'lotgenoten':          { naam: 'LOTgenoten',          feed: 'https://www.lotgenoten.fr/feed/' },
+  'neerlandia-toulouse': { naam: 'Neerlandia Toulouse', feed: 'https://www.neerlandia.fr/?format=feed&type=rss' }
+};
+const NIEUWS_MAX_LEEFTIJD_DAGEN = 180;
+const NIEUWS_MAX_PER_BRON = 6;
+
 // Bronnen met WordPress REST API (posts als event-aankondiging).
 // Datum + titel worden DETERMINISTISCH uit de posttitel geparseerd
 // (patroon "28 juni – Koffieochtend"); AI wordt alleen gebruikt voor
@@ -481,6 +495,17 @@ async function main() {
     }
   });
 
+  // ── 3b. Nieuws van de verenigingen (RSS) ──
+  console.log('\n\u2500\u2500 Nieuwsfeeds ophalen \u2500\u2500');
+  var nieuwsSamenvatting = null;
+  try {
+    nieuwsSamenvatting = await verzamelNieuws(warnings);
+  } catch (err) {
+    // Nieuws is secundair: een totale mislukking mag de kalender-update nooit blokkeren.
+    console.log(`  \u2717 Nieuwsverzameling volledig mislukt: ${err.message}`);
+    nieuwsSamenvatting = { status: 'degraded', items: 0, bronnen_down: Object.keys(NIEUWS_BRONNEN).length };
+  }
+
   // ── 4. Meta bijwerken ──
   const vandaag = new Date().toISOString().split('T')[0];
   // Volgende geplande run: eerstvolgende maandag (1), woensdag (3) of vrijdag (5)
@@ -516,7 +541,7 @@ async function main() {
 
   // Gezondheidsstatus voor externe dashboards (Cockpit): per-bron status +
   // heartbeat. Afgeleid van warnings + de werkelijke event-tellingen.
-  writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents, observaties, vorigeHealth);
+  writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents, observaties, vorigeHealth, nieuwsSamenvatting);
   console.log(`\n\u2713 verenigingen.json bijgewerkt: ${totaalEvents} events van ${bronnenMetEvents} bronnen`);
   if (totaalGefilterd > 0) {
     console.log(`  (${totaalGefilterd} items totaal gefilterd als nieuws/extern)`);
@@ -871,7 +896,21 @@ async function fetchWordpressViaRss(site) {
     throw err;
   }
 
-  const posts = [];
+  const posts = parseRssItems(xml).map(function (it) {
+    return { date: it.date, titel: it.titel, link: it.link || site, content: it.content };
+  });
+
+  if (posts.length === 0) {
+    var leeg = new Error('RSS-feed bevat geen items');
+    leeg.categorie = 'formaat';
+    throw leeg;
+  }
+  return posts;
+}
+
+/** Generieke RSS-item-parser (WordPress- en Joomla-feeds). */
+function parseRssItems(xml) {
+  const result = [];
   const items = xml.split(/<item[\s>]/).slice(1);
   items.forEach(function (blok) {
     function pak(tag) {
@@ -881,20 +920,115 @@ async function fetchWordpressViaRss(site) {
     }
     var pub = new Date(pak('pubDate'));
     if (isNaN(pub.getTime())) return;
-    posts.push({
+    result.push({
       date: pub.toISOString(),
       titel: pak('title'),
-      link: pak('link') || site,
+      link: pak('link'),
       content: pak('content:encoded') || pak('description')
     });
   });
+  return result;
+}
 
-  if (posts.length === 0) {
-    var leeg = new Error('RSS-feed bevat geen items');
-    leeg.categorie = 'formaat';
-    throw leeg;
+// ════════════════════════════════════════════════════════════════
+// NIEUWS VAN DE VERENIGINGEN (RSS → data/nieuws.json)
+// ════════════════════════════════════════════════════════════════
+
+/**
+ * Verzamelt recent nieuws uit de RSS-feeds van verenigingen.
+ * Zelfde robuustheid als de kalenderbronnen: retry, oorzaak-classificatie
+ * en retentie (bij een kapotte feed blijven de eerder opgehaalde items staan).
+ * Schrijft data/nieuws.json; de nieuws-tab in index.html leest die same-origin,
+ * want de feeds zelf zijn door CORS niet direct vanuit de browser op te halen.
+ */
+async function verzamelNieuws(warnings) {
+  // Vorige nieuws.json als retentiebasis
+  var vorig = {};
+  try {
+    var v = JSON.parse(fs.readFileSync(NIEUWS_PATH, 'utf-8'));
+    (v.items || []).forEach(function (it) {
+      (vorig[it.bron_id] = vorig[it.bron_id] || []).push(it);
+    });
+  } catch (e) { /* eerste run: geen vorige data */ }
+
+  var alleItems = [];
+  var bronStatus = [];
+  var grens = Date.now() - NIEUWS_MAX_LEEFTIJD_DAGEN * 24 * 60 * 60 * 1000;
+
+  for (const [id, cfg] of Object.entries(NIEUWS_BRONNEN)) {
+    console.log(`  ${id}: ${cfg.feed}`);
+    try {
+      const response = await fetchMetRetry(cfg.feed, {
+        headers: { 'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)' },
+        signal: AbortSignal.timeout(15000)
+      });
+      const xml = await response.text();
+      if (xml.indexOf('<rss') === -1 && xml.indexOf('<feed') === -1) {
+        var fErr = new Error('Feed levert geen geldige RSS/XML \u2014 formaat gewijzigd');
+        fErr.categorie = 'formaat';
+        throw fErr;
+      }
+
+      var items = parseRssItems(xml)
+        .filter(function (it) { return new Date(it.date).getTime() >= grens; })
+        .filter(function (it) {
+          // Nationale nieuwskoppen (NOS/NU.nl-embeds) weren, net als bij events
+          var t = cleanText(decodeEntities(it.titel));
+          return !detecteerNieuwskop(t).isNieuws;
+        })
+        .slice(0, NIEUWS_MAX_PER_BRON)
+        .map(function (it) {
+          var excerpt = cleanText(decodeEntities(stripHtml(it.content || '')));
+          if (excerpt.length > 280) excerpt = excerpt.substring(0, 277).replace(/\s+\S*$/, '') + '\u2026';
+          return {
+            bron_id: id,
+            bron_naam: cfg.naam,
+            datum: it.date.split('T')[0],
+            titel: cleanText(decodeEntities(it.titel)).substring(0, 140),
+            link: it.link,
+            excerpt: excerpt
+          };
+        });
+
+      alleItems = alleItems.concat(items);
+      bronStatus.push({ id: id, naam: cfg.naam, status: 'ok', items: items.length, feed: cfg.feed, diagnose: null });
+      console.log(`  \u2713 ${items.length} nieuwsberichten`);
+    } catch (err) {
+      var diagnose = classificeerFout(err);
+      var behouden = vorig[id] || [];
+      alleItems = alleItems.concat(behouden);
+      console.log(`  \u2717 FOUT [${diagnose.categorie}]: ${diagnose.oorzaak}`);
+      if (behouden.length > 0) console.log(`    \u2192 ${behouden.length} eerdere nieuwsitems blijven zichtbaar`);
+      bronStatus.push({ id: id, naam: cfg.naam, status: 'down', items: behouden.length,
+                        stale: behouden.length > 0, feed: cfg.feed, diagnose: diagnose });
+      warnings.push({
+        bron_id: 'nieuws-' + id,
+        bron_naam: cfg.naam + ' (nieuwsfeed)',
+        type: 'rss-nieuws',
+        url: cfg.feed,
+        fout: err.message,
+        diagnose: diagnose,
+        datum: new Date().toISOString()
+      });
+    }
   }
-  return posts;
+
+  alleItems.sort(function (a, b) { return new Date(b.datum) - new Date(a.datum); });
+
+  var nieuws = {
+    generated_at: new Date().toISOString(),
+    totaal: alleItems.length,
+    bronnen: bronStatus,
+    items: alleItems
+  };
+  fs.writeFileSync(NIEUWS_PATH, JSON.stringify(nieuws, null, 2), 'utf-8');
+  console.log(`  nieuws.json geschreven: ${alleItems.length} items van ${bronStatus.filter(function (b) { return b.status === 'ok'; }).length}/${bronStatus.length} feeds`);
+
+  return {
+    status: bronStatus.some(function (b) { return b.status === 'down'; }) ? 'degraded' : 'ok',
+    items: alleItems.length,
+    bronnen_down: bronStatus.filter(function (b) { return b.status === 'down'; }).length
+  };
 }
 
 /**
@@ -1460,7 +1594,7 @@ function stripHtml(html) {
  *   - generated_at                  -> heartbeat; als dit > ~4 dagen oud is (schema: ma/wo/vr),
  *                                      draait de workflow zelf niet meer
  */
-function writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents, observaties, vorigeHealth) {
+function writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents, observaties, vorigeHealth, nieuwsSamenvatting) {
   observaties = observaties || [];
   vorigeHealth = vorigeHealth || {};
 
@@ -1545,6 +1679,7 @@ function writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents, observ
     observaties: verdacht.map(function (b) {
       return { id: b.id, naam: b.naam, type: b.type, url: b.url, diagnose: b.diagnose };
     }),
+    nieuws: nieuwsSamenvatting || null,
     bronnen: bronnen
   };
 
