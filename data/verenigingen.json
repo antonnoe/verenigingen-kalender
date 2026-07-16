@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-07-15",
+    "laatst_bijgewerkt": "2026-07-16",
     "volgende_update": "2026-07-17",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 7,
-    "totaal_events": 27,
-    "gefilterde_items": 92,
+    "totaal_events": 34,
+    "gefilterde_items": 0,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 0
+    "warnings": 2
   },
   "verenigingen": [
     {
@@ -383,12 +383,68 @@
       "opmerking": "Forum met 25.000+ leden. Café Jeudi is een wekelijkse, ongedwongen bijeenkomst via Google Meet, iedere donderdag van 18:00 tot 19:30 — toegang via de banner bovenaan het forum of de link in de nieuwsbrief. Al meer dan 5 jaar delen we verhalen en tips over wonen in Frankrijk; wat tijdens de covid-periode begon als sociaal moment, is inmiddels een vaste traditie geworden.",
       "events": [
         {
-          "datum": "2026-12-31",
-          "titel": "Boekpresentaties (doorlopend, maandelijks op 1e dinsdag)",
-          "plaats": "Online",
-          "tijd": "18:00-19:00",
-          "type": "cultureel",
-          "bron": "https://www.nederlanders.fr/events/event/listUpcoming"
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-07-16",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr/profiles/blogs/uitnodiging-cafe-jeudi-een-warm-virtueel-samenzijn-voor-nederland"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-07-23",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr/profiles/blogs/uitnodiging-cafe-jeudi-een-warm-virtueel-samenzijn-voor-nederland"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-07-30",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr/profiles/blogs/uitnodiging-cafe-jeudi-een-warm-virtueel-samenzijn-voor-nederland"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-08-06",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr/profiles/blogs/uitnodiging-cafe-jeudi-een-warm-virtueel-samenzijn-voor-nederland"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-08-13",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr/profiles/blogs/uitnodiging-cafe-jeudi-een-warm-virtueel-samenzijn-voor-nederland"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-08-20",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr/profiles/blogs/uitnodiging-cafe-jeudi-een-warm-virtueel-samenzijn-voor-nederland"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-08-27",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr/profiles/blogs/uitnodiging-cafe-jeudi-een-warm-virtueel-samenzijn-voor-nederland"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-09-03",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr/profiles/blogs/uitnodiging-cafe-jeudi-een-warm-virtueel-samenzijn-voor-nederland"
         }
       ],
       "rubriek": "hulporganisatie",
@@ -494,23 +550,6 @@
       "opmerking": "Gezelligheidsvereniging voor Nederlanders en liefhebbers van Nederland in en om Lille. Alleen generieke activiteitsbeschrijvingen.",
       "events": [],
       "contact": "info@cercleneerlandais.com",
-      "rubriek": "regionaal"
-    },
-    {
-      "id": "aap",
-      "naam": "Association Alpes – Pays-Bas",
-      "afkorting": "AAP",
-      "regio": "Grenoble / Franse Alpen",
-      "website": "",
-      "agenda_url": "",
-      "ical_url": null,
-      "platform": "Statische site",
-      "fanf_lid": true,
-      "status": "onbekend",
-      "agenda_toegankelijkheid": "geen_online_agenda",
-      "contact": "Louis Jansen, aloysiusjansen@aol.com, T 0670612521",
-      "opmerking": "Website tijdelijk niet gelinkt: de site van deze vereniging is gecompromitteerd (gemeld aan het bestuur, juli 2026). De link keert terug zodra de site is opgeschoond.",
-      "events": [],
       "rubriek": "regionaal"
     },
     {
