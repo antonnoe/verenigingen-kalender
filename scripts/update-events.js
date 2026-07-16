@@ -65,10 +65,7 @@ const NIEUWS_BRONNEN = {
   // Aanvullende RSS-bronnen (geverifieerd juli 2026)
   'bourgondische-zaken': { naam: 'Bourgondische Zaken', type: 'rss', feed: 'https://bourgondischezaken.com/feed/' },
   'dbcra':               { naam: 'DBCRA',               type: 'rss', feed: 'https://dbcra.nl/feed/' },
-  // 'aap' UITGESCHAKELD 15-07-2026: alpespaysbas.fr is gecompromitteerd
-  // (casino-spam in meerdere talen via hun WordPress). Pas heractiveren
-  // nadat de vereniging haar site heeft opgeschoond.
-  // 'aap':              { naam: 'Alpes\u2013Pays-Bas',     type: 'rss', feed: 'https://alpespaysbas.fr/?feed=rss2' },
+  // 'aap' (Alpes\u2013Pays-Bas) verwijderd 16-07-2026: vereniging opgeheven.
   'praatje':             { naam: 'Praatje',             type: 'rss', feed: 'https://praatje.fr/feed/' },
   'cmunf':               { naam: 'CMUnf',               type: 'rss', feed: 'https://cmunf.fr/nieuws?format=feed&type=rss' },
   // type 'fanf': Joomla-site met uitgeschakelde feeds; deterministische
@@ -88,6 +85,10 @@ const NIEUWS_BRONNEN = {
     userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36',
     feed: 'https://www.nederlanders.fr/profiles/blog/feed?tag=Clubs%2C+Verenigingen+en+Bij%C3%A9%C3%A9nkomsten&xn_auth=no' }
 };
+const GEZIEN_PATH = path.join(__dirname, '..', 'data', 'gezien.json');
+const NIEUWSBRIEF_PATH = path.join(__dirname, '..', 'data', 'nieuwsbrief-blok.html');
+const TOOL_URL = 'https://antonnoe.github.io/verenigingen-kalender/';
+
 const NIEUWS_MAX_LEEFTIJD_DAGEN = 60;
 const NIEUWS_MAX_PER_BRON = 6;
 
@@ -554,6 +555,14 @@ async function main() {
     // Nieuws is secundair: een totale mislukking mag de kalender-update nooit blokkeren.
     console.log(`  \u2717 Nieuwsverzameling volledig mislukt: ${err.message}`);
     nieuwsSamenvatting = { status: 'degraded', items: 0, bronnen_down: Object.keys(NIEUWS_BRONNEN).length };
+  }
+
+  // ── 3c. Wekelijks nieuwsbrief-blok genereren ──
+  console.log('\n\u2500\u2500 Nieuwsbrief-blok \u2500\u2500');
+  try {
+    genereerNieuwsbriefBlok(data, new Date().toISOString().split('T')[0]);
+  } catch (err) {
+    console.log(`  \u2717 Nieuwsbrief-blok mislukt (niet-blokkerend): ${err.message}`);
   }
 
   // ── 4. Meta bijwerken ──
@@ -1797,6 +1806,127 @@ function stripHtml(html) {
 // ════════════════════════════════════════════════════════════════
 // RUN
 // ════════════════════════════════════════════════════════════════
+
+// ════════════════════════════════════════════════════════════════
+// WEKELIJKS NIEUWSBRIEF-BLOK (mutatie-overzicht → data/nieuwsbrief-blok.html)
+// ════════════════════════════════════════════════════════════════
+
+/**
+ * Houdt bij wanneer elk event en nieuwsitem voor het eerst is gezien
+ * (data/gezien.json) en genereert een e-mail-klaar HTML-blok met alle
+ * mutaties van de afgelopen 7 dagen, inclusief deeplinks naar de tabs.
+ * Bedoeld om wekelijks in de Laposta-nieuwsbrief te plakken.
+ * Vast-ritme-events (Café Jeudi, RDV Bergerac) tellen niet als mutatie:
+ * dat zijn staande afspraken, geen nieuws.
+ */
+function genereerNieuwsbriefBlok(data, vandaagISO) {
+  var nu = Date.now();
+  var eersteRun = !fs.existsSync(GEZIEN_PATH);
+  var gezien = { events: {}, nieuws: {} };
+  if (!eersteRun) {
+    try { gezien = JSON.parse(fs.readFileSync(GEZIEN_PATH, 'utf-8')); }
+    catch (e) { eersteRun = true; }
+  }
+  // Eerste run: alles backdaten zodat er geen kunstmatige vloed van
+  // "nieuwe" items ontstaat; mutaties tellen pas vanaf run twee.
+  var stempel = eersteRun
+    ? new Date(nu - 8 * 24 * 3600 * 1000).toISOString()
+    : new Date(nu).toISOString();
+  var weekGrens = nu - 7 * 24 * 3600 * 1000;
+
+  // ── Events registreren ──
+  var nieuweEvents = [];
+  data.verenigingen.forEach(function (ver) {
+    if (ver.vast_ritme) return; // staande afspraken zijn geen mutaties
+    (ver.events || []).forEach(function (e) {
+      var sleutel = ver.id + '|' + e.datum + '|' + e.titel.toLowerCase();
+      if (!gezien.events[sleutel]) gezien.events[sleutel] = stempel;
+      if (new Date(gezien.events[sleutel]).getTime() >= weekGrens) {
+        nieuweEvents.push({ datum: e.datum, titel: e.titel, ver: ver.afkorting || ver.naam,
+                            plaats: e.plaats, tijd: e.tijd });
+      }
+    });
+  });
+  nieuweEvents.sort(function (a, b) { return new Date(a.datum) - new Date(b.datum); });
+
+  // ── Nieuwsitems registreren ──
+  var nieuweBerichten = [];
+  try {
+    var nieuwsData = JSON.parse(fs.readFileSync(NIEUWS_PATH, 'utf-8'));
+    (nieuwsData.items || []).forEach(function (it) {
+      var sleutel = it.link;
+      if (!gezien.nieuws[sleutel]) gezien.nieuws[sleutel] = stempel;
+      if (new Date(gezien.nieuws[sleutel]).getTime() >= weekGrens) {
+        nieuweBerichten.push(it);
+      }
+    });
+  } catch (e) { /* geen nieuws.json: blok zonder nieuwssectie */ }
+  nieuweBerichten.sort(function (a, b) { return new Date(b.datum) - new Date(a.datum); });
+
+  // ── Registry snoeien (45 dagen) en wegschrijven ──
+  var snoei = nu - 45 * 24 * 3600 * 1000;
+  ['events', 'nieuws'].forEach(function (soort) {
+    Object.keys(gezien[soort]).forEach(function (k) {
+      if (new Date(gezien[soort][k]).getTime() < snoei) delete gezien[soort][k];
+    });
+  });
+  fs.writeFileSync(GEZIEN_PATH, JSON.stringify(gezien, null, 2), 'utf-8');
+
+  // ── E-mail-veilig HTML-blok (inline styles, tabel-opbouw voor Outlook) ──
+  var MAAND_KORT = ['jan', 'feb', 'mrt', 'apr', 'mei', 'jun', 'jul', 'aug', 'sep', 'okt', 'nov', 'dec'];
+  function datumKort(iso) {
+    var d = new Date(iso);
+    return d.getDate() + ' ' + MAAND_KORT[d.getMonth()];
+  }
+  function esc(s) {
+    return String(s || '').replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+  }
+
+  var MAX = 6;
+  var html = '<!-- Wekelijks blok Verenigingen & Evenementen \u2014 gegenereerd ' + vandaagISO + ' -->\n' +
+    '<table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="font-family:Mulish,Verdana,Arial,sans-serif;color:#2a2a2a;border:1px solid #e8e0d8;border-radius:6px;background:#faf8f5;">\n' +
+    '<tr><td style="padding:18px 20px;">\n' +
+    '<h2 style="margin:0 0 4px;font-family:Poppins,Verdana,Arial,sans-serif;font-size:18px;color:#800000;">Deze week bij de verenigingen</h2>\n' +
+    '<p style="margin:0 0 14px;font-size:13px;color:#666;">' +
+      nieuweEvents.length + ' nieuwe evenementen \u00b7 ' + nieuweBerichten.length + ' nieuwe berichten</p>\n';
+
+  if (nieuweEvents.length > 0) {
+    html += '<h3 style="margin:0 0 6px;font-family:Poppins,Verdana,Arial,sans-serif;font-size:14px;color:#800000;">Nieuwe evenementen</h3>\n';
+    nieuweEvents.slice(0, MAX).forEach(function (e) {
+      html += '<p style="margin:0 0 6px;font-size:14px;line-height:1.5;">' +
+        '<strong style="color:#800000;">' + datumKort(e.datum) + '</strong> \u2014 ' + esc(e.titel) +
+        ' <span style="color:#888;font-size:12px;">(' + esc(e.ver) + ')</span></p>\n';
+    });
+    if (nieuweEvents.length > MAX) {
+      html += '<p style="margin:0 0 6px;font-size:12px;color:#888;">\u2026 en nog ' + (nieuweEvents.length - MAX) + ' meer</p>\n';
+    }
+    html += '<p style="margin:4px 0 14px;"><a href="' + TOOL_URL + '#evenementen" style="color:#800000;font-weight:bold;font-size:13px;">Bekijk de volledige kalender \u2192</a></p>\n';
+  }
+
+  if (nieuweBerichten.length > 0) {
+    html += '<h3 style="margin:0 0 6px;font-family:Poppins,Verdana,Arial,sans-serif;font-size:14px;color:#800000;">Nieuws van de verenigingen</h3>\n';
+    nieuweBerichten.slice(0, MAX).forEach(function (it) {
+      html += '<p style="margin:0 0 6px;font-size:14px;line-height:1.5;">' +
+        '<a href="' + it.link + '" style="color:#2a2a2a;text-decoration:underline;">' + esc(it.titel) + '</a>' +
+        ' <span style="color:#888;font-size:12px;">(' + esc(it.bron_naam) + ', ' + datumKort(it.datum) + ')</span></p>\n';
+    });
+    html += '<p style="margin:4px 0 14px;"><a href="' + TOOL_URL + '#nieuws" style="color:#800000;font-weight:bold;font-size:13px;">Alle berichten \u2192</a></p>\n';
+  }
+
+  if (nieuweEvents.length === 0 && nieuweBerichten.length === 0) {
+    html += '<p style="margin:0 0 14px;font-size:14px;">Geen nieuwe aankondigingen deze week. De volledige agenda en het nieuwsoverzicht staan uiteraard klaar:</p>\n';
+  }
+
+  html += '<p style="margin:0;font-size:13px;color:#800000;">' +
+    '<a href="' + TOOL_URL + '#evenementen" style="color:#800000;">Evenementen</a> \u00b7 ' +
+    '<a href="' + TOOL_URL + '#verenigingen" style="color:#800000;">Verenigingen</a> \u00b7 ' +
+    '<a href="' + TOOL_URL + '#kaart" style="color:#800000;">Kaart</a> \u00b7 ' +
+    '<a href="' + TOOL_URL + '#nieuws" style="color:#800000;">Nieuws</a></p>\n' +
+    '</td></tr></table>';
+
+  fs.writeFileSync(NIEUWSBRIEF_PATH, html, 'utf-8');
+  console.log(`  nieuwsbrief-blok.html geschreven: ${nieuweEvents.length} nieuwe events, ${nieuweBerichten.length} nieuwe berichten` + (eersteRun ? ' (eerste run: teller start bij volgende run)' : ''));
+}
 
 // ════════════════════════════════════════════════════════════════
 // HEALTH / STATUS voor externe dashboards (Cockpit)
