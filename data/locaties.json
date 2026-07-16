@@ -47,12 +47,6 @@
     "radius_km": 120,
     "locatie_label": "Midi-Pyrénées"
   },
-  "aap": {
-    "lat": 45.19,
-    "lon": 5.72,
-    "radius_km": 80,
-    "locatie_label": "Grenoble / Alpen"
-  },
   "clcv": {
     "lat": 46.67,
     "lon": -1.43,
