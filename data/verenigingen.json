@@ -4,7 +4,7 @@
     "volgende_update": "2026-07-20",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 6,
-    "totaal_events": 31,
+    "totaal_events": 30,
     "gefilterde_items": 10,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 3
@@ -45,7 +45,7 @@
           "datum": "2026-07-27",
           "titel": "Indonesische maaltijd - l’Atelier in Caunes Minervois",
           "plaats": "1 Rue Montgaillard 11160 CAUNES-MINERVOIS",
-          "tijd": "10:00-14:00",
+          "tijd": "12:00-16:00",
           "type": "sociaal",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -53,7 +53,7 @@
           "datum": "2026-07-28",
           "titel": "Bijpraatlunch Aigne",
           "plaats": "Restaurant Lo Cagarol, Aigne.",
-          "tijd": "10:00-13:00",
+          "tijd": "12:00-15:00",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -61,7 +61,7 @@
           "datum": "2026-08-05",
           "titel": "Bijpraatlunch Brugairolles",
           "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
-          "tijd": "10:00-13:00",
+          "tijd": "12:00-15:00",
           "type": "sociaal",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -69,7 +69,7 @@
           "datum": "2026-08-08",
           "titel": "Zeilmiddag",
           "plaats": "Marseillan",
-          "tijd": "11:30-14:30",
+          "tijd": "13:30-16:30",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -77,7 +77,7 @@
           "datum": "2026-08-12",
           "titel": "Bijpraatlunch regio Pézenas",
           "plaats": "Le Grand Café, 1, Av. de Cassan, 34320 Roujan.",
-          "tijd": "09:30-12:30",
+          "tijd": "11:30-14:30",
           "type": "informatief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -85,7 +85,7 @@
           "datum": "2026-08-19",
           "titel": "Bijpraatlunch regio Carcassonne, Capendu",
           "plaats": "Capendu: Café-restaurant de la Terrasse.",
-          "tijd": "09:30-12:30",
+          "tijd": "11:30-14:30",
           "type": "sociaal",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -93,7 +93,7 @@
           "datum": "2026-09-02",
           "titel": "Bijpraatlunch Brugairolles",
           "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
-          "tijd": "10:00-10:00",
+          "tijd": "12:00-12:00",
           "type": "sociaal",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -101,7 +101,7 @@
           "datum": "2026-09-03",
           "titel": "Toeren zonder dak",
           "plaats": "11 Rte de Fontes, 34720 Caux",
-          "tijd": "08:00-15:00",
+          "tijd": "10:00-17:00",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -109,7 +109,7 @@
           "datum": "2026-09-07",
           "titel": "Bijpraatlunch Ginestas",
           "plaats": "1 Pl. du Marché, 11120 Ginestas",
-          "tijd": "10:30-13:30",
+          "tijd": "12:30-15:30",
           "type": "informatief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -117,7 +117,7 @@
           "datum": "2026-10-01",
           "titel": "Golfdag te Lamalou les Bains",
           "plaats": "Lamalou les Bains",
-          "tijd": "07:30-15:00",
+          "tijd": "09:30-17:00",
           "type": "informatief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -125,7 +125,7 @@
           "datum": "2026-11-05",
           "titel": "Mindfulness…een manier om stress te beheersen",
           "plaats": "42 Avenue du Languedoc 11700 Azille",
-          "tijd": "13:00-14:30",
+          "tijd": "14:00-15:30",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         }
@@ -146,14 +146,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@nedazur.org",
       "events": [
-        {
-          "datum": "2026-07-25",
-          "titel": "Delftse Studenten Big Band - 25 juli",
-          "plaats": "Le Ponton - Tanneron",
-          "tijd": "17:30-21:59",
-          "type": "cultureel",
-          "bron": "https://www.nedazur.org/_ical/public.ics"
-        },
         {
           "datum": "2026-09-11",
           "titel": "Dutch Open Golftoernooi - 11 september",
@@ -183,7 +175,7 @@
           "datum": "2026-07-31",
           "titel": "Holland Apéro Provence (HAP) borrel",
           "plaats": "Fréjus",
-          "tijd": "15:00-17:00",
+          "tijd": "17:00-19:00",
           "type": "sociaal",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         },
@@ -191,7 +183,7 @@
           "datum": "2026-08-06",
           "titel": "ANM Golf",
           "plaats": "La Motte",
-          "tijd": "07:00-12:00",
+          "tijd": "09:00-14:00",
           "type": "sportief",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         }

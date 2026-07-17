@@ -46,6 +46,25 @@ const ICAL_BRONNEN = {
   'anm':     'https://www.a-n-m.nl/_ical/public.ics'
 };
 
+/**
+ * Uitsluitlijst: events die op uitdrukkelijk verzoek van de vereniging
+ * niet gepubliceerd worden, ook al staan ze in hun openbare feed.
+ * Match: bron-id + datum + titel bevat de opgegeven tekst (hoofdletter-
+ * ongevoelig). Verlopen datums kunnen na afloop opgeruimd worden.
+ */
+const UITGESLOTEN_EVENTS = [
+  // Verzoek bestuur DNC per e-mail, juli 2026: besloten activiteit.
+  { bron: 'nedazur', datum: '2026-07-25', titelBevat: 'Delftse Studenten Big Band' }
+];
+
+function isUitgesloten(bronId, event) {
+  return UITGESLOTEN_EVENTS.some(function (u) {
+    return u.bron === bronId &&
+      u.datum === event.datum &&
+      event.titel.toLowerCase().indexOf(u.titelBevat.toLowerCase()) !== -1;
+  });
+}
+
 // Nieuwsfeeds van verenigingen (RSS). Gevalideerd juli 2026; bronnen zonder
 // werkende feed (NVLR, NEDAZUR, ANM, FANF — websitebuilders) staan er bewust niet in.
 const NIEUWS_PATH = path.join(__dirname, '..', 'data', 'nieuws.json');
@@ -771,7 +790,7 @@ async function fetchIcalEvents(url, bronId) {
     }
 
     const event = {
-      datum: formatDate(datum),
+      datum: start.dateOnly ? formatDate(datum) : formatDateParis(datum),
       titel: titel,
       plaats: plaats,
       tijd: formatTime(item),
@@ -779,12 +798,20 @@ async function fetchIcalEvents(url, bronId) {
       bron: ICAL_BRONNEN[bronId]
     };
 
+    // Uitsluitlijst: events die op verzoek van de vereniging niet
+    // (opnieuw) gepubliceerd worden.
+    if (isUitgesloten(bronId, event)) {
+      console.log(`    \u2717 Uitgesloten (verzoek vereniging): "${titel}" op ${event.datum}`);
+      gefilterd++;
+      continue;
+    }
+
     // Einddatum als meerdaags
     if (item.end) {
       const eind = new Date(item.end);
       const verschilUren = (eind - datum) / (1000 * 60 * 60);
       if (verschilUren > 24) {
-        event.datum_eind = formatDate(eind);
+        event.datum_eind = item.end.dateOnly ? formatDate(eind) : formatDateParis(eind);
       }
     }
 
@@ -1680,20 +1707,46 @@ function verifieerEventTegenBron(ev, bronHtml, vandaag) {
   return { ok: false, reden: 'event-datum (' + ev.datum + ') komt niet overeen met datum(s) in bron_tekst' };
 }
 
+/**
+ * TIJDZONE-FIX (juli 2026): de Congressus-feeds (NVLR, NEDAZUR, ANM)
+ * publiceren tijden in UTC ("Z"-notatie). getHours() gaf de tijd in de
+ * tijdzone van de GitHub Actions-runner (UTC), waardoor events 1-2 uur
+ * te vroeg op de kalender stonden (bv. 17:30 i.p.v. 19:30). Alle iCal-
+ * tijden en -datums worden nu expliciet in Europe/Paris weergegeven.
+ * Let op: dit is alleen correct zolang de feeds Z-tijden of pure datums
+ * (dateOnly) leveren. Gecontroleerd juli 2026: alle drie de feeds doen dat.
+ */
+function parijsOnderdelen(d) {
+  const fmt = new Intl.DateTimeFormat('nl-NL', {
+    timeZone: 'Europe/Paris',
+    year: 'numeric', month: '2-digit', day: '2-digit',
+    hour: '2-digit', minute: '2-digit', hourCycle: 'h23'
+  });
+  const delen = {};
+  for (const p of fmt.formatToParts(d)) delen[p.type] = p.value;
+  return delen;
+}
+
+function formatDateParis(d) {
+  const p = parijsOnderdelen(d);
+  return p.year + '-' + p.month + '-' + p.day;
+}
+
+function formatTimeParis(d) {
+  const p = parijsOnderdelen(d);
+  return p.hour + ':' + p.minute;
+}
+
 function formatTime(icalEvent) {
   const start = icalEvent.start;
   if (!start) return 'niet vermeld';
 
   if (start.dateOnly) return 'hele dag';
 
-  const uur = String(start.getHours()).padStart(2, '0');
-  const min = String(start.getMinutes()).padStart(2, '0');
-  let tijd = uur + ':' + min;
+  let tijd = formatTimeParis(start);
 
   if (icalEvent.end && !icalEvent.end.dateOnly) {
-    const eindUur = String(icalEvent.end.getHours()).padStart(2, '0');
-    const eindMin = String(icalEvent.end.getMinutes()).padStart(2, '0');
-    tijd += '-' + eindUur + ':' + eindMin;
+    tijd += '-' + formatTimeParis(icalEvent.end);
   }
 
   return tijd;
