@@ -1,8 +1,5 @@
 name: Verenigingen Kalender Update
 
-env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
-
 on:
   schedule:
     # Maandag, woensdag en vrijdag om 07:00 UTC (09:00 Franse tijd)
@@ -20,12 +17,12 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       - name: Setup Node.js
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
-          node-version: '20'
+          node-version: '22'
 
       - name: Installeer dependencies
         working-directory: scripts
@@ -56,6 +53,7 @@ jobs:
           git add data/verenigingen.json data/health.json data/nieuws.json
           DATUM=$(date +%Y-%m-%d)
           git commit -m "Automatische update evenementen ${DATUM}"
+          git pull --rebase origin main
           git push
 
       - name: Maak Issue aan bij waarschuwingen
