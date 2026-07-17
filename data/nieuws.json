@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T14:59:07.848Z",
+  "generated_at": "2026-07-17T15:13:56.706Z",
   "totaal": 31,
   "bronnen": [
     {
@@ -41,16 +41,11 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "down",
+      "status": "ok",
       "items": 6,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      }
+      "diagnose": null
     },
     {
       "id": "neerlandia-toulouse",
@@ -150,6 +145,22 @@
   ],
   "items": [
     {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-07-16",
+      "titel": "LAST MINUTE TIP!!!! gratis muziekavond bij chateau Camp del Saltre. Datum: vrijdag 17 juli.",
+      "link": "https://www.lotgenoten.fr/last-minuut-tip-gratis-muziekavond-bij-chateau-camp-del-saltre-datum-vrijdag-17-juli/",
+      "excerpt": "LAST MINUUT TIP!!!! gratis muziekavond bij chateau camp del saltre . (wijn chateau v Nederlanders) Datum: vrijdag 17 juli. Er treedt een Nederlandse big band op van 20 personen, Petes Corner big band. Zij spelen zon 1 1/2 uur vanaf 19.30. Mensen kunnen wijn kopen en als hapje…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-07-16",
+      "titel": "Melati, Indonesisch (Oosters) smullen bij mede- LOTgenote Miranda, Montaigu de Quercy",
+      "link": "https://www.lotgenoten.fr/melati-indonesisch-smullen-bij-mede-lotgenote-miranda-montaigu-de-quercy/",
+      "excerpt": "Openingstijden: Woesnsdag: LUNCH Donderdag: DINER Vrijdag: DINER Zaterdag: DINER Belangrijk: Miranda kookt met liefde heel persoonlijk dus alleen op reservering!! Dus 24 uur van tevoren reserveren!!! HIER haar website. (bezoek de site voor gegevens én de prachtige impressie…"
+    },
+    {
       "bron_id": "nvlr",
       "bron_naam": "NVLR",
       "datum": "2026-07-13",
@@ -220,14 +231,6 @@
       "titel": "Uw vakantiewoning verhuren",
       "link": "https://www.lotgenoten.fr/uw-vakantiewoning-verhuren/",
       "excerpt": "Gepubliceerd op: 17 juni 2025 op: https://financialfocus.abnamro.nl/ Het verhuren van uw vakantiewoning kan een mooie manier zijn om extra inkomsten te krijgen en anderen te laten genieten van uw vakantiewoning. Maar er komt wel meer bij kijken dan alleen huurders vinden.…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-07-04",
-      "titel": "Frankrijk bereidt zich voor op drukte bij laadpalen: zelfs wachtruimtes voor elektrische auto’s",
-      "link": "https://www.lotgenoten.fr/frankrijk-bereidt-zich-voor-op-drukte-bij-laadpalen-zelfs-wachtruimtes-voor-elektrische-autos/",
-      "excerpt": "Wie deze zomer met een elektrische auto over de Franse snelwegen reist, doet er goed aan rekening te houden met mogelijke wachtrijen bij laadstations. Over het hele land worden maatregelen genomen om opstoppingen rond laadpalen te beperken. “We verwachten op sommige momenten…"
     },
     {
       "bron_id": "neerlandia-toulouse",
@@ -324,14 +327,6 @@
       "titel": "Uitzicht op woensdag 10 juni",
       "link": "https://ernparis.fr/uitzicht-op-woensdag-10-juni/",
       "excerpt": "Ruth van der Waall-Schaeffer Tot je kern"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-06-10",
-      "titel": "Arozzo Services beheer en onderhoud van uw (tweede) woning",
-      "link": "https://www.lotgenoten.fr/arozzo-services-beheer-en-onderhoud-van-uw-tweede-woning/",
-      "excerpt": "Wij zijn Ashley (24) en Renzo (26), een Nederlands stel dat zich vanaf september permanent vestigt in Lavercantière, in het hart van de Lot. Na jarenlang te hebben gedroomd van een leven in Frankrijk maken wij nu de stap om onze toekomst op te bouwen in deze prachtige regio.…"
     },
     {
       "bron_id": "cmunf",
