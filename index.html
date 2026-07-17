@@ -1139,7 +1139,7 @@
   function populateVerenigingFilter() {
     var namen = [];
     alleVerenigingen.forEach(function (ver) {
-      if (ver.events && ver.events.length > 0 && namen.indexOf(ver.naam) === -1) {
+      if ((!ver.status || ver.status === 'actief') && namen.indexOf(ver.naam) === -1) {
         namen.push(ver.naam);
       }
     });
