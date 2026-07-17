@@ -5,7 +5,7 @@
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 6,
     "totaal_events": 30,
-    "gefilterde_items": 10,
+    "gefilterde_items": 11,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 3
   },
