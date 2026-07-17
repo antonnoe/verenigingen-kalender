@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-07-16",
-    "volgende_update": "2026-07-17",
+    "laatst_bijgewerkt": "2026-07-17",
+    "volgende_update": "2026-07-20",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 7,
-    "totaal_events": 34,
-    "gefilterde_items": 0,
+    "bronnen_met_events": 6,
+    "totaal_events": 31,
+    "gefilterde_items": 10,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 2
+    "warnings": 3
   },
   "verenigingen": [
     {
@@ -41,14 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-07-16",
-          "titel": "Petanque in Siran",
-          "plaats": "Rondom de kerk in Siran",
-          "tijd": "07:30-12:00",
-          "type": "sportief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-07-27",
           "titel": "Indonesische maaltijd - l’Atelier in Caunes Minervois",
@@ -187,14 +179,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@a-n-m.com",
       "events": [
-        {
-          "datum": "2026-07-16",
-          "titel": "ANM Golf",
-          "plaats": "La Motte",
-          "tijd": "07:00-12:00",
-          "type": "sportief",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
         {
           "datum": "2026-07-31",
           "titel": "Holland Apéro Provence (HAP) borrel",
@@ -384,14 +368,6 @@
       "events": [
         {
           "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-07-16",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr/profiles/blogs/uitnodiging-cafe-jeudi-een-warm-virtueel-samenzijn-voor-nederland"
-        },
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-07-23",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
@@ -441,6 +417,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-09-03",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr/profiles/blogs/uitnodiging-cafe-jeudi-een-warm-virtueel-samenzijn-voor-nederland"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-09-10",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",
@@ -523,16 +507,7 @@
       "status": "actief",
       "agenda_toegankelijkheid": "webpagina",
       "opmerking": "Agenda-pagina bevat jaarkalender en uitgewerkte event-blokken (AfterNetWork borrels, Koningsdag, wandelingen, leesclub, paspoort pop-up).",
-      "events": [
-        {
-          "datum": "2026-07-16",
-          "titel": "Zomers etentje",
-          "plaats": "Café du Commerce, 5 Place Dupuy, 31000 Toulouse",
-          "tijd": "19:30",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        }
-      ],
+      "events": [],
       "rubriek": "regionaal"
     },
     {

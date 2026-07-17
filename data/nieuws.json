@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-15T21:24:29.911Z",
+  "generated_at": "2026-07-17T07:40:34.963Z",
   "totaal": 31,
   "bronnen": [
     {
@@ -41,11 +41,16 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "ok",
+      "status": "down",
       "items": 6,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "fetch failed"
+      }
     },
     {
       "id": "neerlandia-toulouse",
@@ -136,10 +141,10 @@
       "stale": false,
       "feed": "https://www.nederlanders.fr/profiles/blog/feed?tag=Clubs%2C+Verenigingen+en+Bij%C3%A9%C3%A9nkomsten&xn_auth=no",
       "diagnose": {
-        "categorie": "server",
-        "oorzaak": "Server van de vereniging geeft een foutmelding (HTTP 5xx).",
-        "advies": "Probleem ligt bij de vereniging; geen actie nodig tenzij het aanhoudt.",
-        "technisch": "HTTP 503 bij https://www.nederlanders.fr/profiles/blog/feed?tag=Clubs%2C+Verenigingen+en+Bij%C3%A9%C3%A9nkomsten&xn_auth=no"
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "fetch failed"
       }
     }
   ],
