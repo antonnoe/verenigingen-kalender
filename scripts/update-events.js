@@ -191,8 +191,8 @@ const GELDIGE_TYPES = ['sociaal', 'sportief', 'cultureel', 'informatief', 'bestu
 
 /**
  * fetch met automatische retry bij tijdelijke fouten (netwerk, timeout,
- * HTTP 429/5xx). Backoff: 2s, dan 6s. Definitieve fouten (404, 403, formaat)
- * worden NIET opnieuw geprobeerd — die zijn niet tijdelijk.
+ * HTTP 429/5xx). Timeout: 30s per poging. Backoff: 2s, dan 8s. Definitieve
+ * fouten (404, 403, formaat) worden NIET opnieuw geprobeerd — die zijn niet tijdelijk.
  * Gooide fouten dragen .categorie en .httpStatus voor classificatie.
  */
 async function fetchMetRetry(url, options, maxPogingen) {
@@ -221,7 +221,7 @@ async function fetchMetRetry(url, options, maxPogingen) {
       laatsteFout = e;
     }
     if (poging < maxPogingen) {
-      var wacht = poging === 1 ? 2000 : 6000;
+      var wacht = poging === 1 ? 2000 : 8000;
       console.log(`    \u21bb poging ${poging} mislukt (${laatsteFout.message}) \u2014 retry over ${wacht / 1000}s`);
       await new Promise(function (r) { setTimeout(r, wacht); });
     }
@@ -750,7 +750,7 @@ function genereerRitmeEvents(ritme) {
 async function fetchIcalEvents(url, bronId) {
   const response = await fetchMetRetry(url, {
     headers: { 'User-Agent': 'VerenigingenKalender/1.0' },
-    signal: AbortSignal.timeout(15000)
+    signal: AbortSignal.timeout(30000)
   });
 
   const text = await response.text();
@@ -893,7 +893,7 @@ async function fetchWordpressEvents(bronId, bronNaam, config) {
         'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)',
         'Accept': 'application/json'
       },
-      signal: AbortSignal.timeout(15000)
+      signal: AbortSignal.timeout(30000)
     });
     const json = await response.json();
     if (!Array.isArray(json)) {
@@ -997,7 +997,7 @@ async function fetchWordpressEvents(bronId, bronNaam, config) {
 async function fetchWordpressViaRss(site) {
   const response = await fetchMetRetry(site + '/feed/', {
     headers: { 'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)' },
-    signal: AbortSignal.timeout(15000)
+    signal: AbortSignal.timeout(30000)
   });
   const xml = await response.text();
   if (xml.indexOf('<rss') === -1 && xml.indexOf('<feed') === -1) {
@@ -1164,7 +1164,7 @@ async function verzamelNieuws(warnings) {
     try {
       const response = await fetchMetRetry(cfg.feed, {
         headers: { 'User-Agent': cfg.userAgent || 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)' },
-        signal: AbortSignal.timeout(15000)
+        signal: AbortSignal.timeout(30000)
       });
       const body = await response.text();
 
@@ -1374,7 +1374,7 @@ async function fetchWebEvents(bronId, bronNaam, urls) {
           'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)',
           'Accept': 'text/html'
         },
-        signal: AbortSignal.timeout(15000)
+        signal: AbortSignal.timeout(30000)
       });
 
       const html = await response.text();
