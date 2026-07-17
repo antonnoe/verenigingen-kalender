@@ -985,17 +985,17 @@
       var popupHtml = '<strong>' + escapeHtml(ver.naam) + '</strong>';
       popupHtml += '<div class="popup-locatie">Werkgebied: ' + escapeHtml(loc.locatie_label) + ' (' + loc.radius_km + ' km)</div>';
       if (ver.opmerking) {
-        var kort = ver.opmerking.length > 140 ? ver.opmerking.substring(0, 140) + '\u2026' : ver.opmerking;
+        var kort = ver.opmerking.length > 140 ? ver.opmerking.substring(0, 140) + '…' : ver.opmerking;
         popupHtml += '<div style="margin-bottom:8px; font-size:.78rem; color:#555;">' + escapeHtml(kort) + '</div>';
       }
       var eventCount = (ver.events && ver.events.length) || 0;
       if (eventCount > 0) {
-        popupHtml += '<div style="font-size:.75rem; color:' + it.kleur + '; margin-bottom:6px;">\ud83d\udcc5 ' + eventCount + ' evenement' + (eventCount > 1 ? 'en' : '') + ' in de kalender</div>';
+        popupHtml += '<div style="font-size:.75rem; color:' + it.kleur + '; margin-bottom:6px;">📅 ' + eventCount + ' evenement' + (eventCount > 1 ? 'en' : '') + ' in de kalender</div>';
       }
       if (ver.website) {
         var isFacebook = /facebook\.com/i.test(ver.website);
         popupHtml += '<a href="' + escapeHtml(ver.website) + '" target="_blank" rel="noopener">' +
-                     (isFacebook ? 'Facebook-pagina' : 'Website bezoeken') + ' \u2192</a>';
+                     (isFacebook ? 'Facebook-pagina' : 'Website bezoeken') + ' →</a>';
       }
       if (ver.contact) {
         popupHtml += '<br><a href="mailto:' + escapeHtml(ver.contact) + '">Contact: ' + escapeHtml(ver.contact) + '</a>';
@@ -1003,7 +1003,7 @@
       cirkel.bindPopup(popupHtml);
     });
 
-    // ── Focus: klik op label \u2192 inzoomen op die cirkel, rest vervaagt ──
+    // ── Focus: klik op label → inzoomen op die cirkel, rest vervaagt ──
     function zetFocus(id) {
       if (focusId === id) { resetFocus(); return; }
       focusId = id;
@@ -1049,7 +1049,7 @@
       groep.forEach(function (it) {
         var tekst = it.ver.afkorting || it.ver.naam;
         html += '<span class="label-regel" data-ver-id="' + escapeHtml(it.ver.id) + '" style="color:' + it.kleur + ';">' +
-                escapeHtml(tekst) + '<span class="label-icoon">\u26f6</span></span>';
+                escapeHtml(tekst) + '<span class="label-icoon">⛶</span></span>';
       });
       var marker = L.marker([groep[0].loc.lat, groep[0].loc.lon], {
         icon: L.divIcon({ className: 'kaart-label', html: html, iconSize: null }),
@@ -1341,10 +1341,17 @@
     return result;
   }
 
+  // Een .ics-feed is een databron, geen webpagina: doorklikken zou een
+  // download starten. Link dan naar de agendapagina of website van de vereniging.
+  function klikbareBron(bron, agendaUrl, website) {
+    if (bron && /\.ics(\?|$)/i.test(bron)) return agendaUrl || website || '';
+    return bron || agendaUrl || website || '';
+  }
+
   // ── RECURRING CARD ──
   function buildRecurringCard(item) {
     var bgColor = TYPE_KLEUREN[item.type] || '#800000';
-    var href = item.bron || item.agenda_url || item.website;
+    var href = klikbareBron(item.bron, item.agenda_url, item.website);
     var count = item.events.length;
 
     // Lijstje datums: "1, 5, 8, 12, 15..."
@@ -1385,7 +1392,7 @@
     var maand    = MAANDEN_NL[d.getMonth()].substring(0, 3);
     var bgColor  = TYPE_KLEUREN[ev.type] || '#800000';
 
-    var href = ev.bron || ev.agenda_url || ev.website;
+    var href = klikbareBron(ev.bron, ev.agenda_url, ev.website);
 
     var card = '';
     if (href) {
