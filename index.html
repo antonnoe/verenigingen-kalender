@@ -1344,8 +1344,10 @@
   // Een .ics-feed is een databron, geen webpagina: doorklikken zou een
   // download starten. Link dan naar de agendapagina of website van de vereniging.
   function klikbareBron(bron, agendaUrl, website) {
-    if (bron && /\.ics(\?|$)/i.test(bron)) return agendaUrl || website || '';
-    return bron || agendaUrl || website || '';
+    // Alleen echte webadressen zijn klikbaar; het bronveld kan ook een
+    // .ics-feed of beschrijvende tekst bevatten ("vast ritme ...").
+    if (bron && /^https?:\/\//i.test(bron) && !/\.ics(\?|$)/i.test(bron)) return bron;
+    return agendaUrl || website || '';
   }
 
   // ── RECURRING CARD ──
