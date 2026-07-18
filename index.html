@@ -32,6 +32,7 @@
       margin-bottom: 24px;
       padding-bottom: 18px;
       border-bottom: 2px solid #800000;
+      position: relative;
     }
     .site-header h1 {
       font-family: 'Poppins', sans-serif;
@@ -665,6 +666,69 @@
     }
     @keyframes spin { to { transform: rotate(360deg); } }
 
+    /* ── INFO-KNOP + FAQ-MODAL ── */
+    .info-btn {
+      position: absolute;
+      top: 0; right: 0;
+      width: 30px; height: 30px;
+      border: 1px solid rgba(128,0,0,.3);
+      border-radius: 50%;
+      background: rgba(128,0,0,.06);
+      color: #800000;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      font-size: .95rem;
+      cursor: pointer;
+      transition: background .2s;
+    }
+    .info-btn:hover { background: rgba(128,0,0,.14); }
+    .info-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.45);
+      z-index: 2000;
+      padding: 24px 16px;
+      overflow-y: auto;
+    }
+    .info-overlay.open { display: block; }
+    .info-modal {
+      max-width: 560px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 8px;
+      padding: 26px 28px;
+      position: relative;
+    }
+    .info-modal h2 {
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.1rem;
+      color: #800000;
+      margin-bottom: 14px;
+    }
+    .info-modal h3 {
+      font-family: 'Poppins', sans-serif;
+      font-size: .88rem;
+      color: #800000;
+      margin: 14px 0 3px;
+    }
+    .info-modal p {
+      font-size: .84rem;
+      line-height: 1.7;
+      color: #444;
+    }
+    .info-modal a { color: #800000; font-weight: 600; }
+    .info-close {
+      position: absolute;
+      top: 12px; right: 14px;
+      border: none;
+      background: none;
+      font-size: 1.3rem;
+      color: #800000;
+      cursor: pointer;
+      line-height: 1;
+    }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 540px) {
       .filters { flex-direction: column; }
@@ -682,6 +746,7 @@
 
   <!-- HEADER -->
   <div class="site-header">
+    <button type="button" class="info-btn" id="info-open" aria-label="Over deze kalender">i</button>
     <h1>Verenigingen &amp; Evenementen</h1>
     <p>Nederlandstalige gemeenschap in Frankrijk <span class="versie">v2026-06-17</span></p>
   </div>
@@ -776,6 +841,23 @@
 
 </div>
 
+<div class="info-overlay" id="info-overlay" role="dialog" aria-modal="true">
+  <div class="info-modal">
+    <button type="button" class="info-close" id="info-close" aria-label="Sluiten">&times;</button>
+    <h2>Over deze kalender</h2>
+    <h3>Hoe komt deze kalender aan de informatie?</h3>
+    <p>Automatisch, drie keer per week, uit de openbare agenda's en nieuwsberichten op de websites van de verenigingen zelf — met bronvermelding en link naar de vereniging.</p>
+    <h3>Er staat een fout in (tijd, plaats, datum)</h3>
+    <p>De informatie komt van de website van de vereniging; een correctie dáár werkt automatisch door. Klopt het op de eigen website wél en hier niet? Mail ons.</p>
+    <h3>Een activiteit is besloten en hoort hier niet</h3>
+    <p>Mail ons; wij sluiten specifieke activiteiten uit van vermelding.</p>
+    <h3>Onze vereniging ontbreekt, of wij hebben een nieuwe agenda</h3>
+    <p>Mail ons, dan nemen wij de bron op in de kalender.</p>
+    <h3>Contact</h3>
+    <p><a href="mailto:info@nederlanders.fr">info@nederlanders.fr</a></p>
+  </div>
+</div>
+
 <script>
 (function () {
   'use strict';
@@ -810,6 +892,18 @@
 
   initTabs();
   loadData();
+
+  // ── INFO-MODAL ──
+  var infoOverlay = document.getElementById('info-overlay');
+  document.getElementById('info-open').addEventListener('click', function () {
+    infoOverlay.classList.add('open');
+  });
+  document.getElementById('info-close').addEventListener('click', function () {
+    infoOverlay.classList.remove('open');
+  });
+  infoOverlay.addEventListener('click', function (e) {
+    if (e.target === infoOverlay) infoOverlay.classList.remove('open');
+  });
 
   // ── VERENIGING FILTER (dynamisch toegevoegd tussen Regio en Type) ──
   function createVerenigingFilter() {
