@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-07-17",
-    "volgende_update": "2026-07-20",
+    "laatst_bijgewerkt": "2026-07-20",
+    "volgende_update": "2026-07-22",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 6,
-    "totaal_events": 30,
-    "gefilterde_items": 18,
+    "totaal_events": 29,
+    "gefilterde_items": 21,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
   },
@@ -283,14 +283,6 @@
       "contact": "ern.paris@gmail.com",
       "opmerking": "Nederlandse Protestantse Kerk, 172 boulevard Vincent Auriol, 75013 Paris. Diensten ook via YouTube.",
       "events": [
-        {
-          "datum": "2026-07-19",
-          "titel": "Meditatieve viering via Zoom en YouTube",
-          "plaats": "Zoom en YouTube",
-          "tijd": "09:45",
-          "type": "kerkdienst",
-          "bron": "https://ernparis.fr/agenda/"
-        },
         {
           "datum": "2026-09-06",
           "titel": "Viering in de kerk (rentrée)",

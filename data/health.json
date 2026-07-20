@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-07-17T15:46:55.174Z",
+  "generated_at": "2026-07-20T08:02:40.817Z",
   "ok": true,
   "status": "ok",
-  "laatst_bijgewerkt": "2026-07-17",
-  "volgende_update": "2026-07-20",
-  "totaal_events": 30,
+  "laatst_bijgewerkt": "2026-07-20",
+  "volgende_update": "2026-07-22",
+  "totaal_events": 29,
   "bronnen_totaal": 10,
   "bronnen_ok": 10,
   "bronnen_down": 0,
@@ -24,7 +24,7 @@
       "status": "ok",
       "events": 11,
       "stale": false,
-      "laatste_succes": "2026-07-17",
+      "laatste_succes": "2026-07-20",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -36,7 +36,7 @@
       "status": "ok",
       "events": 1,
       "stale": false,
-      "laatste_succes": "2026-07-17",
+      "laatste_succes": "2026-07-20",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -48,7 +48,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-07-17",
+      "laatste_succes": "2026-07-20",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -60,7 +60,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-17",
+      "laatste_succes": "2026-07-20",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -72,7 +72,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-17",
+      "laatste_succes": "2026-07-20",
       "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/07/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/08/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/10/15/-.html",
       "fout": null,
       "diagnose": null
@@ -84,7 +84,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-17",
+      "laatste_succes": "2026-07-20",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -94,9 +94,9 @@
       "naam": "ERN Paris",
       "type": "web-scraping",
       "status": "ok",
-      "events": 2,
+      "events": 1,
       "stale": false,
-      "laatste_succes": "2026-07-17",
+      "laatste_succes": "2026-07-20",
       "url": "https://ernparis.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -108,7 +108,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-17",
+      "laatste_succes": "2026-07-20",
       "url": "https://www.lotgenoten.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -120,7 +120,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-17",
+      "laatste_succes": "2026-07-20",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -132,7 +132,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-17",
+      "laatste_succes": "2026-07-20",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null
