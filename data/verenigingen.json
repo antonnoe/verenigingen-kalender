@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-07-20",
-    "volgende_update": "2026-07-22",
+    "laatst_bijgewerkt": "2026-07-22",
+    "volgende_update": "2026-07-24",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 6,
-    "totaal_events": 29,
-    "gefilterde_items": 21,
+    "bronnen_met_events": 7,
+    "totaal_events": 38,
+    "gefilterde_items": 18,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
   },
@@ -24,7 +24,16 @@
       "agenda_toegankelijkheid": "beperkt",
       "contact": null,
       "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar.",
-      "events": [],
+      "events": [
+        {
+          "datum": "2026-09-08",
+          "titel": "Franse lessen seizoen 2026-2027",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "informatief",
+          "bron": "https://www.fanf.fr/activiteiten/lijst"
+        }
+      ],
       "rubriek": "hulporganisatie"
     },
     {
@@ -172,6 +181,14 @@
       "contact": "contact@a-n-m.com",
       "events": [
         {
+          "datum": "2026-07-24",
+          "titel": "RAF Boules",
+          "plaats": "Flayosc",
+          "tijd": "14:00-17:00",
+          "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
           "datum": "2026-07-31",
           "titel": "Holland Apéro Provence (HAP) borrel",
           "plaats": "Fréjus",
@@ -185,6 +202,54 @@
           "plaats": "La Motte",
           "tijd": "09:00-14:00",
           "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-08-14",
+          "titel": "RAF Boules",
+          "plaats": "Flayosc",
+          "tijd": "14:00-17:00",
+          "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-08-28",
+          "titel": "RAF Boules",
+          "plaats": "Flayosc",
+          "tijd": "14:00-17:00",
+          "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-09-02",
+          "titel": "Koor ANM-Vocale",
+          "plaats": "Fréjus",
+          "tijd": "14:00-17:00",
+          "type": "cultureel",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-09-11",
+          "titel": "RAF Boules",
+          "plaats": "Flayosc",
+          "tijd": "14:00-17:00",
+          "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-09-16",
+          "titel": "Koor ANM-Vocale",
+          "plaats": "Lorgues",
+          "tijd": "14:00-17:00",
+          "type": "cultureel",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-09-17",
+          "titel": "Cultuurgroep",
+          "plaats": "Carcès",
+          "tijd": "10:00-14:00",
+          "type": "cultureel",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         }
       ],
@@ -283,6 +348,14 @@
       "contact": "ern.paris@gmail.com",
       "opmerking": "Nederlandse Protestantse Kerk, 172 boulevard Vincent Auriol, 75013 Paris. Diensten ook via YouTube.",
       "events": [
+        {
+          "datum": "2026-07-26",
+          "titel": "Meditatieve viering via Zoom en YouTube",
+          "plaats": "Zoom en YouTube",
+          "tijd": "09:45",
+          "type": "kerkdienst",
+          "bron": "https://ernparis.fr/agenda/"
+        },
         {
           "datum": "2026-09-06",
           "titel": "Viering in de kerk (rentrée)",

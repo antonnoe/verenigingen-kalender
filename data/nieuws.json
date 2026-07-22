@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-20T08:02:40.814Z",
+  "generated_at": "2026-07-22T07:48:59.539Z",
   "totaal": 31,
   "bronnen": [
     {
@@ -145,6 +145,22 @@
   ],
   "items": [
     {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-07-22",
+      "titel": "Uitzicht op woensdag 22 juli",
+      "link": "https://ernparis.fr/uitzicht-op-woensdag-22-juli/",
+      "excerpt": "Ruth van der Waall-Schaeffer Fiducie"
+    },
+    {
+      "bron_id": "bourgondische-zaken",
+      "bron_naam": "Bourgondische Zaken",
+      "datum": "2026-07-20",
+      "titel": "BZ-dag op 8 augustus 2026",
+      "link": "https://bourgondischezaken.com/bz-dag-op-8-augustus-2026/",
+      "excerpt": "Mis het niet: de BZ-ledendag op 8 augustus bij De Oude School in Larochemillay ! Dit jaar vindt de BZ dag plaats in de oude school van Larochemillay. Om het iedereen zo veel mogelijk naar de zin te maken, bieden we niet alleen een aantal lezingen en workshops aan. Ook nodigen…"
+    },
+    {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
       "datum": "2026-07-19",
@@ -199,14 +215,6 @@
       "titel": "Te koop wegens overcompleet; Tondeuse/debroussailleuse, cyclomaaier.",
       "link": "https://www.lotgenoten.fr/te-koop-wegens-overcompleet-tondeuse-debroussailleuse-cyclomaaier/",
       "excerpt": "2e eigenaar en weinig gebruikt. Briggs & Stratton 190 cc, 6pk. De machine heeft een winterbeurt gehad bij Florimont Motoculture. Aankoopnota (€ 620,=) en gebruiksaanwijzing aanwezig. Vraagprijs € 190,= Verdere info en afspraak op locatie; Simon Schutte 0031653895649 Puy lEveque"
-    },
-    {
-      "bron_id": "bourgondische-zaken",
-      "bron_naam": "Bourgondische Zaken",
-      "datum": "2026-07-09",
-      "titel": "BZ-dag op 8 augustus 2026",
-      "link": "https://bourgondischezaken.com/bz-dag-op-8-augustus-2026/",
-      "excerpt": "Mis het niet: de BZ-ledendag komt eraan! Reserveer alvast zaterdag 8 augustus in je agenda, want dan organiseren we opnieuw onze gezellige BZ-ledendag. Dit jaar zijn we te gast bij De Oude School in Larochemillay, waar de eigenaren samen met BZ een gevarieerd programma hebben…"
     },
     {
       "bron_id": "ern-paris",
@@ -358,7 +366,7 @@
       "datum": "2026-06-01",
       "titel": "Zomerstop",
       "link": "https://ernparis.fr/zomerstop-2026/",
-      "excerpt": "In juli en augustus vinden er geen vieringen plaats in de kerk.Op 19 juli is er een meditatieve viering die via Zoom en YouTube uitgezonden wordt. Aanvang 9u45. U kunt via KerkdienstGemist een kerkdienst in Nederland bijwonen, zowel rechtstreeks als later."
+      "excerpt": "In juli en augustus vinden er geen vieringen plaats in de kerk.Op zondag 26 juli is er een meditatieve viering die via Zoom en YouTube uitgezonden wordt. Aanvang 9u45. U kunt via KerkdienstGemist een kerkdienst in Nederland bijwonen, zowel rechtstreeks als"
     },
     {
       "bron_id": "ern-paris",
@@ -375,14 +383,6 @@
       "titel": "Golfclinic op 29 juni",
       "link": "https://www.a-n-m.nl/nieuws/golfclinic-op-29-juni",
       "excerpt": "De ANM Golfgroep organiseert op maandag 29 juni een leerzame eerste golfclinic voor ANM leden. Onder leiding van een ervaren Nederlandse Golfpro (Jan Bos) word je meegenomen in alle facetten die..."
-    },
-    {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-05-27",
-      "titel": "Uitzicht op woensdag 27 mei",
-      "link": "https://ernparis.fr/uitzicht-op-woensdag-27-mei/",
-      "excerpt": "Ruth van der Waall-Schaeffer Beweging"
     },
     {
       "bron_id": "neerlandia-toulouse",
