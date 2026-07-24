@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-22T07:48:59.539Z",
-  "totaal": 31,
+  "generated_at": "2026-07-24T07:48:56.768Z",
+  "totaal": 29,
   "bronnen": [
     {
       "id": "nlvp",
@@ -51,7 +51,7 @@
       "id": "neerlandia-toulouse",
       "naam": "Neerlandia Toulouse",
       "status": "ok",
-      "items": 2,
+      "items": 0,
       "spam_geweerd": 0,
       "feed": "https://www.neerlandia.fr/?format=feed&type=rss",
       "diagnose": null
@@ -241,14 +241,6 @@
       "excerpt": "Gepubliceerd op: 17 juni 2025 op: https://financialfocus.abnamro.nl/ Het verhuren van uw vakantiewoning kan een mooie manier zijn om extra inkomsten te krijgen en anderen te laten genieten van uw vakantiewoning. Maar er komt wel meer bij kijken dan alleen huurders vinden.…"
     },
     {
-      "bron_id": "neerlandia-toulouse",
-      "bron_naam": "Neerlandia Toulouse",
-      "datum": "2026-07-04",
-      "titel": "Zomers etentje",
-      "link": "https://www.neerlandia.fr/index.php/nl/agenda/359-zomers-etentje",
-      "excerpt": "Gezellig zomers etentje. Ga je toevallig ook naar Nederland of Belgie of ben je er onlangs geweest ? Kom even bijkletsen over de zomervakantie. Geef je wel even tijdig op voor dit etentje, en hoeveel personen je meebrengt, want we moeten op 13 juli de reservering doorgeven.…"
-    },
-    {
       "bron_id": "nvlr",
       "bron_naam": "NVLR",
       "datum": "2026-07-02",
@@ -383,14 +375,6 @@
       "titel": "Golfclinic op 29 juni",
       "link": "https://www.a-n-m.nl/nieuws/golfclinic-op-29-juni",
       "excerpt": "De ANM Golfgroep organiseert op maandag 29 juni een leerzame eerste golfclinic voor ANM leden. Onder leiding van een ervaren Nederlandse Golfpro (Jan Bos) word je meegenomen in alle facetten die..."
-    },
-    {
-      "bron_id": "neerlandia-toulouse",
-      "bron_naam": "Neerlandia Toulouse",
-      "datum": "2026-05-23",
-      "titel": "2026 Koningsdag",
-      "link": "https://www.neerlandia.fr/index.php/nl/agenda/361-2026-koningsdag",
-      "excerpt": "Foto's: Eelco de Lange"
     }
   ]
 }

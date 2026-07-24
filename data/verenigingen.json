@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-07-22",
-    "volgende_update": "2026-07-24",
+    "laatst_bijgewerkt": "2026-07-24",
+    "volgende_update": "2026-07-27",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 7,
-    "totaal_events": 38,
-    "gefilterde_items": 18,
+    "totaal_events": 39,
+    "gefilterde_items": 16,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
   },
@@ -95,6 +95,14 @@
           "titel": "Bijpraatlunch regio Carcassonne, Capendu",
           "plaats": "Capendu: Café-restaurant de la Terrasse.",
           "tijd": "11:30-14:30",
+          "type": "sociaal",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-08-25",
+          "titel": "Bijpraatlunch Aigne",
+          "plaats": "1 Place de la Fontaine. Aigne",
+          "tijd": "12:00-15:00",
           "type": "sociaal",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -425,14 +433,6 @@
       "events": [
         {
           "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-07-23",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr"
-        },
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-07-30",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
@@ -482,6 +482,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-09-10",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-09-17",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",
