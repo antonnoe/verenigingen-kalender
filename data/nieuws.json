@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-24T07:48:56.768Z",
-  "totaal": 29,
+  "generated_at": "2026-07-27T08:11:07.129Z",
+  "totaal": 30,
   "bronnen": [
     {
       "id": "nlvp",
@@ -87,7 +87,7 @@
       "id": "bourgondische-zaken",
       "naam": "Bourgondische Zaken",
       "status": "ok",
-      "items": 4,
+      "items": 5,
       "spam_geweerd": 0,
       "feed": "https://bourgondischezaken.com/feed/",
       "diagnose": null
@@ -145,6 +145,54 @@
   ],
   "items": [
     {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-07-27",
+      "titel": "Robin MultiServices Van kleine reparatie tot complete buitenprojecten.",
+      "link": "https://www.lotgenoten.fr/robin-multiservices-van-kleine-reparatie-tot-complete-buitenprojecten/",
+      "excerpt": "Ik ben een Nederlandse allround vakman die sinds kort als zelfstandig ondernemer werkzaam is in de Lot. Ik help particulieren met allerlei werkzaamheden in en om het huis. Ik werk netjes, kom afspraken na en denk graag mee om tot een praktische oplossing te komen. Je kunt mij…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-07-27",
+      "titel": "Bosbranden ZW. Stand van zaken",
+      "link": "https://www.lotgenoten.fr/bosbranden-zw-stand-van-zaken/",
+      "excerpt": "Zondag 26 juli – 22:00 uur De brand in Saumos is zondagavond nog steeds extreem hevig . Na de uitzonderlijke verschijnselen van zaterdag, zoals de vorming van een pyrocumulonimbuswolk en ware vuurstormen , blijft de situatie volgens de prefectuur zeer ongunstig .…"
+    },
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-07-26",
+      "titel": "Zomer overweging op zondag 26 juli",
+      "link": "https://ernparis.fr/zomer-overweging-zondag-26-juli/",
+      "excerpt": "Ruth van der Waall-Schaeffer Heilige Ruimte"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-07-26",
+      "titel": "Huisdieren in Frankrijk",
+      "link": "https://www.lotgenoten.fr/huisdieren-in-frankrijk/",
+      "excerpt": "Door: infofrankrijk.com 15 juli 2026 Voor Nederlandstalige immigranten die naar Frankrijk verhuizen of er al wonen, is het van belang de Franse wetgeving rondom huisdieren goed te begrijpen. Frankrijk kent uitgebreide en gedetailleerde regels voor het houden, fokken,…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-07-26",
+      "titel": "MaPrimeRénov’: de voorwaarden van de regeling veranderen binnenkort",
+      "link": "https://www.lotgenoten.fr/maprimerenov-de-voorwaarden-van-de-regeling-veranderen-binnenkort/",
+      "excerpt": "Hier is de Nederlandse vertaling: Gepubliceerd op 23 februari 2026 – Bijgewerkt op 24 april 2026 Service Public / Directie Juridische en Administratieve Informatie (Premier) Vanaf 1 september 2026 kan de subsidie MaPrimeRénov’ voor een ingrijpende woningrenovatie in bepaalde…"
+    },
+    {
+      "bron_id": "bourgondische-zaken",
+      "bron_naam": "Bourgondische Zaken",
+      "datum": "2026-07-26",
+      "titel": "Rondleiding Cité des Présents",
+      "link": "https://bourgondischezaken.com/rondleiding-cite-des-presents/",
+      "excerpt": "Door René Meeuws Op 19 juli organiseerde Bourgondische Zaken een rondleiding in het in mei heropende Cité des Présents, voorheen Musée du Septennat. Dat museum herbergt duizenden geschenken die François Mitterand gedurende zijn twee periodes van zeven jaar als president van…"
+    },
+    {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
       "datum": "2026-07-22",
@@ -163,14 +211,6 @@
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
-      "datum": "2026-07-19",
-      "titel": "Vijftigduizend steriele muggen moeten overlast van tijgermug terugdringen",
-      "link": "https://www.lotgenoten.fr/vijftigduizend-steriele-muggen-moeten-overlast-van-tijgermug-terugdringen/",
-      "excerpt": "De inwoners van Sainte-Eulalie, vlak bij Bordeaux, zijn de overlast van de tijgermug meer dan zat. Vooral in de zomer wordt buiten zitten bijna onmogelijk door de vele steken. Daarom kiest de gemeente nu voor een opvallende en milieuvriendelijke aanpak: het uitzetten van…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
       "datum": "2026-07-16",
       "titel": "LAST MINUTE TIP!!!! gratis muziekavond bij chateau Camp del Saltre. Datum: vrijdag 17 juli.",
       "link": "https://www.lotgenoten.fr/last-minuut-tip-gratis-muziekavond-bij-chateau-camp-del-saltre-datum-vrijdag-17-juli/",
@@ -180,9 +220,9 @@
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
       "datum": "2026-07-16",
-      "titel": "Melati, Indonesisch (Oosters) smullen bij mede- LOTgenote Miranda, Montaigu de Quercy (wk 30)",
+      "titel": "Melati, Indonesisch (Oosters) smullen bij mede- LOTgenote Miranda, Montaigu de Quercy (wk 31)",
       "link": "https://www.lotgenoten.fr/melati-indonesisch-smullen-bij-mede-lotgenote-miranda-montaigu-de-quercy/",
-      "excerpt": "Openingstijden: Woesnsdag: LUNCH Donderdag: DINER Vrijdag: DINER Zaterdag: DINER Belangrijk: Miranda kookt met liefde heel persoonlijk dus alleen op reservering!! Dus 24 uur van tevoren reserveren!!! HIER haar website. (bezoek de site voor gegevens én de prachtige impressie…"
+      "excerpt": "TIP/AANRADER!! WEEK 31 (29/30 juli en 1 aug) Melati, Indonesisch (Oosters) smullen bij mede- LOTgenote Miranda, Montaigu de Quercy. Openingstijden: Woesnsdag: LUNCH Donderdag: DINER Vrijdag: DINER (beh wk 31) Zaterdag: DINER Belangrijk: Miranda kookt met liefde heel…"
     },
     {
       "bron_id": "nvlr",
@@ -209,14 +249,6 @@
       "excerpt": "waar muziek tot de verbeelding spreekt Van 9 tot 13 augustus 2026 is de Morvan het decor voor de vierde editie van Les Étoiles du Morvan, het internationale kamermuziekfestival dat muziekliefhebbers uit heel Europa trekt. Vijf avonden lang kun je ervaren hoe muziek verhalen…"
     },
     {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-07-10",
-      "titel": "Te koop wegens overcompleet; Tondeuse/debroussailleuse, cyclomaaier.",
-      "link": "https://www.lotgenoten.fr/te-koop-wegens-overcompleet-tondeuse-debroussailleuse-cyclomaaier/",
-      "excerpt": "2e eigenaar en weinig gebruikt. Briggs & Stratton 190 cc, 6pk. De machine heeft een winterbeurt gehad bij Florimont Motoculture. Aankoopnota (€ 620,=) en gebruiksaanwijzing aanwezig. Vraagprijs € 190,= Verdere info en afspraak op locatie; Simon Schutte 0031653895649 Puy lEveque"
-    },
-    {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
       "datum": "2026-07-08",
@@ -233,28 +265,12 @@
       "excerpt": "Wat te doen bij een bosbrand in de buurt? In de Hérault en Aude hebben we te maken gehad met hevige branden. In Pouzols waar ook leden van onze vereniging wonen, moest men hals over kop de woning..."
     },
     {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-07-06",
-      "titel": "Uw vakantiewoning verhuren",
-      "link": "https://www.lotgenoten.fr/uw-vakantiewoning-verhuren/",
-      "excerpt": "Gepubliceerd op: 17 juni 2025 op: https://financialfocus.abnamro.nl/ Het verhuren van uw vakantiewoning kan een mooie manier zijn om extra inkomsten te krijgen en anderen te laten genieten van uw vakantiewoning. Maar er komt wel meer bij kijken dan alleen huurders vinden.…"
-    },
-    {
       "bron_id": "nvlr",
       "bron_naam": "NVLR",
       "datum": "2026-07-02",
       "titel": "Grote natuurbrand in de Minervois",
       "link": "https://www.nvlr.eu/nieuws/grote-brand-in-de-minervois",
       "excerpt": "Zoals jullie wellicht uit het nieuws hebben vernomen, woedt er sinds 1 juli een grote natuurbrand in onze directe omgeving. Met name de dorpen Pouzols-Minervois en Mailhac zijn zwaar getroffen...."
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-06-30",
-      "titel": "Sanne Bink, nagelstyliste met mobiele nagelstudio (Salviac eo)",
-      "link": "https://www.lotgenoten.fr/eclat-des-ongles-mobiele-nagelstudio-salviac-eo/",
-      "excerpt": "Éclat des ongles is mijn mobiele nagelstudio. Ik ben Sanne en werk als nagelstyliste aan huis. Ik kom bij mijn klanten thuis in een straal van ongeveer 20 km rondom Salviac (Lot 46). Zo kunnen zij in hun eigen vertrouwde omgeving genieten van een professionele…"
     },
     {
       "bron_id": "anm",
@@ -359,14 +375,6 @@
       "titel": "Zomerstop",
       "link": "https://ernparis.fr/zomerstop-2026/",
       "excerpt": "In juli en augustus vinden er geen vieringen plaats in de kerk.Op zondag 26 juli is er een meditatieve viering die via Zoom en YouTube uitgezonden wordt. Aanvang 9u45. U kunt via KerkdienstGemist een kerkdienst in Nederland bijwonen, zowel rechtstreeks als"
-    },
-    {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-05-31",
-      "titel": "Woorden doen er toe",
-      "link": "https://ernparis.fr/woorden-doen-er-toe/",
-      "excerpt": "Ds. Rienk Lanooy Ik moet u iets bekennen: al vele jaren moet ik het uit zien te houden met een vorm van apodophoria. Het is dragelijk moet ik zeggen en als het opspeelt dan vooral in de loop van de"
     },
     {
       "bron_id": "anm",
