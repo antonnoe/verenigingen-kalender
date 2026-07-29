@@ -1,30 +1,40 @@
 {
-  "generated_at": "2026-07-27T08:11:07.129Z",
-  "totaal": 30,
+  "generated_at": "2026-07-29T07:56:40.022Z",
+  "totaal": 31,
   "bronnen": [
     {
       "id": "nlvp",
       "naam": "NLVP",
-      "status": "ok",
+      "status": "down",
       "items": 1,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://nlvp.fr/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "server",
+        "oorzaak": "Server van de vereniging geeft een foutmelding (HTTP 5xx).",
+        "advies": "Probleem ligt bij de vereniging; geen actie nodig tenzij het aanhoudt.",
+        "technisch": "HTTP 503 bij https://nlvp.fr/feed/"
+      }
     },
     {
       "id": "latulipe",
       "naam": "La Tulipe",
-      "status": "ok",
+      "status": "down",
       "items": 0,
-      "spam_geweerd": 0,
+      "stale": false,
       "feed": "https://www.latulipe.net/?format=feed&type=rss",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "formaat",
+        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
+        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
+        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
+      }
     },
     {
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
       "status": "ok",
-      "items": 3,
+      "items": 4,
       "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
       "diagnose": null
@@ -32,20 +42,30 @@
     {
       "id": "ern-paris",
       "naam": "ERN Paris",
-      "status": "ok",
+      "status": "down",
       "items": 6,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://ernparis.fr/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "server",
+        "oorzaak": "Server van de vereniging geeft een foutmelding (HTTP 5xx).",
+        "advies": "Probleem ligt bij de vereniging; geen actie nodig tenzij het aanhoudt.",
+        "technisch": "HTTP 503 bij https://ernparis.fr/feed/"
+      }
     },
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "ok",
+      "status": "down",
       "items": 6,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "fetch failed"
+      }
     },
     {
       "id": "neerlandia-toulouse",
@@ -113,11 +133,16 @@
     {
       "id": "cmunf",
       "naam": "CMUnf",
-      "status": "ok",
+      "status": "down",
       "items": 1,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://cmunf.fr/nieuws?format=feed&type=rss",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "formaat",
+        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
+        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
+        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
+      }
     },
     {
       "id": "fanf",
@@ -144,6 +169,14 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "atelier-neerlandais",
+      "bron_naam": "Atelier Néerlandais",
+      "datum": "2026-07-28",
+      "titel": "Paris Design Week 2026: Design Museum Den Bosch x Atelier Néerlandais, 10 – 18 september",
+      "link": "https://atelierneerlandais.com/paris-design-week-2026-design-museum-den-bosch-x-atelier-neerlandais/",
+      "excerpt": "Op uitnodiging van de Nederlandse ambassade in Frankrijk presenteert Design Museum Den Bosch van 10 t/m 18 september een selectie uit de Posthuman-collectie in het Atelier Néerlandais tijdens Paris Design Week. Met deze presentatie verwelkomt het Atelier Néerlandais een van…"
+    },
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",

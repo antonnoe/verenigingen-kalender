@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-07-27",
-    "volgende_update": "2026-07-29",
+    "laatst_bijgewerkt": "2026-07-29",
+    "volgende_update": "2026-07-31",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 6,
-    "totaal_events": 36,
-    "gefilterde_items": 8,
+    "totaal_events": 34,
+    "gefilterde_items": 1,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 1
+    "warnings": 9
   },
   "verenigingen": [
     {
@@ -41,22 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-07-27",
-          "titel": "Indonesische maaltijd - l’Atelier in Caunes Minervois",
-          "plaats": "1 Rue Montgaillard 11160 CAUNES-MINERVOIS",
-          "tijd": "12:00-16:00",
-          "type": "sociaal",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
-        {
-          "datum": "2026-07-28",
-          "titel": "Bijpraatlunch Aigne",
-          "plaats": "Restaurant Lo Cagarol, Aigne.",
-          "tijd": "12:00-15:00",
-          "type": "sportief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-08-05",
           "titel": "Bijpraatlunch Brugairolles",

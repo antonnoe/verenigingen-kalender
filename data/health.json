@@ -1,20 +1,63 @@
 {
-  "generated_at": "2026-07-27T08:11:07.131Z",
-  "ok": true,
-  "status": "ok",
-  "laatst_bijgewerkt": "2026-07-27",
-  "volgende_update": "2026-07-29",
-  "totaal_events": 36,
+  "generated_at": "2026-07-29T07:56:40.025Z",
+  "ok": false,
+  "status": "degraded",
+  "laatst_bijgewerkt": "2026-07-29",
+  "volgende_update": "2026-07-31",
+  "totaal_events": 34,
   "bronnen_totaal": 10,
-  "bronnen_ok": 10,
-  "bronnen_down": 0,
+  "bronnen_ok": 7,
+  "bronnen_down": 3,
   "bronnen_verdacht": 0,
-  "kapotte_koppelingen": [],
+  "kapotte_koppelingen": [
+    {
+      "id": "nlvp",
+      "naam": "NLVP",
+      "type": "wordpress-api",
+      "url": "https://nlvp.fr",
+      "fout": "HTTP 503 bij https://nlvp.fr/wp-json/wp/v2/posts?per_page=30&_fields=date,title,link,content",
+      "diagnose": {
+        "categorie": "server",
+        "oorzaak": "Server van de vereniging geeft een foutmelding (HTTP 5xx).",
+        "advies": "Probleem ligt bij de vereniging; geen actie nodig tenzij het aanhoudt.",
+        "technisch": "HTTP 503 bij https://nlvp.fr/wp-json/wp/v2/posts?per_page=30&_fields=date,title,link,content"
+      },
+      "laatste_succes": "2026-07-27"
+    },
+    {
+      "id": "ern-paris",
+      "naam": "ERN Paris",
+      "type": "web-scraping",
+      "url": "https://ernparis.fr/agenda/",
+      "fout": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: HTTP 503 bij https://ernparis.fr/agenda/",
+      "diagnose": {
+        "categorie": "server",
+        "oorzaak": "Server van de vereniging geeft een foutmelding (HTTP 5xx).",
+        "advies": "Probleem ligt bij de vereniging; geen actie nodig tenzij het aanhoudt.",
+        "technisch": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: HTTP 503 bij https://ernparis.fr/agenda/"
+      },
+      "laatste_succes": "2026-07-27"
+    },
+    {
+      "id": "lotgenoten",
+      "naam": "LOTgenoten",
+      "type": "web-scraping",
+      "url": "https://www.lotgenoten.fr/agenda/",
+      "fout": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: fetch failed",
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: fetch failed"
+      },
+      "laatste_succes": "2026-07-27"
+    }
+  ],
   "observaties": [],
   "nieuws": {
     "status": "degraded",
-    "items": 30,
-    "bronnen_down": 1
+    "items": 31,
+    "bronnen_down": 6
   },
   "bronnen": [
     {
@@ -22,9 +65,9 @@
       "naam": "NVLR",
       "type": "ical",
       "status": "ok",
-      "events": 12,
+      "events": 10,
       "stale": false,
-      "laatste_succes": "2026-07-27",
+      "laatste_succes": "2026-07-29",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -36,7 +79,7 @@
       "status": "ok",
       "events": 1,
       "stale": false,
-      "laatste_succes": "2026-07-27",
+      "laatste_succes": "2026-07-29",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -48,7 +91,7 @@
       "status": "ok",
       "events": 8,
       "stale": false,
-      "laatste_succes": "2026-07-27",
+      "laatste_succes": "2026-07-29",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -57,13 +100,18 @@
       "id": "nlvp",
       "naam": "NLVP",
       "type": "wordpress-api",
-      "status": "ok",
+      "status": "down",
       "events": 0,
       "stale": false,
       "laatste_succes": "2026-07-27",
       "url": "https://nlvp.fr",
-      "fout": null,
-      "diagnose": null
+      "fout": "HTTP 503 bij https://nlvp.fr/wp-json/wp/v2/posts?per_page=30&_fields=date,title,link,content",
+      "diagnose": {
+        "categorie": "server",
+        "oorzaak": "Server van de vereniging geeft een foutmelding (HTTP 5xx).",
+        "advies": "Probleem ligt bij de vereniging; geen actie nodig tenzij het aanhoudt.",
+        "technisch": "HTTP 503 bij https://nlvp.fr/wp-json/wp/v2/posts?per_page=30&_fields=date,title,link,content"
+      }
     },
     {
       "id": "latulipe",
@@ -72,7 +120,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-27",
+      "laatste_succes": "2026-07-29",
       "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/07/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/08/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/10/15/-.html",
       "fout": null,
       "diagnose": null
@@ -84,7 +132,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-27",
+      "laatste_succes": "2026-07-29",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -93,25 +141,35 @@
       "id": "ern-paris",
       "naam": "ERN Paris",
       "type": "web-scraping",
-      "status": "ok",
+      "status": "down",
       "events": 1,
-      "stale": false,
+      "stale": true,
       "laatste_succes": "2026-07-27",
       "url": "https://ernparis.fr/agenda/",
-      "fout": null,
-      "diagnose": null
+      "fout": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: HTTP 503 bij https://ernparis.fr/agenda/",
+      "diagnose": {
+        "categorie": "server",
+        "oorzaak": "Server van de vereniging geeft een foutmelding (HTTP 5xx).",
+        "advies": "Probleem ligt bij de vereniging; geen actie nodig tenzij het aanhoudt.",
+        "technisch": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: HTTP 503 bij https://ernparis.fr/agenda/"
+      }
     },
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
       "type": "web-scraping",
-      "status": "ok",
+      "status": "down",
       "events": 0,
       "stale": false,
       "laatste_succes": "2026-07-27",
       "url": "https://www.lotgenoten.fr/agenda/",
-      "fout": null,
-      "diagnose": null
+      "fout": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: fetch failed",
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: fetch failed"
+      }
     },
     {
       "id": "neerlandia-toulouse",
@@ -120,7 +178,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-27",
+      "laatste_succes": "2026-07-29",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -132,7 +190,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-27",
+      "laatste_succes": "2026-07-29",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null
