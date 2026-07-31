@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-07-29",
-    "volgende_update": "2026-07-31",
+    "laatst_bijgewerkt": "2026-07-31",
+    "volgende_update": "2026-08-03",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 6,
     "totaal_events": 34,
-    "gefilterde_items": 1,
+    "gefilterde_items": 15,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 9
+    "warnings": 1
   },
   "verenigingen": [
     {
@@ -392,14 +392,6 @@
       "events": [
         {
           "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-07-30",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr"
-        },
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-08-06",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
@@ -449,6 +441,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-09-17",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-09-24",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",

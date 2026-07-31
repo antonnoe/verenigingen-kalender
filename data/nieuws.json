@@ -1,34 +1,24 @@
 {
-  "generated_at": "2026-07-29T07:56:40.022Z",
-  "totaal": 31,
+  "generated_at": "2026-07-31T08:00:42.152Z",
+  "totaal": 29,
   "bronnen": [
     {
       "id": "nlvp",
       "naam": "NLVP",
-      "status": "down",
+      "status": "ok",
       "items": 1,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://nlvp.fr/feed/",
-      "diagnose": {
-        "categorie": "server",
-        "oorzaak": "Server van de vereniging geeft een foutmelding (HTTP 5xx).",
-        "advies": "Probleem ligt bij de vereniging; geen actie nodig tenzij het aanhoudt.",
-        "technisch": "HTTP 503 bij https://nlvp.fr/feed/"
-      }
+      "diagnose": null
     },
     {
       "id": "latulipe",
       "naam": "La Tulipe",
-      "status": "down",
+      "status": "ok",
       "items": 0,
-      "stale": false,
+      "spam_geweerd": 0,
       "feed": "https://www.latulipe.net/?format=feed&type=rss",
-      "diagnose": {
-        "categorie": "formaat",
-        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
-        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
-        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
-      }
+      "diagnose": null
     },
     {
       "id": "atelier-neerlandais",
@@ -42,30 +32,20 @@
     {
       "id": "ern-paris",
       "naam": "ERN Paris",
-      "status": "down",
-      "items": 6,
-      "stale": true,
+      "status": "ok",
+      "items": 5,
+      "spam_geweerd": 0,
       "feed": "https://ernparis.fr/feed/",
-      "diagnose": {
-        "categorie": "server",
-        "oorzaak": "Server van de vereniging geeft een foutmelding (HTTP 5xx).",
-        "advies": "Probleem ligt bij de vereniging; geen actie nodig tenzij het aanhoudt.",
-        "technisch": "HTTP 503 bij https://ernparis.fr/feed/"
-      }
+      "diagnose": null
     },
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "down",
+      "status": "ok",
       "items": 6,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      }
+      "diagnose": null
     },
     {
       "id": "neerlandia-toulouse",
@@ -98,7 +78,7 @@
       "id": "anm",
       "naam": "ANM",
       "status": "ok",
-      "items": 4,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://www.a-n-m.nl/nieuws",
       "diagnose": null
@@ -133,16 +113,11 @@
     {
       "id": "cmunf",
       "naam": "CMUnf",
-      "status": "down",
+      "status": "ok",
       "items": 1,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://cmunf.fr/nieuws?format=feed&type=rss",
-      "diagnose": {
-        "categorie": "formaat",
-        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
-        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
-        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
-      }
+      "diagnose": null
     },
     {
       "id": "fanf",
@@ -181,6 +156,14 @@
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
       "datum": "2026-07-27",
+      "titel": "Bosbranden ZW. Stand van zaken do 30-7-26",
+      "link": "https://www.lotgenoten.fr/bosbranden-zw-stand-van-zaken/",
+      "excerpt": "Do 30-7-26 Operationele situatie : De brand is donderdag ochtend nog steeds gestabiliseerd . De alertheid blijft echter op het hoogste niveau. In de loop van de middag hebben brandweerlieden zeven afzonderlijke branden bestreden in de gebieden Lanton/Blagon (2), Le Temple…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-07-27",
       "titel": "Robin MultiServices Van kleine reparatie tot complete buitenprojecten.",
       "link": "https://www.lotgenoten.fr/robin-multiservices-van-kleine-reparatie-tot-complete-buitenprojecten/",
       "excerpt": "Ik ben een Nederlandse allround vakman die sinds kort als zelfstandig ondernemer werkzaam is in de Lot. Ik help particulieren met allerlei werkzaamheden in en om het huis. Ik werk netjes, kom afspraken na en denk graag mee om tot een praktische oplossing te komen. Je kunt mij…"
@@ -189,9 +172,9 @@
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
       "datum": "2026-07-27",
-      "titel": "Bosbranden ZW. Stand van zaken",
-      "link": "https://www.lotgenoten.fr/bosbranden-zw-stand-van-zaken/",
-      "excerpt": "Zondag 26 juli – 22:00 uur De brand in Saumos is zondagavond nog steeds extreem hevig . Na de uitzonderlijke verschijnselen van zaterdag, zoals de vorming van een pyrocumulonimbuswolk en ware vuurstormen , blijft de situatie volgens de prefectuur zeer ongunstig .…"
+      "titel": "Inzamelingsacties",
+      "link": "https://www.lotgenoten.fr/inzamelingsacties/",
+      "excerpt": "Inzamelingsacties: Er wordt vooral gevraagd om: VOEDING Kleine flesjes water Energiedrankjes Thee / koffie Muesli- en energierepen Gedroogd fruit Knijpzakjes fruitmoes (drinkcompote) HYGIËNEPRODUCTEN Zeep Douchegel Shampoo Tandenborstel Tandpasta Vochtige doekjes Maandverband…"
     },
     {
       "bron_id": "ern-paris",
@@ -240,14 +223,6 @@
       "titel": "BZ-dag op 8 augustus 2026",
       "link": "https://bourgondischezaken.com/bz-dag-op-8-augustus-2026/",
       "excerpt": "Mis het niet: de BZ-ledendag op 8 augustus bij De Oude School in Larochemillay ! Dit jaar vindt de BZ dag plaats in de oude school van Larochemillay. Om het iedereen zo veel mogelijk naar de zin te maken, bieden we niet alleen een aantal lezingen en workshops aan. Ook nodigen…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-07-16",
-      "titel": "LAST MINUTE TIP!!!! gratis muziekavond bij chateau Camp del Saltre. Datum: vrijdag 17 juli.",
-      "link": "https://www.lotgenoten.fr/last-minuut-tip-gratis-muziekavond-bij-chateau-camp-del-saltre-datum-vrijdag-17-juli/",
-      "excerpt": "LAST MINUUT TIP!!!! gratis muziekavond bij chateau camp del saltre . (wijn chateau v Nederlanders) Datum: vrijdag 17 juli. Er treedt een Nederlandse big band op van 20 personen, Petes Corner big band. Zij spelen zon 1 1/2 uur vanaf 19.30. Mensen kunnen wijn kopen en als hapje…"
     },
     {
       "bron_id": "lotgenoten",
@@ -400,22 +375,6 @@
       "titel": "Members Only — but you’re invited! 12 – 14 juni",
       "link": "https://atelierneerlandais.com/members-only-but-youre-invited/",
       "excerpt": "Onder de noemer Members Only — but you’re invited! tonen 32 leden van het Atelier Néerlandais van 12 tot en met 14 juni een selectie van hun werk. De expositie viert de verscheidenheid en het talent van onze vereniging. Van fotografie tot weefkunst, van mode tot audio en…"
-    },
-    {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-06-01",
-      "titel": "Zomerstop",
-      "link": "https://ernparis.fr/zomerstop-2026/",
-      "excerpt": "In juli en augustus vinden er geen vieringen plaats in de kerk.Op zondag 26 juli is er een meditatieve viering die via Zoom en YouTube uitgezonden wordt. Aanvang 9u45. U kunt via KerkdienstGemist een kerkdienst in Nederland bijwonen, zowel rechtstreeks als"
-    },
-    {
-      "bron_id": "anm",
-      "bron_naam": "ANM",
-      "datum": "2026-05-31",
-      "titel": "Golfclinic op 29 juni",
-      "link": "https://www.a-n-m.nl/nieuws/golfclinic-op-29-juni",
-      "excerpt": "De ANM Golfgroep organiseert op maandag 29 juni een leerzame eerste golfclinic voor ANM leden. Onder leiding van een ervaren Nederlandse Golfpro (Jan Bos) word je meegenomen in alle facetten die..."
     }
   ]
 }
