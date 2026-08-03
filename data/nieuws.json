@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-07-31T08:00:42.152Z",
-  "totaal": 29,
+  "generated_at": "2026-08-03T08:11:01.389Z",
+  "totaal": 27,
   "bronnen": [
     {
       "id": "nlvp",
@@ -24,7 +24,7 @@
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
       "status": "ok",
-      "items": 4,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
       "diagnose": null
@@ -60,7 +60,7 @@
       "id": "nvlr",
       "naam": "NVLR",
       "status": "ok",
-      "items": 4,
+      "items": 5,
       "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
@@ -87,7 +87,7 @@
       "id": "bourgondische-zaken",
       "naam": "Bourgondische Zaken",
       "status": "ok",
-      "items": 5,
+      "items": 4,
       "spam_geweerd": 0,
       "feed": "https://bourgondischezaken.com/feed/",
       "diagnose": null
@@ -114,7 +114,7 @@
       "id": "cmunf",
       "naam": "CMUnf",
       "status": "ok",
-      "items": 1,
+      "items": 0,
       "spam_geweerd": 0,
       "feed": "https://cmunf.fr/nieuws?format=feed&type=rss",
       "diagnose": null
@@ -145,20 +145,44 @@
   ],
   "items": [
     {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-02",
+      "titel": "Le domaine Chante l’oiseau en zijn Olivia",
+      "link": "https://www.lotgenoten.fr/le-domaine-chante-loiseau-en-zijn-olivia/",
+      "excerpt": "Na enige omzwervingen is Sibel (Wie kent ze nog van Ik Vertrek, de tortels Michiel en Sibel die na hun breuk verder gingen om hun avontuur voort te zetten) uiteindelijk geland in het zuiden van de Perigord noir. Ze is nu met Franse vriend Romuald onderweg om eigenaar te…"
+    },
+    {
+      "bron_id": "nvlr",
+      "bron_naam": "NVLR",
+      "datum": "2026-08-02",
+      "titel": "Rêves de Japon",
+      "link": "https://www.nvlr.eu/nieuws/reves-de-japon",
+      "excerpt": "Deze fantastische expositie (dromen van Japan) is nog te zien tot 30 september in Narbonne. Gedeeltelijk gratis en gedeeltelijk betaald. De eerste maandag van de maand sowieso overal gratis toegang."
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-01",
+      "titel": "Huis kopen in Frankrijk",
+      "link": "https://www.lotgenoten.fr/huis-kopen-in-frankrijk/",
+      "excerpt": "Door: infofrankrijk.com De aankoop van onroerend goed in Frankrijk verloopt doorgaans zonder grote problemen — de procedure is wettelijk strak gereguleerd en de notaris bewaakt de juridische zekerheid. Wat het lastig maakt voor Nederlandstalige kopers, zijn de verschillen met…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-07-31",
+      "titel": "Le campagne…",
+      "link": "https://www.lotgenoten.fr/le-campagne/",
+      "excerpt": "Door: goedinfrankrijk.com Het zal je maar gebeuren. Je verruilt het gejaagde stedelijke leven in Brussel, Amsterdam of Parijs voor de ultieme Franse droom: een charmant, eeuwenoud stulpje op het idyllische platteland. Geen loeiende sirenes meer, geen bumperklevers, maar de…"
+    },
+    {
       "bron_id": "atelier-neerlandais",
       "bron_naam": "Atelier Néerlandais",
       "datum": "2026-07-28",
       "titel": "Paris Design Week 2026: Design Museum Den Bosch x Atelier Néerlandais, 10 – 18 september",
       "link": "https://atelierneerlandais.com/paris-design-week-2026-design-museum-den-bosch-x-atelier-neerlandais/",
       "excerpt": "Op uitnodiging van de Nederlandse ambassade in Frankrijk presenteert Design Museum Den Bosch van 10 t/m 18 september een selectie uit de Posthuman-collectie in het Atelier Néerlandais tijdens Paris Design Week. Met deze presentatie verwelkomt het Atelier Néerlandais een van…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-07-27",
-      "titel": "Bosbranden ZW. Stand van zaken do 30-7-26",
-      "link": "https://www.lotgenoten.fr/bosbranden-zw-stand-van-zaken/",
-      "excerpt": "Do 30-7-26 Operationele situatie : De brand is donderdag ochtend nog steeds gestabiliseerd . De alertheid blijft echter op het hoogste niveau. In de loop van de middag hebben brandweerlieden zeven afzonderlijke branden bestreden in de gebieden Lanton/Blagon (2), Le Temple…"
     },
     {
       "bron_id": "lotgenoten",
@@ -172,9 +196,9 @@
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
       "datum": "2026-07-27",
-      "titel": "Inzamelingsacties",
-      "link": "https://www.lotgenoten.fr/inzamelingsacties/",
-      "excerpt": "Inzamelingsacties: Er wordt vooral gevraagd om: VOEDING Kleine flesjes water Energiedrankjes Thee / koffie Muesli- en energierepen Gedroogd fruit Knijpzakjes fruitmoes (drinkcompote) HYGIËNEPRODUCTEN Zeep Douchegel Shampoo Tandenborstel Tandpasta Vochtige doekjes Maandverband…"
+      "titel": "Bosbranden ZW. Stand van zaken za 1-8-26",
+      "link": "https://www.lotgenoten.fr/bosbranden-zw-stand-van-zaken/",
+      "excerpt": "za 1-8-26 Brand in Saumos: Herintegratie toegestaan ​​in 2 nieuwe gemeenten (Andernos-les-Bains en Lanton) Bijgewerkt op 31-07-2026 Na de veiligheidssituatie te hebben beoordeeld, heeft Sophie Brocas, prefect van Gironde, besloten de volgende gemeenten vanaf 16:00 uur weer…"
     },
     {
       "bron_id": "ern-paris",
@@ -191,14 +215,6 @@
       "titel": "Huisdieren in Frankrijk",
       "link": "https://www.lotgenoten.fr/huisdieren-in-frankrijk/",
       "excerpt": "Door: infofrankrijk.com 15 juli 2026 Voor Nederlandstalige immigranten die naar Frankrijk verhuizen of er al wonen, is het van belang de Franse wetgeving rondom huisdieren goed te begrijpen. Frankrijk kent uitgebreide en gedetailleerde regels voor het houden, fokken,…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-07-26",
-      "titel": "MaPrimeRénov’: de voorwaarden van de regeling veranderen binnenkort",
-      "link": "https://www.lotgenoten.fr/maprimerenov-de-voorwaarden-van-de-regeling-veranderen-binnenkort/",
-      "excerpt": "Hier is de Nederlandse vertaling: Gepubliceerd op 23 februari 2026 – Bijgewerkt op 24 april 2026 Service Public / Directie Juridische en Administratieve Informatie (Premier) Vanaf 1 september 2026 kan de subsidie MaPrimeRénov’ voor een ingrijpende woningrenovatie in bepaalde…"
     },
     {
       "bron_id": "bourgondische-zaken",
@@ -223,14 +239,6 @@
       "titel": "BZ-dag op 8 augustus 2026",
       "link": "https://bourgondischezaken.com/bz-dag-op-8-augustus-2026/",
       "excerpt": "Mis het niet: de BZ-ledendag op 8 augustus bij De Oude School in Larochemillay ! Dit jaar vindt de BZ dag plaats in de oude school van Larochemillay. Om het iedereen zo veel mogelijk naar de zin te maken, bieden we niet alleen een aantal lezingen en workshops aan. Ook nodigen…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-07-16",
-      "titel": "Melati, Indonesisch (Oosters) smullen bij mede- LOTgenote Miranda, Montaigu de Quercy (wk 31)",
-      "link": "https://www.lotgenoten.fr/melati-indonesisch-smullen-bij-mede-lotgenote-miranda-montaigu-de-quercy/",
-      "excerpt": "TIP/AANRADER!! WEEK 31 (29/30 juli en 1 aug) Melati, Indonesisch (Oosters) smullen bij mede- LOTgenote Miranda, Montaigu de Quercy. Openingstijden: Woesnsdag: LUNCH Donderdag: DINER Vrijdag: DINER (beh wk 31) Zaterdag: DINER Belangrijk: Miranda kookt met liefde heel…"
     },
     {
       "bron_id": "nvlr",
@@ -351,30 +359,6 @@
       "titel": "Uitzicht op woensdag 10 juni",
       "link": "https://ernparis.fr/uitzicht-op-woensdag-10-juni/",
       "excerpt": "Ruth van der Waall-Schaeffer Tot je kern"
-    },
-    {
-      "bron_id": "cmunf",
-      "bron_naam": "CMUnf",
-      "datum": "2026-06-03",
-      "titel": "Security incident Almerys",
-      "link": "https://cmunf.fr/nieuws/security-incident-almerys.html",
-      "excerpt": "Parijs, 2 juni 2026 Goedendag, Het bedrijf Almerys, specialist op het gebied van directe betaling van zorgkosten die werkt voor APRIL International Care France en talrijke spelers in de verzekerings- en mutualiteitssector, is onlangs het doelwit geworden van een cyberaanval."
-    },
-    {
-      "bron_id": "bourgondische-zaken",
-      "bron_naam": "Bourgondische Zaken",
-      "datum": "2026-06-02",
-      "titel": "Excursie Cité des présents Château-Chinon",
-      "link": "https://bourgondischezaken.com/excursie-cite-des-present-chateau-chinon/",
-      "excerpt": "Op 19 juli organiseert BZ een uitstap naar het net geopende museum Cité des Présents - François Mitterand in Château-Chinon. In deze vernieuwde ruimte zijn 2 musea opgenomen: de kadoos die Mitterrand ontving tijdens zijn presidentschap en het kostuummuseum. De collectie biedt…"
-    },
-    {
-      "bron_id": "atelier-neerlandais",
-      "bron_naam": "Atelier Néerlandais",
-      "datum": "2026-06-01",
-      "titel": "Members Only — but you’re invited! 12 – 14 juni",
-      "link": "https://atelierneerlandais.com/members-only-but-youre-invited/",
-      "excerpt": "Onder de noemer Members Only — but you’re invited! tonen 32 leden van het Atelier Néerlandais van 12 tot en met 14 juni een selectie van hun werk. De expositie viert de verscheidenheid en het talent van onze vereniging. Van fotografie tot weefkunst, van mode tot audio en…"
     }
   ]
 }

@@ -1,9 +1,9 @@
 {
-  "generated_at": "2026-07-31T08:00:42.154Z",
+  "generated_at": "2026-08-03T08:11:01.391Z",
   "ok": true,
   "status": "ok",
-  "laatst_bijgewerkt": "2026-07-31",
-  "volgende_update": "2026-08-03",
+  "laatst_bijgewerkt": "2026-08-03",
+  "volgende_update": "2026-08-05",
   "totaal_events": 34,
   "bronnen_totaal": 10,
   "bronnen_ok": 10,
@@ -13,7 +13,7 @@
   "observaties": [],
   "nieuws": {
     "status": "degraded",
-    "items": 29,
+    "items": 27,
     "bronnen_down": 1
   },
   "bronnen": [
@@ -24,7 +24,7 @@
       "status": "ok",
       "events": 10,
       "stale": false,
-      "laatste_succes": "2026-07-31",
+      "laatste_succes": "2026-08-03",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -36,7 +36,7 @@
       "status": "ok",
       "events": 1,
       "stale": false,
-      "laatste_succes": "2026-07-31",
+      "laatste_succes": "2026-08-03",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -46,9 +46,9 @@
       "naam": "ANM",
       "type": "ical",
       "status": "ok",
-      "events": 8,
+      "events": 7,
       "stale": false,
-      "laatste_succes": "2026-07-31",
+      "laatste_succes": "2026-08-03",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -60,7 +60,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-31",
+      "laatste_succes": "2026-08-03",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -72,8 +72,8 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-31",
-      "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/07/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/08/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/10/15/-.html",
+      "laatste_succes": "2026-08-03",
+      "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/08/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/10/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/11/15/-.html",
       "fout": null,
       "diagnose": null
     },
@@ -84,7 +84,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-31",
+      "laatste_succes": "2026-08-03",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -96,7 +96,7 @@
       "status": "ok",
       "events": 1,
       "stale": false,
-      "laatste_succes": "2026-07-31",
+      "laatste_succes": "2026-08-03",
       "url": "https://ernparis.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -108,7 +108,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-31",
+      "laatste_succes": "2026-08-03",
       "url": "https://www.lotgenoten.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -120,7 +120,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-07-31",
+      "laatste_succes": "2026-08-03",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -130,9 +130,9 @@
       "naam": "FANF",
       "type": "web-scraping",
       "status": "ok",
-      "events": 0,
+      "events": 1,
       "stale": false,
-      "laatste_succes": "2026-07-31",
+      "laatste_succes": "2026-08-03",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null

@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-07-31",
-    "volgende_update": "2026-08-03",
+    "laatst_bijgewerkt": "2026-08-03",
+    "volgende_update": "2026-08-05",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 6,
+    "bronnen_met_events": 7,
     "totaal_events": 34,
-    "gefilterde_items": 15,
+    "gefilterde_items": 109,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
   },
@@ -24,7 +24,16 @@
       "agenda_toegankelijkheid": "beperkt",
       "contact": null,
       "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar.",
-      "events": [],
+      "events": [
+        {
+          "datum": "2026-09-08",
+          "titel": "Franse lessen seizoen 2026-2027",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "informatief",
+          "bron": "https://www.fanf.fr/activiteiten/lijst"
+        }
+      ],
       "rubriek": "hulporganisatie"
     },
     {
@@ -76,9 +85,9 @@
         {
           "datum": "2026-08-25",
           "titel": "Bijpraatlunch Aigne",
-          "plaats": "1 Place de la Fontaine. Aigne",
+          "plaats": "Restaurant Lo Cagarol, Aigne.",
           "tijd": "12:00-15:00",
-          "type": "sociaal",
+          "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
@@ -163,14 +172,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@a-n-m.com",
       "events": [
-        {
-          "datum": "2026-07-31",
-          "titel": "Holland Apéro Provence (HAP) borrel",
-          "plaats": "Fréjus",
-          "tijd": "17:00-19:00",
-          "type": "sociaal",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
         {
           "datum": "2026-08-06",
           "titel": "ANM Golf",
