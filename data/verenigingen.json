@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-08-03",
-    "volgende_update": "2026-08-05",
+    "laatst_bijgewerkt": "2026-08-05",
+    "volgende_update": "2026-08-07",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 7,
     "totaal_events": 34,
-    "gefilterde_items": 109,
+    "gefilterde_items": 39,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
   },
