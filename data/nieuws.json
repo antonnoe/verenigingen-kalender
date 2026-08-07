@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-05T07:53:42.210Z",
+  "generated_at": "2026-08-07T07:31:03.640Z",
   "totaal": 28,
   "bronnen": [
     {
@@ -145,6 +145,22 @@
   ],
   "items": [
     {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-06",
+      "titel": "Alles over de auto in Frankrijk, totaal overzicht.",
+      "link": "https://www.lotgenoten.fr/alles-over-de-auto-in-frankrijk-totaal-overzicht/",
+      "excerpt": "Frankrijk is voor de meeste Nederlanders en Belgen nog altijd een land dat je binnenrijdt, niet binnenvliegt. Dat maakt de auto het belangrijkste instrument dat u hier heeft, en tegelijk het onderdeel van uw leven waar de Franse overheid de afgelopen jaren het meest aan heeft…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-06",
+      "titel": "Vastgelopen bij een Franse instantie? Dit kan SOLVIT voor u betekenen",
+      "link": "https://www.lotgenoten.fr/vastgelopen-bij-een-franse-instantie-dit-kan-solvit-voor-u-betekenen/",
+      "excerpt": "Door: infofrankrijk Wie in Frankrijk woont, werkt, onderneemt of met Franse instanties te maken krijgt, kan vastlopen in een administratief dossier. Denk aan problemen met de CPAM, CARSAT, ANTS, een Franse gemeente, een prefectuur of een andere overheidsdienst. Niet ieder…"
+    },
+    {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
       "datum": "2026-08-05",
@@ -183,22 +199,6 @@
       "titel": "En gite beginnen in la douce France",
       "link": "https://www.lotgenoten.fr/en-gite-beginnen-in-la-douce-france/",
       "excerpt": "Door: infofrankrijk.com (24 juni 2026) Een gîte beginnen lijkt eenvudig: een woning inrichten, foto’s maken en gasten ontvangen. Juridisch en fiscaal gaat het echter om een meublé de tourisme , met landelijke én plaatselijke regels. Vooral de gemeentelijke registratie, het…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-04",
-      "titel": "Zonnepanelen in Frankrijk: Een praktische gids voor installatie en regelgeving",
-      "link": "https://www.lotgenoten.fr/zonnepanelen-in-frankrijk-een-praktische-gids-voor-installatie-en-regelgeving/",
-      "excerpt": "Door: Rob van de Meulen voor infofrankrijk.com (aug. 2025) De Franse markt voor zonnepanelen is de laatste jaren volwassen geworden. Historische problemen met hoge prijzen en complexe bureaucratie hebben plaatsgemaakt voor een stimulerender beleid, met name gericht op…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-02",
-      "titel": "Le domaine Chante l’oiseau en zijn Olivia",
-      "link": "https://www.lotgenoten.fr/le-domaine-chante-loiseau-en-zijn-olivia/",
-      "excerpt": "Na enige omzwervingen is Sibel, die we nog kennen van Ik Vertrek, uiteindelijk geland in het zuiden van de Perigord noir. (Wie kent ze nog van Ik Vertrek, de tortels Michiel en Sibel die na hun breuk gewoon verder gingen om hun B&B avontuur voort te zetten). Ze is nu met…"
     },
     {
       "bron_id": "nvlr",

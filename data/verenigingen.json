@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-08-05",
-    "volgende_update": "2026-08-07",
+    "laatst_bijgewerkt": "2026-08-07",
+    "volgende_update": "2026-08-10",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 7,
-    "totaal_events": 34,
-    "gefilterde_items": 39,
+    "totaal_events": 33,
+    "gefilterde_items": 19,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
   },
@@ -50,14 +50,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-08-05",
-          "titel": "Bijpraatlunch Brugairolles",
-          "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
-          "tijd": "12:00-15:00",
-          "type": "sociaal",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-08-08",
           "titel": "Zeilmiddag",
@@ -173,14 +165,6 @@
       "contact": "contact@a-n-m.com",
       "events": [
         {
-          "datum": "2026-08-06",
-          "titel": "ANM Golf",
-          "plaats": "La Motte",
-          "tijd": "09:00-14:00",
-          "type": "sportief",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
-        {
           "datum": "2026-08-14",
           "titel": "RAF Boules",
           "plaats": "Flayosc",
@@ -202,6 +186,14 @@
           "plaats": "Fréjus",
           "tijd": "14:00-17:00",
           "type": "cultureel",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-09-10",
+          "titel": "ANM Golf",
+          "plaats": "La Motte",
+          "tijd": "10:00-15:00",
+          "type": "sportief",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         },
         {
@@ -393,14 +385,6 @@
       "events": [
         {
           "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-08-06",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr"
-        },
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-08-13",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
@@ -450,6 +434,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-09-24",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-10-01",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",
@@ -756,14 +748,6 @@
       "events": [
         {
           "titel": "Maandelijkse ontmoeting met diner",
-          "datum": "2026-08-06",
-          "tijd": "ca. 18:00 uur",
-          "plaats": "Restaurant l'Estela, Saint-Nexans",
-          "type": "sociaal",
-          "bron": "vast ritme (automatisch gegenereerd)"
-        },
-        {
-          "titel": "Maandelijkse ontmoeting met diner",
           "datum": "2026-09-03",
           "tijd": "ca. 18:00 uur",
           "plaats": "Restaurant l'Estela, Saint-Nexans",
@@ -797,6 +781,14 @@
         {
           "titel": "Maandelijkse ontmoeting met lunch",
           "datum": "2027-01-07",
+          "tijd": "ca. 12:00 uur",
+          "plaats": "Restaurant l'Estela, Saint-Nexans",
+          "type": "sociaal",
+          "bron": "vast ritme (automatisch gegenereerd)"
+        },
+        {
+          "titel": "Maandelijkse ontmoeting met lunch",
+          "datum": "2027-02-04",
           "tijd": "ca. 12:00 uur",
           "plaats": "Restaurant l'Estela, Saint-Nexans",
           "type": "sociaal",
