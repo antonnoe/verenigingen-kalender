@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-07T07:31:03.640Z",
-  "totaal": 28,
+  "generated_at": "2026-08-10T07:32:41.135Z",
+  "totaal": 27,
   "bronnen": [
     {
       "id": "nlvp",
@@ -14,11 +14,16 @@
     {
       "id": "latulipe",
       "naam": "La Tulipe",
-      "status": "ok",
+      "status": "down",
       "items": 0,
-      "spam_geweerd": 0,
+      "stale": false,
       "feed": "https://www.latulipe.net/?format=feed&type=rss",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "formaat",
+        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
+        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
+        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
+      }
     },
     {
       "id": "atelier-neerlandais",
@@ -33,7 +38,7 @@
       "id": "ern-paris",
       "naam": "ERN Paris",
       "status": "ok",
-      "items": 6,
+      "items": 5,
       "spam_geweerd": 0,
       "feed": "https://ernparis.fr/feed/",
       "diagnose": null
@@ -113,11 +118,16 @@
     {
       "id": "cmunf",
       "naam": "CMUnf",
-      "status": "ok",
+      "status": "down",
       "items": 0,
-      "spam_geweerd": 0,
+      "stale": false,
       "feed": "https://cmunf.fr/nieuws?format=feed&type=rss",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "formaat",
+        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
+        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
+        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
+      }
     },
     {
       "id": "fanf",
@@ -359,14 +369,6 @@
       "titel": "28 juni – Koffieochtend",
       "link": "https://nlvp.fr/28-juni-koffieochtend/",
       "excerpt": "Zin in een gezellige ochtend met een lekker kopje koffie en even nederlands kletsen ? Zondag 28 juni is het weer tijd voor onze maandelijkse koffieochtend, van 10.30 tot 12.00 uur, op de eerste etage van café-brasserie Au Père Tranquille. Een mooie gelegenheid om andere…"
-    },
-    {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-06-10",
-      "titel": "Uitzicht op woensdag 10 juni",
-      "link": "https://ernparis.fr/uitzicht-op-woensdag-10-juni/",
-      "excerpt": "Ruth van der Waall-Schaeffer Tot je kern"
     }
   ]
 }

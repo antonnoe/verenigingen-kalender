@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-08-07",
-    "volgende_update": "2026-08-10",
+    "laatst_bijgewerkt": "2026-08-10",
+    "volgende_update": "2026-08-12",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 7,
-    "totaal_events": 33,
-    "gefilterde_items": 19,
+    "bronnen_met_events": 6,
+    "totaal_events": 32,
+    "gefilterde_items": 6,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 1
+    "warnings": 3
   },
   "verenigingen": [
     {
@@ -24,16 +24,7 @@
       "agenda_toegankelijkheid": "beperkt",
       "contact": null,
       "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar.",
-      "events": [
-        {
-          "datum": "2026-09-08",
-          "titel": "Franse lessen seizoen 2026-2027",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "informatief",
-          "bron": "https://www.fanf.fr/activiteiten/lijst"
-        }
-      ],
+      "events": [],
       "rubriek": "hulporganisatie"
     },
     {
@@ -50,14 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-08-08",
-          "titel": "Zeilmiddag",
-          "plaats": "Marseillan",
-          "tijd": "13:30-16:30",
-          "type": "sportief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-08-12",
           "titel": "Bijpraatlunch regio Pézenas",
@@ -104,6 +87,14 @@
           "plaats": "1 Pl. du Marché, 11120 Ginestas",
           "tijd": "12:30-15:30",
           "type": "informatief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-09-21",
+          "titel": "Een leuke dag bij Parc le Duc in Vacquieres",
+          "plaats": "Parc le Duc Route de Fontanes (RD 109) 34270 Vacquieres",
+          "tijd": "hele dag",
+          "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
