@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-10T07:32:41.135Z",
-  "totaal": 27,
+  "generated_at": "2026-08-12T07:32:41.048Z",
+  "totaal": 29,
   "bronnen": [
     {
       "id": "nlvp",
@@ -14,25 +14,25 @@
     {
       "id": "latulipe",
       "naam": "La Tulipe",
-      "status": "down",
+      "status": "ok",
       "items": 0,
-      "stale": false,
+      "spam_geweerd": 0,
       "feed": "https://www.latulipe.net/?format=feed&type=rss",
-      "diagnose": {
-        "categorie": "formaat",
-        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
-        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
-        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
-      }
+      "diagnose": null
     },
     {
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
-      "status": "ok",
+      "status": "down",
       "items": 3,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://atelierneerlandais.com/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "fetch failed"
+      }
     },
     {
       "id": "ern-paris",
@@ -65,7 +65,7 @@
       "id": "nvlr",
       "naam": "NVLR",
       "status": "ok",
-      "items": 5,
+      "items": 6,
       "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
@@ -118,16 +118,11 @@
     {
       "id": "cmunf",
       "naam": "CMUnf",
-      "status": "down",
-      "items": 0,
-      "stale": false,
+      "status": "ok",
+      "items": 1,
+      "spam_geweerd": 0,
       "feed": "https://cmunf.fr/nieuws?format=feed&type=rss",
-      "diagnose": {
-        "categorie": "formaat",
-        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
-        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
-        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
-      }
+      "diagnose": null
     },
     {
       "id": "fanf",
@@ -154,6 +149,30 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-11",
+      "titel": "wijn proeverij en voorstellen",
+      "link": "https://www.lotgenoten.fr/wijn-proeverij-en-voorstellen/",
+      "excerpt": "Hallo Lotgenoten, Ik wil me even voorstellen: Mijn naam is Christina Kerkhof en sinds 2010 woonachtig in Frankrijk waar ik en mijn man Peter zijn neergestreken in Bellegarde, een dorp vlakbij de mooie stad Nimes. Daar heb ik een aantal jaren mogen werken in de wijnen, een…"
+    },
+    {
+      "bron_id": "nvlr",
+      "bron_naam": "NVLR",
+      "datum": "2026-08-10",
+      "titel": "Festival de Caunes-Minervois vanaf 24 augustus",
+      "link": "https://www.nvlr.eu/nieuws/festival-de-caunes-minervois",
+      "excerpt": "Een culturele reis in het hart van de Minervois. 24 - 29 augustus 2026 Klik hier voor het programma en alle informatie. Een niet te missen evenement Het Festival de Caunes-Minervois is een unieke..."
+    },
+    {
+      "bron_id": "cmunf",
+      "bron_naam": "CMUnf",
+      "datum": "2026-08-10",
+      "titel": "CAK wijzigt regels nieuwe gevallen met vroegpensioen",
+      "link": "https://cmunf.fr/nieuws/cak-wijzigt-regels-nieuwe-gevallen-met-vroegpensioen.html",
+      "excerpt": "Het CAK heeft een artikel gepubliceerd (hier) waarin beschreven wordt dat de regels voor nieuwe gevallen met vroeg-pensioen zijn veranderd. Voor bestaande gevallen veranderd er niets. Waar het op neer komt is dat een vroegpensioen voor nieuwe gevallen niet meer tot recht op…"
+    },
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
@@ -201,14 +220,6 @@
       "titel": "Regels en subsidies",
       "link": "https://www.lotgenoten.fr/regels-en-subsidies/",
       "excerpt": "Zeer uitgebreid overzicht van allerhande artikelen over regels en subsidies in Frankrijk. Check ze allemaal hier!!"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-04",
-      "titel": "En gite beginnen in la douce France",
-      "link": "https://www.lotgenoten.fr/en-gite-beginnen-in-la-douce-france/",
-      "excerpt": "Door: infofrankrijk.com (24 juni 2026) Een gîte beginnen lijkt eenvudig: een woning inrichten, foto’s maken en gasten ontvangen. Juridisch en fiscaal gaat het echter om een meublé de tourisme , met landelijke én plaatselijke regels. Vooral de gemeentelijke registratie, het…"
     },
     {
       "bron_id": "nvlr",

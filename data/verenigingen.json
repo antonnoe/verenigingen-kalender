@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-08-10",
-    "volgende_update": "2026-08-12",
+    "laatst_bijgewerkt": "2026-08-12",
+    "volgende_update": "2026-08-14",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 6,
-    "totaal_events": 32,
-    "gefilterde_items": 6,
+    "bronnen_met_events": 7,
+    "totaal_events": 33,
+    "gefilterde_items": 95,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 3
   },
@@ -24,7 +24,16 @@
       "agenda_toegankelijkheid": "beperkt",
       "contact": null,
       "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar.",
-      "events": [],
+      "events": [
+        {
+          "datum": "2026-09-08",
+          "titel": "Franse lessen seizoen 2026-2027",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "informatief",
+          "bron": "https://www.fanf.fr/activiteiten/lijst"
+        }
+      ],
       "rubriek": "hulporganisatie"
     },
     {
