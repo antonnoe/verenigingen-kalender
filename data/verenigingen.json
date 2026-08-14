@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-08-12",
-    "volgende_update": "2026-08-14",
+    "laatst_bijgewerkt": "2026-08-14",
+    "volgende_update": "2026-08-17",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 7,
     "totaal_events": 33,
-    "gefilterde_items": 95,
+    "gefilterde_items": 90,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 3
+    "warnings": 5
   },
   "verenigingen": [
     {
@@ -50,14 +50,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-08-12",
-          "titel": "Bijpraatlunch regio Pézenas",
-          "plaats": "Le Grand Café, 1, Av. de Cassan, 34320 Roujan.",
-          "tijd": "11:30-14:30",
-          "type": "informatief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-08-19",
           "titel": "Bijpraatlunch regio Carcassonne, Capendu",
@@ -102,7 +94,7 @@
           "datum": "2026-09-21",
           "titel": "Een leuke dag bij Parc le Duc in Vacquieres",
           "plaats": "Parc le Duc Route de Fontanes (RD 109) 34270 Vacquieres",
-          "tijd": "hele dag",
+          "tijd": "10:00-18:00",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -178,6 +170,14 @@
           "plaats": "Flayosc",
           "tijd": "14:00-17:00",
           "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-08-28",
+          "titel": "Holland Apéro Provence (HAP) borrel",
+          "plaats": "Lorgues",
+          "tijd": "17:00-19:00",
+          "type": "sociaal",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         },
         {
@@ -385,14 +385,6 @@
       "events": [
         {
           "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-08-13",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr"
-        },
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-08-20",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
@@ -442,6 +434,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-10-01",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-10-08",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",

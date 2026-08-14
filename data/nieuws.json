@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-08-12T07:32:41.048Z",
-  "totaal": 29,
+  "generated_at": "2026-08-14T07:32:35.902Z",
+  "totaal": 27,
   "bronnen": [
     {
       "id": "nlvp",
       "naam": "NLVP",
       "status": "ok",
-      "items": 1,
+      "items": 0,
       "spam_geweerd": 0,
       "feed": "https://nlvp.fr/feed/",
       "diagnose": null
@@ -46,11 +46,16 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "ok",
+      "status": "down",
       "items": 6,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "fetch failed"
+      }
     },
     {
       "id": "neerlandia-toulouse",
@@ -65,7 +70,7 @@
       "id": "nvlr",
       "naam": "NVLR",
       "status": "ok",
-      "items": 6,
+      "items": 5,
       "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
@@ -364,22 +369,6 @@
       "titel": "Wereldkampioenschap Voetbal",
       "link": "https://www.a-n-m.nl/nieuws/wereldkampioenschap-voetbal",
       "excerpt": "Ben je voetballiefhebber, en wil je de wedstrijden van Nederland samen beleven met andere Nederlanders? Onze zustervereniging DNC biedt daarvoor de mogelijkheid in het centrum van Cannes. Kijk..."
-    },
-    {
-      "bron_id": "nvlr",
-      "bron_naam": "NVLR",
-      "datum": "2026-06-14",
-      "titel": "Expositie Marike Koot in Carcassonne",
-      "link": "https://www.nvlr.eu/nieuws/expositie-marike-koot-in-carcassonne",
-      "excerpt": "Exclusieve vernissage van de schilderijen van Marike Koot. Donderdag 25 juni van 18.00 tot 20.00 uur. Kom de werken van Marike ontdekken en geniet van een gezellige bijeenkomst met een drankje. De..."
-    },
-    {
-      "bron_id": "nlvp",
-      "bron_naam": "NLVP",
-      "datum": "2026-06-13",
-      "titel": "28 juni – Koffieochtend",
-      "link": "https://nlvp.fr/28-juni-koffieochtend/",
-      "excerpt": "Zin in een gezellige ochtend met een lekker kopje koffie en even nederlands kletsen ? Zondag 28 juni is het weer tijd voor onze maandelijkse koffieochtend, van 10.30 tot 12.00 uur, op de eerste etage van café-brasserie Au Père Tranquille. Een mooie gelegenheid om andere…"
     }
   ]
 }
