@@ -1,29 +1,15 @@
 {
-  "generated_at": "2026-08-14T07:32:35.904Z",
+  "generated_at": "2026-08-17T07:22:31.296Z",
   "ok": false,
   "status": "degraded",
-  "laatst_bijgewerkt": "2026-08-14",
-  "volgende_update": "2026-08-17",
-  "totaal_events": 33,
+  "laatst_bijgewerkt": "2026-08-17",
+  "volgende_update": "2026-08-19",
+  "totaal_events": 31,
   "bronnen_totaal": 10,
-  "bronnen_ok": 8,
-  "bronnen_down": 2,
+  "bronnen_ok": 9,
+  "bronnen_down": 1,
   "bronnen_verdacht": 0,
   "kapotte_koppelingen": [
-    {
-      "id": "atelier-neerlandais",
-      "naam": "Atelier Néerlandais",
-      "type": "web-scraping",
-      "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
-      "fout": "Geen bruikbare HTML opgehaald van 2 pagina('s) — laatste fout: fetch failed",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "Geen bruikbare HTML opgehaald van 2 pagina('s) — laatste fout: fetch failed"
-      },
-      "laatste_succes": "2026-08-10"
-    },
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
@@ -43,7 +29,7 @@
   "nieuws": {
     "status": "degraded",
     "items": 27,
-    "bronnen_down": 3
+    "bronnen_down": 4
   },
   "bronnen": [
     {
@@ -53,7 +39,7 @@
       "status": "ok",
       "events": 8,
       "stale": false,
-      "laatste_succes": "2026-08-14",
+      "laatste_succes": "2026-08-17",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -65,7 +51,7 @@
       "status": "ok",
       "events": 1,
       "stale": false,
-      "laatste_succes": "2026-08-14",
+      "laatste_succes": "2026-08-17",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -75,9 +61,9 @@
       "naam": "ANM",
       "type": "ical",
       "status": "ok",
-      "events": 8,
+      "events": 7,
       "stale": false,
-      "laatste_succes": "2026-08-14",
+      "laatste_succes": "2026-08-17",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -89,7 +75,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-08-14",
+      "laatste_succes": "2026-08-17",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -101,7 +87,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-08-14",
+      "laatste_succes": "2026-08-17",
       "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/08/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/10/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/11/15/-.html",
       "fout": null,
       "diagnose": null
@@ -110,18 +96,13 @@
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
       "type": "web-scraping",
-      "status": "down",
+      "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-08-10",
+      "laatste_succes": "2026-08-17",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
-      "fout": "Geen bruikbare HTML opgehaald van 2 pagina('s) — laatste fout: fetch failed",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "Geen bruikbare HTML opgehaald van 2 pagina('s) — laatste fout: fetch failed"
-      }
+      "fout": null,
+      "diagnose": null
     },
     {
       "id": "ern-paris",
@@ -130,7 +111,7 @@
       "status": "ok",
       "events": 1,
       "stale": false,
-      "laatste_succes": "2026-08-14",
+      "laatste_succes": "2026-08-17",
       "url": "https://ernparis.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -159,7 +140,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-08-14",
+      "laatste_succes": "2026-08-17",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -169,9 +150,9 @@
       "naam": "FANF",
       "type": "web-scraping",
       "status": "ok",
-      "events": 1,
+      "events": 0,
       "stale": false,
-      "laatste_succes": "2026-08-14",
+      "laatste_succes": "2026-08-17",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null

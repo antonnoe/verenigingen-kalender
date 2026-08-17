@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-14T07:32:35.902Z",
+  "generated_at": "2026-08-17T07:22:31.294Z",
   "totaal": 27,
   "bronnen": [
     {
@@ -14,25 +14,25 @@
     {
       "id": "latulipe",
       "naam": "La Tulipe",
-      "status": "ok",
+      "status": "down",
       "items": 0,
-      "spam_geweerd": 0,
+      "stale": false,
       "feed": "https://www.latulipe.net/?format=feed&type=rss",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "formaat",
+        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
+        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
+        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
+      }
     },
     {
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
-      "status": "down",
+      "status": "ok",
       "items": 3,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      }
+      "diagnose": null
     },
     {
       "id": "ern-paris",
@@ -123,11 +123,16 @@
     {
       "id": "cmunf",
       "naam": "CMUnf",
-      "status": "ok",
+      "status": "down",
       "items": 1,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://cmunf.fr/nieuws?format=feed&type=rss",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "formaat",
+        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
+        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
+        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
+      }
     },
     {
       "id": "fanf",

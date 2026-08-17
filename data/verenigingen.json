@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-08-14",
-    "volgende_update": "2026-08-17",
+    "laatst_bijgewerkt": "2026-08-17",
+    "volgende_update": "2026-08-19",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 7,
-    "totaal_events": 33,
-    "gefilterde_items": 90,
+    "bronnen_met_events": 6,
+    "totaal_events": 31,
+    "gefilterde_items": 1,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 5
   },
@@ -24,16 +24,7 @@
       "agenda_toegankelijkheid": "beperkt",
       "contact": null,
       "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar.",
-      "events": [
-        {
-          "datum": "2026-09-08",
-          "titel": "Franse lessen seizoen 2026-2027",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "informatief",
-          "bron": "https://www.fanf.fr/activiteiten/lijst"
-        }
-      ],
+      "events": [],
       "rubriek": "hulporganisatie"
     },
     {
@@ -156,14 +147,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@a-n-m.com",
       "events": [
-        {
-          "datum": "2026-08-14",
-          "titel": "RAF Boules",
-          "plaats": "Flayosc",
-          "tijd": "14:00-17:00",
-          "type": "sportief",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
         {
           "datum": "2026-08-28",
           "titel": "RAF Boules",
