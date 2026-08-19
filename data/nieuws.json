@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-17T07:22:31.294Z",
-  "totaal": 27,
+  "generated_at": "2026-08-19T07:17:09.588Z",
+  "totaal": 26,
   "bronnen": [
     {
       "id": "nlvp",
@@ -14,16 +14,11 @@
     {
       "id": "latulipe",
       "naam": "La Tulipe",
-      "status": "down",
+      "status": "ok",
       "items": 0,
-      "stale": false,
+      "spam_geweerd": 0,
       "feed": "https://www.latulipe.net/?format=feed&type=rss",
-      "diagnose": {
-        "categorie": "formaat",
-        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
-        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
-        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
-      }
+      "diagnose": null
     },
     {
       "id": "atelier-neerlandais",
@@ -46,16 +41,11 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "down",
+      "status": "ok",
       "items": 6,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      }
+      "diagnose": null
     },
     {
       "id": "neerlandia-toulouse",
@@ -88,7 +78,7 @@
       "id": "anm",
       "naam": "ANM",
       "status": "ok",
-      "items": 3,
+      "items": 2,
       "spam_geweerd": 0,
       "feed": "https://www.a-n-m.nl/nieuws",
       "diagnose": null
@@ -123,16 +113,11 @@
     {
       "id": "cmunf",
       "naam": "CMUnf",
-      "status": "down",
+      "status": "ok",
       "items": 1,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://cmunf.fr/nieuws?format=feed&type=rss",
-      "diagnose": {
-        "categorie": "formaat",
-        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
-        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
-        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
-      }
+      "diagnose": null
     },
     {
       "id": "fanf",
@@ -159,6 +144,38 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-18",
+      "titel": "Franse online banken vergeleken: kosten, limieten en vooral snelheid",
+      "link": "https://www.lotgenoten.fr/franse-online-banken-vergeleken-kosten-limieten-en-vooral-snelheid/",
+      "excerpt": "Een gratis bankrekening openen kan tegenwoordig in Frankrijk bij een groot aantal online banken. Maar “gratis” betekent niet automatisch dat iedere bank hetzelfde werkt. Vooral bij overschrijvingen (virements) zijn er grote verschillen. Kan een nieuwe begunstigde meteen…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-17",
+      "titel": "Na 3,5 jaar gaat onze camper met pijn in het hart de verkoop in.",
+      "link": "https://www.lotgenoten.fr/na-35-jaar-gaat-onze-camper-met-pijn-in-het-hart-de-verkoop-in/",
+      "excerpt": "Ik kocht hem destijds om samen met mijn dochter mooie reizen en avonturen te maken. En dat is precies wat we hebben gedaan. We hebben er prachtige trips mee gemaakt en ontzettend veel mooie herinneringen aan overgehouden. Inmiddels is onze gezinssituatie veranderd en vormen…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-17",
+      "titel": "Nieuwe Franse wetgeving soc. media onder vijftien jaar, is in strijd met de grondwet.",
+      "link": "https://www.lotgenoten.fr/hoogste-franse-raad-verklaart-socialemediaverbod-voor-kinderen-ongrondwettig/",
+      "excerpt": "Nieuwe Franse wetgeving die het gebruik van sociale media voor jongeren onder de vijftien jaar verbiedt, is in strijd met de grondwet. Dat heeft de Franse Grondwettelijke Raad vrijdag bepaald. De wet zou in het voorjaar van 2027 van kracht worden. Volgens de raad is…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-17",
+      "titel": "Droogte: de prefectuur van de Lot scherpt de beperkingen op het watergebruik verder aan",
+      "link": "https://www.lotgenoten.fr/droogte-de-prefectuur-van-de-lot-scherpt-de-beperkingen-op-het-watergebruik-verder-aan/",
+      "excerpt": "De droogte houdt aan in de Lot en de waterreserves blijven sterk onder druk staan. Daarom heeft de prefectuur van de Lot nieuwe maatregelen aangekondigd om het watergebruik te beperken. De maatregelen gaan in op zaterdag 15 augustus 2026 om 8.00 uur en gelden afhankelijk van…"
+    },
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
@@ -192,44 +209,12 @@
       "excerpt": "Frankrijk is voor de meeste Nederlanders en Belgen nog altijd een land dat je binnenrijdt, niet binnenvliegt. Dat maakt de auto het belangrijkste instrument dat u hier heeft, en tegelijk het onderdeel van uw leven waar de Franse overheid de afgelopen jaren het meest aan heeft…"
     },
     {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-06",
-      "titel": "Vastgelopen bij een Franse instantie? Dit kan SOLVIT voor u betekenen",
-      "link": "https://www.lotgenoten.fr/vastgelopen-bij-een-franse-instantie-dit-kan-solvit-voor-u-betekenen/",
-      "excerpt": "Door: infofrankrijk Wie in Frankrijk woont, werkt, onderneemt of met Franse instanties te maken krijgt, kan vastlopen in een administratief dossier. Denk aan problemen met de CPAM, CARSAT, ANTS, een Franse gemeente, een prefectuur of een andere overheidsdienst. Niet ieder…"
-    },
-    {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
       "datum": "2026-08-05",
       "titel": "Uitzicht op woensdag 5 augustus",
       "link": "https://ernparis.fr/uitzicht-op-woensdag-5-augustus/",
       "excerpt": "Ruth van der Waall-Schaeffer Ankers"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-05",
-      "titel": "Restaurants, guinguettes… 15 gezellige plekjes om te eten aan het water in de Lot",
-      "link": "https://www.lotgenoten.fr/restaurants-guinguettes-15-gezellige-plekjes-om-te-eten-aan-het-water-in-de-lot/",
-      "excerpt": "Genieten van een heerlijke maaltijd met een prachtig uitzicht over een rivier of meer… Hier zijn 15 leuke adresjes verspreid over het departement Lot waar je vrijwel met je voeten in het water kunt eten. Een maaltijd aan het water, een beetje verkoeling en lekker eten op je…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-04",
-      "titel": "Welzijn en hulpverlening",
-      "link": "https://www.lotgenoten.fr/welzijn-en-hulpverlening/",
-      "excerpt": "politie-en-veiligheid thuishulp-voor-ouderen-in-frankrijk persoonlijke-hulp-aan-huis-in-frankrijk-contract-goed-nalezen snel-hulp-zorg-vinden-nederlanders hulp-bezoek-aan-franse-dokter ouderenzorg-thuiszorg-nederlanders-frankrijk-regels hulpmiddel-verzoeken-in-frankrijk Deze…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-04",
-      "titel": "Regels en subsidies",
-      "link": "https://www.lotgenoten.fr/regels-en-subsidies/",
-      "excerpt": "Zeer uitgebreid overzicht van allerhande artikelen over regels en subsidies in Frankrijk. Check ze allemaal hier!!"
     },
     {
       "bron_id": "nvlr",
@@ -366,14 +351,6 @@
       "titel": "Showrooms Paris Fashion Week, 23 – 29 juni",
       "link": "https://atelierneerlandais.com/showrooms-paris-fashion-week/",
       "excerpt": "Rondom Paris Fashion Week zullen verschillende leden hun showrooms houden op het Atelier Néerlandais, waaronder Pien Studios, Rhea en Hul Le Kes. De showrooms zijn op uitnodiging te bezoeken. Showrooms op uitnodiging: 23–26 juni Pien Studios 25-29 juni Hul le Kes 26–29 juni…"
-    },
-    {
-      "bron_id": "anm",
-      "bron_naam": "ANM",
-      "datum": "2026-06-19",
-      "titel": "Wereldkampioenschap Voetbal",
-      "link": "https://www.a-n-m.nl/nieuws/wereldkampioenschap-voetbal",
-      "excerpt": "Ben je voetballiefhebber, en wil je de wedstrijden van Nederland samen beleven met andere Nederlanders? Onze zustervereniging DNC biedt daarvoor de mogelijkheid in het centrum van Cannes. Kijk..."
     }
   ]
 }

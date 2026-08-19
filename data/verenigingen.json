@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-08-17",
-    "volgende_update": "2026-08-19",
+    "laatst_bijgewerkt": "2026-08-19",
+    "volgende_update": "2026-08-21",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 6,
-    "totaal_events": 31,
-    "gefilterde_items": 1,
+    "bronnen_met_events": 7,
+    "totaal_events": 33,
+    "gefilterde_items": 16,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 5
+    "warnings": 1
   },
   "verenigingen": [
     {
@@ -24,7 +24,16 @@
       "agenda_toegankelijkheid": "beperkt",
       "contact": null,
       "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar.",
-      "events": [],
+      "events": [
+        {
+          "datum": "2026-09-08",
+          "titel": "Franse lessen seizoen 2026-2027",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "informatief",
+          "bron": "https://www.fanf.fr/activiteiten/lijst"
+        }
+      ],
       "rubriek": "hulporganisatie"
     },
     {
@@ -94,7 +103,15 @@
           "titel": "Golfdag te Lamalou les Bains",
           "plaats": "Lamalou les Bains",
           "tijd": "09:30-17:00",
-          "type": "informatief",
+          "type": "sociaal",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-02",
+          "titel": "Cultuurclub NVLR bezoekt St. Guilhem-le-Désert",
+          "plaats": "Saint-Guilhem-le-Désert",
+          "tijd": "10:30-17:00",
+          "type": "cultureel",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
