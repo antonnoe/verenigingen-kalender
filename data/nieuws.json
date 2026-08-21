@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-19T07:17:09.588Z",
+  "generated_at": "2026-08-21T07:19:05.959Z",
   "totaal": 26,
   "bronnen": [
     {
@@ -23,11 +23,16 @@
     {
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
-      "status": "ok",
+      "status": "down",
       "items": 3,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://atelierneerlandais.com/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "fetch failed"
+      }
     },
     {
       "id": "ern-paris",
@@ -41,11 +46,16 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "ok",
+      "status": "down",
       "items": 6,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "fetch failed"
+      }
     },
     {
       "id": "neerlandia-toulouse",

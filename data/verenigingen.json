@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-08-19",
-    "volgende_update": "2026-08-21",
+    "laatst_bijgewerkt": "2026-08-21",
+    "volgende_update": "2026-08-24",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 7,
-    "totaal_events": 33,
-    "gefilterde_items": 16,
+    "bronnen_met_events": 6,
+    "totaal_events": 32,
+    "gefilterde_items": 14,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 1
+    "warnings": 5
   },
   "verenigingen": [
     {
@@ -24,16 +24,7 @@
       "agenda_toegankelijkheid": "beperkt",
       "contact": null,
       "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar.",
-      "events": [
-        {
-          "datum": "2026-09-08",
-          "titel": "Franse lessen seizoen 2026-2027",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "informatief",
-          "bron": "https://www.fanf.fr/activiteiten/lijst"
-        }
-      ],
+      "events": [],
       "rubriek": "hulporganisatie"
     },
     {
@@ -50,14 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-08-19",
-          "titel": "Bijpraatlunch regio Carcassonne, Capendu",
-          "plaats": "Capendu: Café-restaurant de la Terrasse.",
-          "tijd": "11:30-14:30",
-          "type": "sociaal",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-08-25",
           "titel": "Bijpraatlunch Aigne",
@@ -95,6 +78,14 @@
           "titel": "Een leuke dag bij Parc le Duc in Vacquieres",
           "plaats": "Parc le Duc Route de Fontanes (RD 109) 34270 Vacquieres",
           "tijd": "10:00-18:00",
+          "type": "sportief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-09-30",
+          "titel": "Laatste-woensdag-van-de-maand wandeling",
+          "plaats": "nog niet bekend",
+          "tijd": "09:45-15:00",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -385,14 +376,6 @@
       "events": [
         {
           "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-08-20",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr"
-        },
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-08-27",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
@@ -442,6 +425,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-10-08",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-10-15",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",
