@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-08-21",
-    "volgende_update": "2026-08-24",
+    "laatst_bijgewerkt": "2026-08-24",
+    "volgende_update": "2026-08-26",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 6,
-    "totaal_events": 32,
-    "gefilterde_items": 14,
+    "bronnen_met_events": 7,
+    "totaal_events": 34,
+    "gefilterde_items": 19,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 5
+    "warnings": 1
   },
   "verenigingen": [
     {
@@ -24,7 +24,16 @@
       "agenda_toegankelijkheid": "beperkt",
       "contact": null,
       "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar.",
-      "events": [],
+      "events": [
+        {
+          "datum": "2026-09-08",
+          "titel": "Franse lessen seizoen 2026-2027",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "informatief",
+          "bron": "https://www.fanf.fr/activiteiten/lijst"
+        }
+      ],
       "rubriek": "hulporganisatie"
     },
     {
@@ -53,7 +62,7 @@
           "datum": "2026-09-02",
           "titel": "Bijpraatlunch Brugairolles",
           "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
-          "tijd": "12:00-12:00",
+          "tijd": "12:00-15:30",
           "type": "sociaal",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -78,6 +87,14 @@
           "titel": "Een leuke dag bij Parc le Duc in Vacquieres",
           "plaats": "Parc le Duc Route de Fontanes (RD 109) 34270 Vacquieres",
           "tijd": "10:00-18:00",
+          "type": "sportief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-09-25",
+          "titel": "Petanque in Siran",
+          "plaats": "Rondom de kerk in Siran",
+          "tijd": "10:00-14:30",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },

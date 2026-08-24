@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-21T07:19:05.959Z",
-  "totaal": 26,
+  "generated_at": "2026-08-24T07:24:35.848Z",
+  "totaal": 23,
   "bronnen": [
     {
       "id": "nlvp",
@@ -23,22 +23,17 @@
     {
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
-      "status": "down",
-      "items": 3,
-      "stale": true,
+      "status": "ok",
+      "items": 1,
+      "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      }
+      "diagnose": null
     },
     {
       "id": "ern-paris",
       "naam": "ERN Paris",
       "status": "ok",
-      "items": 5,
+      "items": 4,
       "spam_geweerd": 0,
       "feed": "https://ernparis.fr/feed/",
       "diagnose": null
@@ -46,16 +41,11 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "down",
+      "status": "ok",
       "items": 6,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      }
+      "diagnose": null
     },
     {
       "id": "neerlandia-toulouse",
@@ -187,14 +177,6 @@
       "excerpt": "De droogte houdt aan in de Lot en de waterreserves blijven sterk onder druk staan. Daarom heeft de prefectuur van de Lot nieuwe maatregelen aangekondigd om het watergebruik te beperken. De maatregelen gaan in op zaterdag 15 augustus 2026 om 8.00 uur en gelden afhankelijk van…"
     },
     {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-11",
-      "titel": "wijn proeverij en voorstellen",
-      "link": "https://www.lotgenoten.fr/wijn-proeverij-en-voorstellen/",
-      "excerpt": "Hallo Lotgenoten, Ik wil me even voorstellen: Mijn naam is Christina Kerkhof en sinds 2010 woonachtig in Frankrijk waar ik en mijn man Peter zijn neergestreken in Bellegarde, een dorp vlakbij de mooie stad Nimes. Daar heb ik een aantal jaren mogen werken in de wijnen, een…"
-    },
-    {
       "bron_id": "nvlr",
       "bron_naam": "NVLR",
       "datum": "2026-08-10",
@@ -217,6 +199,14 @@
       "titel": "Alles over de auto in Frankrijk, totaal overzicht.",
       "link": "https://www.lotgenoten.fr/alles-over-de-auto-in-frankrijk-totaal-overzicht/",
       "excerpt": "Frankrijk is voor de meeste Nederlanders en Belgen nog altijd een land dat je binnenrijdt, niet binnenvliegt. Dat maakt de auto het belangrijkste instrument dat u hier heeft, en tegelijk het onderdeel van uw leven waar de Franse overheid de afgelopen jaren het meest aan heeft…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-06",
+      "titel": "Vastgelopen bij een Franse instantie? Dit kan SOLVIT voor u betekenen",
+      "link": "https://www.lotgenoten.fr/vastgelopen-bij-een-franse-instantie-dit-kan-solvit-voor-u-betekenen/",
+      "excerpt": "Door: infofrankrijk Wie in Frankrijk woont, werkt, onderneemt of met Franse instanties te maken krijgt, kan vastlopen in een administratief dossier. Denk aan problemen met de CPAM, CARSAT, ANTS, een Franse gemeente, een prefectuur of een andere overheidsdienst. Niet ieder…"
     },
     {
       "bron_id": "ern-paris",
@@ -337,30 +327,6 @@
       "titel": "Parasols in de wijngaarden",
       "link": "https://bourgondischezaken.com/parasols-in-de-wijngaarden/",
       "excerpt": "Misschien heb je ze al gezien: midden tussen de wijnranken staan op sommige percelen opvallende constructies die doen denken aan grote parasols. Geen kunstproject en ook geen tijdelijke zomerattractie, maar een nieuwe techniek om druiven te beschermen tegen de steeds…"
-    },
-    {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-06-24",
-      "titel": "Uitzicht op woensdag 24 juni",
-      "link": "https://ernparis.fr/uitzicht-op-woensdag-24-juni/",
-      "excerpt": "Ruth van der Waall-Schaeffer Lichaamstaal"
-    },
-    {
-      "bron_id": "atelier-neerlandais",
-      "bron_naam": "Atelier Néerlandais",
-      "datum": "2026-06-22",
-      "titel": "Boeklancering: Capitalism’s Favorite Child, 24 juni",
-      "link": "https://atelierneerlandais.com/boeklancering-capitalisms-favorite-child-24-juni/",
-      "excerpt": "Ter gelegenheid van Paris Fashion Week verwelkomt lAtelier Néerlandais de boeklancering van Capitalisms Favorite Child — een nieuw perspectief op de bedrijfsgeschiedenis van de mode sinds het midden van de negentiende eeuw. AN lid Ben Wubs en zijn co-auteur Pierre-Yves Donzé…"
-    },
-    {
-      "bron_id": "atelier-neerlandais",
-      "bron_naam": "Atelier Néerlandais",
-      "datum": "2026-06-22",
-      "titel": "Showrooms Paris Fashion Week, 23 – 29 juni",
-      "link": "https://atelierneerlandais.com/showrooms-paris-fashion-week/",
-      "excerpt": "Rondom Paris Fashion Week zullen verschillende leden hun showrooms houden op het Atelier Néerlandais, waaronder Pien Studios, Rhea en Hul Le Kes. De showrooms zijn op uitnodiging te bezoeken. Showrooms op uitnodiging: 23–26 juni Pien Studios 25-29 juni Hul le Kes 26–29 juni…"
     }
   ]
 }
