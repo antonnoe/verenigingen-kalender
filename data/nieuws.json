@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-24T07:24:35.848Z",
-  "totaal": 23,
+  "generated_at": "2026-08-26T07:19:41.813Z",
+  "totaal": 24,
   "bronnen": [
     {
       "id": "nlvp",
@@ -33,7 +33,7 @@
       "id": "ern-paris",
       "naam": "ERN Paris",
       "status": "ok",
-      "items": 4,
+      "items": 5,
       "spam_geweerd": 0,
       "feed": "https://ernparis.fr/feed/",
       "diagnose": null
@@ -41,11 +41,16 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "ok",
+      "status": "down",
       "items": 6,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "fetch failed"
+      }
     },
     {
       "id": "neerlandia-toulouse",
@@ -104,11 +109,16 @@
     {
       "id": "praatje",
       "naam": "Praatje",
-      "status": "ok",
+      "status": "down",
       "items": 0,
-      "spam_geweerd": 0,
+      "stale": false,
       "feed": "https://praatje.fr/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "The operation was aborted due to timeout"
+      }
     },
     {
       "id": "cmunf",
@@ -144,6 +154,14 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-08-24",
+      "titel": "Doorkijkje",
+      "link": "https://ernparis.fr/doorkijkje-09-26/",
+      "excerpt": "ds. Ruth van der Waall-Schaeffer Er is geen speld tussen te krijgen: Vanaf het allereerste begin zien we dat God een God van communicatie is. Voordat er mensen waren, sprak God, en door Zijn woord ontstond de schepping. Toen Hij"
+    },
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
