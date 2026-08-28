@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-08-26",
-    "volgende_update": "2026-08-28",
+    "laatst_bijgewerkt": "2026-08-28",
+    "volgende_update": "2026-08-31",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 6,
-    "totaal_events": 35,
-    "gefilterde_items": 14,
+    "bronnen_met_events": 7,
+    "totaal_events": 36,
+    "gefilterde_items": 12,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 4
+    "warnings": 3
   },
   "verenigingen": [
     {
@@ -24,7 +24,16 @@
       "agenda_toegankelijkheid": "beperkt",
       "contact": null,
       "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar.",
-      "events": [],
+      "events": [
+        {
+          "datum": "2026-09-08",
+          "titel": "Franse lessen seizoen 2026-2027",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "informatief",
+          "bron": "https://www.fanf.fr/activiteiten/lijst"
+        }
+      ],
       "rubriek": "hulporganisatie"
     },
     {
@@ -107,8 +116,8 @@
         },
         {
           "datum": "2026-09-30",
-          "titel": "Laatste-woensdag-van-de-maand wandeling",
-          "plaats": "nog niet bekend",
+          "titel": "Wandeling: Barrage de Saint-Denis en Prise d’Alzeau",
+          "plaats": "Bassin de Saint Denis",
           "tijd": "09:45-15:00",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
@@ -400,14 +409,6 @@
       "events": [
         {
           "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-08-27",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr"
-        },
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-09-03",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
@@ -457,6 +458,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-10-15",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-10-22",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",

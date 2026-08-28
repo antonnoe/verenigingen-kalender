@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-08-26T07:19:41.813Z",
-  "totaal": 24,
+  "generated_at": "2026-08-28T10:31:55.332Z",
+  "totaal": 23,
   "bronnen": [
     {
       "id": "nlvp",
@@ -92,7 +92,7 @@
       "id": "bourgondische-zaken",
       "naam": "Bourgondische Zaken",
       "status": "ok",
-      "items": 4,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://bourgondischezaken.com/feed/",
       "diagnose": null
@@ -109,16 +109,11 @@
     {
       "id": "praatje",
       "naam": "Praatje",
-      "status": "down",
+      "status": "ok",
       "items": 0,
-      "stale": false,
+      "spam_geweerd": 0,
       "feed": "https://praatje.fr/feed/",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "The operation was aborted due to timeout"
-      }
+      "diagnose": null
     },
     {
       "id": "cmunf",
@@ -337,14 +332,6 @@
       "titel": "Cleveringalezing op zaterdag 28 november",
       "link": "https://www.a-n-m.nl/nieuws/cleveringalezing-op-zaterdag-28-november",
       "excerpt": "Op een groot aantal plaatsen over de wereld wordt jaarlijks omstreeks 26 november het moedige verzet van prof. R. Cleveringa tegen het gedwongen ontslag van joodse medewerkers aan de Leidse..."
-    },
-    {
-      "bron_id": "bourgondische-zaken",
-      "bron_naam": "Bourgondische Zaken",
-      "datum": "2026-06-29",
-      "titel": "Parasols in de wijngaarden",
-      "link": "https://bourgondischezaken.com/parasols-in-de-wijngaarden/",
-      "excerpt": "Misschien heb je ze al gezien: midden tussen de wijnranken staan op sommige percelen opvallende constructies die doen denken aan grote parasols. Geen kunstproject en ook geen tijdelijke zomerattractie, maar een nieuwe techniek om druiven te beschermen tegen de steeds…"
     }
   ]
 }
