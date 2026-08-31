@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-08-28",
-    "volgende_update": "2026-08-31",
+    "laatst_bijgewerkt": "2026-08-31",
+    "volgende_update": "2026-09-02",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 7,
-    "totaal_events": 36,
-    "gefilterde_items": 12,
+    "totaal_events": 41,
+    "gefilterde_items": 11,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 3
+    "warnings": 0
   },
   "verenigingen": [
     {
@@ -139,10 +139,26 @@
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
+          "datum": "2026-10-28",
+          "titel": "Wandeling:",
+          "plaats": "Bassin de Saint Denis",
+          "tijd": "09:45-15:00",
+          "type": "sportief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
           "datum": "2026-11-05",
           "titel": "Mindfulness…een manier om stress te beheersen",
           "plaats": "42 Avenue du Languedoc 11700 Azille",
           "tijd": "14:00-15:30",
+          "type": "sportief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-25",
+          "titel": "Wandeling:",
+          "plaats": "Bassin de Saint Denis",
+          "tijd": "09:45-15:00",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         }
@@ -189,22 +205,6 @@
       "contact": "contact@a-n-m.com",
       "events": [
         {
-          "datum": "2026-08-28",
-          "titel": "RAF Boules",
-          "plaats": "Flayosc",
-          "tijd": "14:00-17:00",
-          "type": "sportief",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
-        {
-          "datum": "2026-08-28",
-          "titel": "Holland Apéro Provence (HAP) borrel",
-          "plaats": "Lorgues",
-          "tijd": "17:00-19:00",
-          "type": "sociaal",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
-        {
           "datum": "2026-09-02",
           "titel": "Koor ANM-Vocale",
           "plaats": "Fréjus",
@@ -239,7 +239,23 @@
         {
           "datum": "2026-09-17",
           "titel": "Cultuurgroep",
-          "plaats": "Carcès",
+          "plaats": "Flayosc",
+          "tijd": "10:00-14:00",
+          "type": "cultureel",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-15",
+          "titel": "Cultuurgroep",
+          "plaats": "Callas",
+          "tijd": "10:00-14:00",
+          "type": "cultureel",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-19",
+          "titel": "Cultuurgroep",
+          "plaats": "Callas",
           "tijd": "10:00-14:00",
           "type": "cultureel",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
@@ -342,9 +358,33 @@
       "events": [
         {
           "datum": "2026-09-06",
-          "titel": "Viering in de kerk (rentrée)",
+          "titel": "Kerkdienst - Rentréezondag",
           "plaats": "172 boulevard Vincent Auriol 75013 Paris",
-          "tijd": "niet vermeld",
+          "tijd": "09:45",
+          "type": "kerkdienst",
+          "bron": "https://ernparis.fr/agenda/"
+        },
+        {
+          "datum": "2026-09-20",
+          "titel": "Kerkdienst",
+          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
+          "tijd": "09:45",
+          "type": "kerkdienst",
+          "bron": "https://ernparis.fr/agenda/"
+        },
+        {
+          "datum": "2026-10-04",
+          "titel": "Kerkdienst",
+          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
+          "tijd": "09:45",
+          "type": "kerkdienst",
+          "bron": "https://ernparis.fr/agenda/"
+        },
+        {
+          "datum": "2026-10-18",
+          "titel": "Kerkdienst",
+          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
+          "tijd": "09:45",
           "type": "kerkdienst",
           "bron": "https://ernparis.fr/agenda/"
         }

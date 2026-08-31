@@ -1,35 +1,20 @@
 {
-  "generated_at": "2026-08-28T10:31:55.334Z",
-  "ok": false,
-  "status": "degraded",
-  "laatst_bijgewerkt": "2026-08-28",
-  "volgende_update": "2026-08-31",
-  "totaal_events": 36,
+  "generated_at": "2026-08-31T07:14:23.751Z",
+  "ok": true,
+  "status": "ok",
+  "laatst_bijgewerkt": "2026-08-31",
+  "volgende_update": "2026-09-02",
+  "totaal_events": 41,
   "bronnen_totaal": 10,
-  "bronnen_ok": 9,
-  "bronnen_down": 1,
+  "bronnen_ok": 10,
+  "bronnen_down": 0,
   "bronnen_verdacht": 0,
-  "kapotte_koppelingen": [
-    {
-      "id": "lotgenoten",
-      "naam": "LOTgenoten",
-      "type": "web-scraping",
-      "url": "https://www.lotgenoten.fr/agenda/",
-      "fout": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: fetch failed",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: fetch failed"
-      },
-      "laatste_succes": "2026-08-24"
-    }
-  ],
+  "kapotte_koppelingen": [],
   "observaties": [],
   "nieuws": {
-    "status": "degraded",
+    "status": "ok",
     "items": 23,
-    "bronnen_down": 2
+    "bronnen_down": 0
   },
   "bronnen": [
     {
@@ -37,9 +22,9 @@
       "naam": "NVLR",
       "type": "ical",
       "status": "ok",
-      "events": 12,
+      "events": 14,
       "stale": false,
-      "laatste_succes": "2026-08-28",
+      "laatste_succes": "2026-08-31",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -51,7 +36,7 @@
       "status": "ok",
       "events": 1,
       "stale": false,
-      "laatste_succes": "2026-08-28",
+      "laatste_succes": "2026-08-31",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -63,7 +48,7 @@
       "status": "ok",
       "events": 7,
       "stale": false,
-      "laatste_succes": "2026-08-28",
+      "laatste_succes": "2026-08-31",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -75,7 +60,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-08-28",
+      "laatste_succes": "2026-08-31",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -87,7 +72,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-08-28",
+      "laatste_succes": "2026-08-31",
       "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/08/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/10/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/11/15/-.html",
       "fout": null,
       "diagnose": null
@@ -99,7 +84,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-08-28",
+      "laatste_succes": "2026-08-31",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -109,9 +94,9 @@
       "naam": "ERN Paris",
       "type": "web-scraping",
       "status": "ok",
-      "events": 1,
+      "events": 4,
       "stale": false,
-      "laatste_succes": "2026-08-28",
+      "laatste_succes": "2026-08-31",
       "url": "https://ernparis.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -120,18 +105,13 @@
       "id": "lotgenoten",
       "naam": "LOTgenoten",
       "type": "web-scraping",
-      "status": "down",
+      "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-08-24",
+      "laatste_succes": "2026-08-31",
       "url": "https://www.lotgenoten.fr/agenda/",
-      "fout": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: fetch failed",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: fetch failed"
-      }
+      "fout": null,
+      "diagnose": null
     },
     {
       "id": "neerlandia-toulouse",
@@ -140,7 +120,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-08-28",
+      "laatste_succes": "2026-08-31",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -152,7 +132,7 @@
       "status": "ok",
       "events": 1,
       "stale": false,
-      "laatste_succes": "2026-08-28",
+      "laatste_succes": "2026-08-31",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null

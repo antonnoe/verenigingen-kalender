@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-28T10:31:55.332Z",
+  "generated_at": "2026-08-31T07:14:23.749Z",
   "totaal": 23,
   "bronnen": [
     {
@@ -33,7 +33,7 @@
       "id": "ern-paris",
       "naam": "ERN Paris",
       "status": "ok",
-      "items": 5,
+      "items": 6,
       "spam_geweerd": 0,
       "feed": "https://ernparis.fr/feed/",
       "diagnose": null
@@ -41,16 +41,11 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "down",
+      "status": "ok",
       "items": 6,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      }
+      "diagnose": null
     },
     {
       "id": "neerlandia-toulouse",
@@ -83,7 +78,7 @@
       "id": "anm",
       "naam": "ANM",
       "status": "ok",
-      "items": 2,
+      "items": 1,
       "spam_geweerd": 0,
       "feed": "https://www.a-n-m.nl/nieuws",
       "diagnose": null
@@ -136,19 +131,62 @@
     {
       "id": "nederlanders-fr",
       "naam": "Nederlanders.fr",
-      "status": "down",
+      "status": "ok",
       "items": 0,
-      "stale": false,
+      "spam_geweerd": 0,
       "feed": "https://www.nederlanders.fr/profiles/blog/feed?tag=Clubs%2C+Verenigingen+en+Bij%C3%A9%C3%A9nkomsten&xn_auth=no",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      }
+      "diagnose": null
     }
   ],
   "items": [
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-08-30",
+      "titel": "Zondag 18 oktober – Kerkdienst (Kerk+YouTube)",
+      "link": "https://ernparis.fr/zondag-18-oktober-kerkdienst-kerkyoutube-2/",
+      "excerpt": "Voorganger: ds. Rienk Lanooy Ouderling van dienst: nnb. Organist: Hans Lammers Collecte: Net4Kids Dienst in de kerk en via YouTube Aanvang 9:45"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-30",
+      "titel": "Opnieuw tropische temperaturen…",
+      "link": "https://www.lotgenoten.fr/opnieuw-tropische-temperaturen/",
+      "excerpt": "Door: goedinfrankrijk.fr Nazomer brengt opnieuw tropische temperaturen: Frankrijk maakt zich op voor zesde hittegolf van het jaar. Wie beslist heeft om net na het hoogseizoen naar Frankrijk af te zakken, hoeft niet te vrezen voor kwakkelweer. Vanaf begin september stijgen de…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-28",
+      "titel": "Van druif tot fles kort uitgelegd…",
+      "link": "https://www.lotgenoten.fr/van-druif-tot-fles-kort-uitgelegd/",
+      "excerpt": "1. Van druif naar most Bij een handmatige oogst worden de druiventrossen eerst ontrist: de steeltjes worden verwijderd. Tijdens dit proces worden de druiven ook gekneusd. Zo ontstaat een mengsel van druivensap en gekneusde druiven, dat we most noemen. 2. De alcoholische…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-28",
+      "titel": "Melding, bouwvergunning, hoe en wat",
+      "link": "https://www.lotgenoten.fr/melding-bouwvergunning-hoe-en-wat/",
+      "excerpt": "door Rob van der Meulen | jun 26, 2017 Déclaration préalable Een melding ( déclaration préalable ) dient te worden gedaan wanneer meer dan 5 m² vloeroppervlak wordt gerealiseerd of de voetafdruk met meer dan 5 m² wordt vergroot en er geen verplichting bestaat tot de aanvraag…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-28",
+      "titel": "Zonnepanelen, hoe en wat en waarom anno 2026",
+      "link": "https://www.lotgenoten.fr/zonnepanelen-hoe-en-wat-en-waarom-anno-2026/",
+      "excerpt": "Zonnepanelen zijn in Frankrijk in 2026 niet automatisch een slechte investering. Het oude model, plaatsen, subsidie ontvangen en een groot overschot tegen een aantrekkelijk tarief verkopen, is voor nieuwe kleine installaties echter verdwenen. Het huidige model beloont een…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-08-26",
+      "titel": "Wat veranderd er in september?",
+      "link": "https://www.lotgenoten.fr/wat-veranderd-er-in-september/",
+      "excerpt": "Door: goedinfrankrijk.fr De maand september 2026 brengt in Frankrijk een reeks concrete veranderingen met zich mee voor zowel burgers als bedrijven. Van de gezondheidszorg tot milieumaatregelen en het bedrijfsleven: verschillende wetten en hervormingen treden vanaf 1…"
+    },
     {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
@@ -164,30 +202,6 @@
       "titel": "Franse online banken vergeleken: kosten, limieten en vooral snelheid",
       "link": "https://www.lotgenoten.fr/franse-online-banken-vergeleken-kosten-limieten-en-vooral-snelheid/",
       "excerpt": "Een gratis bankrekening openen kan tegenwoordig in Frankrijk bij een groot aantal online banken. Maar “gratis” betekent niet automatisch dat iedere bank hetzelfde werkt. Vooral bij overschrijvingen (virements) zijn er grote verschillen. Kan een nieuwe begunstigde meteen…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-17",
-      "titel": "Na 3,5 jaar gaat onze camper met pijn in het hart de verkoop in.",
-      "link": "https://www.lotgenoten.fr/na-35-jaar-gaat-onze-camper-met-pijn-in-het-hart-de-verkoop-in/",
-      "excerpt": "Ik kocht hem destijds om samen met mijn dochter mooie reizen en avonturen te maken. En dat is precies wat we hebben gedaan. We hebben er prachtige trips mee gemaakt en ontzettend veel mooie herinneringen aan overgehouden. Inmiddels is onze gezinssituatie veranderd en vormen…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-17",
-      "titel": "Nieuwe Franse wetgeving soc. media onder vijftien jaar, is in strijd met de grondwet.",
-      "link": "https://www.lotgenoten.fr/hoogste-franse-raad-verklaart-socialemediaverbod-voor-kinderen-ongrondwettig/",
-      "excerpt": "Nieuwe Franse wetgeving die het gebruik van sociale media voor jongeren onder de vijftien jaar verbiedt, is in strijd met de grondwet. Dat heeft de Franse Grondwettelijke Raad vrijdag bepaald. De wet zou in het voorjaar van 2027 van kracht worden. Volgens de raad is…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-17",
-      "titel": "Droogte: de prefectuur van de Lot scherpt de beperkingen op het watergebruik verder aan",
-      "link": "https://www.lotgenoten.fr/droogte-de-prefectuur-van-de-lot-scherpt-de-beperkingen-op-het-watergebruik-verder-aan/",
-      "excerpt": "De droogte houdt aan in de Lot en de waterreserves blijven sterk onder druk staan. Daarom heeft de prefectuur van de Lot nieuwe maatregelen aangekondigd om het watergebruik te beperken. De maatregelen gaan in op zaterdag 15 augustus 2026 om 8.00 uur en gelden afhankelijk van…"
     },
     {
       "bron_id": "nvlr",
@@ -206,28 +220,20 @@
       "excerpt": "Het CAK heeft een artikel gepubliceerd (hier) waarin beschreven wordt dat de regels voor nieuwe gevallen met vroeg-pensioen zijn veranderd. Voor bestaande gevallen veranderd er niets. Waar het op neer komt is dat een vroegpensioen voor nieuwe gevallen niet meer tot recht op…"
     },
     {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-06",
-      "titel": "Alles over de auto in Frankrijk, totaal overzicht.",
-      "link": "https://www.lotgenoten.fr/alles-over-de-auto-in-frankrijk-totaal-overzicht/",
-      "excerpt": "Frankrijk is voor de meeste Nederlanders en Belgen nog altijd een land dat je binnenrijdt, niet binnenvliegt. Dat maakt de auto het belangrijkste instrument dat u hier heeft, en tegelijk het onderdeel van uw leven waar de Franse overheid de afgelopen jaren het meest aan heeft…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-06",
-      "titel": "Vastgelopen bij een Franse instantie? Dit kan SOLVIT voor u betekenen",
-      "link": "https://www.lotgenoten.fr/vastgelopen-bij-een-franse-instantie-dit-kan-solvit-voor-u-betekenen/",
-      "excerpt": "Door: infofrankrijk Wie in Frankrijk woont, werkt, onderneemt of met Franse instanties te maken krijgt, kan vastlopen in een administratief dossier. Denk aan problemen met de CPAM, CARSAT, ANTS, een Franse gemeente, een prefectuur of een andere overheidsdienst. Niet ieder…"
-    },
-    {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
       "datum": "2026-08-05",
       "titel": "Uitzicht op woensdag 5 augustus",
       "link": "https://ernparis.fr/uitzicht-op-woensdag-5-augustus/",
       "excerpt": "Ruth van der Waall-Schaeffer Ankers"
+    },
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-08-04",
+      "titel": "Zondag 4 oktober – Kerkdienst (Kerk+YouTube)",
+      "link": "https://ernparis.fr/zondag-4-oktober-kerkdienst-kerkyoutube/",
+      "excerpt": "Voorganger: Kees Posthumus Ouderling van dienst: nnb. Organist: Johan van den Burg Collecte: Net4Kids Dienst in de kerk en via YouTube Aanvang 9:45"
     },
     {
       "bron_id": "nvlr",
@@ -302,14 +308,6 @@
       "excerpt": "waar muziek tot de verbeelding spreekt Van 9 tot 13 augustus 2026 is de Morvan het decor voor de vierde editie van Les Étoiles du Morvan, het internationale kamermuziekfestival dat muziekliefhebbers uit heel Europa trekt. Vijf avonden lang kun je ervaren hoe muziek verhalen…"
     },
     {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-07-08",
-      "titel": "Uitzicht op woensdag 8 juli",
-      "link": "https://ernparis.fr/uitzicht-op-woensdag-8-juli/",
-      "excerpt": "Ruth van der Waall-Schaeffer Kijk niet te ver"
-    },
-    {
       "bron_id": "nvlr",
       "bron_naam": "NVLR",
       "datum": "2026-07-08",
@@ -324,14 +322,6 @@
       "titel": "Grote natuurbrand in de Minervois",
       "link": "https://www.nvlr.eu/nieuws/grote-brand-in-de-minervois",
       "excerpt": "Zoals jullie wellicht uit het nieuws hebben vernomen, woedt er sinds 1 juli een grote natuurbrand in onze directe omgeving. Met name de dorpen Pouzols-Minervois en Mailhac zijn zwaar getroffen...."
-    },
-    {
-      "bron_id": "anm",
-      "bron_naam": "ANM",
-      "datum": "2026-06-30",
-      "titel": "Cleveringalezing op zaterdag 28 november",
-      "link": "https://www.a-n-m.nl/nieuws/cleveringalezing-op-zaterdag-28-november",
-      "excerpt": "Op een groot aantal plaatsen over de wereld wordt jaarlijks omstreeks 26 november het moedige verzet van prof. R. Cleveringa tegen het gedwongen ontslag van joodse medewerkers aan de Leidse..."
     }
   ]
 }
