@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-08-31",
-    "volgende_update": "2026-09-02",
+    "laatst_bijgewerkt": "2026-09-02",
+    "volgende_update": "2026-09-04",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 7,
-    "totaal_events": 41,
-    "gefilterde_items": 11,
+    "totaal_events": 44,
+    "gefilterde_items": 61,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 0
   },
@@ -139,11 +139,27 @@
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
+          "datum": "2026-10-07",
+          "titel": "Bijpraatlunch Brugairolles",
+          "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
+          "tijd": "12:00-15:00",
+          "type": "sociaal",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
           "datum": "2026-10-28",
           "titel": "Wandeling:",
           "plaats": "Bassin de Saint Denis",
           "tijd": "09:45-15:00",
           "type": "sportief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-04",
+          "titel": "Bijpraatlunch Brugairolles",
+          "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
+          "tijd": "12:00-15:00",
+          "type": "sociaal",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
@@ -382,6 +398,14 @@
         },
         {
           "datum": "2026-10-18",
+          "titel": "Kerkdienst",
+          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
+          "tijd": "09:45",
+          "type": "kerkdienst",
+          "bron": "https://ernparis.fr/agenda/"
+        },
+        {
+          "datum": "2026-11-01",
           "titel": "Kerkdienst",
           "plaats": "172 boulevard Vincent Auriol 75013 Paris",
           "tijd": "09:45",

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-08-31T07:14:23.749Z",
+  "generated_at": "2026-09-02T07:09:47.390Z",
   "totaal": 23,
   "bronnen": [
     {
@@ -142,6 +142,22 @@
     {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
+      "datum": "2026-09-01",
+      "titel": "Zondag 1 november – Kerkdienst (Kerk+YouTube)",
+      "link": "https://ernparis.fr/zondag-1-november-kerkdienst-kerkyoutube/",
+      "excerpt": "Voorganger: ds. Ruth van der Waall-Schaeffer Ouderling van dienst: nnb. Organist: Johan van den Burg Collecte: Restos du cœur Dienst in de kerk en via YouTube Aanvang 9:45"
+    },
+    {
+      "bron_id": "nvlr",
+      "bron_naam": "NVLR",
+      "datum": "2026-08-31",
+      "titel": "Dubbele nationaliteit",
+      "link": "https://www.nvlr.eu/nieuws/dubbele-nationaliteit",
+      "excerpt": "DUBBELE NATIONALITEITOp donderdag 3 september organiseert de Stichting Nederlanders Buiten Nederland (SNBN) in Nieuwspoort in Den Haag de derde Dag van de Nederlanders buiten Nederland, van 09.30..."
+    },
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
       "datum": "2026-08-30",
       "titel": "Zondag 18 oktober – Kerkdienst (Kerk+YouTube)",
       "link": "https://ernparis.fr/zondag-18-oktober-kerkdienst-kerkyoutube-2/",
@@ -268,14 +284,6 @@
       "excerpt": "Door René Meeuws Op 19 juli organiseerde Bourgondische Zaken een rondleiding in het in mei heropende Cité des Présents, voorheen Musée du Septennat. Dat museum herbergt duizenden geschenken die François Mitterand gedurende zijn twee periodes van zeven jaar als president van…"
     },
     {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-07-22",
-      "titel": "Uitzicht op woensdag 22 juli",
-      "link": "https://ernparis.fr/uitzicht-op-woensdag-22-juli/",
-      "excerpt": "Ruth van der Waall-Schaeffer Fiducie"
-    },
-    {
       "bron_id": "bourgondische-zaken",
       "bron_naam": "Bourgondische Zaken",
       "datum": "2026-07-20",
@@ -314,14 +322,6 @@
       "titel": "Bosbranden in de regio, wees voorbereid",
       "link": "https://www.nvlr.eu/nieuws/bosbranden-in-de-regio-wees-voorbereid",
       "excerpt": "Wat te doen bij een bosbrand in de buurt? In de Hérault en Aude hebben we te maken gehad met hevige branden. In Pouzols waar ook leden van onze vereniging wonen, moest men hals over kop de woning..."
-    },
-    {
-      "bron_id": "nvlr",
-      "bron_naam": "NVLR",
-      "datum": "2026-07-02",
-      "titel": "Grote natuurbrand in de Minervois",
-      "link": "https://www.nvlr.eu/nieuws/grote-brand-in-de-minervois",
-      "excerpt": "Zoals jullie wellicht uit het nieuws hebben vernomen, woedt er sinds 1 juli een grote natuurbrand in onze directe omgeving. Met name de dorpen Pouzols-Minervois en Mailhac zijn zwaar getroffen...."
     }
   ]
 }
