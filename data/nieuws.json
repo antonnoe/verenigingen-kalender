@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-02T07:09:47.390Z",
-  "totaal": 23,
+  "generated_at": "2026-09-04T07:10:17.270Z",
+  "totaal": 27,
   "bronnen": [
     {
       "id": "nlvp",
@@ -24,7 +24,7 @@
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
       "status": "ok",
-      "items": 1,
+      "items": 4,
       "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
       "diagnose": null
@@ -60,7 +60,7 @@
       "id": "nvlr",
       "naam": "NVLR",
       "status": "ok",
-      "items": 5,
+      "items": 6,
       "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
@@ -140,6 +140,46 @@
   ],
   "items": [
     {
+      "bron_id": "atelier-neerlandais",
+      "bron_naam": "Atelier Néerlandais",
+      "datum": "2026-09-03",
+      "titel": "FOTODOK: A Wide Gaze, 6 – 15 november",
+      "link": "https://atelierneerlandais.com/fotodok-a-wide-gaze-6-15-november/",
+      "excerpt": "Van 6 t/m 15 november presenteert FOTODOK op uitnodiging van de Nederlandse ambassade in Frankrijk de groepstentoonstelling A Wider Gaze in Atelier Néerlandais in Parijs. Deze tentoonstelling opent in de aanloop naar de prestigieuze fotobeurs Paris Photo. De makers…"
+    },
+    {
+      "bron_id": "atelier-neerlandais",
+      "bron_naam": "Atelier Néerlandais",
+      "datum": "2026-09-03",
+      "titel": "Art Basel x Mondriaanfonds, 21-25 oktober",
+      "link": "https://atelierneerlandais.com/art-basel-x-mondriaanfonds-21-25-oktober/",
+      "excerpt": "Tijdens Art Basel Paris presenteert het Mondriaan Fonds, in samenwerking met de Nederlandse ambassade in Parijs, een tentoonstelling in Atelier Néerlandais, gecureerd door Julia Geerlings. Binnenkort meer informatie op deze pagina en onze socials."
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-03",
+      "titel": "“De vos doden, een absurditeit”",
+      "link": "https://www.lotgenoten.fr/34236-2/",
+      "excerpt": "“De vos doden, een absurditeit”: deskundigen op het gebied van wilde dieren komen in opstand tegen de beslissing van de regering om de vos als “schadelijk” te classificeren De regering heeft de vos voor drie jaar aangemerkt als een “soort die schade kan veroorzaken” ,…"
+    },
+    {
+      "bron_id": "nvlr",
+      "bron_naam": "NVLR",
+      "datum": "2026-09-03",
+      "titel": "Et Voilà",
+      "link": "https://www.nvlr.eu/nieuws/et-voila",
+      "excerpt": "Et Voilà nummer 02 is uit! Check uw brievenbus of lees het magazine hier."
+    },
+    {
+      "bron_id": "atelier-neerlandais",
+      "bron_naam": "Atelier Néerlandais",
+      "datum": "2026-09-02",
+      "titel": "Parcours Bijoux, 1 – 31 oktober",
+      "link": "https://atelierneerlandais.com/parcours-bijoux-1-31-octobre/",
+      "excerpt": "Van 1 tot en met 31 oktober nodigt Parcours Bijoux bezoekers uit om Parijs vanuit een nieuw perspectief te verkennen en sieraden niet slechts als draagbare objecten te zien, maar als volwaardig artistiek medium. Voor deze nieuwe editie neemt Atelier Néerlandais deel als…"
+    },
+    {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
       "datum": "2026-09-01",
@@ -194,14 +234,6 @@
       "titel": "Zonnepanelen, hoe en wat en waarom anno 2026",
       "link": "https://www.lotgenoten.fr/zonnepanelen-hoe-en-wat-en-waarom-anno-2026/",
       "excerpt": "Zonnepanelen zijn in Frankrijk in 2026 niet automatisch een slechte investering. Het oude model, plaatsen, subsidie ontvangen en een groot overschot tegen een aantrekkelijk tarief verkopen, is voor nieuwe kleine installaties echter verdwenen. Het huidige model beloont een…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-26",
-      "titel": "Wat veranderd er in september?",
-      "link": "https://www.lotgenoten.fr/wat-veranderd-er-in-september/",
-      "excerpt": "Door: goedinfrankrijk.fr De maand september 2026 brengt in Frankrijk een reeks concrete veranderingen met zich mee voor zowel burgers als bedrijven. Van de gezondheidszorg tot milieumaatregelen en het bedrijfsleven: verschillende wetten en hervormingen treden vanaf 1…"
     },
     {
       "bron_id": "ern-paris",
