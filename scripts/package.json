@@ -7,6 +7,6 @@
     "update": "node update-events.js"
   },
   "dependencies": {
-    "node-ical": "^0.18.0"
+    "node-ical": "^0.27.1"
   }
 }
