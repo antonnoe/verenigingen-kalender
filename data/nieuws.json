@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-04T07:10:17.270Z",
-  "totaal": 27,
+  "generated_at": "2026-09-07T07:16:44.271Z",
+  "totaal": 30,
   "bronnen": [
     {
       "id": "nlvp",
       "naam": "NLVP",
       "status": "ok",
-      "items": 0,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://nlvp.fr/feed/",
       "diagnose": null
@@ -24,7 +24,7 @@
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
       "status": "ok",
-      "items": 4,
+      "items": 5,
       "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
       "diagnose": null
@@ -41,11 +41,16 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "ok",
+      "status": "down",
       "items": 6,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "fetch failed"
+      }
     },
     {
       "id": "neerlandia-toulouse",
@@ -60,7 +65,7 @@
       "id": "nvlr",
       "naam": "NVLR",
       "status": "ok",
-      "items": 6,
+      "items": 5,
       "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
@@ -140,6 +145,38 @@
   ],
   "items": [
     {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-09-06",
+      "titel": "3 oktober – Haringparty te Parijs",
+      "link": "https://nlvp.fr/3-oktober-haringparty-te-parijs-2/",
+      "excerpt": "Op zaterdag 3 oktober vanaf 19:00 uur organiseert de NLVP weer de jaarlijkse Haringparty in Brasserie “Le Louis Philippe”, 66 Quai de l’Hôtel de Ville, 75004 Paris. Traditiegetrouw vieren we dit op exact dezelfde dag als in Leiden. Daar herdenken ze op 3 oktober dat er in…"
+    },
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-09-06",
+      "titel": "27 september – Koffieochtend",
+      "link": "https://nlvp.fr/27-september-koffieochtend/",
+      "excerpt": "Goed nieuws! De maandelijkse koffieochtenden zijn weer begonnen. Hét perfecte moment om onder het genot van een lekkere kop koffie even te kletsen met andere Nederlanders. Van 10.30 tot 12.00 uur Een mooie gelegenheid om oude bekenden terug te zien, verhalen uit te wisselen…"
+    },
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-09-06",
+      "titel": "13 september – Speurtocht in de Tuilerieën",
+      "link": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/",
+      "excerpt": "Zondag 13 september organiseren we een speurtocht voor onze leden in de centraal gelegen Tuilerieën! Ook leuk voor kinderen. We starten gezamenlijk om 11 uur, bij de uitgang van metro station Tuileries (lijn 1) en besluiten de speurtocht ongeveer een uur later op een terrasje…"
+    },
+    {
+      "bron_id": "atelier-neerlandais",
+      "bron_naam": "Atelier Néerlandais",
+      "datum": "2026-09-04",
+      "titel": "Boeklancering: Capitalism’s Favorite Child, 20 november",
+      "link": "https://atelierneerlandais.com/boeklancering-capitalisms-favorite-child-24-juni/",
+      "excerpt": "Het Atelier Néerlandais verwelkomt AN-lid Ben Wubs en zijn co-auteur Pierre-Yves Donzé voor de boeklancering van Capitalisms Favorite Child . Het boek biedt een nieuw perspectief op de bedrijfsgeschiedenis van de mode-industrie, van het midden van de negentiende eeuw tot…"
+    },
+    {
       "bron_id": "atelier-neerlandais",
       "bron_naam": "Atelier Néerlandais",
       "datum": "2026-09-03",
@@ -185,7 +222,7 @@
       "datum": "2026-09-01",
       "titel": "Zondag 1 november – Kerkdienst (Kerk+YouTube)",
       "link": "https://ernparis.fr/zondag-1-november-kerkdienst-kerkyoutube/",
-      "excerpt": "Voorganger: ds. Ruth van der Waall-Schaeffer Ouderling van dienst: nnb. Organist: Johan van den Burg Collecte: Restos du cœur Dienst in de kerk en via YouTube Aanvang 9:45"
+      "excerpt": "Voorganger: ds. Ruth van der Waall-Schaeffer Ouderling van dienst: Rianne Courtin Organist: Johan van den Burg Collecte: Restos du cœur Dienst in de kerk en via YouTube Aanvang 9:45"
     },
     {
       "bron_id": "nvlr",
@@ -201,7 +238,7 @@
       "datum": "2026-08-30",
       "titel": "Zondag 18 oktober – Kerkdienst (Kerk+YouTube)",
       "link": "https://ernparis.fr/zondag-18-oktober-kerkdienst-kerkyoutube-2/",
-      "excerpt": "Voorganger: ds. Rienk Lanooy Ouderling van dienst: nnb. Organist: Hans Lammers Collecte: Net4Kids Dienst in de kerk en via YouTube Aanvang 9:45"
+      "excerpt": "Voorganger: ds. Rienk Lanooy Ouderling van dienst: Dianne Valenciennes Organist: Hans Lammers Collecte: Net4Kids Dienst in de kerk en via YouTube Aanvang 9:45"
     },
     {
       "bron_id": "lotgenoten",
@@ -281,7 +318,7 @@
       "datum": "2026-08-04",
       "titel": "Zondag 4 oktober – Kerkdienst (Kerk+YouTube)",
       "link": "https://ernparis.fr/zondag-4-oktober-kerkdienst-kerkyoutube/",
-      "excerpt": "Voorganger: Kees Posthumus Ouderling van dienst: nnb. Organist: Johan van den Burg Collecte: Net4Kids Dienst in de kerk en via YouTube Aanvang 9:45"
+      "excerpt": "Voorganger: Kees Posthumus Ouderling van dienst: Dianne Valenciennes Organist: Johan van den Burg Collecte: Net4Kids Dienst in de kerk en via YouTube Aanvang 9:45"
     },
     {
       "bron_id": "nvlr",
@@ -346,14 +383,6 @@
       "titel": "Les Étoiles du Morvan 2026",
       "link": "https://bourgondischezaken.com/les-etoiles-du-morvan-2026/",
       "excerpt": "waar muziek tot de verbeelding spreekt Van 9 tot 13 augustus 2026 is de Morvan het decor voor de vierde editie van Les Étoiles du Morvan, het internationale kamermuziekfestival dat muziekliefhebbers uit heel Europa trekt. Vijf avonden lang kun je ervaren hoe muziek verhalen…"
-    },
-    {
-      "bron_id": "nvlr",
-      "bron_naam": "NVLR",
-      "datum": "2026-07-08",
-      "titel": "Bosbranden in de regio, wees voorbereid",
-      "link": "https://www.nvlr.eu/nieuws/bosbranden-in-de-regio-wees-voorbereid",
-      "excerpt": "Wat te doen bij een bosbrand in de buurt? In de Hérault en Aude hebben we te maken gehad met hevige branden. In Pouzols waar ook leden van onze vereniging wonen, moest men hals over kop de woning..."
     }
   ]
 }

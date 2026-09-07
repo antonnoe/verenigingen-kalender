@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-09-04",
-    "volgende_update": "2026-09-07",
+    "laatst_bijgewerkt": "2026-09-07",
+    "volgende_update": "2026-09-09",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 7,
-    "totaal_events": 41,
-    "gefilterde_items": 43,
+    "bronnen_met_events": 8,
+    "totaal_events": 44,
+    "gefilterde_items": 63,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 0
+    "warnings": 2
   },
   "verenigingen": [
     {
@@ -24,16 +24,7 @@
       "agenda_toegankelijkheid": "beperkt",
       "contact": null,
       "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar.",
-      "events": [
-        {
-          "datum": "2026-09-08",
-          "titel": "Franse lessen seizoen 2026-2027",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "informatief",
-          "bron": "https://www.fanf.fr/activiteiten/lijst"
-        }
-      ],
+      "events": [],
       "rubriek": "hulporganisatie"
     },
     {
@@ -111,7 +102,7 @@
           "titel": "Golfdag te Lamalou les Bains",
           "plaats": "Lamalou les Bains",
           "tijd": "09:30-17:00",
-          "type": "sociaal",
+          "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
@@ -128,6 +119,14 @@
           "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
           "tijd": "12:00-15:00",
           "type": "sociaal",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-14",
+          "titel": "Bijpraatlunch regio Pézenas",
+          "plaats": "Le Grand Café, 1, Av. de Cassan, 34320 Roujan.",
+          "tijd": "11:30-15:00",
+          "type": "informatief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
@@ -269,7 +268,32 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": null,
       "opmerking": "Publiceert events per maand als blogposts",
-      "events": [],
+      "events": [
+        {
+          "datum": "2026-09-13",
+          "titel": "Speurtocht in de Tuilerieën",
+          "plaats": "Tuilerieën, metro station Tuileries (lijn 1)",
+          "tijd": "11:00",
+          "type": "sociaal",
+          "bron": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/"
+        },
+        {
+          "datum": "2026-09-27",
+          "titel": "Koffieochtend",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://nlvp.fr/27-september-koffieochtend/"
+        },
+        {
+          "datum": "2026-10-03",
+          "titel": "Haringparty te Parijs",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://nlvp.fr/3-oktober-haringparty-te-parijs-2/"
+        }
+      ],
       "rubriek": "regionaal"
     },
     {
@@ -330,7 +354,16 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "info@atelierneerlandais.com",
       "opmerking": "Platform van de Nederlandse ambassade in Parijs voor creatieve bedrijfstakken. 22 Avenue Victoria, 75001 Paris.",
-      "events": [],
+      "events": [
+        {
+          "datum": "2026-11-20",
+          "titel": "Boeklancering: Capitalism's Favorite Child",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://atelierneerlandais.com/kalender/"
+        }
+      ],
       "rubriek": "regionaal"
     },
     {
@@ -348,14 +381,6 @@
       "contact": "ern.paris@gmail.com",
       "opmerking": "Nederlandse Protestantse Kerk, 172 boulevard Vincent Auriol, 75013 Paris. Diensten ook via YouTube.",
       "events": [
-        {
-          "datum": "2026-09-06",
-          "titel": "Kerkdienst - Rentréezondag",
-          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
-          "tijd": "09:45",
-          "type": "kerkdienst",
-          "bron": "https://ernparis.fr/agenda/"
-        },
         {
           "datum": "2026-09-20",
           "titel": "Kerkdienst",
