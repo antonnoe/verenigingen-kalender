@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-09-07",
-    "volgende_update": "2026-09-09",
+    "laatst_bijgewerkt": "2026-09-09",
+    "volgende_update": "2026-09-11",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 8,
-    "totaal_events": 44,
-    "gefilterde_items": 63,
+    "totaal_events": 43,
+    "gefilterde_items": 7,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 2
+    "warnings": 4
   },
   "verenigingen": [
     {
@@ -41,14 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-09-07",
-          "titel": "Bijpraatlunch Ginestas",
-          "plaats": "1 Pl. du Marché, 11120 Ginestas",
-          "tijd": "12:30-15:30",
-          "type": "informatief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-09-09",
           "titel": "Bijpraatlunch regio Pézenas",
@@ -270,14 +262,6 @@
       "opmerking": "Publiceert events per maand als blogposts",
       "events": [
         {
-          "datum": "2026-09-13",
-          "titel": "Speurtocht in de Tuilerieën",
-          "plaats": "Tuilerieën, metro station Tuileries (lijn 1)",
-          "tijd": "11:00",
-          "type": "sociaal",
-          "bron": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/"
-        },
-        {
           "datum": "2026-09-27",
           "titel": "Koffieochtend",
           "plaats": "niet vermeld",
@@ -292,6 +276,14 @@
           "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://nlvp.fr/3-oktober-haringparty-te-parijs-2/"
+        },
+        {
+          "datum": "2026-10-18",
+          "titel": "Speurtocht in de Tuilerieën",
+          "plaats": "Tuilerieën, Paris",
+          "tijd": "11:00",
+          "type": "sociaal",
+          "bron": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/"
         }
       ],
       "rubriek": "regionaal"

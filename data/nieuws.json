@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-07T07:16:44.271Z",
+  "generated_at": "2026-09-09T07:08:41.339Z",
   "totaal": 30,
   "bronnen": [
     {
@@ -23,11 +23,16 @@
     {
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
-      "status": "ok",
+      "status": "down",
       "items": 5,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://atelierneerlandais.com/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "fetch failed"
+      }
     },
     {
       "id": "ern-paris",
@@ -147,6 +152,14 @@
     {
       "bron_id": "nlvp",
       "bron_naam": "NLVP",
+      "datum": "2026-09-08",
+      "titel": "18 oktober – Speurtocht in de Tuilerieën",
+      "link": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/",
+      "excerpt": "Zondag 18 oktober organiseren we een speurtocht voor onze leden in de centraal gelegen Tuilerieën! Ook leuk voor kinderen. We starten gezamenlijk om 11 uur, bij de uitgang van metro station Tuileries (lijn 1) en besluiten de speurtocht ongeveer een uur later op een terrasje…"
+    },
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
       "datum": "2026-09-06",
       "titel": "3 oktober – Haringparty te Parijs",
       "link": "https://nlvp.fr/3-oktober-haringparty-te-parijs-2/",
@@ -161,12 +174,12 @@
       "excerpt": "Goed nieuws! De maandelijkse koffieochtenden zijn weer begonnen. Hét perfecte moment om onder het genot van een lekkere kop koffie even te kletsen met andere Nederlanders. Van 10.30 tot 12.00 uur Een mooie gelegenheid om oude bekenden terug te zien, verhalen uit te wisselen…"
     },
     {
-      "bron_id": "nlvp",
-      "bron_naam": "NLVP",
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
       "datum": "2026-09-06",
-      "titel": "13 september – Speurtocht in de Tuilerieën",
-      "link": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/",
-      "excerpt": "Zondag 13 september organiseren we een speurtocht voor onze leden in de centraal gelegen Tuilerieën! Ook leuk voor kinderen. We starten gezamenlijk om 11 uur, bij de uitgang van metro station Tuileries (lijn 1) en besluiten de speurtocht ongeveer een uur later op een terrasje…"
+      "titel": "Zondag 6 mei – ds Henk Spoelstra",
+      "link": "https://ernparis.fr/zondag-6-mei-ds-henk-spoelstra/",
+      "excerpt": ""
     },
     {
       "bron_id": "atelier-neerlandais",
@@ -335,14 +348,6 @@
       "titel": "Paris Design Week 2026: Design Museum Den Bosch x Atelier Néerlandais, 10 – 18 september",
       "link": "https://atelierneerlandais.com/paris-design-week-2026-design-museum-den-bosch-x-atelier-neerlandais/",
       "excerpt": "Op uitnodiging van de Nederlandse ambassade in Frankrijk presenteert Design Museum Den Bosch van 10 t/m 18 september een selectie uit de Posthuman-collectie in het Atelier Néerlandais tijdens Paris Design Week. Met deze presentatie verwelkomt het Atelier Néerlandais een van…"
-    },
-    {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-07-26",
-      "titel": "Zomer overweging op zondag 26 juli",
-      "link": "https://ernparis.fr/zomer-overweging-zondag-26-juli/",
-      "excerpt": "Ruth van der Waall-Schaeffer Heilige Ruimte"
     },
     {
       "bron_id": "bourgondische-zaken",
