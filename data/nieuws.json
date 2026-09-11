@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-09T07:08:41.339Z",
-  "totaal": 30,
+  "generated_at": "2026-09-11T07:08:47.053Z",
+  "totaal": 28,
   "bronnen": [
     {
       "id": "nlvp",
@@ -23,16 +23,11 @@
     {
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
-      "status": "down",
+      "status": "ok",
       "items": 5,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      }
+      "diagnose": null
     },
     {
       "id": "ern-paris",
@@ -46,16 +41,11 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "down",
+      "status": "ok",
       "items": 6,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      }
+      "diagnose": null
     },
     {
       "id": "neerlandia-toulouse",
@@ -88,7 +78,7 @@
       "id": "anm",
       "naam": "ANM",
       "status": "ok",
-      "items": 1,
+      "items": 0,
       "spam_geweerd": 0,
       "feed": "https://www.a-n-m.nl/nieuws",
       "diagnose": null
@@ -97,7 +87,7 @@
       "id": "bourgondische-zaken",
       "naam": "Bourgondische Zaken",
       "status": "ok",
-      "items": 3,
+      "items": 2,
       "spam_geweerd": 0,
       "feed": "https://bourgondischezaken.com/feed/",
       "diagnose": null
@@ -150,12 +140,52 @@
   ],
   "items": [
     {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-09",
+      "titel": "Eén enkele kaart kan u een boete van €135 besparen, in de Lot en elders…",
+      "link": "https://www.lotgenoten.fr/een-enkele-kaart-kan-u-een-boete-van-e135-besparen-in-de-lot-en-elders/",
+      "excerpt": "In de Lot, net als overal in Frankrijk, maakt alleen de Carte Mobilité Inclusion met de vermelding « Stationnement » het mogelijk om de parkeerplaatsen voor personen met beperkte mobiliteit (PMR*) te gebruiken. Een herinnering aan de regels om een boete te voorkomen. De…"
+    },
+    {
       "bron_id": "nlvp",
       "bron_naam": "NLVP",
       "datum": "2026-09-08",
       "titel": "18 oktober – Speurtocht in de Tuilerieën",
       "link": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/",
       "excerpt": "Zondag 18 oktober organiseren we een speurtocht voor onze leden in de centraal gelegen Tuilerieën! Ook leuk voor kinderen. We starten gezamenlijk om 11 uur, bij de uitgang van metro station Tuileries (lijn 1) en besluiten de speurtocht ongeveer een uur later op een terrasje…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-08",
+      "titel": "Even voorstellen, over verduurzamen van gebouwen!!",
+      "link": "https://www.lotgenoten.fr/even-voorstellen-over-verduurzamen-van-gebouwen/",
+      "excerpt": "Sinds dit jaar zijn wij, mijn vrouw Anouk, onze drie kinderen Beau (20), Luca (17) en Liv (14) en ik, Lieven Andringa, de trotse eigenaar van een vakantiewoning in Luzech. In mijn werk heb ik jarenlang advies gegeven over het verduurzamen van gebouwen en gebieden. Ook heb ik…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-08",
+      "titel": "Muziekfestival in Bournel 11 oktober",
+      "link": "https://www.lotgenoten.fr/muziekfestival-in-bournel-11-oktober/",
+      "excerpt": "Dit jaar is het in combinatie met een vide grenier, oldtimers, lunch en muziek. Als het weer meezit dat moet het een feest worden."
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-08",
+      "titel": "Van Utrecht-centrum naar een wijnchâteau in de Lot",
+      "link": "https://www.lotgenoten.fr/van-utrecht-centrum-naar-een-wijnchateau-in-de-lot/",
+      "excerpt": "Wij zijn Jurjen en Franca en sinds afgelopen juli de nieuwe eigenaren van Château Cantelauze Duravel, een biologisch wijndomein in de Cahors. Dat we eigenaar zouden worden van een wijnchâteau w as nooit het plan . .. In 2023 namen we allebei een sabbatical en reisden we zes…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-08",
+      "titel": "Nederlandse boekenmarkt, 1 november van 11.00 tot 16.00 uur",
+      "link": "https://www.lotgenoten.fr/nederlandse-boekenmarkt-1-november-van-11-00-tot-16-00-uur/",
+      "excerpt": "Na het succes van dit voorjaar, organiseren wij voor de tweede keer dit jaar de Nederlandse boekenmarkt. Kom gezellig snuffelen tussen tweedehands boeken (€ 1,- per stuk), drink een kopje thee/koffie of een glaasje wijn, eet een kopje soep en ontmoet nieuwe mensen. De…"
     },
     {
       "bron_id": "nlvp",
@@ -190,10 +220,18 @@
       "excerpt": "Het Atelier Néerlandais verwelkomt AN-lid Ben Wubs en zijn co-auteur Pierre-Yves Donzé voor de boeklancering van Capitalisms Favorite Child . Het boek biedt een nieuw perspectief op de bedrijfsgeschiedenis van de mode-industrie, van het midden van de negentiende eeuw tot…"
     },
     {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-04",
+      "titel": "Te koop: karakteristieke boerderij aan een meer!! In de natuur! €375.000",
+      "link": "https://www.lotgenoten.fr/te-koop-karakteristieke-boerderij-aan-een-meer-in-de-natuur-e375-000/",
+      "excerpt": "NIEUW OP DE MARKT!! Karakteristieke stenen boerderij met 6,7 hectare grond, waaronder een prachtig meer van 2,5 hectare, rijk aan vis. Het geheel beschikt over diverse bijgebouwen, waaronder een grote hangar van circa 576 m² (24 m x 24 m). Gelegen op een gewilde locatie nabij…"
+    },
+    {
       "bron_id": "atelier-neerlandais",
       "bron_naam": "Atelier Néerlandais",
       "datum": "2026-09-03",
-      "titel": "FOTODOK: A Wide Gaze, 6 – 15 november",
+      "titel": "FOTODOK: A Wider Gaze, 6 – 15 november",
       "link": "https://atelierneerlandais.com/fotodok-a-wide-gaze-6-15-november/",
       "excerpt": "Van 6 t/m 15 november presenteert FOTODOK op uitnodiging van de Nederlandse ambassade in Frankrijk de groepstentoonstelling A Wider Gaze in Atelier Néerlandais in Parijs. Deze tentoonstelling opent in de aanloop naar de prestigieuze fotobeurs Paris Photo. De makers…"
     },
@@ -204,14 +242,6 @@
       "titel": "Art Basel x Mondriaanfonds, 21-25 oktober",
       "link": "https://atelierneerlandais.com/art-basel-x-mondriaanfonds-21-25-oktober/",
       "excerpt": "Tijdens Art Basel Paris presenteert het Mondriaan Fonds, in samenwerking met de Nederlandse ambassade in Parijs, een tentoonstelling in Atelier Néerlandais, gecureerd door Julia Geerlings. Binnenkort meer informatie op deze pagina en onze socials."
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-03",
-      "titel": "“De vos doden, een absurditeit”",
-      "link": "https://www.lotgenoten.fr/34236-2/",
-      "excerpt": "“De vos doden, een absurditeit”: deskundigen op het gebied van wilde dieren komen in opstand tegen de beslissing van de regering om de vos als “schadelijk” te classificeren De regering heeft de vos voor drie jaar aangemerkt als een “soort die schade kan veroorzaken” ,…"
     },
     {
       "bron_id": "nvlr",
@@ -254,52 +284,12 @@
       "excerpt": "Voorganger: ds. Rienk Lanooy Ouderling van dienst: Dianne Valenciennes Organist: Hans Lammers Collecte: Net4Kids Dienst in de kerk en via YouTube Aanvang 9:45"
     },
     {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-30",
-      "titel": "Opnieuw tropische temperaturen…",
-      "link": "https://www.lotgenoten.fr/opnieuw-tropische-temperaturen/",
-      "excerpt": "Door: goedinfrankrijk.fr Nazomer brengt opnieuw tropische temperaturen: Frankrijk maakt zich op voor zesde hittegolf van het jaar. Wie beslist heeft om net na het hoogseizoen naar Frankrijk af te zakken, hoeft niet te vrezen voor kwakkelweer. Vanaf begin september stijgen de…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-28",
-      "titel": "Van druif tot fles kort uitgelegd…",
-      "link": "https://www.lotgenoten.fr/van-druif-tot-fles-kort-uitgelegd/",
-      "excerpt": "1. Van druif naar most Bij een handmatige oogst worden de druiventrossen eerst ontrist: de steeltjes worden verwijderd. Tijdens dit proces worden de druiven ook gekneusd. Zo ontstaat een mengsel van druivensap en gekneusde druiven, dat we most noemen. 2. De alcoholische…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-28",
-      "titel": "Melding, bouwvergunning, hoe en wat",
-      "link": "https://www.lotgenoten.fr/melding-bouwvergunning-hoe-en-wat/",
-      "excerpt": "door Rob van der Meulen | jun 26, 2017 Déclaration préalable Een melding ( déclaration préalable ) dient te worden gedaan wanneer meer dan 5 m² vloeroppervlak wordt gerealiseerd of de voetafdruk met meer dan 5 m² wordt vergroot en er geen verplichting bestaat tot de aanvraag…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-28",
-      "titel": "Zonnepanelen, hoe en wat en waarom anno 2026",
-      "link": "https://www.lotgenoten.fr/zonnepanelen-hoe-en-wat-en-waarom-anno-2026/",
-      "excerpt": "Zonnepanelen zijn in Frankrijk in 2026 niet automatisch een slechte investering. Het oude model, plaatsen, subsidie ontvangen en een groot overschot tegen een aantrekkelijk tarief verkopen, is voor nieuwe kleine installaties echter verdwenen. Het huidige model beloont een…"
-    },
-    {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
       "datum": "2026-08-24",
       "titel": "Doorkijkje",
       "link": "https://ernparis.fr/doorkijkje-09-26/",
       "excerpt": "ds. Ruth van der Waall-Schaeffer Er is geen speld tussen te krijgen: Vanaf het allereerste begin zien we dat God een God van communicatie is. Voordat er mensen waren, sprak God, en door Zijn woord ontstond de schepping. Toen Hij"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-08-18",
-      "titel": "Franse online banken vergeleken: kosten, limieten en vooral snelheid",
-      "link": "https://www.lotgenoten.fr/franse-online-banken-vergeleken-kosten-limieten-en-vooral-snelheid/",
-      "excerpt": "Een gratis bankrekening openen kan tegenwoordig in Frankrijk bij een groot aantal online banken. Maar “gratis” betekent niet automatisch dat iedere bank hetzelfde werkt. Vooral bij overschrijvingen (virements) zijn er grote verschillen. Kan een nieuwe begunstigde meteen…"
     },
     {
       "bron_id": "nvlr",
@@ -372,22 +362,6 @@
       "titel": "Exposition 17-19 juillet 2026, Miriam Janssen",
       "link": "https://www.nvlr.eu/nieuws/exposition-17-19-juillet-2026-miriam-janssen",
       "excerpt": "Bonjour, hi, hallo, heehee, Exposition 17-19 juillet 2026, Vernissage le 18 juillet 18.00 h. Presbytère de Montolieu Ik heet jullie allemaal van harte welkom om deze tentoonstelling te komen..."
-    },
-    {
-      "bron_id": "anm",
-      "bron_naam": "ANM",
-      "datum": "2026-07-12",
-      "titel": "Fotofestival Fréjus",
-      "link": "https://www.a-n-m.nl/nieuws/fotofestival-frejus",
-      "excerpt": "Van 26 september tot 4 oktober wordt in Fréjus het 8e Festival International de la Photographie Surréaliste et Créative georganiseerd. De ANM-fotoclub zal op woensdag 30 september of vrijdag 2..."
-    },
-    {
-      "bron_id": "bourgondische-zaken",
-      "bron_naam": "Bourgondische Zaken",
-      "datum": "2026-07-12",
-      "titel": "Les Étoiles du Morvan 2026",
-      "link": "https://bourgondischezaken.com/les-etoiles-du-morvan-2026/",
-      "excerpt": "waar muziek tot de verbeelding spreekt Van 9 tot 13 augustus 2026 is de Morvan het decor voor de vierde editie van Les Étoiles du Morvan, het internationale kamermuziekfestival dat muziekliefhebbers uit heel Europa trekt. Vijf avonden lang kun je ervaren hoe muziek verhalen…"
     }
   ]
 }

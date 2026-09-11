@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-09-09",
-    "volgende_update": "2026-09-11",
+    "laatst_bijgewerkt": "2026-09-11",
+    "volgende_update": "2026-09-14",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 8,
-    "totaal_events": 43,
-    "gefilterde_items": 7,
+    "bronnen_met_events": 9,
+    "totaal_events": 57,
+    "gefilterde_items": 59,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 4
+    "warnings": 0
   },
   "verenigingen": [
     {
@@ -41,14 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-09-09",
-          "titel": "Bijpraatlunch regio Pézenas",
-          "plaats": "Le Grand Café, 1, Av. de Cassan, 34320 Roujan.",
-          "tijd": "11:30-14:30",
-          "type": "informatief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-09-16",
           "titel": "Bijpraatlunch regio Carcassonne, Capendu",
@@ -196,14 +188,6 @@
       "contact": "contact@a-n-m.com",
       "events": [
         {
-          "datum": "2026-09-10",
-          "titel": "ANM Golf",
-          "plaats": "La Motte",
-          "tijd": "10:00-15:00",
-          "type": "sportief",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
-        {
           "datum": "2026-09-11",
           "titel": "RAF Boules",
           "plaats": "Flayosc",
@@ -264,8 +248,8 @@
         {
           "datum": "2026-09-27",
           "titel": "Koffieochtend",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
+          "plaats": "Café-brasserie Au Père Tranquille, 16 rue Pierre Lescot – 75001 Paris",
+          "tijd": "10:30-12:00",
           "type": "sociaal",
           "bron": "https://nlvp.fr/27-september-koffieochtend/"
         },
@@ -280,7 +264,7 @@
         {
           "datum": "2026-10-18",
           "titel": "Speurtocht in de Tuilerieën",
-          "plaats": "Tuilerieën, Paris",
+          "plaats": "Tuilerieën, metro station Tuileries (lijn 1)",
           "tijd": "11:00",
           "type": "sociaal",
           "bron": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/"
@@ -466,14 +450,6 @@
       "events": [
         {
           "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-09-10",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr"
-        },
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-09-17",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
@@ -523,6 +499,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-10-29",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-11-05",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",
@@ -605,7 +589,136 @@
       "status": "actief",
       "agenda_toegankelijkheid": "webpagina",
       "opmerking": "Agenda-pagina bevat jaarkalender en uitgewerkte event-blokken (AfterNetWork borrels, Koningsdag, wandelingen, leesclub, paspoort pop-up).",
-      "events": [],
+      "events": [
+        {
+          "datum": "2026-10-01",
+          "titel": "Rentree borrel",
+          "plaats": "Le vélo Sentimental, Café dans La Maison du vélo, 12 Boulevard Bonrepos, 31000 Toulouse",
+          "tijd": "19:00",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2026-10-04",
+          "titel": "Wandeling",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2026-10-11",
+          "titel": "Appelpluk uitje",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2026-10-23",
+          "titel": "AfterNetWork borrel",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "zakelijk",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2026-11-18",
+          "titel": "ALV",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "bestuurlijk",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2026-12-06",
+          "titel": "Sinterklaasfeest",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-01-04",
+          "titel": "Wandeling",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-01-29",
+          "titel": "Nieuwjaarsborrel",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-02-05",
+          "titel": "AfterNetwork borrel",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "zakelijk",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-03-01",
+          "titel": "Wandeling",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-03-19",
+          "titel": "Leesclub",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-03-24",
+          "titel": "AfterNetWork borrel",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "zakelijk",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-04-27",
+          "titel": "AfterNetWork borrel",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "zakelijk",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-05-20",
+          "titel": "Koningsdag receptie",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-06-11",
+          "titel": "Leesclub",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-07-16",
+          "titel": "Zomers etentje",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        }
+      ],
       "rubriek": "regionaal"
     },
     {
