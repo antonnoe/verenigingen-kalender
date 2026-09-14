@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-09-11",
-    "volgende_update": "2026-09-14",
+    "laatst_bijgewerkt": "2026-09-14",
+    "volgende_update": "2026-09-16",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 9,
-    "totaal_events": 57,
-    "gefilterde_items": 59,
+    "bronnen_met_events": 8,
+    "totaal_events": 59,
+    "gefilterde_items": 12,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 0
   },
@@ -161,16 +161,7 @@
       "status": "actief",
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@nedazur.org",
-      "events": [
-        {
-          "datum": "2026-09-11",
-          "titel": "Dutch Open Golftoernooi - 11 september",
-          "plaats": "Golf de Saint Donat - Grasse",
-          "tijd": "hele dag",
-          "type": "sportief",
-          "bron": "https://www.nedazur.org/_ical/public.ics"
-        }
-      ],
+      "events": [],
       "rubriek": "regionaal"
     },
     {
@@ -188,14 +179,6 @@
       "contact": "contact@a-n-m.com",
       "events": [
         {
-          "datum": "2026-09-11",
-          "titel": "RAF Boules",
-          "plaats": "Flayosc",
-          "tijd": "14:00-17:00",
-          "type": "sportief",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
-        {
           "datum": "2026-09-16",
           "titel": "Koor ANM-Vocale",
           "plaats": "Lorgues",
@@ -212,11 +195,107 @@
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         },
         {
+          "datum": "2026-09-22",
+          "titel": "ANM Bridge",
+          "plaats": "Le Muy",
+          "tijd": "14:30-20:30",
+          "type": "informatief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-09-24",
+          "titel": "44e ANM Autopuzzelrit",
+          "plaats": "Start in Callas.",
+          "tijd": "08:30-15:30",
+          "type": "sociaal",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-09-25",
+          "titel": "RAF Boules",
+          "plaats": "Flayosc",
+          "tijd": "14:00-17:00",
+          "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-02",
+          "titel": "Holland Apéro Provence (HAP) borrel",
+          "plaats": "Nog niet bekend",
+          "tijd": "17:00-19:00",
+          "type": "sociaal",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-05",
+          "titel": "ANM Golf (clinic)",
+          "plaats": "Brignoles",
+          "tijd": "09:30-11:30",
+          "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-07",
+          "titel": "Koor ANM-Vocale",
+          "plaats": "Cotignac",
+          "tijd": "14:00-17:00",
+          "type": "cultureel",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-09",
+          "titel": "RAF Boules",
+          "plaats": "Flayosc",
+          "tijd": "14:00-17:00",
+          "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
           "datum": "2026-10-15",
           "titel": "Cultuurgroep",
           "plaats": "Callas",
           "tijd": "10:00-14:00",
           "type": "cultureel",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-21",
+          "titel": "Koor ANM-Vocale",
+          "plaats": "les Issambres",
+          "tijd": "14:00-17:00",
+          "type": "cultureel",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-22",
+          "titel": "ANM Golf",
+          "plaats": "La Motte",
+          "tijd": "10:00-15:00",
+          "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-23",
+          "titel": "RAF Boules",
+          "plaats": "Flayosc",
+          "tijd": "14:00-17:00",
+          "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-27",
+          "titel": "ANM Bridge",
+          "plaats": "Le Muy",
+          "tijd": "14:30-20:30",
+          "type": "informatief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-06",
+          "titel": "Holland Apéro Provence (HAP) borrel",
+          "plaats": "Nog niet bekend",
+          "tijd": "17:00-19:00",
+          "type": "sociaal",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         },
         {
@@ -246,10 +325,18 @@
       "opmerking": "Publiceert events per maand als blogposts",
       "events": [
         {
+          "datum": "2026-09-20",
+          "titel": "De Camino lopen",
+          "plaats": "Metrostation Porte de Pantin (lijn 5), Parijs",
+          "tijd": "10:00",
+          "type": "sportief",
+          "bron": "https://nlvp.fr/20-september-de-camino-lopen/"
+        },
+        {
           "datum": "2026-09-27",
           "titel": "Koffieochtend",
-          "plaats": "Café-brasserie Au Père Tranquille, 16 rue Pierre Lescot – 75001 Paris",
-          "tijd": "10:30-12:00",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
           "type": "sociaal",
           "bron": "https://nlvp.fr/27-september-koffieochtend/"
         },
@@ -264,9 +351,9 @@
         {
           "datum": "2026-10-18",
           "titel": "Speurtocht in de Tuilerieën",
-          "plaats": "Tuilerieën, metro station Tuileries (lijn 1)",
+          "plaats": "Jardin des Tuileries, metrostation Tuileries (lijn 1), Parijs",
           "tijd": "11:00",
-          "type": "sociaal",
+          "type": "cultureel",
           "bron": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/"
         }
       ],
@@ -337,6 +424,14 @@
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "cultureel",
+          "bron": "https://atelierneerlandais.com/kalender/"
+        },
+        {
+          "datum": "2026-11-27",
+          "titel": "Johan de Witt Stichting: Geruchten en Reputatie in de Diplomatie",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "informatief",
           "bron": "https://atelierneerlandais.com/kalender/"
         }
       ],
@@ -633,86 +728,6 @@
         {
           "datum": "2026-12-06",
           "titel": "Sinterklaasfeest",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-01-04",
-          "titel": "Wandeling",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-01-29",
-          "titel": "Nieuwjaarsborrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-02-05",
-          "titel": "AfterNetwork borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "zakelijk",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-03-01",
-          "titel": "Wandeling",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-03-19",
-          "titel": "Leesclub",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-03-24",
-          "titel": "AfterNetWork borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "zakelijk",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-04-27",
-          "titel": "AfterNetWork borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "zakelijk",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-05-20",
-          "titel": "Koningsdag receptie",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-06-11",
-          "titel": "Leesclub",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-07-16",
-          "titel": "Zomers etentje",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sociaal",

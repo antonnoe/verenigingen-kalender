@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-11T07:08:47.055Z",
+  "generated_at": "2026-09-14T07:17:46.661Z",
   "ok": true,
   "status": "ok",
-  "laatst_bijgewerkt": "2026-09-11",
-  "volgende_update": "2026-09-14",
-  "totaal_events": 57,
+  "laatst_bijgewerkt": "2026-09-14",
+  "volgende_update": "2026-09-16",
+  "totaal_events": 59,
   "bronnen_totaal": 10,
   "bronnen_ok": 10,
   "bronnen_down": 0,
@@ -13,7 +13,7 @@
   "observaties": [],
   "nieuws": {
     "status": "ok",
-    "items": 28,
+    "items": 30,
     "bronnen_down": 0
   },
   "bronnen": [
@@ -24,7 +24,7 @@
       "status": "ok",
       "events": 13,
       "stale": false,
-      "laatste_succes": "2026-09-11",
+      "laatste_succes": "2026-09-14",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -34,9 +34,9 @@
       "naam": "NEDAZUR",
       "type": "ical",
       "status": "ok",
-      "events": 1,
+      "events": 0,
       "stale": false,
-      "laatste_succes": "2026-09-11",
+      "laatste_succes": "2026-09-14",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -46,9 +46,9 @@
       "naam": "ANM",
       "type": "ical",
       "status": "ok",
-      "events": 5,
+      "events": 16,
       "stale": false,
-      "laatste_succes": "2026-09-11",
+      "laatste_succes": "2026-09-14",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -58,9 +58,9 @@
       "naam": "NLVP",
       "type": "wordpress-api",
       "status": "ok",
-      "events": 3,
+      "events": 4,
       "stale": false,
-      "laatste_succes": "2026-09-11",
+      "laatste_succes": "2026-09-14",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -72,7 +72,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-09-11",
+      "laatste_succes": "2026-09-14",
       "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/10/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/11/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/12/15/-.html",
       "fout": null,
       "diagnose": null
@@ -82,9 +82,9 @@
       "naam": "Atelier Néerlandais",
       "type": "web-scraping",
       "status": "ok",
-      "events": 1,
+      "events": 2,
       "stale": false,
-      "laatste_succes": "2026-09-11",
+      "laatste_succes": "2026-09-14",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -96,7 +96,7 @@
       "status": "ok",
       "events": 4,
       "stale": false,
-      "laatste_succes": "2026-09-11",
+      "laatste_succes": "2026-09-14",
       "url": "https://ernparis.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -108,7 +108,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-09-11",
+      "laatste_succes": "2026-09-14",
       "url": "https://www.lotgenoten.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -118,9 +118,9 @@
       "naam": "Neerlandia Toulouse",
       "type": "web-scraping",
       "status": "ok",
-      "events": 16,
+      "events": 6,
       "stale": false,
-      "laatste_succes": "2026-09-11",
+      "laatste_succes": "2026-09-14",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -132,7 +132,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-09-11",
+      "laatste_succes": "2026-09-14",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null

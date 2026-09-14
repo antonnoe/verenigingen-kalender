@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-09-11T07:08:47.053Z",
-  "totaal": 28,
+  "generated_at": "2026-09-14T07:17:46.658Z",
+  "totaal": 30,
   "bronnen": [
     {
       "id": "nlvp",
       "naam": "NLVP",
       "status": "ok",
-      "items": 3,
+      "items": 4,
       "spam_geweerd": 0,
       "feed": "https://nlvp.fr/feed/",
       "diagnose": null
@@ -24,7 +24,7 @@
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
       "status": "ok",
-      "items": 5,
+      "items": 6,
       "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
       "diagnose": null
@@ -60,7 +60,7 @@
       "id": "nvlr",
       "naam": "NVLR",
       "status": "ok",
-      "items": 5,
+      "items": 4,
       "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
@@ -87,7 +87,7 @@
       "id": "bourgondische-zaken",
       "naam": "Bourgondische Zaken",
       "status": "ok",
-      "items": 2,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://bourgondischezaken.com/feed/",
       "diagnose": null
@@ -140,6 +140,30 @@
   ],
   "items": [
     {
+      "bron_id": "bourgondische-zaken",
+      "bron_naam": "Bourgondische Zaken",
+      "datum": "2026-09-13",
+      "titel": "Bosbouw in de Morvan",
+      "link": "https://bourgondischezaken.com/bosbouw-in-de-morvan/",
+      "excerpt": "Sinds de jaren zeventig is het bos in de Morvan aan het veranderen. In de afgelopen vijftig jaar zijn er steeds meer gemengde loofbossen gekapt om plaats te maken voor plantages van naaldbomen. In BZ 84, het herfstmagazine van 2026, lees je meer over de schadelijke gevolgen…"
+    },
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-09-12",
+      "titel": "20 september – De Camino lopen",
+      "link": "https://nlvp.fr/20-september-de-camino-lopen/",
+      "excerpt": "Op zondag 20 september gaan we een stukje van de Camino lopen. Iedereen kent wel de Camino, de weg naar Santiago de Compostela. Maar wist u dat de noordelijke wandelroute Parijs doorkruist ? Discrete schelpjes op de grond wijzen de pelgrims en wandelaars de weg, en het lijkt…"
+    },
+    {
+      "bron_id": "atelier-neerlandais",
+      "bron_naam": "Atelier Néerlandais",
+      "datum": "2026-09-11",
+      "titel": "Johan de Witt Stichting: Geruchten en Reputatie in de Diplomatie, 27 november",
+      "link": "https://atelierneerlandais.com/johan-de-witt-stichting-nieuwe-perspectieven-op-de-zeventiende-eeuw-27-november/",
+      "excerpt": "Ter gelegenheid van het tienjarig bestaan ​​van de Johan de Witt Stichting (Huygens Instituut Amsterdam), komen jonge wetenschappers uit Nederland en Frankrijk samen in Parijs om actueel onderzoek te presenteren over politiek en diplomatie, correspondentie, geruchten en…"
+    },
+    {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
       "datum": "2026-09-09",
@@ -153,7 +177,7 @@
       "datum": "2026-09-08",
       "titel": "18 oktober – Speurtocht in de Tuilerieën",
       "link": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/",
-      "excerpt": "Zondag 18 oktober organiseren we een speurtocht voor onze leden in de centraal gelegen Tuilerieën! Ook leuk voor kinderen. We starten gezamenlijk om 11 uur, bij de uitgang van metro station Tuileries (lijn 1) en besluiten de speurtocht ongeveer een uur later op een terrasje…"
+      "excerpt": "Op zondag 18 oktober organiseren we een speurtocht in de Jardin des Tuileries. Het wordt niet alleen een gezellige wandeling in dit prachtige historische park midden in Parijs. Al “speurend” ontdekt U bijzondere monumenten, sculpturen en architectonische elementen. U hebt…"
     },
     {
       "bron_id": "lotgenoten",
@@ -239,7 +263,7 @@
       "bron_id": "atelier-neerlandais",
       "bron_naam": "Atelier Néerlandais",
       "datum": "2026-09-03",
-      "titel": "Art Basel x Mondriaanfonds, 21-25 oktober",
+      "titel": "Mondriaan Fonds: The Space between Breaths, 21-25 oktober",
       "link": "https://atelierneerlandais.com/art-basel-x-mondriaanfonds-21-25-oktober/",
       "excerpt": "Tijdens Art Basel Paris presenteert het Mondriaan Fonds, in samenwerking met de Nederlandse ambassade in Parijs, een tentoonstelling in Atelier Néerlandais, gecureerd door Julia Geerlings. Binnenkort meer informatie op deze pagina en onze socials."
     },
@@ -354,14 +378,6 @@
       "titel": "BZ-dag op 8 augustus 2026",
       "link": "https://bourgondischezaken.com/bz-dag-op-8-augustus-2026/",
       "excerpt": "Mis het niet: de BZ-ledendag op 8 augustus bij De Oude School in Larochemillay ! Dit jaar vindt de BZ dag plaats in de oude school van Larochemillay. Om het iedereen zo veel mogelijk naar de zin te maken, bieden we niet alleen een aantal lezingen en workshops aan. Ook nodigen…"
-    },
-    {
-      "bron_id": "nvlr",
-      "bron_naam": "NVLR",
-      "datum": "2026-07-13",
-      "titel": "Exposition 17-19 juillet 2026, Miriam Janssen",
-      "link": "https://www.nvlr.eu/nieuws/exposition-17-19-juillet-2026-miriam-janssen",
-      "excerpt": "Bonjour, hi, hallo, heehee, Exposition 17-19 juillet 2026, Vernissage le 18 juillet 18.00 h. Presbytère de Montolieu Ik heet jullie allemaal van harte welkom om deze tentoonstelling te komen..."
     }
   ]
 }
