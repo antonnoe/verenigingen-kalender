@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-14T07:17:46.658Z",
-  "totaal": 30,
+  "generated_at": "2026-09-16T07:09:56.939Z",
+  "totaal": 31,
   "bronnen": [
     {
       "id": "nlvp",
@@ -41,11 +41,16 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "ok",
+      "status": "down",
       "items": 6,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "fetch failed"
+      }
     },
     {
       "id": "neerlandia-toulouse",
@@ -60,7 +65,7 @@
       "id": "nvlr",
       "naam": "NVLR",
       "status": "ok",
-      "items": 4,
+      "items": 5,
       "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
@@ -139,6 +144,30 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-09-16",
+      "titel": "Uitzicht op woensdag 16 september",
+      "link": "https://ernparis.fr/uitzicht-op-woensdag-16-september/",
+      "excerpt": "Ruth van der Waall-Schaeffer Naar het noorden toezingen"
+    },
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-09-15",
+      "titel": "Zondag 15 november – Kerkdienst (Kerk+YouTube)",
+      "link": "https://ernparis.fr/zondag-15-november-kerkdienst-kerkyoutube/",
+      "excerpt": "Voorganger: ds. Frits de Lange Ouderling van dienst: nnb. Organist: Hans Lammers Collecte: Restos du cœur Dienst in de kerk en via YouTube Aanvang 9:45"
+    },
+    {
+      "bron_id": "nvlr",
+      "bron_naam": "NVLR",
+      "datum": "2026-09-14",
+      "titel": "64e Internationale Tentoonstelling van Beeldende Kunst",
+      "link": "https://www.nvlr.eu/nieuws/64e-internationale-tentoonstelling-van-beeldende-kunst",
+      "excerpt": "Om in je agenda te vermelden:64e Salon des Arts Plastiques in het Palais des Congrès in Béziers van 3 tot 10 oktober 2026.De eregast is Jean-Luc BEAUFILS, die al meer dan 50 jaar belangrijk werk..."
+    },
     {
       "bron_id": "bourgondische-zaken",
       "bron_naam": "Bourgondische Zaken",
@@ -330,22 +359,6 @@
       "titel": "CAK wijzigt regels nieuwe gevallen met vroegpensioen",
       "link": "https://cmunf.fr/nieuws/cak-wijzigt-regels-nieuwe-gevallen-met-vroegpensioen.html",
       "excerpt": "Het CAK heeft een artikel gepubliceerd (hier) waarin beschreven wordt dat de regels voor nieuwe gevallen met vroeg-pensioen zijn veranderd. Voor bestaande gevallen veranderd er niets. Waar het op neer komt is dat een vroegpensioen voor nieuwe gevallen niet meer tot recht op…"
-    },
-    {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-08-05",
-      "titel": "Uitzicht op woensdag 5 augustus",
-      "link": "https://ernparis.fr/uitzicht-op-woensdag-5-augustus/",
-      "excerpt": "Ruth van der Waall-Schaeffer Ankers"
-    },
-    {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-08-04",
-      "titel": "Zondag 4 oktober – Kerkdienst (Kerk+YouTube)",
-      "link": "https://ernparis.fr/zondag-4-oktober-kerkdienst-kerkyoutube/",
-      "excerpt": "Voorganger: Kees Posthumus Ouderling van dienst: Dianne Valenciennes Organist: Johan van den Burg Collecte: Net4Kids Dienst in de kerk en via YouTube Aanvang 9:45"
     },
     {
       "bron_id": "nvlr",

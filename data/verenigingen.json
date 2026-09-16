@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-09-14",
-    "volgende_update": "2026-09-16",
+    "laatst_bijgewerkt": "2026-09-16",
+    "volgende_update": "2026-09-18",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 8,
     "totaal_events": 59,
-    "gefilterde_items": 12,
+    "gefilterde_items": 44,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 0
+    "warnings": 2
   },
   "verenigingen": [
     {
@@ -47,14 +47,6 @@
           "plaats": "Capendu: Café-restaurant de la Terrasse.",
           "tijd": "11:30-14:30",
           "type": "sociaal",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
-        {
-          "datum": "2026-09-21",
-          "titel": "Een leuke dag bij Parc le Duc in Vacquieres",
-          "plaats": "Parc le Duc Route de Fontanes (RD 109) 34270 Vacquieres",
-          "tijd": "10:00-18:00",
-          "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
@@ -478,6 +470,14 @@
         },
         {
           "datum": "2026-11-01",
+          "titel": "Kerkdienst",
+          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
+          "tijd": "09:45",
+          "type": "kerkdienst",
+          "bron": "https://ernparis.fr/agenda/"
+        },
+        {
+          "datum": "2026-11-15",
           "titel": "Kerkdienst",
           "plaats": "172 boulevard Vincent Auriol 75013 Paris",
           "tijd": "09:45",
