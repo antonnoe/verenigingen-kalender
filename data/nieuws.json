@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-16T07:09:56.939Z",
-  "totaal": 31,
+  "generated_at": "2026-09-18T07:08:30.632Z",
+  "totaal": 32,
   "bronnen": [
     {
       "id": "nlvp",
@@ -15,7 +15,7 @@
       "id": "latulipe",
       "naam": "La Tulipe",
       "status": "ok",
-      "items": 0,
+      "items": 1,
       "spam_geweerd": 0,
       "feed": "https://www.latulipe.net/?format=feed&type=rss",
       "diagnose": null
@@ -41,16 +41,11 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "down",
+      "status": "ok",
       "items": 6,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      }
+      "diagnose": null
     },
     {
       "id": "neerlandia-toulouse",
@@ -153,6 +148,14 @@
       "excerpt": "Ruth van der Waall-Schaeffer Naar het noorden toezingen"
     },
     {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-16",
+      "titel": "Nederlandse auto importeren",
+      "link": "https://www.lotgenoten.fr/nederlandse-auto-importeren/",
+      "excerpt": "Wie in die jaren met zijn DAF naar Frankrijk reed, plakte een ovaal NL-plaatje op de achterklep, stak de groene kaart in het dashboardkastje en was klaar. Wie er in 2026 mee naar Frankrijk verhuist, heeft één maand, een France Titres-account, een quitus fiscal, een certificat…"
+    },
+    {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
       "datum": "2026-09-15",
@@ -166,7 +169,7 @@
       "datum": "2026-09-14",
       "titel": "64e Internationale Tentoonstelling van Beeldende Kunst",
       "link": "https://www.nvlr.eu/nieuws/64e-internationale-tentoonstelling-van-beeldende-kunst",
-      "excerpt": "Om in je agenda te vermelden:64e Salon des Arts Plastiques in het Palais des Congrès in Béziers van 3 tot 10 oktober 2026.De eregast is Jean-Luc BEAUFILS, die al meer dan 50 jaar belangrijk werk..."
+      "excerpt": "Om in je agenda te vermelden: 64e Salon des Arts Plastiques in het Palais des Congrès in Béziers van 3 tot 10 oktober 2026.De eregast is Jean-Luc BEAUFILS, die al meer dan 50 jaar belangrijk werk..."
     },
     {
       "bron_id": "bourgondische-zaken",
@@ -273,14 +276,6 @@
       "excerpt": "Het Atelier Néerlandais verwelkomt AN-lid Ben Wubs en zijn co-auteur Pierre-Yves Donzé voor de boeklancering van Capitalisms Favorite Child . Het boek biedt een nieuw perspectief op de bedrijfsgeschiedenis van de mode-industrie, van het midden van de negentiende eeuw tot…"
     },
     {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-04",
-      "titel": "Te koop: karakteristieke boerderij aan een meer!! In de natuur! €375.000",
-      "link": "https://www.lotgenoten.fr/te-koop-karakteristieke-boerderij-aan-een-meer-in-de-natuur-e375-000/",
-      "excerpt": "NIEUW OP DE MARKT!! Karakteristieke stenen boerderij met 6,7 hectare grond, waaronder een prachtig meer van 2,5 hectare, rijk aan vis. Het geheel beschikt over diverse bijgebouwen, waaronder een grote hangar van circa 576 m² (24 m x 24 m). Gelegen op een gewilde locatie nabij…"
-    },
-    {
       "bron_id": "atelier-neerlandais",
       "bron_naam": "Atelier Néerlandais",
       "datum": "2026-09-03",
@@ -343,6 +338,14 @@
       "titel": "Doorkijkje",
       "link": "https://ernparis.fr/doorkijkje-09-26/",
       "excerpt": "ds. Ruth van der Waall-Schaeffer Er is geen speld tussen te krijgen: Vanaf het allereerste begin zien we dat God een God van communicatie is. Voordat er mensen waren, sprak God, en door Zijn woord ontstond de schepping. Toen Hij"
+    },
+    {
+      "bron_id": "latulipe",
+      "bron_naam": "La Tulipe",
+      "datum": "2026-08-12",
+      "titel": "La Tulipe: een dynamisch platform",
+      "link": "https://www.latulipe.net/nl/component/content/article/la-tulipe-een-dynamisch-platform?catid=2",
+      "excerpt": "Welkom bij La Tulipe, een vereniging, of beter gezegd platform dóór en vóór Nederlanders in de Dordogne. In de leeftijd van jong tot... ja, zeg het maar. Een gemengd gezelschap van permanent in Frankrijk wonenden, tweede-huizen-bewoners, in Nederland werkenden en…"
     },
     {
       "bron_id": "nvlr",

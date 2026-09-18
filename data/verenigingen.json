@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-09-16",
-    "volgende_update": "2026-09-18",
+    "laatst_bijgewerkt": "2026-09-18",
+    "volgende_update": "2026-09-21",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 8,
-    "totaal_events": 59,
-    "gefilterde_items": 44,
+    "totaal_events": 58,
+    "gefilterde_items": 3,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 2
+    "warnings": 1
   },
   "verenigingen": [
     {
@@ -41,14 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-09-16",
-          "titel": "Bijpraatlunch regio Carcassonne, Capendu",
-          "plaats": "Capendu: Café-restaurant de la Terrasse.",
-          "tijd": "11:30-14:30",
-          "type": "sociaal",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-09-25",
           "titel": "Petanque in Siran",
@@ -171,22 +163,6 @@
       "contact": "contact@a-n-m.com",
       "events": [
         {
-          "datum": "2026-09-16",
-          "titel": "Koor ANM-Vocale",
-          "plaats": "Lorgues",
-          "tijd": "14:00-17:00",
-          "type": "cultureel",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
-        {
-          "datum": "2026-09-17",
-          "titel": "Cultuurgroep",
-          "plaats": "Flayosc",
-          "tijd": "10:00-14:00",
-          "type": "cultureel",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
-        {
           "datum": "2026-09-22",
           "titel": "ANM Bridge",
           "plaats": "Le Muy",
@@ -240,6 +216,14 @@
           "plaats": "Flayosc",
           "tijd": "14:00-17:00",
           "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-14",
+          "titel": "Herfstworkshop 2026",
+          "plaats": "Les Mayons",
+          "tijd": "hele dag",
+          "type": "informatief",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         },
         {
@@ -327,8 +311,8 @@
         {
           "datum": "2026-09-27",
           "titel": "Koffieochtend",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
+          "plaats": "Café-brasserie Au Père Tranquille, 16 rue Pierre Lescot – 75001 Paris",
+          "tijd": "10:30-12:00",
           "type": "sociaal",
           "bron": "https://nlvp.fr/27-september-koffieochtend/"
         },
@@ -445,14 +429,6 @@
       "opmerking": "Nederlandse Protestantse Kerk, 172 boulevard Vincent Auriol, 75013 Paris. Diensten ook via YouTube.",
       "events": [
         {
-          "datum": "2026-09-20",
-          "titel": "Kerkdienst",
-          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
-          "tijd": "09:45",
-          "type": "kerkdienst",
-          "bron": "https://ernparis.fr/agenda/"
-        },
-        {
           "datum": "2026-10-04",
           "titel": "Kerkdienst",
           "plaats": "172 boulevard Vincent Auriol 75013 Paris",
@@ -545,14 +521,6 @@
       "events": [
         {
           "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-09-17",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr"
-        },
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-09-24",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
@@ -602,6 +570,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-11-05",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-11-12",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",
@@ -702,10 +678,18 @@
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         },
         {
-          "datum": "2026-10-11",
-          "titel": "Appelpluk uitje",
+          "datum": "2026-10-07",
+          "titel": "Leesclub",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2026-10-11",
+          "titel": "Appelpluk uitje",
+          "plaats": "Boomgaard van Candie, Verger de Toulouse, Rond-point du Général Pottier, 31100 Toulouse",
+          "tijd": "13:00",
           "type": "sociaal",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         },
@@ -731,6 +715,14 @@
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-01-04",
+          "titel": "Wandeling",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         }
       ],

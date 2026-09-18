@@ -1,35 +1,35 @@
 {
-  "generated_at": "2026-09-16T07:09:56.942Z",
+  "generated_at": "2026-09-18T07:08:30.635Z",
   "ok": false,
   "status": "degraded",
-  "laatst_bijgewerkt": "2026-09-16",
-  "volgende_update": "2026-09-18",
-  "totaal_events": 59,
+  "laatst_bijgewerkt": "2026-09-18",
+  "volgende_update": "2026-09-21",
+  "totaal_events": 58,
   "bronnen_totaal": 10,
   "bronnen_ok": 9,
   "bronnen_down": 1,
   "bronnen_verdacht": 0,
   "kapotte_koppelingen": [
     {
-      "id": "lotgenoten",
-      "naam": "LOTgenoten",
+      "id": "latulipe",
+      "naam": "La Tulipe",
       "type": "web-scraping",
-      "url": "https://www.lotgenoten.fr/agenda/",
-      "fout": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: fetch failed",
+      "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/10/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/11/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/12/15/-.html",
+      "fout": "Geen bruikbare HTML opgehaald van 4 pagina('s) — laatste fout: HTTP 404 bij https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/12/15/-.html",
       "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: fetch failed"
+        "categorie": "verplaatst",
+        "oorzaak": "Pagina of feed bestaat niet meer (HTTP 404/410) — de vereniging heeft haar site-inrichting gewijzigd.",
+        "advies": "GEEN scriptbug. Zoek de nieuwe agenda-URL op de site van de vereniging en pas de bronconfiguratie aan.",
+        "technisch": "Geen bruikbare HTML opgehaald van 4 pagina('s) — laatste fout: HTTP 404 bij https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/12/15/-.html"
       },
-      "laatste_succes": "2026-09-14"
+      "laatste_succes": "2026-09-16"
     }
   ],
   "observaties": [],
   "nieuws": {
-    "status": "degraded",
-    "items": 31,
-    "bronnen_down": 1
+    "status": "ok",
+    "items": 32,
+    "bronnen_down": 0
   },
   "bronnen": [
     {
@@ -37,9 +37,9 @@
       "naam": "NVLR",
       "type": "ical",
       "status": "ok",
-      "events": 12,
+      "events": 11,
       "stale": false,
-      "laatste_succes": "2026-09-16",
+      "laatste_succes": "2026-09-18",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -51,7 +51,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-09-16",
+      "laatste_succes": "2026-09-18",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -61,9 +61,9 @@
       "naam": "ANM",
       "type": "ical",
       "status": "ok",
-      "events": 16,
+      "events": 15,
       "stale": false,
-      "laatste_succes": "2026-09-16",
+      "laatste_succes": "2026-09-18",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -75,7 +75,7 @@
       "status": "ok",
       "events": 4,
       "stale": false,
-      "laatste_succes": "2026-09-16",
+      "laatste_succes": "2026-09-18",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -84,13 +84,18 @@
       "id": "latulipe",
       "naam": "La Tulipe",
       "type": "web-scraping",
-      "status": "ok",
+      "status": "down",
       "events": 0,
       "stale": false,
       "laatste_succes": "2026-09-16",
       "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/10/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/11/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/12/15/-.html",
-      "fout": null,
-      "diagnose": null
+      "fout": "Geen bruikbare HTML opgehaald van 4 pagina('s) — laatste fout: HTTP 404 bij https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/12/15/-.html",
+      "diagnose": {
+        "categorie": "verplaatst",
+        "oorzaak": "Pagina of feed bestaat niet meer (HTTP 404/410) — de vereniging heeft haar site-inrichting gewijzigd.",
+        "advies": "GEEN scriptbug. Zoek de nieuwe agenda-URL op de site van de vereniging en pas de bronconfiguratie aan.",
+        "technisch": "Geen bruikbare HTML opgehaald van 4 pagina('s) — laatste fout: HTTP 404 bij https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/12/15/-.html"
+      }
     },
     {
       "id": "atelier-neerlandais",
@@ -99,7 +104,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-09-16",
+      "laatste_succes": "2026-09-18",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -109,9 +114,9 @@
       "naam": "ERN Paris",
       "type": "web-scraping",
       "status": "ok",
-      "events": 5,
+      "events": 4,
       "stale": false,
-      "laatste_succes": "2026-09-16",
+      "laatste_succes": "2026-09-18",
       "url": "https://ernparis.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -120,27 +125,22 @@
       "id": "lotgenoten",
       "naam": "LOTgenoten",
       "type": "web-scraping",
-      "status": "down",
+      "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-09-14",
+      "laatste_succes": "2026-09-18",
       "url": "https://www.lotgenoten.fr/agenda/",
-      "fout": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: fetch failed",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "Geen bruikbare HTML opgehaald van 1 pagina('s) — laatste fout: fetch failed"
-      }
+      "fout": null,
+      "diagnose": null
     },
     {
       "id": "neerlandia-toulouse",
       "naam": "Neerlandia Toulouse",
       "type": "web-scraping",
       "status": "ok",
-      "events": 6,
+      "events": 8,
       "stale": false,
-      "laatste_succes": "2026-09-16",
+      "laatste_succes": "2026-09-18",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -152,7 +152,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-09-16",
+      "laatste_succes": "2026-09-18",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null
