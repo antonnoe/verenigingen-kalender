@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-18T07:08:30.632Z",
-  "totaal": 32,
+  "generated_at": "2026-09-21T07:19:09.325Z",
+  "totaal": 31,
   "bronnen": [
     {
       "id": "nlvp",
@@ -87,7 +87,7 @@
       "id": "bourgondische-zaken",
       "naam": "Bourgondische Zaken",
       "status": "ok",
-      "items": 3,
+      "items": 2,
       "spam_geweerd": 0,
       "feed": "https://bourgondischezaken.com/feed/",
       "diagnose": null
@@ -139,6 +139,22 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-20",
+      "titel": "“Een stormloop” steeds meer automobilisten kiezen voor een flexfuel-kastje",
+      "link": "https://www.lotgenoten.fr/een-stormloop-steeds-meer-automobilisten-kiezen-voor-een-flexfuel-kastje/",
+      "excerpt": "Door de stijgende brandstofprijzen zoeken steeds meer automobilisten naar manieren om goedkoper te kunnen tanken. Een klein kastje dat benzineauto’s geschikt maakt voor superethanol E85 is momenteel bijzonder populair. De installatie kost tussen de 900 en 1.200 euro en is…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-19",
+      "titel": "Transavia gaat nu echt stoppen met Rotterdam/Bergerac….",
+      "link": "https://www.lotgenoten.fr/transavia-gaat-nu-echt-stoppen-met-rotterdam-bergerac/",
+      "excerpt": "Het bericht werd mij gebracht in de mailbox door één van de leden en in eerste instantie was ik sceptisch, die geruchten gaan al jaren, in 2016 was er zelfs een petitie. Ik heb dus contact opgenomen met Transavia en die hebben helaas bevestigd dat het echt zo is. Vanaf 27…"
+    },
     {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
@@ -226,22 +242,6 @@
       "titel": "Muziekfestival in Bournel 11 oktober",
       "link": "https://www.lotgenoten.fr/muziekfestival-in-bournel-11-oktober/",
       "excerpt": "Dit jaar is het in combinatie met een vide grenier, oldtimers, lunch en muziek. Als het weer meezit dat moet het een feest worden."
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-08",
-      "titel": "Van Utrecht-centrum naar een wijnchâteau in de Lot",
-      "link": "https://www.lotgenoten.fr/van-utrecht-centrum-naar-een-wijnchateau-in-de-lot/",
-      "excerpt": "Wij zijn Jurjen en Franca en sinds afgelopen juli de nieuwe eigenaren van Château Cantelauze Duravel, een biologisch wijndomein in de Cahors. Dat we eigenaar zouden worden van een wijnchâteau w as nooit het plan . .. In 2023 namen we allebei een sabbatical en reisden we zes…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-08",
-      "titel": "Nederlandse boekenmarkt, 1 november van 11.00 tot 16.00 uur",
-      "link": "https://www.lotgenoten.fr/nederlandse-boekenmarkt-1-november-van-11-00-tot-16-00-uur/",
-      "excerpt": "Na het succes van dit voorjaar, organiseren wij voor de tweede keer dit jaar de Nederlandse boekenmarkt. Kom gezellig snuffelen tussen tweedehands boeken (€ 1,- per stuk), drink een kopje thee/koffie of een glaasje wijn, eet een kopje soep en ontmoet nieuwe mensen. De…"
     },
     {
       "bron_id": "nlvp",
@@ -386,14 +386,6 @@
       "titel": "Rondleiding Cité des Présents",
       "link": "https://bourgondischezaken.com/rondleiding-cite-des-presents/",
       "excerpt": "Door René Meeuws Op 19 juli organiseerde Bourgondische Zaken een rondleiding in het in mei heropende Cité des Présents, voorheen Musée du Septennat. Dat museum herbergt duizenden geschenken die François Mitterand gedurende zijn twee periodes van zeven jaar als president van…"
-    },
-    {
-      "bron_id": "bourgondische-zaken",
-      "bron_naam": "Bourgondische Zaken",
-      "datum": "2026-07-20",
-      "titel": "BZ-dag op 8 augustus 2026",
-      "link": "https://bourgondischezaken.com/bz-dag-op-8-augustus-2026/",
-      "excerpt": "Mis het niet: de BZ-ledendag op 8 augustus bij De Oude School in Larochemillay ! Dit jaar vindt de BZ dag plaats in de oude school van Larochemillay. Om het iedereen zo veel mogelijk naar de zin te maken, bieden we niet alleen een aantal lezingen en workshops aan. Ook nodigen…"
     }
   ]
 }

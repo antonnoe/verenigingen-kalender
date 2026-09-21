@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-09-18T07:08:30.635Z",
+  "generated_at": "2026-09-21T07:19:09.327Z",
   "ok": false,
   "status": "degraded",
-  "laatst_bijgewerkt": "2026-09-18",
-  "volgende_update": "2026-09-21",
-  "totaal_events": 58,
+  "laatst_bijgewerkt": "2026-09-21",
+  "volgende_update": "2026-09-23",
+  "totaal_events": 66,
   "bronnen_totaal": 10,
   "bronnen_ok": 9,
   "bronnen_down": 1,
@@ -28,7 +28,7 @@
   "observaties": [],
   "nieuws": {
     "status": "ok",
-    "items": 32,
+    "items": 31,
     "bronnen_down": 0
   },
   "bronnen": [
@@ -39,7 +39,7 @@
       "status": "ok",
       "events": 11,
       "stale": false,
-      "laatste_succes": "2026-09-18",
+      "laatste_succes": "2026-09-21",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -51,7 +51,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-09-18",
+      "laatste_succes": "2026-09-21",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -63,7 +63,7 @@
       "status": "ok",
       "events": 15,
       "stale": false,
-      "laatste_succes": "2026-09-18",
+      "laatste_succes": "2026-09-21",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -73,9 +73,9 @@
       "naam": "NLVP",
       "type": "wordpress-api",
       "status": "ok",
-      "events": 4,
+      "events": 3,
       "stale": false,
-      "laatste_succes": "2026-09-18",
+      "laatste_succes": "2026-09-21",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -104,7 +104,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-09-18",
+      "laatste_succes": "2026-09-21",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -116,7 +116,7 @@
       "status": "ok",
       "events": 4,
       "stale": false,
-      "laatste_succes": "2026-09-18",
+      "laatste_succes": "2026-09-21",
       "url": "https://ernparis.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -128,7 +128,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-09-18",
+      "laatste_succes": "2026-09-21",
       "url": "https://www.lotgenoten.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -138,9 +138,9 @@
       "naam": "Neerlandia Toulouse",
       "type": "web-scraping",
       "status": "ok",
-      "events": 8,
+      "events": 17,
       "stale": false,
-      "laatste_succes": "2026-09-18",
+      "laatste_succes": "2026-09-21",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -152,7 +152,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-09-18",
+      "laatste_succes": "2026-09-21",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null
