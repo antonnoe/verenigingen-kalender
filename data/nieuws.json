@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-21T07:19:09.325Z",
-  "totaal": 31,
+  "generated_at": "2026-09-23T07:09:58.947Z",
+  "totaal": 32,
   "bronnen": [
     {
       "id": "nlvp",
@@ -14,11 +14,16 @@
     {
       "id": "latulipe",
       "naam": "La Tulipe",
-      "status": "ok",
+      "status": "down",
       "items": 1,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://www.latulipe.net/?format=feed&type=rss",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "formaat",
+        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
+        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
+        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
+      }
     },
     {
       "id": "atelier-neerlandais",
@@ -87,7 +92,7 @@
       "id": "bourgondische-zaken",
       "naam": "Bourgondische Zaken",
       "status": "ok",
-      "items": 2,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://bourgondischezaken.com/feed/",
       "diagnose": null
@@ -113,11 +118,16 @@
     {
       "id": "cmunf",
       "naam": "CMUnf",
-      "status": "ok",
+      "status": "down",
       "items": 1,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://cmunf.fr/nieuws?format=feed&type=rss",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "formaat",
+        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
+        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
+        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
+      }
     },
     {
       "id": "fanf",
@@ -146,6 +156,14 @@
       "titel": "“Een stormloop” steeds meer automobilisten kiezen voor een flexfuel-kastje",
       "link": "https://www.lotgenoten.fr/een-stormloop-steeds-meer-automobilisten-kiezen-voor-een-flexfuel-kastje/",
       "excerpt": "Door de stijgende brandstofprijzen zoeken steeds meer automobilisten naar manieren om goedkoper te kunnen tanken. Een klein kastje dat benzineauto’s geschikt maakt voor superethanol E85 is momenteel bijzonder populair. De installatie kost tussen de 900 en 1.200 euro en is…"
+    },
+    {
+      "bron_id": "bourgondische-zaken",
+      "bron_naam": "Bourgondische Zaken",
+      "datum": "2026-09-20",
+      "titel": "Ledenexcursie Opus Gothique",
+      "link": "https://bourgondischezaken.com/ledenexcursie-opus-gothique/",
+      "excerpt": "Ga je mee naar Opus Gothique? Laat je betoveren door de gotische droom van Donald Russell en ontdek de bijzondere wereld van Opus Gothique. Ervaar deze inspirerende plek tijdens een exclusieve rondleiding voor BZ-leden, gevolgd door een gezellige borrel. Zaterdag 17 oktober…"
     },
     {
       "bron_id": "lotgenoten",
