@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-23T07:09:58.947Z",
-  "totaal": 32,
+  "generated_at": "2026-09-25T07:10:58.732Z",
+  "totaal": 31,
   "bronnen": [
     {
       "id": "nlvp",
@@ -14,16 +14,11 @@
     {
       "id": "latulipe",
       "naam": "La Tulipe",
-      "status": "down",
+      "status": "ok",
       "items": 1,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://www.latulipe.net/?format=feed&type=rss",
-      "diagnose": {
-        "categorie": "formaat",
-        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
-        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
-        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
-      }
+      "diagnose": null
     },
     {
       "id": "atelier-neerlandais",
@@ -92,7 +87,7 @@
       "id": "bourgondische-zaken",
       "naam": "Bourgondische Zaken",
       "status": "ok",
-      "items": 3,
+      "items": 2,
       "spam_geweerd": 0,
       "feed": "https://bourgondischezaken.com/feed/",
       "diagnose": null
@@ -118,16 +113,11 @@
     {
       "id": "cmunf",
       "naam": "CMUnf",
-      "status": "down",
+      "status": "ok",
       "items": 1,
-      "stale": true,
+      "spam_geweerd": 0,
       "feed": "https://cmunf.fr/nieuws?format=feed&type=rss",
-      "diagnose": {
-        "categorie": "formaat",
-        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
-        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
-        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
-      }
+      "diagnose": null
     },
     {
       "id": "fanf",
@@ -149,6 +139,22 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-24",
+      "titel": "Nieuw tandartscentrum in de Vallée du Lot moet tekort aan zorg aanpakken",
+      "link": "https://www.lotgenoten.fr/nieuw-tandartscentrum-in-de-vallee-du-lot-moet-tekort-aan-zorg-aanpakken/",
+      "excerpt": "In Parnac, in de Lot, komt een nieuw tandartscentrum dat moet helpen het tekort aan tandheelkundige zorg in de Vallée du Lot en du Vignoble terug te dringen. Het initiatief komt van twee jonge tandartsen en wordt financieel ondersteund door de Communauté de communes de la…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-23",
+      "titel": "Frans wijnchateau in Duravel met Nederlandse eigenaren, www.cantelauzeduravel.com",
+      "link": "https://www.cantelauzeduravel.com/#new_tab",
+      "excerpt": ""
+    },
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
@@ -244,22 +250,6 @@
       "titel": "18 oktober – Speurtocht in de Tuilerieën",
       "link": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/",
       "excerpt": "Op zondag 18 oktober organiseren we een speurtocht in de Jardin des Tuileries. Het wordt niet alleen een gezellige wandeling in dit prachtige historische park midden in Parijs. Al “speurend” ontdekt U bijzondere monumenten, sculpturen en architectonische elementen. U hebt…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-08",
-      "titel": "Even voorstellen, over verduurzamen van gebouwen!!",
-      "link": "https://www.lotgenoten.fr/even-voorstellen-over-verduurzamen-van-gebouwen/",
-      "excerpt": "Sinds dit jaar zijn wij, mijn vrouw Anouk, onze drie kinderen Beau (20), Luca (17) en Liv (14) en ik, Lieven Andringa, de trotse eigenaar van een vakantiewoning in Luzech. In mijn werk heb ik jarenlang advies gegeven over het verduurzamen van gebouwen en gebieden. Ook heb ik…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-08",
-      "titel": "Muziekfestival in Bournel 11 oktober",
-      "link": "https://www.lotgenoten.fr/muziekfestival-in-bournel-11-oktober/",
-      "excerpt": "Dit jaar is het in combinatie met een vide grenier, oldtimers, lunch en muziek. Als het weer meezit dat moet het een feest worden."
     },
     {
       "bron_id": "nlvp",
@@ -396,14 +386,6 @@
       "titel": "Paris Design Week 2026: Design Museum Den Bosch x Atelier Néerlandais, 10 – 18 september",
       "link": "https://atelierneerlandais.com/paris-design-week-2026-design-museum-den-bosch-x-atelier-neerlandais/",
       "excerpt": "Op uitnodiging van de Nederlandse ambassade in Frankrijk presenteert Design Museum Den Bosch van 10 t/m 18 september een selectie uit de Posthuman-collectie in het Atelier Néerlandais tijdens Paris Design Week. Met deze presentatie verwelkomt het Atelier Néerlandais een van…"
-    },
-    {
-      "bron_id": "bourgondische-zaken",
-      "bron_naam": "Bourgondische Zaken",
-      "datum": "2026-07-26",
-      "titel": "Rondleiding Cité des Présents",
-      "link": "https://bourgondischezaken.com/rondleiding-cite-des-presents/",
-      "excerpt": "Door René Meeuws Op 19 juli organiseerde Bourgondische Zaken een rondleiding in het in mei heropende Cité des Présents, voorheen Musée du Septennat. Dat museum herbergt duizenden geschenken die François Mitterand gedurende zijn twee periodes van zeven jaar als president van…"
     }
   ]
 }

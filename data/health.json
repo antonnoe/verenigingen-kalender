@@ -1,20 +1,35 @@
 {
-  "generated_at": "2026-09-23T07:09:58.951Z",
-  "ok": true,
-  "status": "ok",
-  "laatst_bijgewerkt": "2026-09-23",
-  "volgende_update": "2026-09-25",
-  "totaal_events": 65,
+  "generated_at": "2026-09-25T07:10:58.734Z",
+  "ok": false,
+  "status": "degraded",
+  "laatst_bijgewerkt": "2026-09-25",
+  "volgende_update": "2026-09-28",
+  "totaal_events": 55,
   "bronnen_totaal": 10,
-  "bronnen_ok": 10,
-  "bronnen_down": 0,
+  "bronnen_ok": 9,
+  "bronnen_down": 1,
   "bronnen_verdacht": 0,
-  "kapotte_koppelingen": [],
+  "kapotte_koppelingen": [
+    {
+      "id": "latulipe",
+      "naam": "La Tulipe",
+      "type": "web-scraping",
+      "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/10/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/11/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/12/15/-.html",
+      "fout": "Geen bruikbare HTML opgehaald van 4 pagina('s) — laatste fout: HTTP 404 bij https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/12/15/-.html",
+      "diagnose": {
+        "categorie": "verplaatst",
+        "oorzaak": "Pagina of feed bestaat niet meer (HTTP 404/410) — de vereniging heeft haar site-inrichting gewijzigd.",
+        "advies": "GEEN scriptbug. Zoek de nieuwe agenda-URL op de site van de vereniging en pas de bronconfiguratie aan.",
+        "technisch": "Geen bruikbare HTML opgehaald van 4 pagina('s) — laatste fout: HTTP 404 bij https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/12/15/-.html"
+      },
+      "laatste_succes": "2026-09-23"
+    }
+  ],
   "observaties": [],
   "nieuws": {
-    "status": "degraded",
-    "items": 32,
-    "bronnen_down": 2
+    "status": "ok",
+    "items": 31,
+    "bronnen_down": 0
   },
   "bronnen": [
     {
@@ -22,9 +37,9 @@
       "naam": "NVLR",
       "type": "ical",
       "status": "ok",
-      "events": 11,
+      "events": 12,
       "stale": false,
-      "laatste_succes": "2026-09-23",
+      "laatste_succes": "2026-09-25",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -36,7 +51,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-09-23",
+      "laatste_succes": "2026-09-25",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -46,9 +61,9 @@
       "naam": "ANM",
       "type": "ical",
       "status": "ok",
-      "events": 14,
+      "events": 13,
       "stale": false,
-      "laatste_succes": "2026-09-23",
+      "laatste_succes": "2026-09-25",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -60,7 +75,7 @@
       "status": "ok",
       "events": 3,
       "stale": false,
-      "laatste_succes": "2026-09-23",
+      "laatste_succes": "2026-09-25",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -69,13 +84,18 @@
       "id": "latulipe",
       "naam": "La Tulipe",
       "type": "web-scraping",
-      "status": "ok",
+      "status": "down",
       "events": 0,
       "stale": false,
       "laatste_succes": "2026-09-23",
       "url": "https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/09/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/10/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/11/15/-.html, https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/12/15/-.html",
-      "fout": null,
-      "diagnose": null
+      "fout": "Geen bruikbare HTML opgehaald van 4 pagina('s) — laatste fout: HTTP 404 bij https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/12/15/-.html",
+      "diagnose": {
+        "categorie": "verplaatst",
+        "oorzaak": "Pagina of feed bestaat niet meer (HTTP 404/410) — de vereniging heeft haar site-inrichting gewijzigd.",
+        "advies": "GEEN scriptbug. Zoek de nieuwe agenda-URL op de site van de vereniging en pas de bronconfiguratie aan.",
+        "technisch": "Geen bruikbare HTML opgehaald van 4 pagina('s) — laatste fout: HTTP 404 bij https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/2026/12/15/-.html"
+      }
     },
     {
       "id": "atelier-neerlandais",
@@ -84,7 +104,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-09-23",
+      "laatste_succes": "2026-09-25",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -96,7 +116,7 @@
       "status": "ok",
       "events": 4,
       "stale": false,
-      "laatste_succes": "2026-09-23",
+      "laatste_succes": "2026-09-25",
       "url": "https://ernparis.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -108,7 +128,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-09-23",
+      "laatste_succes": "2026-09-25",
       "url": "https://www.lotgenoten.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -118,9 +138,9 @@
       "naam": "Neerlandia Toulouse",
       "type": "web-scraping",
       "status": "ok",
-      "events": 17,
+      "events": 7,
       "stale": false,
-      "laatste_succes": "2026-09-23",
+      "laatste_succes": "2026-09-25",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -132,7 +152,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-09-23",
+      "laatste_succes": "2026-09-25",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null

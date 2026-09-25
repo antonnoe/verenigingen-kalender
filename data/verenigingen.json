@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-09-23",
-    "volgende_update": "2026-09-25",
+    "laatst_bijgewerkt": "2026-09-25",
+    "volgende_update": "2026-09-28",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 8,
-    "totaal_events": 65,
-    "gefilterde_items": 5,
+    "totaal_events": 55,
+    "gefilterde_items": 3,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 2
+    "warnings": 1
   },
   "verenigingen": [
     {
@@ -79,6 +79,14 @@
           "plaats": "Saint-Guilhem-le-Désert",
           "tijd": "10:30-17:00",
           "type": "sportief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-05",
+          "titel": "Bijpraatlunch Ginestas",
+          "plaats": "1 Pl. du Marché, 11120 Ginestas",
+          "tijd": "12:00-14:00",
+          "type": "informatief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
@@ -162,14 +170,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@a-n-m.com",
       "events": [
-        {
-          "datum": "2026-09-24",
-          "titel": "44e ANM Autopuzzelrit",
-          "plaats": "Start in Callas.",
-          "tijd": "08:30-15:30",
-          "type": "sociaal",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
         {
           "datum": "2026-09-25",
           "titel": "RAF Boules",
@@ -505,14 +505,6 @@
       "events": [
         {
           "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-09-24",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr"
-        },
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-10-01",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
@@ -562,6 +554,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-11-12",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-11-19",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",
@@ -696,86 +696,6 @@
         {
           "datum": "2026-12-06",
           "titel": "Sinterklaasfeest",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-01-04",
-          "titel": "Wandeling",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-01-29",
-          "titel": "Nieuwjaarsborrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-02-05",
-          "titel": "AfterNetwork borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "zakelijk",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-03-01",
-          "titel": "Wandeling",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-03-19",
-          "titel": "Leesclub",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-03-24",
-          "titel": "AfterNetWork borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "zakelijk",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-04-27",
-          "titel": "AfterNetWork borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "zakelijk",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-05-20",
-          "titel": "Koningsdag receptie",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-06-11",
-          "titel": "Leesclub",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-07-16",
-          "titel": "Zomers etentje",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sociaal",
