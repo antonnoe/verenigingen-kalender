@@ -1,10 +1,10 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-09-25",
-    "volgende_update": "2026-09-28",
+    "laatst_bijgewerkt": "2026-09-28",
+    "volgende_update": "2026-09-30",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 8,
-    "totaal_events": 55,
+    "totaal_events": 52,
     "gefilterde_items": 3,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
@@ -41,14 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-09-25",
-          "titel": "Petanque in Siran",
-          "plaats": "Rondom de kerk in Siran",
-          "tijd": "10:00-14:30",
-          "type": "sportief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-09-29",
           "titel": "Bijpraatlunch Aigne",
@@ -171,14 +163,6 @@
       "contact": "contact@a-n-m.com",
       "events": [
         {
-          "datum": "2026-09-25",
-          "titel": "RAF Boules",
-          "plaats": "Flayosc",
-          "tijd": "14:00-17:00",
-          "type": "sportief",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
-        {
           "datum": "2026-10-02",
           "titel": "Holland Apéro Provence (HAP) borrel",
           "plaats": "les Arcs-sur-Argens",
@@ -292,14 +276,6 @@
       "contact": null,
       "opmerking": "Publiceert events per maand als blogposts",
       "events": [
-        {
-          "datum": "2026-09-27",
-          "titel": "Koffieochtend",
-          "plaats": "Café-brasserie Au Père Tranquille, 16 rue Pierre Lescot – 75001 Paris",
-          "tijd": "10:30-12:00",
-          "type": "sociaal",
-          "bron": "https://nlvp.fr/27-september-koffieochtend/"
-        },
         {
           "datum": "2026-10-03",
           "titel": "Haringparty te Parijs",

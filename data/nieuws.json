@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-25T07:10:58.732Z",
-  "totaal": 31,
+  "generated_at": "2026-09-28T07:25:46.605Z",
+  "totaal": 30,
   "bronnen": [
     {
       "id": "nlvp",
@@ -24,7 +24,7 @@
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
       "status": "ok",
-      "items": 6,
+      "items": 5,
       "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
       "diagnose": null
@@ -142,6 +142,30 @@
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
+      "datum": "2026-09-27",
+      "titel": "B&B-eigenaren gezocht voor een nieuw seizoen van het succesvolle programma: ‘B&B Vol Liefde’",
+      "link": "https://www.lotgenoten.fr/bb-eigenaren-gezocht-voor-een-nieuw-seizoen-van-het-succesvolle-programma-bb-vol-liefde/",
+      "excerpt": "Ben jij of ken jij iemand die recent of wellicht al lang geleden een groot avontuur is aangegaan in het buitenland (zowel binnen als buiten Europa)? Iemand die een B&B, hotel, guesthouse, camping, agriturismo of bijvoorbeeld een chambre d’hotes runt? En waar zijn of haar…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-27",
+      "titel": "Te koop, prachtig domein in de Lot, in de Bouriane, Pontcirq €818.000",
+      "link": "https://www.lotgenoten.fr/te-koop-prachtig-domein-in-de-lot-in-de-bouriane-pontcirq-e818-000/",
+      "excerpt": "Ons prachtige domein in de Lot staat te koop. Het is gelegen in de Bourianne, in het mooie dorpje Pontcirq, midden in de rustige natuur. Het gaat om een ‘maison en pierre’ met een mooie duiventoren (Pigeonnier) en een vrijstaande gîte. De bestemming kan zijn een woonhuis met…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-25",
+      "titel": "Wat verandert er op 1 oktober 2026?",
+      "link": "https://www.lotgenoten.fr/wat-verandert-er-op-1-oktober-2026/",
+      "excerpt": "Door: goedinfrankrijk.fr In Frankrijk treden op 1 oktober 2026 verschillende nieuwe maatregelen in werking op het gebied van gezondheid, de zorgverzekering en financiële ondersteuning. Om menstruatiearmoede te bestrijden, worden vanaf deze datum bepaalde herbruikbare…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
       "datum": "2026-09-24",
       "titel": "Nieuw tandartscentrum in de Vallée du Lot moet tekort aan zorg aanpakken",
       "link": "https://www.lotgenoten.fr/nieuw-tandartscentrum-in-de-vallee-du-lot-moet-tekort-aan-zorg-aanpakken/",
@@ -172,28 +196,12 @@
       "excerpt": "Ga je mee naar Opus Gothique? Laat je betoveren door de gotische droom van Donald Russell en ontdek de bijzondere wereld van Opus Gothique. Ervaar deze inspirerende plek tijdens een exclusieve rondleiding voor BZ-leden, gevolgd door een gezellige borrel. Zaterdag 17 oktober…"
     },
     {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-19",
-      "titel": "Transavia gaat nu echt stoppen met Rotterdam/Bergerac….",
-      "link": "https://www.lotgenoten.fr/transavia-gaat-nu-echt-stoppen-met-rotterdam-bergerac/",
-      "excerpt": "Het bericht werd mij gebracht in de mailbox door één van de leden en in eerste instantie was ik sceptisch, die geruchten gaan al jaren, in 2016 was er zelfs een petitie. Ik heb dus contact opgenomen met Transavia en die hebben helaas bevestigd dat het echt zo is. Vanaf 27…"
-    },
-    {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
       "datum": "2026-09-16",
       "titel": "Uitzicht op woensdag 16 september",
       "link": "https://ernparis.fr/uitzicht-op-woensdag-16-september/",
       "excerpt": "Ruth van der Waall-Schaeffer Naar het noorden toezingen"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-16",
-      "titel": "Nederlandse auto importeren",
-      "link": "https://www.lotgenoten.fr/nederlandse-auto-importeren/",
-      "excerpt": "Wie in die jaren met zijn DAF naar Frankrijk reed, plakte een ovaal NL-plaatje op de achterklep, stak de groene kaart in het dashboardkastje en was klaar. Wie er in 2026 mee naar Frankrijk verhuist, heeft één maand, een France Titres-account, een quitus fiscal, een certificat…"
     },
     {
       "bron_id": "ern-paris",
@@ -234,14 +242,6 @@
       "titel": "Johan de Witt Stichting: Geruchten en Reputatie in de Diplomatie, 27 november",
       "link": "https://atelierneerlandais.com/johan-de-witt-stichting-nieuwe-perspectieven-op-de-zeventiende-eeuw-27-november/",
       "excerpt": "Ter gelegenheid van het tienjarig bestaan ​​van de Johan de Witt Stichting (Huygens Instituut Amsterdam), komen jonge wetenschappers uit Nederland en Frankrijk samen in Parijs om actueel onderzoek te presenteren over politiek en diplomatie, correspondentie, geruchten en…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-09",
-      "titel": "Eén enkele kaart kan u een boete van €135 besparen, in de Lot en elders…",
-      "link": "https://www.lotgenoten.fr/een-enkele-kaart-kan-u-een-boete-van-e135-besparen-in-de-lot-en-elders/",
-      "excerpt": "In de Lot, net als overal in Frankrijk, maakt alleen de Carte Mobilité Inclusion met de vermelding « Stationnement » het mogelijk om de parkeerplaatsen voor personen met beperkte mobiliteit (PMR*) te gebruiken. Een herinnering aan de regels om een boete te voorkomen. De…"
     },
     {
       "bron_id": "nlvp",
@@ -378,14 +378,6 @@
       "titel": "Rêves de Japon",
       "link": "https://www.nvlr.eu/nieuws/reves-de-japon",
       "excerpt": "Deze fantastische expositie (dromen van Japan) is nog te zien tot 30 september in Narbonne. Gedeeltelijk gratis en gedeeltelijk betaald. De eerste zondag van de maand sowieso overal gratis toegang."
-    },
-    {
-      "bron_id": "atelier-neerlandais",
-      "bron_naam": "Atelier Néerlandais",
-      "datum": "2026-07-28",
-      "titel": "Paris Design Week 2026: Design Museum Den Bosch x Atelier Néerlandais, 10 – 18 september",
-      "link": "https://atelierneerlandais.com/paris-design-week-2026-design-museum-den-bosch-x-atelier-neerlandais/",
-      "excerpt": "Op uitnodiging van de Nederlandse ambassade in Frankrijk presenteert Design Museum Den Bosch van 10 t/m 18 september een selectie uit de Posthuman-collectie in het Atelier Néerlandais tijdens Paris Design Week. Met deze presentatie verwelkomt het Atelier Néerlandais een van…"
     }
   ]
 }
