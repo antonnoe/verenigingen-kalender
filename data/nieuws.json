@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-09-28T07:25:46.605Z",
+  "generated_at": "2026-09-30T07:14:59.459Z",
   "totaal": 30,
   "bronnen": [
     {
@@ -140,6 +140,22 @@
   ],
   "items": [
     {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-09-30",
+      "titel": "Uitzicht op woensdag 30 september",
+      "link": "https://ernparis.fr/uitzicht-op-woensdag-30-september/",
+      "excerpt": "Ruth van der Waall-Schaeffer Heilige momenten"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-29",
+      "titel": "Behoud de vliegroute Rotterdam – Bergerac!",
+      "link": "https://www.lotgenoten.fr/behoud-de-vliegroute-rotterdam-bergerac/",
+      "excerpt": "Transavia stopt vanaf het voorjaar van 2027 definitief met de vliegroute tussen Rotterdam (RTM) en Bergerac (EGC), wat een zware slag is voor reizigers en de regio Dordogne, Lot et Garonne en de Lot. In 2025 was deze lijn goed voor 41.539 passagiers (ruim 17% van het totaal…"
+    },
+    {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
       "datum": "2026-09-27",
@@ -180,14 +196,6 @@
       "excerpt": ""
     },
     {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-20",
-      "titel": "“Een stormloop” steeds meer automobilisten kiezen voor een flexfuel-kastje",
-      "link": "https://www.lotgenoten.fr/een-stormloop-steeds-meer-automobilisten-kiezen-voor-een-flexfuel-kastje/",
-      "excerpt": "Door de stijgende brandstofprijzen zoeken steeds meer automobilisten naar manieren om goedkoper te kunnen tanken. Een klein kastje dat benzineauto’s geschikt maakt voor superethanol E85 is momenteel bijzonder populair. De installatie kost tussen de 900 en 1.200 euro en is…"
-    },
-    {
       "bron_id": "bourgondische-zaken",
       "bron_naam": "Bourgondische Zaken",
       "datum": "2026-09-20",
@@ -210,6 +218,22 @@
       "titel": "Zondag 15 november – Kerkdienst (Kerk+YouTube)",
       "link": "https://ernparis.fr/zondag-15-november-kerkdienst-kerkyoutube/",
       "excerpt": "Voorganger: ds. Frits de Lange Ouderling van dienst: nnb. Organist: Hans Lammers Collecte: Restos du cœur Dienst in de kerk en via YouTube Aanvang 9:45"
+    },
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-09-14",
+      "titel": "18 oktober – Speurtocht in de Tuilerieën",
+      "link": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/",
+      "excerpt": "Op zondag 18 oktober organiseren we een speurtocht in de Jardin des Tuileries. Het wordt niet alleen een gezellige wandeling in dit prachtige historische park midden in Parijs. Al “speurend” ontdekt U bijzondere monumenten, sculpturen en architectonische elementen. U hebt…"
+    },
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-09-14",
+      "titel": "3 oktober – Haringparty te Parijs",
+      "link": "https://nlvp.fr/3-oktober-haringparty-te-parijs-2/",
+      "excerpt": "Op zaterdag 3 oktober vanaf 19:00 uur organiseert de NLVP weer de jaarlijkse Haringparty in Brasserie “Le Louis Philippe”, 66 Quai de l’Hôtel de Ville, 75004 Paris. Traditiegetrouw vieren we dit op exact dezelfde dag als in Leiden. Daar herdenken ze op 3 oktober dat er in…"
     },
     {
       "bron_id": "nvlr",
@@ -242,22 +266,6 @@
       "titel": "Johan de Witt Stichting: Geruchten en Reputatie in de Diplomatie, 27 november",
       "link": "https://atelierneerlandais.com/johan-de-witt-stichting-nieuwe-perspectieven-op-de-zeventiende-eeuw-27-november/",
       "excerpt": "Ter gelegenheid van het tienjarig bestaan ​​van de Johan de Witt Stichting (Huygens Instituut Amsterdam), komen jonge wetenschappers uit Nederland en Frankrijk samen in Parijs om actueel onderzoek te presenteren over politiek en diplomatie, correspondentie, geruchten en…"
-    },
-    {
-      "bron_id": "nlvp",
-      "bron_naam": "NLVP",
-      "datum": "2026-09-08",
-      "titel": "18 oktober – Speurtocht in de Tuilerieën",
-      "link": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/",
-      "excerpt": "Op zondag 18 oktober organiseren we een speurtocht in de Jardin des Tuileries. Het wordt niet alleen een gezellige wandeling in dit prachtige historische park midden in Parijs. Al “speurend” ontdekt U bijzondere monumenten, sculpturen en architectonische elementen. U hebt…"
-    },
-    {
-      "bron_id": "nlvp",
-      "bron_naam": "NLVP",
-      "datum": "2026-09-06",
-      "titel": "3 oktober – Haringparty te Parijs",
-      "link": "https://nlvp.fr/3-oktober-haringparty-te-parijs-2/",
-      "excerpt": "Op zaterdag 3 oktober vanaf 19:00 uur organiseert de NLVP weer de jaarlijkse Haringparty in Brasserie “Le Louis Philippe”, 66 Quai de l’Hôtel de Ville, 75004 Paris. Traditiegetrouw vieren we dit op exact dezelfde dag als in Leiden. Daar herdenken ze op 3 oktober dat er in…"
     },
     {
       "bron_id": "nlvp",
@@ -338,14 +346,6 @@
       "titel": "Zondag 18 oktober – Kerkdienst (Kerk+YouTube)",
       "link": "https://ernparis.fr/zondag-18-oktober-kerkdienst-kerkyoutube-2/",
       "excerpt": "Voorganger: ds. Rienk Lanooy Ouderling van dienst: Dianne Valenciennes Organist: Hans Lammers Collecte: Net4Kids Dienst in de kerk en via YouTube Aanvang 9:45"
-    },
-    {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-08-24",
-      "titel": "Doorkijkje",
-      "link": "https://ernparis.fr/doorkijkje-09-26/",
-      "excerpt": "ds. Ruth van der Waall-Schaeffer Er is geen speld tussen te krijgen: Vanaf het allereerste begin zien we dat God een God van communicatie is. Voordat er mensen waren, sprak God, en door Zijn woord ontstond de schepping. Toen Hij"
     },
     {
       "bron_id": "latulipe",
