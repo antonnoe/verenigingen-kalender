@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-09-30T07:14:59.459Z",
-  "totaal": 30,
+  "generated_at": "2026-10-02T07:13:42.858Z",
+  "totaal": 29,
   "bronnen": [
     {
       "id": "nlvp",
@@ -60,7 +60,7 @@
       "id": "nvlr",
       "naam": "NVLR",
       "status": "ok",
-      "items": 5,
+      "items": 4,
       "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
@@ -370,14 +370,6 @@
       "titel": "CAK wijzigt regels nieuwe gevallen met vroegpensioen",
       "link": "https://cmunf.fr/nieuws/cak-wijzigt-regels-nieuwe-gevallen-met-vroegpensioen.html",
       "excerpt": "Het CAK heeft een artikel gepubliceerd (hier) waarin beschreven wordt dat de regels voor nieuwe gevallen met vroeg-pensioen zijn veranderd. Voor bestaande gevallen veranderd er niets. Waar het op neer komt is dat een vroegpensioen voor nieuwe gevallen niet meer tot recht op…"
-    },
-    {
-      "bron_id": "nvlr",
-      "bron_naam": "NVLR",
-      "datum": "2026-08-02",
-      "titel": "Rêves de Japon",
-      "link": "https://www.nvlr.eu/nieuws/reves-de-japon",
-      "excerpt": "Deze fantastische expositie (dromen van Japan) is nog te zien tot 30 september in Narbonne. Gedeeltelijk gratis en gedeeltelijk betaald. De eerste zondag van de maand sowieso overal gratis toegang."
     }
   ]
 }

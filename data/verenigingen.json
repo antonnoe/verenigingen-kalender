@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-09-30",
-    "volgende_update": "2026-10-02",
+    "laatst_bijgewerkt": "2026-10-02",
+    "volgende_update": "2026-10-05",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 8,
-    "totaal_events": 54,
-    "gefilterde_items": 4,
+    "totaal_events": 49,
+    "gefilterde_items": 2,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
   },
@@ -41,22 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-09-30",
-          "titel": "Wandeling: Barrage de Saint-Denis en Prise d’Alzeau",
-          "plaats": "Bassin de Saint Denis",
-          "tijd": "09:45-15:00",
-          "type": "sportief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
-        {
-          "datum": "2026-10-01",
-          "titel": "Golfdag te Lamalou les Bains",
-          "plaats": "Lamalou les Bains",
-          "tijd": "09:30-17:00",
-          "type": "sportief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-10-02",
           "titel": "Cultuurclub NVLR bezoekt St. Guilhem-le-Désert",
@@ -231,14 +215,6 @@
           "titel": "ANM Golf",
           "plaats": "La Motte",
           "tijd": "10:00-15:00",
-          "type": "sportief",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
-        {
-          "datum": "2026-10-23",
-          "titel": "RAF Boules",
-          "plaats": "Flayosc",
-          "tijd": "14:00-17:00",
           "type": "sportief",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         },
@@ -489,14 +465,6 @@
       "events": [
         {
           "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-10-01",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr"
-        },
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-10-08",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
@@ -546,6 +514,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-11-19",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-11-26",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",
@@ -630,14 +606,6 @@
       "opmerking": "Agenda-pagina bevat jaarkalender en uitgewerkte event-blokken (AfterNetWork borrels, Koningsdag, wandelingen, leesclub, paspoort pop-up).",
       "events": [
         {
-          "datum": "2026-10-01",
-          "titel": "Rentree borrel",
-          "plaats": "Le vélo Sentimental, Café dans La Maison du vélo, 12 Boulevard Bonrepos, 31000 Toulouse",
-          "tijd": "19:00",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
           "datum": "2026-10-04",
           "titel": "Wandeling",
           "plaats": "niet vermeld",
@@ -650,7 +618,7 @@
           "titel": "Leesclub",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
-          "type": "cultureel",
+          "type": "sociaal",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         },
         {
@@ -683,14 +651,6 @@
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-01-04",
-          "titel": "Wandeling",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         }
       ],
@@ -917,14 +877,6 @@
       "events": [
         {
           "titel": "Maandelijkse ontmoeting met lunch",
-          "datum": "2026-10-01",
-          "tijd": "ca. 12:00 uur",
-          "plaats": "Restaurant l'Estela, Saint-Nexans",
-          "type": "sociaal",
-          "bron": "vast ritme (automatisch gegenereerd)"
-        },
-        {
-          "titel": "Maandelijkse ontmoeting met lunch",
           "datum": "2026-11-05",
           "tijd": "ca. 12:00 uur",
           "plaats": "Restaurant l'Estela, Saint-Nexans",
@@ -959,6 +911,14 @@
           "titel": "Maandelijkse ontmoeting met lunch",
           "datum": "2027-03-04",
           "tijd": "ca. 12:00 uur",
+          "plaats": "Restaurant l'Estela, Saint-Nexans",
+          "type": "sociaal",
+          "bron": "vast ritme (automatisch gegenereerd)"
+        },
+        {
+          "titel": "Maandelijkse ontmoeting met diner",
+          "datum": "2027-04-01",
+          "tijd": "ca. 18:00 uur",
           "plaats": "Restaurant l'Estela, Saint-Nexans",
           "type": "sociaal",
           "bron": "vast ritme (automatisch gegenereerd)"
