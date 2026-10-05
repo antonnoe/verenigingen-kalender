@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-02T07:13:42.858Z",
+  "generated_at": "2026-10-05T07:28:50.060Z",
   "totaal": 29,
   "bronnen": [
     {
@@ -142,6 +142,38 @@
     {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
+      "datum": "2026-10-04",
+      "titel": "Zondag 4 oktober – Kees Posthumus",
+      "link": "https://ernparis.fr/zondag-4-oktober-kees-posthumus/",
+      "excerpt": ""
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-03",
+      "titel": "Afval scheiden: voor de gele (of groene) container hoef je maar één vraag te stellen",
+      "link": "https://www.lotgenoten.fr/afval-scheiden-voor-de-gele-of-groene-container-hoef-je-maar-een-vraag-te-stellen/",
+      "excerpt": "Afval scheiden is in Frankrijk inmiddels een vast onderdeel van het dagelijks leven. Toch twijfelen veel Fransen nog regelmatig over wat precies in de gele (of groene) afvalbak mag. Er is daarom een campagne gestart om de belangrijkste regels nog eens eenvoudig uit te leggen.…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-02",
+      "titel": "Post en pakketten versturen in Frankrijk en naar Nederland",
+      "link": "https://www.lotgenoten.fr/post-en-pakketten-versturen-in-frankrijk-en-naar-nederland/",
+      "excerpt": "door infofrankrijk.com | sep 27, 2026 | Tarieven gecontroleerd bij La Poste: september 2026 (geldig sinds 1 januari 2026) Een kaart naar Nederland, een brief aan de buren, een aangetekend stuk voor de préfecture of een pakket voor de kleinkinderen: post versturen in Frankrijk…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-02",
+      "titel": "Bosbrand Gironde nu geblust",
+      "link": "https://www.lotgenoten.fr/bosbrand-gironde-nu-geblust/",
+      "excerpt": "De grote brand die in juli duizenden hectares verwoestte in de Franse regio Gironde is volledig gedoofd. De vlammen waren begin augustus al onder controle, maar het vuur bleef sindsdien ondergronds smeulen en soms oplaaien. De brand brak in juli uit bij het dorp Saumos,…"
+    },
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
       "datum": "2026-09-30",
       "titel": "Uitzicht op woensdag 30 september",
       "link": "https://ernparis.fr/uitzicht-op-woensdag-30-september/",
@@ -151,9 +183,9 @@
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
       "datum": "2026-09-29",
-      "titel": "Behoud de vliegroute Rotterdam – Bergerac!",
+      "titel": "UPDATE!!! Behoud de vliegroute Rotterdam – Bergerac!",
       "link": "https://www.lotgenoten.fr/behoud-de-vliegroute-rotterdam-bergerac/",
-      "excerpt": "Transavia stopt vanaf het voorjaar van 2027 definitief met de vliegroute tussen Rotterdam (RTM) en Bergerac (EGC), wat een zware slag is voor reizigers en de regio Dordogne, Lot et Garonne en de Lot. In 2025 was deze lijn goed voor 41.539 passagiers (ruim 17% van het totaal…"
+      "excerpt": "Update: (Door: Tjitze Hoekstra) Een enorme politieke doorbraak – de hoogste baas van de Dordogne bemoeit zich ermee! We hebben fantastisch nieuws dat onze actie in één klap een enorm politiek gewicht geeft. Niemand minder dan Germinal Peiro, de president van het departement…"
     },
     {
       "bron_id": "lotgenoten",
@@ -170,30 +202,6 @@
       "titel": "Te koop, prachtig domein in de Lot, in de Bouriane, Pontcirq €818.000",
       "link": "https://www.lotgenoten.fr/te-koop-prachtig-domein-in-de-lot-in-de-bouriane-pontcirq-e818-000/",
       "excerpt": "Ons prachtige domein in de Lot staat te koop. Het is gelegen in de Bourianne, in het mooie dorpje Pontcirq, midden in de rustige natuur. Het gaat om een ‘maison en pierre’ met een mooie duiventoren (Pigeonnier) en een vrijstaande gîte. De bestemming kan zijn een woonhuis met…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-25",
-      "titel": "Wat verandert er op 1 oktober 2026?",
-      "link": "https://www.lotgenoten.fr/wat-verandert-er-op-1-oktober-2026/",
-      "excerpt": "Door: goedinfrankrijk.fr In Frankrijk treden op 1 oktober 2026 verschillende nieuwe maatregelen in werking op het gebied van gezondheid, de zorgverzekering en financiële ondersteuning. Om menstruatiearmoede te bestrijden, worden vanaf deze datum bepaalde herbruikbare…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-24",
-      "titel": "Nieuw tandartscentrum in de Vallée du Lot moet tekort aan zorg aanpakken",
-      "link": "https://www.lotgenoten.fr/nieuw-tandartscentrum-in-de-vallee-du-lot-moet-tekort-aan-zorg-aanpakken/",
-      "excerpt": "In Parnac, in de Lot, komt een nieuw tandartscentrum dat moet helpen het tekort aan tandheelkundige zorg in de Vallée du Lot en du Vignoble terug te dringen. Het initiatief komt van twee jonge tandartsen en wordt financieel ondersteund door de Communauté de communes de la…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-23",
-      "titel": "Frans wijnchateau in Duravel met Nederlandse eigenaren, www.cantelauzeduravel.com",
-      "link": "https://www.cantelauzeduravel.com/#new_tab",
-      "excerpt": ""
     },
     {
       "bron_id": "bourgondische-zaken",
@@ -338,14 +346,6 @@
       "titel": "Dubbele nationaliteit",
       "link": "https://www.nvlr.eu/nieuws/dubbele-nationaliteit",
       "excerpt": "DUBBELE NATIONALITEITOp donderdag 3 september organiseert de Stichting Nederlanders Buiten Nederland (SNBN) in Nieuwspoort in Den Haag de derde Dag van de Nederlanders buiten Nederland, van 09.30..."
-    },
-    {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-08-30",
-      "titel": "Zondag 18 oktober – Kerkdienst (Kerk+YouTube)",
-      "link": "https://ernparis.fr/zondag-18-oktober-kerkdienst-kerkyoutube-2/",
-      "excerpt": "Voorganger: ds. Rienk Lanooy Ouderling van dienst: Dianne Valenciennes Organist: Hans Lammers Collecte: Net4Kids Dienst in de kerk en via YouTube Aanvang 9:45"
     },
     {
       "bron_id": "latulipe",

@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-10-02",
-    "volgende_update": "2026-10-05",
+    "laatst_bijgewerkt": "2026-10-05",
+    "volgende_update": "2026-10-07",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 8,
-    "totaal_events": 49,
-    "gefilterde_items": 2,
+    "bronnen_met_events": 9,
+    "totaal_events": 48,
+    "gefilterde_items": 3,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
   },
@@ -41,14 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-10-02",
-          "titel": "Cultuurclub NVLR bezoekt St. Guilhem-le-Désert",
-          "plaats": "Saint-Guilhem-le-Désert",
-          "tijd": "10:30-17:00",
-          "type": "sportief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-10-05",
           "titel": "Bijpraatlunch Ginestas",
@@ -137,7 +129,40 @@
       "status": "actief",
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@nedazur.org",
-      "events": [],
+      "events": [
+        {
+          "datum": "2026-10-07",
+          "titel": "Jeu de boules Sainte-Maxime",
+          "plaats": "Sainte-Maxime",
+          "tijd": "09:15-09:15",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-21",
+          "titel": "Golfwedstrijd Golf de Valescure",
+          "plaats": "Saint-Raphaël",
+          "tijd": "09:00-09:00",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-04",
+          "titel": "Jeu de boules Sainte-Maxime",
+          "plaats": "Sainte-Maxime",
+          "tijd": "09:15-09:15",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-28",
+          "titel": "Cleveringabijeenkomst 2026",
+          "plaats": "Mougins",
+          "tijd": "11:00-15:00",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        }
+      ],
       "rubriek": "regionaal"
     },
     {
@@ -154,14 +179,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@a-n-m.com",
       "events": [
-        {
-          "datum": "2026-10-02",
-          "titel": "Holland Apéro Provence (HAP) borrel",
-          "plaats": "les Arcs-sur-Argens",
-          "tijd": "17:00-19:00",
-          "type": "sociaal",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
         {
           "datum": "2026-10-05",
           "titel": "ANM Golf (clinic)",
@@ -261,19 +278,11 @@
       "opmerking": "Publiceert events per maand als blogposts",
       "events": [
         {
-          "datum": "2026-10-03",
-          "titel": "Haringparty te Parijs",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://nlvp.fr/3-oktober-haringparty-te-parijs-2/"
-        },
-        {
           "datum": "2026-10-18",
           "titel": "Speurtocht in de Tuilerieën",
           "plaats": "Jardin des Tuileries, Parijs",
           "tijd": "11:00",
-          "type": "sociaal",
+          "type": "cultureel",
           "bron": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/"
         }
       ],
@@ -372,14 +381,6 @@
       "contact": "ern.paris@gmail.com",
       "opmerking": "Nederlandse Protestantse Kerk, 172 boulevard Vincent Auriol, 75013 Paris. Diensten ook via YouTube.",
       "events": [
-        {
-          "datum": "2026-10-04",
-          "titel": "Kerkdienst",
-          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
-          "tijd": "09:45",
-          "type": "kerkdienst",
-          "bron": "https://ernparis.fr/agenda/"
-        },
         {
           "datum": "2026-10-18",
           "titel": "Kerkdienst",
@@ -606,26 +607,10 @@
       "opmerking": "Agenda-pagina bevat jaarkalender en uitgewerkte event-blokken (AfterNetWork borrels, Koningsdag, wandelingen, leesclub, paspoort pop-up).",
       "events": [
         {
-          "datum": "2026-10-04",
-          "titel": "Wandeling",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
           "datum": "2026-10-07",
           "titel": "Leesclub",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2026-10-11",
-          "titel": "Appelpluk uitje",
-          "plaats": "Boomgaard van Candie, Verger de Toulouse, Rond-point du Général Pottier, 31100 Toulouse",
-          "tijd": "13:00",
           "type": "sociaal",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         },
@@ -651,6 +636,14 @@
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-01-04",
+          "titel": "Wandeling",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         }
       ],
