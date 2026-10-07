@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-10-05",
-    "volgende_update": "2026-10-07",
+    "laatst_bijgewerkt": "2026-10-07",
+    "volgende_update": "2026-10-09",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 9,
-    "totaal_events": 48,
-    "gefilterde_items": 3,
+    "totaal_events": 54,
+    "gefilterde_items": 0,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 1
+    "warnings": 3
   },
   "verenigingen": [
     {
@@ -42,14 +42,6 @@
       "contact": "secretaris@nvlr.eu",
       "events": [
         {
-          "datum": "2026-10-05",
-          "titel": "Bijpraatlunch Ginestas",
-          "plaats": "1 Pl. du Marché, 11120 Ginestas",
-          "tijd": "12:00-14:00",
-          "type": "informatief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
-        {
           "datum": "2026-10-07",
           "titel": "Bijpraatlunch Brugairolles",
           "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
@@ -74,10 +66,26 @@
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
+          "datum": "2026-10-25",
+          "titel": "Mood/comfortfood en Mindfulness",
+          "plaats": "36 Av. de la Gare Nissan lez Enserune",
+          "tijd": "14:00-16:00",
+          "type": "informatief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
           "datum": "2026-10-27",
           "titel": "Bijpraatlunch Aigne",
           "plaats": "Restaurant Lo Cagarol, Aigne.",
           "tijd": "12:00-15:00",
+          "type": "sportief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-28",
+          "titel": "Petanque in Tourbes",
+          "plaats": "Tourb’Art Café, Pl. du Quai, 34120 Tourbes",
+          "tijd": "10:00-14:30",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -99,10 +107,26 @@
         },
         {
           "datum": "2026-11-05",
-          "titel": "Mindfulness…een manier om stress te beheersen",
+          "titel": "Mindfulness… een manier om stress te beheersen",
           "plaats": "42 Avenue du Languedoc 11700 Azille",
           "tijd": "14:00-15:30",
           "type": "sportief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-11",
+          "titel": "Bijpraatlunch regio Pézenas",
+          "plaats": "Le Grand Café, 1, Av. de Cassan, 34320 Roujan.",
+          "tijd": "11:30-15:00",
+          "type": "informatief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-15",
+          "titel": "THEATERVOORSTELLING &#34;Blue Note in the Theatre&#34;",
+          "plaats": "1, Rue Traversière 11200 Escales",
+          "tijd": "15:00-19:00",
+          "type": "cultureel",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
@@ -111,6 +135,22 @@
           "plaats": "Bassin de Saint Denis",
           "tijd": "09:45-15:00",
           "type": "sportief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-29",
+          "titel": "‘Niet vallen’ kun je trainen",
+          "plaats": "36 Av. de la Gare Nissan lez Enserune",
+          "tijd": "14:00-16:00",
+          "type": "sportief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2027-02-14",
+          "titel": "WINTER-BBQ NVLR – 14 februari",
+          "plaats": "134 Chemin du Jardin Haut, Villemagne-l’Argentiere",
+          "tijd": "11:30-18:00",
+          "type": "sociaal",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         }
       ],
@@ -147,6 +187,14 @@
           "bron": "https://www.nedazur.org/_ical/public.ics"
         },
         {
+          "datum": "2026-10-31",
+          "titel": "Oranje Borrel",
+          "plaats": "Mandelieu",
+          "tijd": "17:00-19:00",
+          "type": "informatief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
           "datum": "2026-11-04",
           "titel": "Jeu de boules Sainte-Maxime",
           "plaats": "Sainte-Maxime",
@@ -179,14 +227,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@a-n-m.com",
       "events": [
-        {
-          "datum": "2026-10-05",
-          "titel": "ANM Golf (clinic)",
-          "plaats": "Brignoles",
-          "tijd": "09:30-11:30",
-          "type": "sportief",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
         {
           "datum": "2026-10-07",
           "titel": "Koor ANM-Vocale",
@@ -611,6 +651,14 @@
           "titel": "Leesclub",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2026-10-11",
+          "titel": "Appelpluk uitje",
+          "plaats": "Boomgaard van Candie, Verger de Toulouse, Rond-point du Général Pottier, 31100 Toulouse",
+          "tijd": "13:00",
           "type": "sociaal",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         },
@@ -619,6 +667,14 @@
           "titel": "AfterNetWork borrel",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
+          "type": "zakelijk",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2026-11-17",
+          "titel": "AfterNetWork borrel",
+          "plaats": "variabele locatie in Toulouse centrum",
+          "tijd": "18:00-20:00",
           "type": "zakelijk",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         },
@@ -636,14 +692,6 @@
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-01-04",
-          "titel": "Wandeling",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         }
       ],
