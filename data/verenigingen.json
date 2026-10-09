@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-10-07",
-    "volgende_update": "2026-10-09",
+    "laatst_bijgewerkt": "2026-10-09",
+    "volgende_update": "2026-10-12",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 9,
-    "totaal_events": 54,
-    "gefilterde_items": 0,
+    "totaal_events": 51,
+    "gefilterde_items": 3,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 3
+    "warnings": 1
   },
   "verenigingen": [
     {
@@ -41,14 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-10-07",
-          "titel": "Bijpraatlunch Brugairolles",
-          "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
-          "tijd": "12:00-15:00",
-          "type": "sociaal",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-10-14",
           "titel": "Bijpraatlunch regio Pézenas",
@@ -92,7 +84,7 @@
         {
           "datum": "2026-10-28",
           "titel": "Wandeling:",
-          "plaats": "Bassin de Saint Denis",
+          "plaats": "niet vermeld",
           "tijd": "09:45-15:00",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
@@ -103,14 +95,6 @@
           "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
           "tijd": "12:00-15:00",
           "type": "sociaal",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
-        {
-          "datum": "2026-11-05",
-          "titel": "Mindfulness… een manier om stress te beheersen",
-          "plaats": "42 Avenue du Languedoc 11700 Azille",
-          "tijd": "14:00-15:30",
-          "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
@@ -132,7 +116,7 @@
         {
           "datum": "2026-11-25",
           "titel": "Wandeling:",
-          "plaats": "Bassin de Saint Denis",
+          "plaats": "niet vermeld",
           "tijd": "09:45-15:00",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
@@ -170,14 +154,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@nedazur.org",
       "events": [
-        {
-          "datum": "2026-10-07",
-          "titel": "Jeu de boules Sainte-Maxime",
-          "plaats": "Sainte-Maxime",
-          "tijd": "09:15-09:15",
-          "type": "sportief",
-          "bron": "https://www.nedazur.org/_ical/public.ics"
-        },
         {
           "datum": "2026-10-21",
           "titel": "Golfwedstrijd Golf de Valescure",
@@ -227,14 +203,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@a-n-m.com",
       "events": [
-        {
-          "datum": "2026-10-07",
-          "titel": "Koor ANM-Vocale",
-          "plaats": "Cotignac",
-          "tijd": "14:00-17:00",
-          "type": "cultureel",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
         {
           "datum": "2026-10-09",
           "titel": "RAF Boules",
@@ -297,6 +265,14 @@
           "plaats": "Callas",
           "tijd": "10:00-14:00",
           "type": "cultureel",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-26",
+          "titel": "Vrijwilligersborrel 2026",
+          "plaats": "Hôtel L’Estirado, Les Adrets de L&#39;Esterel.",
+          "tijd": "14:00-17:00",
+          "type": "sociaal",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         }
       ],
@@ -506,14 +482,6 @@
       "events": [
         {
           "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-10-08",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr"
-        },
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-10-15",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
@@ -563,6 +531,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-11-26",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-12-03",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",
@@ -647,14 +623,6 @@
       "opmerking": "Agenda-pagina bevat jaarkalender en uitgewerkte event-blokken (AfterNetWork borrels, Koningsdag, wandelingen, leesclub, paspoort pop-up).",
       "events": [
         {
-          "datum": "2026-10-07",
-          "titel": "Leesclub",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
           "datum": "2026-10-11",
           "titel": "Appelpluk uitje",
           "plaats": "Boomgaard van Candie, Verger de Toulouse, Rond-point du Général Pottier, 31100 Toulouse",
@@ -673,7 +641,7 @@
         {
           "datum": "2026-11-17",
           "titel": "AfterNetWork borrel",
-          "plaats": "variabele locatie in Toulouse centrum",
+          "plaats": "Le comptoir Saint Sernin, Toulouse centrum",
           "tijd": "18:00-20:00",
           "type": "zakelijk",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
@@ -692,6 +660,14 @@
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-01-04",
+          "titel": "Wandeling",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         }
       ],
