@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-09T07:17:27.013Z",
-  "totaal": 32,
+  "generated_at": "2026-10-12T07:32:58.178Z",
+  "totaal": 30,
   "bronnen": [
     {
       "id": "nlvp",
@@ -15,7 +15,7 @@
       "id": "latulipe",
       "naam": "La Tulipe",
       "status": "ok",
-      "items": 1,
+      "items": 0,
       "spam_geweerd": 0,
       "feed": "https://www.latulipe.net/?format=feed&type=rss",
       "diagnose": null
@@ -60,7 +60,7 @@
       "id": "nvlr",
       "naam": "NVLR",
       "status": "ok",
-      "items": 4,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
@@ -87,7 +87,7 @@
       "id": "bourgondische-zaken",
       "naam": "Bourgondische Zaken",
       "status": "ok",
-      "items": 2,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://bourgondischezaken.com/feed/",
       "diagnose": null
@@ -114,7 +114,7 @@
       "id": "cmunf",
       "naam": "CMUnf",
       "status": "ok",
-      "items": 1,
+      "items": 0,
       "spam_geweerd": 0,
       "feed": "https://cmunf.fr/nieuws?format=feed&type=rss",
       "diagnose": null
@@ -139,6 +139,14 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-09",
+      "titel": "vergelijken in Frankrijk",
+      "link": "https://www.lotgenoten.fr/vergelijken-in-frankrijk/",
+      "excerpt": "Door: infofrankrijk.com Franse vergelijkers zonder verkooppraatjes. U krijgt eerst een korte Nederlandse uitleg en gaat daarna rechtstreeks naar een onafhankelijke consumentenorganisatie of publieke dienst. Bijvoorbeeld, de mutuelle, brillenglazen, internet, gas en…"
+    },
     {
       "bron_id": "anm",
       "bron_naam": "ANM",
@@ -194,14 +202,6 @@
       "titel": "Zondag 4 oktober – Kees Posthumus",
       "link": "https://ernparis.fr/zondag-4-oktober-kees-posthumus/",
       "excerpt": ""
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-03",
-      "titel": "Afval scheiden: voor de gele (of groene) container hoef je maar één vraag te stellen",
-      "link": "https://www.lotgenoten.fr/afval-scheiden-voor-de-gele-of-groene-container-hoef-je-maar-een-vraag-te-stellen/",
-      "excerpt": "Afval scheiden is in Frankrijk inmiddels een vast onderdeel van het dagelijks leven. Toch twijfelen veel Fransen nog regelmatig over wat precies in de gele (of groene) afvalbak mag. Er is daarom een campagne gestart om de belangrijkste regels nog eens eenvoudig uit te leggen.…"
     },
     {
       "bron_id": "lotgenoten",
@@ -273,7 +273,7 @@
       "datum": "2026-09-14",
       "titel": "64e Internationale Tentoonstelling van Beeldende Kunst",
       "link": "https://www.nvlr.eu/nieuws/64e-internationale-tentoonstelling-van-beeldende-kunst",
-      "excerpt": "Om in je agenda te vermelden: 64e Salon des Arts Plastiques in het Palais des Congrès in Béziers van 3 tot 10 oktober 2026.De eregast is Jean-Luc BEAUFILS, die al meer dan 50 jaar belangrijk werk..."
+      "excerpt": "Om in je agenda te vermelden: 64e Salon des Arts Plastiques in het Palais des Congrès in Béziers van 3 tot 10 oktober 2026. De eregast is Jean-Luc BEAUFILS, die al meer dan 50 jaar belangrijk werk..."
     },
     {
       "bron_id": "bourgondische-zaken",
@@ -290,6 +290,14 @@
       "titel": "20 september – De Camino lopen",
       "link": "https://nlvp.fr/20-september-de-camino-lopen/",
       "excerpt": "Op zondag 20 september gaan we een stukje van de Camino lopen. Iedereen kent wel de Camino, de weg naar Santiago de Compostela. Maar wist u dat de noordelijke wandelroute Parijs doorkruist ? Discrete schelpjes op de grond wijzen de pelgrims en wandelaars de weg, en het lijkt…"
+    },
+    {
+      "bron_id": "bourgondische-zaken",
+      "bron_naam": "Bourgondische Zaken",
+      "datum": "2026-09-12",
+      "titel": "Terugblik op de BZ-dag 2026 in Larochemillay",
+      "link": "https://bourgondischezaken.com/bz-dag-op-8-augustus-2026/",
+      "excerpt": "Wat later dan gepland, maar niet minder enthousiast: een korte terugblik op de BZ-dag van dit jaar, met indrukken van enkele deelnemers. We waren te gast in de oude school van Larochemillay. Gids Christiaan en zijn assistente Evelyne namen ons mee op een boeiende wandeling.…"
     },
     {
       "bron_id": "atelier-neerlandais",
@@ -369,31 +377,7 @@
       "datum": "2026-08-31",
       "titel": "Dubbele nationaliteit",
       "link": "https://www.nvlr.eu/nieuws/dubbele-nationaliteit",
-      "excerpt": "DUBBELE NATIONALITEITOp donderdag 3 september organiseert de Stichting Nederlanders Buiten Nederland (SNBN) in Nieuwspoort in Den Haag de derde Dag van de Nederlanders buiten Nederland, van 09.30..."
-    },
-    {
-      "bron_id": "latulipe",
-      "bron_naam": "La Tulipe",
-      "datum": "2026-08-12",
-      "titel": "La Tulipe: een dynamisch platform",
-      "link": "https://www.latulipe.net/nl/component/content/article/la-tulipe-een-dynamisch-platform?catid=2",
-      "excerpt": "Welkom bij La Tulipe, een vereniging, of beter gezegd platform dóór en vóór Nederlanders in de Dordogne. In de leeftijd van jong tot... ja, zeg het maar. Een gemengd gezelschap van permanent in Frankrijk wonenden, tweede-huizen-bewoners, in Nederland werkenden en…"
-    },
-    {
-      "bron_id": "nvlr",
-      "bron_naam": "NVLR",
-      "datum": "2026-08-10",
-      "titel": "Festival de Caunes-Minervois vanaf 24 augustus",
-      "link": "https://www.nvlr.eu/nieuws/festival-de-caunes-minervois",
-      "excerpt": "Een culturele reis in het hart van de Minervois. 24 - 29 augustus 2026 Klik hier voor het programma en alle informatie. Een niet te missen evenement Het Festival de Caunes-Minervois is een unieke..."
-    },
-    {
-      "bron_id": "cmunf",
-      "bron_naam": "CMUnf",
-      "datum": "2026-08-10",
-      "titel": "CAK wijzigt regels nieuwe gevallen met vroegpensioen",
-      "link": "https://cmunf.fr/nieuws/cak-wijzigt-regels-nieuwe-gevallen-met-vroegpensioen.html",
-      "excerpt": "Het CAK heeft een artikel gepubliceerd (hier) waarin beschreven wordt dat de regels voor nieuwe gevallen met vroeg-pensioen zijn veranderd. Voor bestaande gevallen veranderd er niets. Waar het op neer komt is dat een vroegpensioen voor nieuwe gevallen niet meer tot recht op…"
+      "excerpt": "DUBBELE NATIONALITEIT Op donderdag 3 september organiseert de Stichting Nederlanders Buiten Nederland (SNBN) in Nieuwspoort in Den Haag de derde Dag van de Nederlanders buiten Nederland, van 09.30..."
     }
   ]
 }

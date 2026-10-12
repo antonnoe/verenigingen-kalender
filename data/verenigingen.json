@@ -1,10 +1,10 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-10-09",
-    "volgende_update": "2026-10-12",
+    "laatst_bijgewerkt": "2026-10-12",
+    "volgende_update": "2026-10-14",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 9,
-    "totaal_events": 51,
+    "totaal_events": 48,
     "gefilterde_items": 3,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
@@ -75,7 +75,7 @@
         },
         {
           "datum": "2026-10-28",
-          "titel": "Petanque in Tourbes",
+          "titel": "Pétanque in Tourbes",
           "plaats": "Tourb’Art Café, Pl. du Quai, 34120 Tourbes",
           "tijd": "10:00-14:30",
           "type": "sportief",
@@ -94,6 +94,22 @@
           "titel": "Bijpraatlunch Brugairolles",
           "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
           "tijd": "12:00-15:00",
+          "type": "sociaal",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-04",
+          "titel": "Kennismakingsbijeenkomst voor de leden van ONIZ",
+          "plaats": "niet vermeld",
+          "tijd": "10:00-14:00",
+          "type": "informatief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-10",
+          "titel": "Chopin op Mallorca",
+          "plaats": "Bram",
+          "tijd": "10:30-16:00",
           "type": "sociaal",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -203,14 +219,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@a-n-m.com",
       "events": [
-        {
-          "datum": "2026-10-09",
-          "titel": "RAF Boules",
-          "plaats": "Flayosc",
-          "tijd": "14:00-17:00",
-          "type": "sportief",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
         {
           "datum": "2026-10-14",
           "titel": "Herfstworkshop 2026",
@@ -623,34 +631,10 @@
       "opmerking": "Agenda-pagina bevat jaarkalender en uitgewerkte event-blokken (AfterNetWork borrels, Koningsdag, wandelingen, leesclub, paspoort pop-up).",
       "events": [
         {
-          "datum": "2026-10-11",
-          "titel": "Appelpluk uitje",
-          "plaats": "Boomgaard van Candie, Verger de Toulouse, Rond-point du Général Pottier, 31100 Toulouse",
-          "tijd": "13:00",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2026-10-23",
-          "titel": "AfterNetWork borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "zakelijk",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2026-11-17",
-          "titel": "AfterNetWork borrel",
-          "plaats": "Le comptoir Saint Sernin, Toulouse centrum",
-          "tijd": "18:00-20:00",
-          "type": "zakelijk",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
           "datum": "2026-11-18",
-          "titel": "ALV",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
+          "titel": "ALV, borrel, boekenruilbeurs en etentje",
+          "plaats": "Café du Commerce, place Dupuy, Toulouse",
+          "tijd": "19:00",
           "type": "bestuurlijk",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         },
@@ -660,14 +644,6 @@
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-01-04",
-          "titel": "Wandeling",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         }
       ],
