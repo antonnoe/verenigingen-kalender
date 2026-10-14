@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-12T07:32:58.178Z",
-  "totaal": 30,
+  "generated_at": "2026-10-14T07:12:05.260Z",
+  "totaal": 31,
   "bronnen": [
     {
       "id": "nlvp",
@@ -69,7 +69,7 @@
       "id": "nedazur",
       "naam": "NEDAZUR",
       "status": "ok",
-      "items": 1,
+      "items": 2,
       "spam_geweerd": 0,
       "feed": "https://www.nedazur.org/nieuws",
       "diagnose": null
@@ -139,6 +139,14 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "nedazur",
+      "bron_naam": "NEDAZUR",
+      "datum": "2026-10-13",
+      "titel": "Actie: 50% korting op het lidmaatschap 2026",
+      "link": "https://www.nedazur.org/nieuws/actie-50-korting-op-het-lidmaatschap-2026",
+      "excerpt": "Het lidmaatschap geeft u toegang tot alle activiteiten en evenementen die door de Nederlandse Club worden georganiseerd, al dan niet tegen betaling van een speciaal voor leden vastgesteld bedrag...."
+    },
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
@@ -345,7 +353,7 @@
       "datum": "2026-09-03",
       "titel": "Mondriaan Fonds: The Space between Breaths, 21-25 oktober",
       "link": "https://atelierneerlandais.com/art-basel-x-mondriaanfonds-21-25-oktober/",
-      "excerpt": "Tijdens Art Basel Paris presenteert het Mondriaan Fonds, in samenwerking met de Nederlandse ambassade in Parijs, een tentoonstelling in Atelier Néerlandais, gecureerd door Julia Geerlings. Binnenkort meer informatie op deze pagina en onze socials."
+      "excerpt": "Tijdens de week van Art Basel Paris presenteren het Mondriaan Fonds en de Nederlandse ambassade in Frankrijk The Space between Breaths . Het is een tentoonstelling van Nederlandse hedendaagse kunstenaars, samengesteld door curator Julia Geerlings. Zij toont een selectie van…"
     },
     {
       "bron_id": "nvlr",

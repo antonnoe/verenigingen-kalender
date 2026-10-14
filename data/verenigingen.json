@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-10-12",
-    "volgende_update": "2026-10-14",
+    "laatst_bijgewerkt": "2026-10-14",
+    "volgende_update": "2026-10-16",
     "bronnen_gecontroleerd": 9,
     "bronnen_met_events": 9,
-    "totaal_events": 48,
-    "gefilterde_items": 3,
+    "totaal_events": 49,
+    "gefilterde_items": 7,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
   },
@@ -83,7 +83,15 @@
         },
         {
           "datum": "2026-10-28",
-          "titel": "Wandeling:",
+          "titel": "Let op!",
+          "plaats": "niet vermeld",
+          "tijd": "09:45-15:00",
+          "type": "sportief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-10-29",
+          "titel": "Uitzicht op Bages – Houten pontons wandeling vanuit Bages",
           "plaats": "niet vermeld",
           "tijd": "09:45-15:00",
           "type": "sportief",
@@ -99,7 +107,7 @@
         },
         {
           "datum": "2026-11-04",
-          "titel": "Kennismakingsbijeenkomst voor de leden van ONIZ",
+          "titel": "ONIZ Kennismakingsbijeenkomst 4 november",
           "plaats": "niet vermeld",
           "tijd": "10:00-14:00",
           "type": "informatief",
