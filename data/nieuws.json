@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-14T07:12:05.260Z",
-  "totaal": 31,
+  "generated_at": "2026-10-16T07:10:46.459Z",
+  "totaal": 32,
   "bronnen": [
     {
       "id": "nlvp",
@@ -24,7 +24,7 @@
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
       "status": "ok",
-      "items": 5,
+      "items": 6,
       "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
       "diagnose": null
@@ -140,6 +140,38 @@
   ],
   "items": [
     {
+      "bron_id": "atelier-neerlandais",
+      "bron_naam": "Atelier Néerlandais",
+      "datum": "2026-10-15",
+      "titel": "Atelier Néerlandais netwerk-event @DDW",
+      "link": "https://atelierneerlandais.com/atelier-neerlandais-netwerk-event-ddw-2/",
+      "excerpt": "Op 17 oktober a.s. organiseert het Atelier Néerlandais een netwerk-event tijdens de Dutch Design Week in Eindhoven. Dit is een kans om andere makers, ondernemers en creatievelingen te ontmoeten en te ontdekken wat het Atelier Néerlandais voor jou kan betekenen. Kom vooral…"
+    },
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-10-14",
+      "titel": "Uitzicht op woensdag 14 oktober",
+      "link": "https://ernparis.fr/uitzicht-op-woensdag-8-juli-2/",
+      "excerpt": "Ruth van der Waall-Schaeffer Wat of wie?"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-14",
+      "titel": "Nieuw! Borrelmiddag voor de Zuiderlijke LOTgenoten, Tarn et Garonne, Moissac",
+      "link": "https://www.lotgenoten.fr/nieuw-borrelmiddag-voor-de-zuiderlijke-lotgenoten-tarn-et-garonne/",
+      "excerpt": "Deze nieuwe meeting is de ene keer in Moissac (19/11) en de keer daarop in Montauban en dan weer Moissac etc. Wij hebben er zin in! De locatie: Ced & Alex LAtelier, 6 Place Roger Delthil in Moissac Tijd: 15:00 – 18:00 (borrel en plankje tapas) Paul & Yvonne De bar in Moissac:…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-14",
+      "titel": "Te koop: Privéwoning, zwembad, gastenverblijf en panoramisch uitzicht nabij Cahors €379.000",
+      "link": "https://www.lotgenoten.fr/te-koop-privewoning-met-vier-slaapkamers-zwembad-gastenverblijf-en-panoramisch-uitzicht-nabij-cahors/",
+      "excerpt": "Huis te koop in lieu-dit Brouelles, MAXOU Lot Verscholen in het hart van een prachtige Franse vallei biedt dit huis een uniek en adembenemend uitzicht op het landschap. Hier wordt u elke dag wakker met het gefluit van de vele vogels, geniet u van de rust van de omliggende en…"
+    },
+    {
       "bron_id": "nedazur",
       "bron_naam": "NEDAZUR",
       "datum": "2026-10-13",
@@ -212,14 +244,6 @@
       "excerpt": ""
     },
     {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-02",
-      "titel": "Post en pakketten versturen in Frankrijk en naar Nederland",
-      "link": "https://www.lotgenoten.fr/post-en-pakketten-versturen-in-frankrijk-en-naar-nederland/",
-      "excerpt": "door infofrankrijk.com | sep 27, 2026 | Tarieven gecontroleerd bij La Poste: september 2026 (geldig sinds 1 januari 2026) Een kaart naar Nederland, een brief aan de buren, een aangetekend stuk voor de préfecture of een pakket voor de kleinkinderen: post versturen in Frankrijk…"
-    },
-    {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
       "datum": "2026-09-30",
@@ -228,20 +252,12 @@
       "excerpt": "Ruth van der Waall-Schaeffer Heilige momenten"
     },
     {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-29",
-      "titel": "UPDATE (en een idee 5/10/26) !!! Behoud de vliegroute Rotterdam – Bergerac!",
-      "link": "https://www.lotgenoten.fr/behoud-de-vliegroute-rotterdam-bergerac/",
-      "excerpt": "Update: (Door: Tjitze Hoekstra) Een enorme politieke doorbraak – de hoogste baas van de Dordogne bemoeit zich ermee! We hebben fantastisch nieuws dat onze actie in één klap een enorm politiek gewicht geeft. Niemand minder dan Germinal Peiro, de president van het departement…"
-    },
-    {
       "bron_id": "bourgondische-zaken",
       "bron_naam": "Bourgondische Zaken",
       "datum": "2026-09-20",
       "titel": "Ledenexcursie Opus Gothique",
       "link": "https://bourgondischezaken.com/ledenexcursie-opus-gothique/",
-      "excerpt": "Ga je mee naar Opus Gothique? Laat je betoveren door de gotische droom van Donald Russell en ontdek de bijzondere wereld van Opus Gothique. Ervaar deze inspirerende plek tijdens een exclusieve rondleiding voor BZ-leden, gevolgd door een gezellige borrel. Zaterdag 17 oktober…"
+      "excerpt": "VOL - alleen nog aanmelden voor wachtlijst Ga je mee naar Opus Gothique? Laat je betoveren door de gotische droom van Donald Russell en ontdek de bijzondere wereld van Opus Gothique. Ervaar deze inspirerende plek tijdens een exclusieve rondleiding voor BZ-leden, gevolgd door…"
     },
     {
       "bron_id": "ern-paris",
@@ -370,14 +386,6 @@
       "titel": "Parcours Bijoux, 1 – 31 oktober",
       "link": "https://atelierneerlandais.com/parcours-bijoux-1-31-octobre/",
       "excerpt": "Van 1 tot en met 31 oktober nodigt Parcours Bijoux bezoekers uit om Parijs vanuit een nieuw perspectief te verkennen en sieraden niet slechts als draagbare objecten te zien, maar als volwaardig artistiek medium. Voor deze nieuwe editie neemt Atelier Néerlandais deel als…"
-    },
-    {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-09-01",
-      "titel": "Zondag 1 november – Kerkdienst (Kerk+YouTube)",
-      "link": "https://ernparis.fr/zondag-1-november-kerkdienst-kerkyoutube/",
-      "excerpt": "Voorganger: ds. Ruth van der Waall-Schaeffer Ouderling van dienst: Rianne Courtin Organist: Johan van den Burg Collecte: Restos du cœur Dienst in de kerk en via YouTube Aanvang 9:45"
     },
     {
       "bron_id": "nvlr",

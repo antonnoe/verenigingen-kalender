@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-14T07:12:05.263Z",
+  "generated_at": "2026-10-16T07:10:46.462Z",
   "ok": false,
   "status": "degraded",
-  "laatst_bijgewerkt": "2026-10-14",
-  "volgende_update": "2026-10-16",
-  "totaal_events": 49,
+  "laatst_bijgewerkt": "2026-10-16",
+  "volgende_update": "2026-10-19",
+  "totaal_events": 62,
   "bronnen_totaal": 10,
   "bronnen_ok": 9,
   "bronnen_down": 1,
@@ -28,7 +28,7 @@
   "observaties": [],
   "nieuws": {
     "status": "ok",
-    "items": 31,
+    "items": 32,
     "bronnen_down": 0
   },
   "bronnen": [
@@ -37,9 +37,9 @@
       "naam": "NVLR",
       "type": "ical",
       "status": "ok",
-      "events": 15,
+      "events": 14,
       "stale": false,
-      "laatste_succes": "2026-10-14",
+      "laatste_succes": "2026-10-16",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -51,7 +51,7 @@
       "status": "ok",
       "events": 4,
       "stale": false,
-      "laatste_succes": "2026-10-14",
+      "laatste_succes": "2026-10-16",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -61,9 +61,9 @@
       "naam": "ANM",
       "type": "ical",
       "status": "ok",
-      "events": 8,
+      "events": 7,
       "stale": false,
-      "laatste_succes": "2026-10-14",
+      "laatste_succes": "2026-10-16",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -75,7 +75,7 @@
       "status": "ok",
       "events": 1,
       "stale": false,
-      "laatste_succes": "2026-10-14",
+      "laatste_succes": "2026-10-16",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -102,9 +102,9 @@
       "naam": "Atelier Néerlandais",
       "type": "web-scraping",
       "status": "ok",
-      "events": 2,
+      "events": 3,
       "stale": false,
-      "laatste_succes": "2026-10-14",
+      "laatste_succes": "2026-10-16",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -114,9 +114,9 @@
       "naam": "ERN Paris",
       "type": "web-scraping",
       "status": "ok",
-      "events": 3,
+      "events": 2,
       "stale": false,
-      "laatste_succes": "2026-10-14",
+      "laatste_succes": "2026-10-16",
       "url": "https://ernparis.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -128,7 +128,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-10-14",
+      "laatste_succes": "2026-10-16",
       "url": "https://www.lotgenoten.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -138,9 +138,9 @@
       "naam": "Neerlandia Toulouse",
       "type": "web-scraping",
       "status": "ok",
-      "events": 2,
+      "events": 17,
       "stale": false,
-      "laatste_succes": "2026-10-14",
+      "laatste_succes": "2026-10-16",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -152,7 +152,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-10-14",
+      "laatste_succes": "2026-10-16",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null
