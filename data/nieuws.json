@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-16T07:10:46.459Z",
-  "totaal": 32,
+  "generated_at": "2026-10-19T07:24:20.812Z",
+  "totaal": 34,
   "bronnen": [
     {
       "id": "nlvp",
       "naam": "NLVP",
       "status": "ok",
-      "items": 4,
+      "items": 6,
       "spam_geweerd": 0,
       "feed": "https://nlvp.fr/feed/",
       "diagnose": null
@@ -139,6 +139,22 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-10-17",
+      "titel": "29 november – Sinterklaasfeest",
+      "link": "https://nlvp.fr/29-november-sinterklaasfeest/",
+      "excerpt": "Goed nieuws uit Spanje !!! De Nederlandse vereniging heeft namelijk de volgende brief van Sinterklaas ontvangen : Lieve kinderen van Parijs en omgeving, Mijn Pieten hebben mij verteld dat jullie heel lief zijn geweest dit jaar. Geweldig ! Daarom heb ik besloten met een omweg…"
+    },
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-10-17",
+      "titel": "25 oktober – Koffieochtend",
+      "link": "https://nlvp.fr/25-oktober-koffieochtend/",
+      "excerpt": "Zondag 25 oktober is het weer tijd voor koffie in café-brasserie Au Père Tranquille. Hét perfecte moment om onder het genot van een lekkere kop koffie even te kletsen met andere Nederlanders. Een mooie gelegenheid om oude bekenden terug te zien, verhalen uit te wisselen of…"
+    },
     {
       "bron_id": "atelier-neerlandais",
       "bron_naam": "Atelier Néerlandais",
