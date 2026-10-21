@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-19T07:24:20.812Z",
-  "totaal": 34,
+  "generated_at": "2026-10-21T07:13:41.525Z",
+  "totaal": 35,
   "bronnen": [
     {
       "id": "nlvp",
@@ -69,7 +69,7 @@
       "id": "nedazur",
       "naam": "NEDAZUR",
       "status": "ok",
-      "items": 2,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://www.nedazur.org/nieuws",
       "diagnose": null
@@ -139,6 +139,22 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-20",
+      "titel": "Door omstandigheden te koop van mede-LOTgenoot, mooie bungalow in Condezaygues €290.000 z. makelaar",
+      "link": "https://www.lotgenoten.fr/door-omstandigheden-te-koop-van-mede-lotgenoot-mooie-bungalow-in-condezaygues-e290-000-z-makelaar/",
+      "excerpt": "Het totale grondoppervlak is 1450 m2. Het huis is een bungalow met 4 slaapkamers. Het huis is gunstig gelegen, 1,4 km van het centrum van Libos waar donderdag de grootste weekmark van de Lot en Garonne gehouden wordt. Ook is op 2 km afstand een winkelcentrum met een Brico,…"
+    },
+    {
+      "bron_id": "nedazur",
+      "bron_naam": "NEDAZUR",
+      "datum": "2026-10-19",
+      "titel": "Redactiemedewerkers gezocht",
+      "link": "https://www.nedazur.org/nieuws/redactiemedewerkers-gezocht",
+      "excerpt": "Wij zoeken enthousiaste redactiemedewerkers die willen bijdragen aan ons Holland Côte d'Azur magazine. Wil je er meer over weten? Neem dan contact op met Connie Soetens via Secretaris@Nedazur.org."
+    },
     {
       "bron_id": "nlvp",
       "bron_naam": "NLVP",
@@ -226,14 +242,6 @@
       "titel": "Emigratiecoach, van droom naar werkelijkheid",
       "link": "https://www.lotgenoten.fr/emigratiecoach-van-droom-naar-werkelijkheid/",
       "excerpt": "Emigratieweek in Frankrijk Van emigratiedroom naar een goed voorbereid plan, v oor Nederlanders en Belgen. Een emigratie naar Frankrijk is veel meer dan een huis kopen en de administratie regelen. Juist wanneer je plannen serieus worden, ontstaan vaak de vragen waar je vooraf…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-05",
-      "titel": "Van Utrecht-centrum naar een wijnchâteau in de Lot",
-      "link": "https://www.lotgenoten.fr/van-utrecht-centrum-naar-een-wijnchateau-in-de-lot-2/",
-      "excerpt": "Wij zijn Jurjen en Franca en sinds afgelopen juli de nieuwe eigenaren van Château Cantelauze Duravel, een biologisch wijndomein in de Cahors. Dat we eigenaar zouden worden van een wijnchâteau w as nooit het plan . .. In 2023 namen we allebei een sabbatical en reisden we zes…"
     },
     {
       "bron_id": "nedazur",
