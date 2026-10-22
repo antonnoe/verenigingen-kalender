@@ -169,8 +169,11 @@ const WEB_BRONNEN = {
     naam: 'ERN Paris'
   },
   'lotgenoten': {
-    urls: ['https://www.lotgenoten.fr/agenda/'],
-    naam: 'LOTgenoten'
+    // Aankomende activiteiten staan als linklijst op de startpagina; elk
+    // evenement heeft een eigen bericht. Zie fetchLotgenotenEvents.
+    urls: ['https://www.lotgenoten.fr/'],
+    naam: 'LOTgenoten',
+    handler: 'lotgenoten'
   },
   'neerlandia-toulouse': {
     urls: ['https://www.neerlandia.fr/index.php/nl/agenda'],
@@ -531,7 +534,9 @@ async function main() {
       const urls = config.urlGenerator ? config.urlGenerator() : config.urls;
       console.log(`  ${id}: ${urls.length} pagina('s)`);
       try {
-        const result = await fetchWebEvents(id, config.naam, urls);
+        const result = config.handler === 'lotgenoten'
+          ? await fetchLotgenotenEvents(id, config.naam, urls[0])
+          : await fetchWebEvents(id, config.naam, urls);
         console.log(`  \u2713 ${result.events.length} toekomstige events ge\u00ebxtraheerd`);
         if (result.gefilterd > 0) {
           console.log(`    (${result.gefilterd} items gefilterd als nieuws/extern)`);
@@ -1363,7 +1368,8 @@ ${lijst}`;
 // WEB-SCRAPING VIA CLAUDE
 // ════════════════════════════════════════════════════════════════
 
-async function fetchWebEvents(bronId, bronNaam, urls) {
+async function fetchWebEvents(bronId, bronNaam, urls, opties) {
+  opties = opties || {};
   let alleHtml = '';
   let laatstePaginaFout = null;
 
@@ -1385,13 +1391,20 @@ async function fetchWebEvents(bronId, bronNaam, urls) {
         throw kErr;
       }
 
-      const stripped = stripHtml(html);
+      let stripped = stripHtml(html);
+      if (opties.knipVanaf) stripped = stripped.replace(opties.knipVanaf, '');
       alleHtml += `\n\n--- PAGINA: ${url} ---\n${stripped}`;
 
     } catch (err) {
       laatstePaginaFout = err;
       console.log(`    Subpagina ${url}: ${err.message}`);
     }
+  }
+
+  // Brontekst die niet op de pagina zelf staat maar wel bij de bron hoort
+  // (bijv. de linktekst van de aankondiging). Telt mee voor het bronanker.
+  if (opties.voorTekst && alleHtml.trim().length >= 100) {
+    alleHtml = `\n\n--- ${opties.voorTekst.label} ---\n${opties.voorTekst.tekst}` + alleHtml;
   }
 
   if (alleHtml.trim().length < 100) {
@@ -1564,6 +1577,120 @@ ${alleHtml}`;
   });
 
   return { events: validated, gefilterd: gefilterd };
+}
+
+// ════════════════════════════════════════════════════════════════
+// LOTGENOTEN: aankomende evenementen van de startpagina
+// ════════════════════════════════════════════════════════════════
+
+const LOTGENOTEN_MAX_BERICHTEN = 6;
+
+/**
+ * Haalt uit de startpagina-HTML de berichtlinks in het blok
+ * "Aankomende 'LOT'genoten Evenementen". Alleen dat blok telt: de rest van
+ * de startpagina (huizen te koop, overgenomen artikelen) is geen agenda.
+ * Opbouw (tagDiv-thema): een knop met de kop (href="#"), direct gevolgd door
+ * één knop per evenement (span.tdm-btn-s-txt). Het blok eindigt bij de eerste
+ * link die geen zo'n evenementknop is. Geeft [{url, tekst}] terug, ontdubbeld,
+ * op paginavolgorde, of null als de kop niet gevonden is (structuur gewijzigd).
+ */
+function parseLotgenotenBlok(html, basisUrl) {
+  var reAlle = /<a\b[^>]*>[\s\S]*?<\/a>/gi;
+  var m, start = -1;
+  while ((m = reAlle.exec(html)) !== null) {
+    if (/aankomende[\s\S]{0,40}evenementen/i.test(stripHtml(m[0]).replace(/&#x27;/g, "'"))) {
+      start = m.index + m[0].length;
+      break;
+    }
+  }
+  if (start === -1) return null;
+
+  var host = new URL(basisUrl).host.replace(/^www\./, '');
+  var gezien = {};
+  var items = [];
+  var reA = /<a\b([^>]*)>([\s\S]*?)<\/a>/gi;
+  reA.lastIndex = start;
+  while ((m = reA.exec(html)) !== null) {
+    if (m[2].indexOf('tdm-btn-s-txt') === -1) break; // einde van het blok
+    var hrefM = /\bhref=["']([^"']+)["']/i.exec(m[1]);
+    if (!hrefM) continue;
+    var url;
+    try { url = new URL(decodeEntities(hrefM[1]), basisUrl); } catch (e) { continue; }
+    if (url.host.replace(/^www\./, '') !== host) continue;
+    url.hash = '';
+    if (url.pathname === '/') continue;
+    var href = url.toString();
+    if (gezien[href]) continue;
+    gezien[href] = true;
+    items.push({ url: href, tekst: cleanText(decodeEntities(stripHtml(m[2]))) });
+  }
+  return items;
+}
+
+/**
+ * LOTgenoten: startpagina één keer ophalen, per aankomend evenement het eigen
+ * bericht volgen en laten extraheren door dezelfde Claude-extractie als de
+ * andere web-bronnen (fetchWebEvents met het bericht als enige pagina, zodat
+ * event.bron de bericht-URL wordt). Onvolledige datum na ophalen: overslaan en
+ * loggen, nooit gokken. Geen extra retries buiten fetchMetRetry.
+ */
+async function fetchLotgenotenEvents(bronId, bronNaam, startUrl) {
+  var response = await fetchMetRetry(startUrl, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)',
+      'Accept': 'text/html'
+    },
+    signal: AbortSignal.timeout(30000)
+  });
+  var html = await response.text();
+
+  var items = parseLotgenotenBlok(html, startUrl);
+  if (items === null) {
+    var bErr = new Error('Blok "Aankomende evenementen" niet gevonden op de startpagina (structuur gewijzigd?)');
+    bErr.categorie = 'formaat';
+    throw bErr;
+  }
+  console.log(`    ${items.length} aankomend(e) evenement(en) in blok`);
+  if (items.length > LOTGENOTEN_MAX_BERICHTEN) {
+    console.log(`    ⚠ meer dan ${LOTGENOTEN_MAX_BERICHTEN} links in blok; alleen de eerste ${LOTGENOTEN_MAX_BERICHTEN} worden gevolgd`);
+    items = items.slice(0, LOTGENOTEN_MAX_BERICHTEN);
+  }
+
+  var events = [];
+  var gefilterd = 0;
+  var fouten = 0;
+  var laatsteFout = null;
+  for (var i = 0; i < items.length; i++) {
+    var item = items[i];
+    try {
+      // Het bericht zelf is vaak verouderd (oude datum) of mist de datum die in de
+      // linktekst staat; die linktekst gaat daarom als aankondiging mee als bron.
+      // Verwante berichten onderaan het bericht zijn geen evenementen van dit bericht.
+      var res = await fetchWebEvents(bronId, bronNaam, [item.url], {
+        knipVanaf: /Verwante berichten[\s\S]*$/i,
+        voorTekst: {
+          label: 'AANKONDIGING OP STARTPAGINA (hoort bij het bericht hieronder; 1700 uur = 17:00; dit bericht beschrijft maximaal één evenement)',
+          tekst: item.tekst
+        }
+      });
+      gefilterd += res.gefilterd;
+      if (res.events.length === 0) {
+        console.log(`    ✗ Overgeslagen (geen volledige, toekomstige datum): "${item.tekst}" ${item.url}`);
+        continue;
+      }
+      // Eén bericht = één evenement; het bericht zelf is de eventlink (bron)
+      events.push(res.events[0]);
+    } catch (err) {
+      fouten++;
+      laatsteFout = err;
+      console.log(`    ✗ Bericht niet verwerkt: "${item.tekst}" ${item.url} — ${err.message}`);
+    }
+  }
+
+  if (items.length > 0 && fouten === items.length) throw laatsteFout;
+
+  events.sort(function (a, b) { return new Date(a.datum) - new Date(b.datum); });
+  return { events: events, gefilterd: gefilterd };
 }
 
 // ════════════════════════════════════════════════════════════════
@@ -2087,7 +2214,11 @@ function writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents, observ
               ' kapot, ' + health.bronnen_verdacht + ' verdacht, van ' + health.bronnen_totaal + ' bronnen)');
 }
 
-main().catch(function (err) {
-  console.error('FATALE FOUT:', err);
-  process.exit(2);
-});
+if (require.main === module) {
+  main().catch(function (err) {
+    console.error('FATALE FOUT:', err);
+    process.exit(2);
+  });
+} else {
+  module.exports = { parseLotgenotenBlok, fetchLotgenotenEvents };
+}
