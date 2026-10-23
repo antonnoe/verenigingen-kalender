@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-21T07:13:41.525Z",
-  "totaal": 35,
+  "generated_at": "2026-10-23T07:12:57.169Z",
+  "totaal": 36,
   "bronnen": [
     {
       "id": "nlvp",
@@ -42,7 +42,7 @@
       "id": "lotgenoten",
       "naam": "LOTgenoten",
       "status": "ok",
-      "items": 6,
+      "items": 4,
       "spam_geweerd": 0,
       "feed": "https://www.lotgenoten.fr/feed/",
       "diagnose": null
@@ -69,7 +69,7 @@
       "id": "nedazur",
       "naam": "NEDAZUR",
       "status": "ok",
-      "items": 3,
+      "items": 5,
       "spam_geweerd": 0,
       "feed": "https://www.nedazur.org/nieuws",
       "diagnose": null
@@ -87,7 +87,7 @@
       "id": "bourgondische-zaken",
       "naam": "Bourgondische Zaken",
       "status": "ok",
-      "items": 3,
+      "items": 4,
       "spam_geweerd": 0,
       "feed": "https://bourgondischezaken.com/feed/",
       "diagnose": null
@@ -140,6 +140,30 @@
   ],
   "items": [
     {
+      "bron_id": "bourgondische-zaken",
+      "bron_naam": "Bourgondische Zaken",
+      "datum": "2026-10-22",
+      "titel": "Geslaagd bezoek aan Opus Gothique",
+      "link": "https://bourgondischezaken.com/geslaagd-bezoek-aan-opus-gothique/",
+      "excerpt": "Op zaterdag 17 oktober organiseerde Bourgondische Zaken een rondleiding op het bouwproject Opus Gothique in Saint Léger de Fougeret. In het herfstnummer 2026 staat een artikel over deze bijzondere onderneming. De Amerikaanse paleontoloog Donald Russell, ook specialist in…"
+    },
+    {
+      "bron_id": "nedazur",
+      "bron_naam": "NEDAZUR",
+      "datum": "2026-10-21",
+      "titel": "Pieten gezocht voor aankomst van Sinterklaas 29 november",
+      "link": "https://www.nedazur.org/nieuws/pieten-gezocht-voor-aankomst-van-sinterklaas-29-november",
+      "excerpt": "Wij zijn dringend op zoek naar vrijwilligers en enthousiaste mensen die het leuk vinden om zich in een Pietenpak te hijsen en zo het Sinterklaasfeest voor de kinderen tot een groot succes te..."
+    },
+    {
+      "bron_id": "nedazur",
+      "bron_naam": "NEDAZUR",
+      "datum": "2026-10-21",
+      "titel": "Oranje Borrel commissieleden gezocht",
+      "link": "https://www.nedazur.org/nieuws/oranje-borrel-commissieleden-gezocht",
+      "excerpt": "Voor de Oranjeborrelcommissie zoeken wij nog versterking. Vind je het leuk om te helpen met het organiseren van borrels meld je dan aan via: Contact@nedazur.org."
+    },
+    {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
       "datum": "2026-10-20",
@@ -191,14 +215,6 @@
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
       "datum": "2026-10-14",
-      "titel": "Nieuw! Borrelmiddag voor de Zuiderlijke LOTgenoten, Tarn et Garonne, Moissac",
-      "link": "https://www.lotgenoten.fr/nieuw-borrelmiddag-voor-de-zuiderlijke-lotgenoten-tarn-et-garonne/",
-      "excerpt": "Deze nieuwe meeting is de ene keer in Moissac (19/11) en de keer daarop in Montauban en dan weer Moissac etc. Wij hebben er zin in! De locatie: Ced & Alex LAtelier, 6 Place Roger Delthil in Moissac Tijd: 15:00 – 18:00 (borrel en plankje tapas) Paul & Yvonne De bar in Moissac:…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-14",
       "titel": "Te koop: Privéwoning, zwembad, gastenverblijf en panoramisch uitzicht nabij Cahors €379.000",
       "link": "https://www.lotgenoten.fr/te-koop-privewoning-met-vier-slaapkamers-zwembad-gastenverblijf-en-panoramisch-uitzicht-nabij-cahors/",
       "excerpt": "Huis te koop in lieu-dit Brouelles, MAXOU Lot Verscholen in het hart van een prachtige Franse vallei biedt dit huis een uniek en adembenemend uitzicht op het landschap. Hier wordt u elke dag wakker met het gefluit van de vele vogels, geniet u van de rust van de omliggende en…"
@@ -234,14 +250,6 @@
       "titel": "Hulp in huis of tuinman in Frankrijk: minder sociale lasten vanaf 80 jaar",
       "link": "https://www.lotgenoten.fr/hulp-in-huis-of-tuinman-in-frankrijk-minder-sociale-lasten-vanaf-80-jaar-en-andere-voordelen-voor-ouderen/",
       "excerpt": "Door: infofrankrijk.com Heeft u een hulp in huis of een tuinman via het CESU-systeem? Tot voor kort betaalde u vanaf 70 jaar automatisch minder werkgeverslasten. Sinds de aangifte over juli 2026 ligt die grens op 80 jaar. In dit artikel leest u wat er is veranderd, wat er…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-06",
-      "titel": "Emigratiecoach, van droom naar werkelijkheid",
-      "link": "https://www.lotgenoten.fr/emigratiecoach-van-droom-naar-werkelijkheid/",
-      "excerpt": "Emigratieweek in Frankrijk Van emigratiedroom naar een goed voorbereid plan, v oor Nederlanders en Belgen. Een emigratie naar Frankrijk is veel meer dan een huis kopen en de administratie regelen. Juist wanneer je plannen serieus worden, ontstaan vaak de vragen waar je vooraf…"
     },
     {
       "bron_id": "nedazur",

@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-10-21",
-    "volgende_update": "2026-10-23",
+    "laatst_bijgewerkt": "2026-10-23",
+    "volgende_update": "2026-10-26",
     "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 9,
-    "totaal_events": 64,
-    "gefilterde_items": 4,
+    "bronnen_met_events": 10,
+    "totaal_events": 52,
+    "gefilterde_items": 3,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
   },
@@ -41,14 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-10-21",
-          "titel": "Bijpraatlunch regio Carcassonne, Capendu",
-          "plaats": "Capendu: Café-restaurant de la Terrasse.",
-          "tijd": "11:30-14:30",
-          "type": "sociaal",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-10-25",
           "titel": "Mood/comfortfood en Mindfulness",
@@ -212,10 +204,26 @@
         },
         {
           "datum": "2026-11-28",
+          "titel": "Oranje Borrel",
+          "plaats": "Var -volgt zo spoedig mogelijk",
+          "tijd": "17:00-19:00",
+          "type": "informatief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-28",
           "titel": "Cleveringabijeenkomst 2026",
           "plaats": "Mougins",
           "tijd": "11:00-15:00",
           "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-29",
+          "titel": "Aankomst van Sinterklaas",
+          "plaats": "Cagnes-sur-Mer",
+          "tijd": "14:00-14:00",
+          "type": "cultureel",
           "bron": "https://www.nedazur.org/_ical/public.ics"
         }
       ],
@@ -235,22 +243,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@a-n-m.com",
       "events": [
-        {
-          "datum": "2026-10-21",
-          "titel": "Koor ANM-Vocale",
-          "plaats": "les Issambres",
-          "tijd": "14:00-17:00",
-          "type": "cultureel",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
-        {
-          "datum": "2026-10-22",
-          "titel": "ANM Golf",
-          "plaats": "La Motte",
-          "tijd": "10:00-15:00",
-          "type": "sportief",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
         {
           "datum": "2026-10-27",
           "titel": "ANM Bridge",
@@ -461,7 +453,32 @@
           "plaats": "Bouysset, Saint Martin le Redon (46700)"
         }
       ],
-      "events": [],
+      "events": [
+        {
+          "datum": "2026-10-30",
+          "titel": "Borrelavond/maaltijd Villeneuve/Lot",
+          "plaats": "LA TABLE DU MARCHÉ, 18-22 rue Lakanal, 47300 Villeneuve sur Lot",
+          "tijd": "17:00",
+          "type": "sociaal",
+          "bron": "https://www.lotgenoten.fr/lotgenotenavond-in-villeneuve-sur-lot/"
+        },
+        {
+          "datum": "2026-11-08",
+          "titel": "Borrelmiddag/daghap st Martin/Redon Lot op Bouysset",
+          "plaats": "Bouysset, Saint Martin le Redon",
+          "tijd": "15:00",
+          "type": "sociaal",
+          "bron": "https://www.lotgenoten.fr/borrelmiddag-daghap-st-martin-redon-lot-op-bouysset/"
+        },
+        {
+          "datum": "2026-11-19",
+          "titel": "Borrelmiddag Tarn/Garonne Moissac",
+          "plaats": "Ced & Alex L'Atelier, 6 Place Roger Delthil, Moissac",
+          "tijd": "15:00-18:00",
+          "type": "sociaal",
+          "bron": "https://www.lotgenoten.fr/nieuw-borrelmiddag-voor-de-zuiderlijke-lotgenoten-tarn-et-garonne/"
+        }
+      ],
       "rubriek": "regionaal"
     },
     {
@@ -496,14 +513,6 @@
       "contact": null,
       "opmerking": "Forum met 25.000+ leden. Café Jeudi is een wekelijkse, ongedwongen bijeenkomst via Google Meet, iedere donderdag van 18:00 tot 19:30 — toegang via de banner bovenaan het forum of de link in de nieuwsbrief. Al meer dan 5 jaar delen we verhalen en tips over wonen in Frankrijk; wat tijdens de covid-periode begon als sociaal moment, is inmiddels een vaste traditie geworden.",
       "events": [
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-10-22",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr"
-        },
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-10-29",
@@ -555,6 +564,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-12-10",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-12-17",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",
@@ -639,127 +656,7 @@
       "opmerking": "Agenda-pagina bevat jaarkalender en uitgewerkte event-blokken (AfterNetWork borrels, Koningsdag, wandelingen, leesclub, paspoort pop-up).",
       "events": [
         {
-          "datum": "2027-01-04",
-          "titel": "Wandeling",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-01-29",
-          "titel": "Nieuwjaarsborrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-02-05",
-          "titel": "AfterNetwork borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "zakelijk",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-03-01",
-          "titel": "Wandeling",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-03-19",
-          "titel": "Leesclub",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-03-24",
-          "titel": "AfterNetWork borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "zakelijk",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-04-27",
-          "titel": "AfterNetWork borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "zakelijk",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-05-20",
-          "titel": "Koningsdag receptie",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-06-11",
-          "titel": "Leesclub",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-07-16",
-          "titel": "Zomers etentje",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-09-02",
-          "titel": "Leesclub",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-10-01",
-          "titel": "Rentree borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-10-04",
-          "titel": "Wandeling",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-10-07",
-          "titel": "Leesclub",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-10-11",
-          "titel": "Appelpluk uitje",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-11-25",
+          "datum": "2026-11-25",
           "titel": "ALV, borrel, boekenruilbeurs en etentje",
           "plaats": "Café du Commerce, place Dupuy, Toulouse",
           "tijd": "19:00",
@@ -767,11 +664,19 @@
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         },
         {
-          "datum": "2027-12-06",
+          "datum": "2026-12-06",
           "titel": "Sinterklaasfeest",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-01-04",
+          "titel": "Wandeling",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         }
       ],
