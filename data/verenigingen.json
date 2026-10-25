@@ -349,7 +349,7 @@
       "status": "actief",
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretarislatulipe@gmail.com",
-      "opmerking": "Maandkalender doorbladerbaar via /month.calendar/YYYY/MM/DD/-.html. Veel wekelijks terugkerende activiteiten. Audit 25-10-2026: de agendapagina laadt haar gegevens via een publieke JSON-feed (https://leden.latulipe.net/api/agenda.json.php, maand via parameter, antwoord bevat ook terugkerende reeksen); de huidige scraper-URL's (/month.calendar/...) geven 404. Scraper omzetten naar die feed.",
+      "opmerking": "Agendapagina laadt een publieke JSON-feed per maand (leden.latulipe.net/api/agenda.json.php?month=YYYY-MM); de scraper leest die feed voor de huidige en de drie volgende maanden. Terugkerende reeksen (golf, wandelen, petanque, clubborrel) staan onder terugkerende_activiteiten en komen niet als losse events. Beschrijvingen worden niet overgenomen (bevatten namen en mailadressen).",
       "terugkerende_activiteiten": [
         {
           "activiteit": "Golf",
@@ -620,7 +620,7 @@
       "status": "actief",
       "agenda_toegankelijkheid": "webpagina",
       "contact": null,
-      "opmerking": "Geen publieke events na januari 2026. Events via persoonlijke uitnodiging. Audit 25-10-2026, vorige opmerking klopt niet meer: de pagina dbcra.nl/nederlandse-club-lyon toont onder 'Planning DBCRA 2026' een publieke lijst met datums (o.a. 3 december Sinterklaas, 17 december Kerstdiner); jaar staat in de kop, tijd en plaats ontbreken (details via persoonlijke uitnodiging). Nog niet als bron ingesteld.",
+      "opmerking": "Publieke lijst 'Planning DBCRA <jaar>' op dbcra.nl/nederlandse-club-lyon (jaar in de kop). Alleen datum en titel; tijd en plaats volgen via persoonlijke uitnodiging en de datums zijn volgens de pagina nog niet definitief, daarom staat 'datum onder voorbehoud' bij de titel. Gelezen door een deterministische parser.",
       "events": [],
       "rubriek": "zakelijk"
     },

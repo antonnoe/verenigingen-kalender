@@ -144,18 +144,10 @@ const WORDPRESS_BRONNEN = {
 // Bronnen met webpagina-agenda (via Claude AI geëxtraheerd)
 const WEB_BRONNEN = {
   'latulipe': {
-    urlGenerator: function () {
-      const urls = [];
-      const now = new Date();
-      for (let i = 0; i < 4; i++) {
-        const d = new Date(now.getFullYear(), now.getMonth() + i, 15);
-        const y = d.getFullYear();
-        const m = String(d.getMonth() + 1).padStart(2, '0');
-        urls.push(`https://www.latulipe.net/nl/activiteiten-la-tulipe/agenda-la-tulipe-dordogne/month.calendar/${y}/${m}/15/-.html`);
-      }
-      return urls;
-    },
-    naam: 'La Tulipe'
+    // Agendapagina laadt een publieke JSON-feed per maand. Zie fetchLatulipeEvents.
+    urls: ['https://www.latulipe.net/nl/agenda'],
+    naam: 'La Tulipe',
+    handler: 'latulipe'
   },
   'atelier-neerlandais': {
     urls: [
@@ -182,6 +174,12 @@ const WEB_BRONNEN = {
     naam: 'Cercle Néerlandais',
     handler: 'cercle'
   },
+  'dbcra': {
+    // Publieke lijst "Planning DBCRA <jaar>" op de clubpagina. Zie fetchDbcraEvents.
+    urls: ['https://dbcra.nl/nederlandse-club-lyon/'],
+    naam: 'DBCRA',
+    handler: 'dbcra'
+  },
   'neerlandia-toulouse': {
     urls: ['https://www.neerlandia.fr/index.php/nl/agenda'],
     naam: 'Neerlandia Toulouse'
@@ -190,6 +188,13 @@ const WEB_BRONNEN = {
     urls: ['https://www.fanf.fr/activiteiten/lijst'],
     naam: 'FANF'
   }
+};
+
+// Bronnen met een eigen deterministische parser (geen AI, geen API-key nodig)
+const DETERMINISTISCHE_HANDLERS = {
+  cercle: function () { return fetchCercleEvents; },
+  latulipe: function () { return fetchLatulipeEvents; },
+  dbcra: function () { return fetchDbcraEvents; }
 };
 
 // Type-mapping voor normalisatie
@@ -538,7 +543,7 @@ async function main() {
   } else {
     console.log('\n── Web-bronnen ophalen via Claude ──');
     for (const [id, config] of Object.entries(WEB_BRONNEN)) {
-      if (config.handler === 'cercle') continue; // deterministisch, eigen blok hieronder
+      if (DETERMINISTISCHE_HANDLERS[config.handler]) continue; // deterministisch, eigen blok hieronder
       const urls = config.urlGenerator ? config.urlGenerator() : config.urls;
       console.log(`  ${id}: ${urls.length} pagina('s)`);
       try {
@@ -561,10 +566,10 @@ async function main() {
   // ── 2b. Web-bronnen zonder AI (deterministische parser, geen API-key nodig) ──
   console.log('\n── Deterministische web-bronnen ophalen ──');
   for (const [id, config] of Object.entries(WEB_BRONNEN)) {
-    if (config.handler !== 'cercle') continue;
+    if (!DETERMINISTISCHE_HANDLERS[config.handler]) continue;
     console.log(`  ${id}: ${config.urls[0]}`);
     try {
-      const result = await fetchCercleEvents(id, config.naam, config.urls[0]);
+      const result = await DETERMINISTISCHE_HANDLERS[config.handler]()(id, config.naam, config.urls[0]);
       console.log(`  \u2713 ${result.events.length} toekomstige events herkend`);
       updateVereniging(data, id, result.events);
       checkVerdacht(observaties, vorigeHealth, id, config.naam, 'web-parser', config.urls[0], result.events.length);
@@ -1838,7 +1843,7 @@ function schoonCerclePlek(plek) {
   if (inM) stad = inM[1];
   else if (/^([A-ZÀ-Ý][\wÀ-ÿ' -]+?),/.test(s)) stad = /^([^,]+),/.exec(s)[1];
 
-  if (/nog te bevestigen/i.test(s)) {
+  if (/nog te bevestigen|nog onbekend/i.test(s)) {
     return stad && !/^(bij|thuis)/i.test(stad) ? stad + ', ' + onbekend : onbekend;
   }
   var privaat = /\b(thuis|bij)\b/i.test(s) ||
@@ -1928,6 +1933,160 @@ async function fetchCercleEvents(bronId, bronNaam, startUrl) {
     var iErr = new Error(`0 evenementen herkend terwijl de startpagina ${links.length} activiteitenpagina('s) linkt (alles verlopen of pagina-opbouw gewijzigd?)`);
     iErr.categorie = 'inhoud';
     throw iErr;
+  }
+  events.sort(function (a, b) { return a.datum < b.datum ? -1 : a.datum > b.datum ? 1 : 0; });
+  return { events: events, gefilterd: 0 };
+}
+
+// ════════════════════════════════════════════════════════════════
+// LA TULIPE: publieke JSON-feed achter de agendapagina
+// ════════════════════════════════════════════════════════════════
+
+const LATULIPE_API = 'https://leden.latulipe.net/api/agenda.json.php';
+const LATULIPE_MAANDEN = 4;
+// 'bestuur' in de feed betekent "georganiseerd door het bestuur", geen bestuursvergadering: type dan uit de titel.
+const LATULIPE_TYPES = { sociaal: 'sociaal', sportief: 'sportief', cultureel: 'cultureel' };
+
+/**
+ * De agendapagina van La Tulipe laadt per maand JSON (?month=YYYY-MM), met
+ * terugkerende reeksen al uitgeschreven per datum. Per run: de huidige maand
+ * en de drie volgende, 2 s pauze ertussen. De beschrijving (namen, mailadressen)
+ * wordt nooit overgenomen. Geannuleerde evenementen vallen af. Terugkerende
+ * reeksen (series_id: golf, wandelen, petanque) staan al als vast ritme in
+ * `terugkerende_activiteiten` van het bronrecord en komen niet als losse events.
+ */
+async function fetchLatulipeEvents(bronId, bronNaam, agendaUrl) {
+  var opties = { headers: { 'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)', 'Accept': 'application/json' } };
+  var vandaag = formatDateParis(new Date());
+  var jaar = parseInt(vandaag.substring(0, 4), 10);
+  var maand = parseInt(vandaag.substring(5, 7), 10);
+  var gezien = {};
+  var events = [];
+  var fouten = 0;
+  var laatsteFout = null;
+  for (var i = 0; i < LATULIPE_MAANDEN; i++) {
+    var m = new Date(Date.UTC(jaar, maand - 1 + i, 1));
+    var maandKey = m.getUTCFullYear() + '-' + String(m.getUTCMonth() + 1).padStart(2, '0');
+    if (i > 0) await new Promise(function (r) { setTimeout(r, CERCLE_PAUZE_MS); });
+    try {
+      var res = await fetchMetRetry(LATULIPE_API + '?month=' + maandKey, { headers: opties.headers, signal: AbortSignal.timeout(30000) });
+      var data = await res.json();
+      if (!data || !Array.isArray(data.events) || !data.gridEnd) {
+        var fErr = new Error('Feed van La Tulipe heeft een ander formaat dan verwacht (geen events/gridEnd)');
+        fErr.categorie = 'formaat';
+        throw fErr;
+      }
+      data.events.forEach(function (ev) {
+        var datum = String(ev.dtstart || '').substring(0, 10);
+        if (!/^\d{4}-\d{2}-\d{2}$/.test(datum) || datum < vandaag || datum > data.gridEnd) return;
+        if (gezien[ev.id]) return;
+        gezien[ev.id] = true;
+        if (ev.series_id) return;
+        var titel = String(ev.title || '').replace(/\s+/g, ' ').trim();
+        if (!titel || /@|\d{2}[\s.]?\d{2}[\s.]?\d{2}[\s.]?\d{2}[\s.]?\d{2}/.test(titel)) {
+          console.log(`    ✗ Overgeslagen (geen bruikbare titel): ${datum} id ${ev.id}`);
+          return;
+        }
+        if (/geannuleerd|afgelast|cancel/i.test(titel)) {
+          console.log(`    ✗ Overgeslagen (geannuleerd): ${datum} "${titel}"`);
+          return;
+        }
+        var start = String(ev.dtstart).substring(11, 16);
+        var eind = ev.dtend && String(ev.dtend).substring(0, 10) === datum ? String(ev.dtend).substring(11, 16) : '';
+        var tijd = (!start || start === '00:00') ? 'niet vermeld' : (eind && eind !== '00:00' && eind > start ? start + '-' + eind : start);
+        var loc = String(ev.location || '').trim();
+        events.push({
+          titel: titel,
+          datum: datum,
+          tijd: tijd,
+          plaats: loc ? schoonCerclePlek(loc) : 'plaats niet vermeld',
+          type: LATULIPE_TYPES[ev.cat_slug] || categoriseerType(titel, '', null),
+          bron: agendaUrl + '#' + datum.substring(0, 7) + '/' + ev.id
+        });
+      });
+    } catch (err) {
+      fouten++;
+      laatsteFout = err;
+      console.log(`    ✗ Maand ${maandKey} niet verwerkt: ${err.message}`);
+    }
+  }
+  if (fouten === LATULIPE_MAANDEN) throw laatsteFout;
+  events.sort(function (a, b) { return a.datum < b.datum ? -1 : a.datum > b.datum ? 1 : (a.tijd < b.tijd ? -1 : a.tijd > b.tijd ? 1 : 0); });
+  return { events: events, gefilterd: 0 };
+}
+
+// ════════════════════════════════════════════════════════════════
+// DBCRA (Lyon): lijst "Planning DBCRA <jaar>" op de clubpagina
+// ════════════════════════════════════════════════════════════════
+
+/**
+ * Parseert uit de paginatekst de lijst onder de kop "Planning DBCRA 2026":
+ * regels als "3 december: Sinterklaas". Het jaar staat in de kop. Tijd en
+ * plaats staan er niet (details via persoonlijke uitnodiging).
+ * Geeft [{jaar, dag, maand, titel}], of null als de kop ontbreekt.
+ */
+function parseDbcraPlanning(html) {
+  var tekst = decodeEntities(html
+    .replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, '')
+    .replace(/<br\s*\/?>|<\/p>|<\/div>|<\/li>|<\/h\d>|<\/tr>/gi, '\n')
+    .replace(/<[^>]+>/g, ''))
+    .replace(/[​ ]/g, ' ');
+  var regels = tekst.split('\n').map(function (r) { return r.replace(/\s+/g, ' ').trim(); }).filter(Boolean);
+  var items = [];
+  var jaar = null;
+  var gevonden = false;
+  var inLijst = false;
+  regels.forEach(function (r) {
+    var kop = /^Planning\b.*\bDBCRA\b.*\b(20\d\d)\b/i.exec(r);
+    if (kop) { jaar = parseInt(kop[1], 10); gevonden = true; inLijst = true; return; }
+    if (!inLijst) return;
+    var m = /^(\d{1,2})\s+([a-z]+)\s*:\s*(.+)$/i.exec(r);
+    var mnd = m ? CERCLE_MAANDEN[m[2].toLowerCase()] : undefined;
+    if (m && mnd) items.push({ jaar: jaar, dag: parseInt(m[1], 10), maand: mnd, titel: m[3].trim() });
+    else inLijst = false; // lijst is afgelopen
+  });
+  return gevonden ? items : null;
+}
+
+async function fetchDbcraEvents(bronId, bronNaam, url) {
+  var response = await fetchMetRetry(url, {
+    headers: { 'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)', 'Accept': 'text/html' },
+    signal: AbortSignal.timeout(30000)
+  });
+  var items = parseDbcraPlanning(await response.text());
+  if (items === null) {
+    var fErr = new Error('Kop "Planning DBCRA <jaar>" niet gevonden op de clubpagina (structuur gewijzigd?)');
+    fErr.categorie = 'formaat';
+    throw fErr;
+  }
+  console.log(`    ${items.length} regel(s) in de planning`);
+  var vandaag = formatDateParis(new Date());
+  var events = [];
+  items.forEach(function (it) {
+    var c = new Date(Date.UTC(it.jaar, it.maand - 1, it.dag));
+    if (c.getUTCMonth() !== it.maand - 1 || c.getUTCDate() !== it.dag) {
+      console.log(`    ✗ Overgeslagen (ongeldige datum): ${it.dag}/${it.maand} "${it.titel}"`);
+      return;
+    }
+    var datum = c.toISOString().substring(0, 10);
+    if (datum < vandaag) {
+      console.log(`    ✗ Overgeslagen (verlopen): ${datum} "${it.titel}"`);
+      return;
+    }
+    var titel = it.titel.replace(/\s+/g, ' ').trim();
+    if (/@|\d{2}[\s.]?\d{2}[\s.]?\d{2}[\s.]?\d{2}[\s.]?\d{2}/.test(titel)) return;
+    events.push({
+      titel: titel + ' (datum onder voorbehoud)',
+      datum: datum,
+      tijd: 'niet vermeld',
+      plaats: 'plaats nog te bevestigen',
+      type: categoriseerType(titel, '', null),
+      bron: url
+    });
+  });
+  if (items.length > 0 && events.length === 0 && items.every(function (it) { return it.jaar >= parseInt(vandaag.substring(0, 4), 10); })) {
+    // alles verlopen is geen fout: de planning is dan simpelweg voorbij
+    console.log('    (alle regels in de planning zijn verlopen)');
   }
   events.sort(function (a, b) { return a.datum < b.datum ? -1 : a.datum > b.datum ? 1 : 0; });
   return { events: events, gefilterd: 0 };
@@ -2421,7 +2580,7 @@ function writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents, observ
   Object.keys(WEB_BRONNEN).forEach(function (id) {
     var config = WEB_BRONNEN[id];
     var urls = config.urlGenerator ? config.urlGenerator() : config.urls;
-    bronnen.push(bronRegel(id, config.naam, config.handler === 'cercle' ? 'web-parser' : 'web-scraping', (urls || []).join(', ')));
+    bronnen.push(bronRegel(id, config.naam, DETERMINISTISCHE_HANDLERS[config.handler] ? 'web-parser' : 'web-scraping', (urls || []).join(', ')));
   });
 
   var kapot = bronnen.filter(function (b) { return b.status === 'down'; });
@@ -2460,5 +2619,5 @@ if (require.main === module) {
     process.exit(2);
   });
 } else {
-  module.exports = { parseLotgenotenBlok, fetchLotgenotenEvents, parseCercleLinks, parseCercleBlok, leidCercleDatumAf, schoonCerclePlek, schoonCercleTitel, fetchCercleEvents };
+  module.exports = { parseLotgenotenBlok, fetchLotgenotenEvents, parseCercleLinks, parseCercleBlok, fetchLatulipeEvents, fetchDbcraEvents, parseDbcraPlanning, leidCercleDatumAf, schoonCerclePlek, schoonCercleTitel, fetchCercleEvents };
 }
