@@ -42,12 +42,11 @@ Controle per vereniging, in deze volgorde, en stop zodra iets werkt:
 4. Nieuwsbrief-archief of PDF-agenda.
 5. Alleen Facebook of niets: label klopt, niet scrapen, wel noteren.
 
-Eerste kandidaten om opnieuw te bekijken (0 events op dit moment, label of reden uit het bronrecord):
-- `geen_online_agenda`: bourgondische-zaken, nvso, nzgf (geen website), aneas, france-advies, nederlands-ondersteuningsfonds, clcv, cmunf.
-- `beperkt` of kapot: fanf, dbcra, latulipe (404 op de agenda-URL, URL opnieuw zoeken).
-- `facebook_only`: nvm-montpellier, crefnec-combrailles.
-- `geen_eventkalender`: praatje.
-- `geen_website`: pays-de-gex, perpignan, club-normandie.
+Uitkomst audit 25-10-2026 (details in het veld `opmerking` per bronrecord):
+- Bouwen (er zijn gestructureerde gegevens): latulipe (publieke JSON-feed `leden.latulipe.net/api/agenda.json.php`, maand via parameter, vervangt de 404-URL's), dbcra (lijst "Planning DBCRA 2026" op dbcra.nl/nederlandse-club-lyon, jaar in de kop, geen tijd of plaats).
+- Eerst onderzoeken: bourgondische-zaken (agendabourgogne.nl laadt client-side, onderliggende API zoeken).
+- Label klopt, geen events: aneas, cmunf, nederlands-ondersteuningsfonds, nvso, praatje, clcv (iCal leeg), fanf (alleen doorlopende lessen).
+- Niet beoordeeld: france-advies (HTTP 502), facebook-bronnen (nvm-montpellier, crefnec-combrailles) en bronnen zonder website (nzgf, pays-de-gex, perpignan, club-normandie).
 
 Een grote uitleesklus over alle bronnen eerst in één regel melden aan Anton, en per bron na afloop de status in het bronrecord corrigeren.
 

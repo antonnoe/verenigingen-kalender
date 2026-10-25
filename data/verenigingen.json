@@ -23,7 +23,7 @@
       "status": "actief",
       "agenda_toegankelijkheid": "beperkt",
       "contact": null,
-      "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar.",
+      "opmerking": "Koepelorganisatie van ca. 17 Nederlandse verenigingen in Frankrijk. Biedt zelf Franse les, webinars, juridisch advies. Meeste activiteiten alleen voor leden zichtbaar. Audit 25-10-2026: de lijst bevat alleen doorlopende lessen (Franse lessen, 'nog bezig tot 20 juli'), geen gedateerde evenementen; 0 events klopt op dit moment.",
       "events": [],
       "rubriek": "hulporganisatie"
     },
@@ -349,7 +349,7 @@
       "status": "actief",
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretarislatulipe@gmail.com",
-      "opmerking": "Maandkalender doorbladerbaar via /month.calendar/YYYY/MM/DD/-.html. Veel wekelijks terugkerende activiteiten.",
+      "opmerking": "Maandkalender doorbladerbaar via /month.calendar/YYYY/MM/DD/-.html. Veel wekelijks terugkerende activiteiten. Audit 25-10-2026: de agendapagina laadt haar gegevens via een publieke JSON-feed (https://leden.latulipe.net/api/agenda.json.php, maand via parameter, antwoord bevat ook terugkerende reeksen); de huidige scraper-URL's (/month.calendar/...) geven 404. Scraper omzetten naar die feed.",
       "terugkerende_activiteiten": [
         {
           "activiteit": "Golf",
@@ -510,7 +510,7 @@
       "status": "actief",
       "agenda_toegankelijkheid": "geen_online_agenda",
       "contact": null,
-      "opmerking": "Heeft website bourgondischezaken.com en agenda-platform agendabourgogne.nl. Events zijn echter niet gestructureerd ophaalbaar (regio-agenda met gemengde bron, of inlog-vereisten). Meest recente activiteiten worden via nieuwsbrief en Facebook gedeeld.",
+      "opmerking": "Heeft website bourgondischezaken.com en agenda-platform agendabourgogne.nl. Events zijn echter niet gestructureerd ophaalbaar (regio-agenda met gemengde bron, of inlog-vereisten). Meest recente activiteiten worden via nieuwsbrief en Facebook gedeeld. Audit 25-10-2026: agendabourgogne.nl is een regio-agenda die client-side laadt (Vue); in de HTML staat één evenement (derde partij, 13 tot 15 november). Filter 'bz-activiteit' voor eigen activiteiten bestaat, maar de HTML levert geen lijst. Niet ophaalbaar zonder onderliggende API te vinden; de nieuwsberichten op bourgondischezaken.com/nieuws noemen soms een evenement met datum.",
       "events": [],
       "rubriek": "regionaal"
     },
@@ -618,9 +618,9 @@
       "platform": "WordPress",
       "fanf_lid": true,
       "status": "actief",
-      "agenda_toegankelijkheid": "beperkt",
+      "agenda_toegankelijkheid": "webpagina",
       "contact": null,
-      "opmerking": "Geen publieke events na januari 2026. Events via persoonlijke uitnodiging.",
+      "opmerking": "Geen publieke events na januari 2026. Events via persoonlijke uitnodiging. Audit 25-10-2026, vorige opmerking klopt niet meer: de pagina dbcra.nl/nederlandse-club-lyon toont onder 'Planning DBCRA 2026' een publieke lijst met datums (o.a. 3 december Sinterklaas, 17 december Kerstdiner); jaar staat in de kop, tijd en plaats ontbreken (details via persoonlijke uitnodiging). Nog niet als bron ingesteld.",
       "events": [],
       "rubriek": "zakelijk"
     },
@@ -637,7 +637,7 @@
       "status": "actief",
       "agenda_toegankelijkheid": "geen_online_agenda",
       "contact": "Hans de Bruin, 19 rue Philippe Grass, 67000 Strasbourg",
-      "opmerking": "Geen online agenda. Info via periodiek 'De Rommelpot' (laatste online editie: december 2020). Maandelijkse borrelavond en excursies worden intern gecommuniceerd. ~100 betalende leden/gezinnen.",
+      "opmerking": "Geen online agenda. Info via periodiek 'De Rommelpot' (laatste online editie: december 2020). Maandelijkse borrelavond en excursies worden intern gecommuniceerd. ~100 betalende leden/gezinnen. Audit 25-10-2026: site is een verouderd WebAcappella-ontwerp (2022) zonder agenda of evenementen; label klopt.",
       "events": [],
       "rubriek": "regionaal"
     },
@@ -811,7 +811,7 @@
       "fanf_lid": true,
       "status": "actief",
       "agenda_toegankelijkheid": "geen_eventkalender",
-      "opmerking": "Nederlands taal- en cultuuronderwijs. Geen eventkalender, lescurriculum.",
+      "opmerking": "Nederlands taal- en cultuuronderwijs. Geen eventkalender, lescurriculum. Audit 25-10-2026: homepage toont alleen verlopen cursusberichten (2025), geen kalender; label klopt.",
       "events": [],
       "rubriek": "regionaal"
     },
@@ -845,7 +845,7 @@
       "status": "actief",
       "agenda_toegankelijkheid": "geen_online_agenda",
       "contact": "contact@aneas.fr",
-      "opmerking": "Association Néerlandaise Entre Aide Sociale. Ondersteuning aan Nederlanders in Frankrijk die hulp nodig hebben.",
+      "opmerking": "Association Néerlandaise Entre Aide Sociale. Ondersteuning aan Nederlanders in Frankrijk die hulp nodig hebben. Audit 25-10-2026: startpagina en nieuwsbrief-archief tonen geen agenda; het archief gaf HTTP 500. Label klopt.",
       "rubriek": "hulporganisatie",
       "events": []
     },
@@ -862,7 +862,7 @@
       "status": "actief",
       "agenda_toegankelijkheid": "geen_online_agenda",
       "contact": "franceadvies@gmail.com",
-      "opmerking": "Voor Nederlanders en Vlamingen die ondersteuning nodig hebben bij praktische problemen in Frankrijk. Advies is volledig gratis.",
+      "opmerking": "Voor Nederlanders en Vlamingen die ondersteuning nodig hebben bij praktische problemen in Frankrijk. Advies is volledig gratis. Audit 25-10-2026: site gaf HTTP 502 bij twee pogingen; niet beoordeeld.",
       "rubriek": "hulporganisatie",
       "events": []
     },
@@ -879,7 +879,7 @@
       "status": "actief",
       "agenda_toegankelijkheid": "geen_online_agenda",
       "contact": "nlondersteuningsfonds@gmail.com",
-      "opmerking": "Helpt sinds 1967 landgenoten met financiële of sociale problemen in Zuid-Frankrijk. Voor mensen zonder andere opties.",
+      "opmerking": "Helpt sinds 1967 landgenoten met financiële of sociale problemen in Zuid-Frankrijk. Voor mensen zonder andere opties. Audit 25-10-2026: geen agenda of evenementen op de site; label klopt.",
       "rubriek": "hulporganisatie",
       "events": []
     },
@@ -896,7 +896,7 @@
       "status": "actief",
       "agenda_toegankelijkheid": "geen_online_agenda",
       "contact": "juridique@clcv85.com",
-      "opmerking": "Franse consumentenvereniging, vestiging Vendée. Maria Jacobs helpt met consumentenrecht wanneer bedrijf in Frankrijk gevestigd is.",
+      "opmerking": "Franse consumentenvereniging, vestiging Vendée. Maria Jacobs helpt met consumentenrecht wanneer bedrijf in Frankrijk gevestigd is. Audit 25-10-2026: de opgegeven Nederlandstalige pagina geeft 404; de iCal-feed (/events/?ical=1) bestaat maar is leeg. Geen events.",
       "rubriek": "hulporganisatie",
       "events": []
     },
@@ -913,7 +913,7 @@
       "status": "actief",
       "agenda_toegankelijkheid": "geen_online_agenda",
       "contact": null,
-      "opmerking": "Opgericht 2000 voor collectieve ziektekostenverzekering. Meer dan 1200 leden in 2023. Faciliteert collectieve verzekeringen voor Nederlanders in Frankrijk.",
+      "opmerking": "Opgericht 2000 voor collectieve ziektekostenverzekering. Meer dan 1200 leden in 2023. Faciliteert collectieve verzekeringen voor Nederlanders in Frankrijk. Audit 25-10-2026: alleen nieuwsberichten (verzekeringsnieuws), geen evenementen; label klopt.",
       "rubriek": "collectiviteit",
       "events": []
     },
