@@ -175,6 +175,13 @@ const WEB_BRONNEN = {
     naam: 'LOTgenoten',
     handler: 'lotgenoten'
   },
+  'cercle-neerlandais-lille': {
+    // Geen agendapagina: de startpagina linkt losse activiteitenpagina's.
+    // Deterministisch geparsed, geen AI. Zie fetchCercleEvents.
+    urls: ['https://www.cercleneerlandais.com/'],
+    naam: 'Cercle Néerlandais',
+    handler: 'cercle'
+  },
   'neerlandia-toulouse': {
     urls: ['https://www.neerlandia.fr/index.php/nl/agenda'],
     naam: 'Neerlandia Toulouse'
@@ -531,6 +538,7 @@ async function main() {
   } else {
     console.log('\n── Web-bronnen ophalen via Claude ──');
     for (const [id, config] of Object.entries(WEB_BRONNEN)) {
+      if (config.handler === 'cercle') continue; // deterministisch, eigen blok hieronder
       const urls = config.urlGenerator ? config.urlGenerator() : config.urls;
       console.log(`  ${id}: ${urls.length} pagina('s)`);
       try {
@@ -547,6 +555,21 @@ async function main() {
       } catch (err) {
         registreerBronFout(warnings, vorigeHealth, data, id, config.naam, 'web-scraping', urls.join(', '), err);
       }
+    }
+  }
+
+  // ── 2b. Web-bronnen zonder AI (deterministische parser, geen API-key nodig) ──
+  console.log('\n── Deterministische web-bronnen ophalen ──');
+  for (const [id, config] of Object.entries(WEB_BRONNEN)) {
+    if (config.handler !== 'cercle') continue;
+    console.log(`  ${id}: ${config.urls[0]}`);
+    try {
+      const result = await fetchCercleEvents(id, config.naam, config.urls[0]);
+      console.log(`  \u2713 ${result.events.length} toekomstige events herkend`);
+      updateVereniging(data, id, result.events);
+      checkVerdacht(observaties, vorigeHealth, id, config.naam, 'web-parser', config.urls[0], result.events.length);
+    } catch (err) {
+      registreerBronFout(warnings, vorigeHealth, data, id, config.naam, 'web-parser', config.urls[0], err);
     }
   }
 
@@ -1694,6 +1717,223 @@ async function fetchLotgenotenEvents(bronId, bronNaam, startUrl) {
 }
 
 // ════════════════════════════════════════════════════════════════
+// CERCLE NÉERLANDAIS (Lille): geen agendapagina, wel losse activiteitenpagina's
+// ════════════════════════════════════════════════════════════════
+
+const CERCLE_MAX_PAGINAS = 12;
+const CERCLE_PAUZE_MS = 2000;
+// Menupagina's van de site: geen activiteiten, niet openen.
+const CERCLE_NAVIGATIE = ['contact', 'contributie', 'links', 'tips', 'word-lid', 'index'];
+const CERCLE_WEEKDAGEN = { zondag: 0, maandag: 1, dinsdag: 2, woensdag: 3, donderdag: 4, vrijdag: 5, zaterdag: 6 };
+const CERCLE_MAANDEN = {
+  januari: 1, februari: 2, maart: 3, april: 4, mei: 5, juni: 6,
+  juli: 7, augustus: 8, september: 9, oktober: 10, november: 11, december: 12
+};
+
+/** Interne links naar activiteitenpagina's op de startpagina (tegels), ontdubbeld, zonder menupagina's. */
+function parseCercleLinks(html, basisUrl) {
+  var host = new URL(basisUrl).host.replace(/^www\./, '');
+  var gezien = {};
+  var urls = [];
+  var re = /<a\b[^>]*\bhref=["']([^"']+)["']/gi;
+  var m;
+  while ((m = re.exec(html)) !== null) {
+    var url;
+    try { url = new URL(decodeEntities(m[1]), basisUrl); } catch (e) { continue; }
+    if (url.host.replace(/^www\./, '') !== host) continue;
+    var naam = url.pathname.replace(/^\//, '');
+    if (!/\.html$/i.test(naam) || naam.indexOf('/') !== -1) continue;
+    if (CERCLE_NAVIGATIE.indexOf(naam.replace(/\.html$/i, '')) !== -1) continue;
+    url.hash = '';
+    url.search = '';
+    var href = url.toString();
+    if (gezien[href]) continue;
+    gezien[href] = true;
+    urls.push(href);
+  }
+  return urls;
+}
+
+/** Leest een meta-tag (property of name), volgorde van attributen vrij. */
+function leesMeta(html, naam) {
+  var tags = html.match(/<meta\b[^>]*>/gi) || [];
+  for (var i = 0; i < tags.length; i++) {
+    if (new RegExp('(?:property|name)=["\']' + naam + '["\']', 'i').test(tags[i])) {
+      var c = /\bcontent=(?:"([^"]*)"|'([^']*)')/i.exec(tags[i]);
+      if (c) return decodeEntities(c[1] !== undefined ? c[1] : c[2]);
+    }
+  }
+  return '';
+}
+
+/** Paginatekst met regeleinden (voor de 📍-regel); scripts, menu en footer eruit. */
+function cercleBodyTekst(html) {
+  return decodeEntities(html
+    .replace(/<script[\s\S]*?<\/script>|<style[\s\S]*?<\/style>/gi, '')
+    .replace(/<br\s*\/?>|<\/p>|<\/div>|<\/h\d>/gi, '\n')
+    .replace(/<[^>]+>/g, ''))
+    .replace(/[​ ]/g, ' ')
+    .replace(/[ \t]+/g, ' ');
+}
+
+/** Haalt 🗓 / 🕖🕒 / 📍 uit een tekstblok. Velden die ontbreken zijn null. */
+function parseCercleBlok(tekst) {
+  tekst = String(tekst || '').replace(/[​ ]/g, ' ');
+  var datum = null, tijd = null, plek = null, plekAfgekapt = false;
+
+  var d = /\u{1F5D3}️?\s*-?\s*(?:([a-z]+)\s+)?(\d{1,2})\s+([a-z]+)/iu.exec(tekst);
+  if (d) {
+    var wd = d[1] ? CERCLE_WEEKDAGEN[d[1].toLowerCase()] : undefined;
+    var mnd = CERCLE_MAANDEN[d[3].toLowerCase()];
+    if (wd !== undefined && mnd) datum = { weekdag: wd, dag: parseInt(d[2], 10), maand: mnd };
+  }
+
+  var t = /[\u{1F550}-\u{1F567}]️?\s*-?\s*(vanaf\s+)?(\d{1,2})\s*(?:[.:h]\s*(\d{2}))?\s*(?:uur|u\b|h\b)?/iu.exec(tekst);
+  if (t) {
+    var uur = parseInt(t[2], 10);
+    var min = t[3] ? parseInt(t[3], 10) : 0;
+    if (uur <= 23 && min <= 59) {
+      tijd = (t[1] ? 'vanaf ' : '') + String(uur).padStart(2, '0') + ':' + String(min).padStart(2, '0');
+    }
+  }
+
+  var p = /\u{1F4CD}️?\s*-?\s*([^\n]*)/u.exec(tekst);
+  if (p) {
+    // Op één regel (og:description): plek loopt tot het volgende kopje.
+    var rest = p[1].split(/\s(?:Programma|Info|Kosten|Aanmelden|Meer info)\b/i)[0];
+    plekAfgekapt = /(?:\.{3}|…)\s*$/.test(rest) && rest === p[1];
+    plek = rest.replace(/\s+/g, ' ').trim() || null;
+  }
+  return { datum: datum, tijd: tijd, plek: plek, plekAfgekapt: plekAfgekapt };
+}
+
+/**
+ * Het jaar staat niet op de pagina: het eerstvolgende jaar waarin dag+maand op
+ * de genoemde weekdag valt, binnen 12 maanden vooruit. Nooit gokken.
+ * Geeft {datum:'YYYY-MM-DD'} of {reden:'verlopen'|'weekdag'|'venster'}.
+ */
+function leidCercleDatumAf(d, vandaagISO) {
+  var jaar0 = parseInt(vandaagISO.substring(0, 4), 10);
+  var vandaagMs = Date.parse(vandaagISO + 'T00:00:00Z');
+  var grens = new Date(vandaagMs);
+  grens.setUTCMonth(grens.getUTCMonth() + 12);
+  for (var jaar = jaar0; jaar <= jaar0 + 1; jaar++) {
+    var c = new Date(Date.UTC(jaar, d.maand - 1, d.dag));
+    if (c.getUTCMonth() !== d.maand - 1 || c.getUTCDate() !== d.dag) continue; // bv. 29 feb
+    if (c.getUTCDay() !== d.weekdag) continue;
+    if (c.getTime() < vandaagMs) return { reden: 'verlopen' };
+    if (c.getTime() > grens.getTime()) return { reden: 'venster' };
+    return { datum: c.toISOString().substring(0, 10) };
+  }
+  return { reden: 'weekdag' };
+}
+
+/** Plek zonder privégegevens: geen thuisadres, namen, telefoon, mail of bankgegevens. */
+function schoonCerclePlek(plek) {
+  var onbekend = 'plaats nog te bevestigen';
+  if (!plek) return onbekend;
+  var s = plek.replace(/\s+/g, ' ').trim();
+  var stad = null;
+  var inM = /\b(?:in|te)\s+([A-ZÀ-Ý][\wÀ-ÿ' -]+?)\s*$/.exec(s);
+  if (inM) stad = inM[1];
+  else if (/^([A-ZÀ-Ý][\wÀ-ÿ' -]+?),/.test(s)) stad = /^([^,]+),/.exec(s)[1];
+
+  if (/nog te bevestigen/i.test(s)) {
+    return stad && !/^(bij|thuis)/i.test(stad) ? stad + ', ' + onbekend : onbekend;
+  }
+  var privaat = /\b(thuis|bij)\b/i.test(s) ||
+    /^\d+\s*(?:bis\s+)?(?:rue|avenue|av\.|bd|boulevard|place|chemin|all[ée]e|impasse|route|quai|cours|square)\b/i.test(s) ||
+    /\d{2}[\s.]?\d{2}[\s.]?\d{2}[\s.]?\d{2}[\s.]?\d{2}|@|\bFR\d{2}\b|\bIBAN\b|\bRIB\b|\bBIC\b/i.test(s);
+  if (privaat) return stad || onbekend;
+  return s;
+}
+
+/** Titel uit og:title zonder "Aanmelden"/"Info" ervoor. */
+function schoonCercleTitel(titel) {
+  var s = String(titel || '').replace(/^\s*(?:aanmelden|info)\s+/i, '').replace(/\s+/g, ' ').trim();
+  if (/@|\d{2}[\s.]?\d{2}[\s.]?\d{2}[\s.]?\d{2}[\s.]?\d{2}/.test(s)) return '';
+  return s ? s.charAt(0).toUpperCase() + s.slice(1) : '';
+}
+
+/**
+ * Cercle Néerlandais: startpagina één keer ophalen, elke activiteitenpagina
+ * openen (2 s pauze per verzoek) en deterministisch parsen. Geen AI.
+ * Overgeslagen evenementen worden gelogd, nooit gegokt.
+ */
+async function fetchCercleEvents(bronId, bronNaam, startUrl) {
+  var opties = {
+    headers: { 'User-Agent': 'Mozilla/5.0 (compatible; VerenigingenKalender/1.0)', 'Accept': 'text/html' },
+    signal: AbortSignal.timeout(30000)
+  };
+  var pauze = function () { return new Promise(function (r) { setTimeout(r, CERCLE_PAUZE_MS); }); };
+  var response = await fetchMetRetry(startUrl, opties);
+  var links = parseCercleLinks(await response.text(), startUrl);
+  console.log(`    ${links.length} activiteitenpagina('s) gelinkt op de startpagina`);
+  if (links.length === 0) {
+    var fErr = new Error('Geen activiteitenpagina\'s gevonden op de startpagina (structuur gewijzigd?)');
+    fErr.categorie = 'formaat';
+    throw fErr;
+  }
+  links = links.slice(0, CERCLE_MAX_PAGINAS);
+
+  var vandaag = formatDateParis(new Date());
+  var events = [];
+  var fouten = 0;
+  var laatsteFout = null;
+  for (var i = 0; i < links.length; i++) {
+    var url = links[i];
+    await pauze();
+    try {
+      var res = await fetchMetRetry(url, { headers: opties.headers, signal: AbortSignal.timeout(30000) });
+      var html = await res.text();
+      var og = leesMeta(html, 'og:description');
+      var blok = parseCercleBlok(og);
+      if (!blok.datum) blok = parseCercleBlok(cercleBodyTekst(html)); // terugval op paginatekst
+      var titel = schoonCercleTitel(leesMeta(html, 'og:title'));
+      if (!blok.datum) {
+        console.log(`    ✗ Overgeslagen (geen datum met weekdag): ${url}`);
+        continue;
+      }
+      if (!blok.tijd || !blok.plek || blok.plekAfgekapt) {
+        var body = parseCercleBlok(cercleBodyTekst(html));
+        if (!blok.tijd) blok.tijd = body.tijd;
+        if (!blok.plek || blok.plekAfgekapt) blok.plek = body.plek;
+      }
+      var af = leidCercleDatumAf(blok.datum, vandaag);
+      if (!af.datum) {
+        var uitleg = af.reden === 'verlopen' ? 'verlopen' : 'jaar niet af te leiden (' + af.reden + ')';
+        console.log(`    ✗ Overgeslagen (${uitleg}): "${titel}" ${blok.datum.dag}/${blok.datum.maand} ${url}`);
+        continue;
+      }
+      if (!titel) {
+        console.log(`    ✗ Overgeslagen (geen bruikbare titel): ${url}`);
+        continue;
+      }
+      events.push({
+        titel: titel,
+        datum: af.datum,
+        tijd: blok.tijd || 'niet vermeld',
+        plaats: schoonCerclePlek(blok.plek),
+        type: 'sociaal',
+        bron: url
+      });
+    } catch (err) {
+      fouten++;
+      laatsteFout = err;
+      console.log(`    ✗ Pagina niet verwerkt: ${url} — ${err.message}`);
+    }
+  }
+  if (fouten === links.length) throw laatsteFout;
+  if (events.length === 0) {
+    var iErr = new Error(`0 evenementen herkend terwijl de startpagina ${links.length} activiteitenpagina('s) linkt (alles verlopen of pagina-opbouw gewijzigd?)`);
+    iErr.categorie = 'inhoud';
+    throw iErr;
+  }
+  events.sort(function (a, b) { return a.datum < b.datum ? -1 : a.datum > b.datum ? 1 : 0; });
+  return { events: events, gefilterd: 0 };
+}
+
+// ════════════════════════════════════════════════════════════════
 // DATA MERGE
 // ════════════════════════════════════════════════════════════════
 
@@ -2181,7 +2421,7 @@ function writeHealth(data, warnings, vandaag, volgendeWeek, totaalEvents, observ
   Object.keys(WEB_BRONNEN).forEach(function (id) {
     var config = WEB_BRONNEN[id];
     var urls = config.urlGenerator ? config.urlGenerator() : config.urls;
-    bronnen.push(bronRegel(id, config.naam, 'web-scraping', (urls || []).join(', ')));
+    bronnen.push(bronRegel(id, config.naam, config.handler === 'cercle' ? 'web-parser' : 'web-scraping', (urls || []).join(', ')));
   });
 
   var kapot = bronnen.filter(function (b) { return b.status === 'down'; });
@@ -2220,5 +2460,5 @@ if (require.main === module) {
     process.exit(2);
   });
 } else {
-  module.exports = { parseLotgenotenBlok, fetchLotgenotenEvents };
+  module.exports = { parseLotgenotenBlok, fetchLotgenotenEvents, parseCercleLinks, parseCercleBlok, leidCercleDatumAf, schoonCerclePlek, schoonCercleTitel, fetchCercleEvents };
 }
