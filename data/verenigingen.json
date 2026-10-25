@@ -1,10 +1,10 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-10-23",
+    "laatst_bijgewerkt": "2026-10-25",
     "volgende_update": "2026-10-26",
-    "bronnen_gecontroleerd": 9,
-    "bronnen_met_events": 10,
-    "totaal_events": 52,
+    "bronnen_gecontroleerd": 10,
+    "bronnen_met_events": 11,
+    "totaal_events": 58,
     "gefilterde_items": 3,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 1
@@ -82,14 +82,6 @@
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
-          "datum": "2026-11-02",
-          "titel": "Bijpraatlunch Ginestas",
-          "plaats": "1 Pl. du Marché, 11120 Ginestas",
-          "tijd": "12:00-14:00",
-          "type": "informatief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
-        {
           "datum": "2026-11-04",
           "titel": "Bijpraatlunch Brugairolles",
           "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
@@ -102,6 +94,14 @@
           "titel": "ONIZ Kennismakingsbijeenkomst 4 november",
           "plaats": "niet vermeld",
           "tijd": "10:00-14:00",
+          "type": "informatief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-09",
+          "titel": "Bijpraatlunch Ginestas",
+          "plaats": "1 Pl. du Marché, 11120 Ginestas",
+          "tijd": "12:00-14:00",
           "type": "informatief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -195,6 +195,14 @@
           "bron": "https://www.nedazur.org/_ical/public.ics"
         },
         {
+          "datum": "2026-11-02",
+          "titel": "Jeu de boules Saint-Paul",
+          "plaats": "Saint-Paul de Vence",
+          "tijd": "09:30-12:00",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
           "datum": "2026-11-04",
           "titel": "Jeu de boules Sainte-Maxime",
           "plaats": "Sainte-Maxime",
@@ -224,6 +232,14 @@
           "plaats": "Cagnes-sur-Mer",
           "tijd": "14:00-14:00",
           "type": "cultureel",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-12-02",
+          "titel": "Jeu de boules Sainte-Maxime",
+          "plaats": "Sainte-Maxime",
+          "tijd": "09:15-09:15",
+          "type": "sportief",
           "bron": "https://www.nedazur.org/_ical/public.ics"
         }
       ],
@@ -695,7 +711,40 @@
       "status": "actief",
       "agenda_toegankelijkheid": "webpagina",
       "opmerking": "Gezelligheidsvereniging voor Nederlanders en liefhebbers van Nederland in en om Lille. Geen agendapagina: de startpagina linkt losse activiteitenpagina's; datum en tijd worden daaruit gelezen, het jaar wordt afgeleid uit de weekdag.",
-      "events": [],
+      "events": [
+        {
+          "titel": "Kindermiddag",
+          "datum": "2026-11-22",
+          "tijd": "15:00",
+          "plaats": "plaats nog te bevestigen",
+          "type": "sociaal",
+          "bron": "https://www.cercleneerlandais.com/info-kindermiddag.html"
+        },
+        {
+          "titel": "Kookatelier",
+          "datum": "2026-12-02",
+          "tijd": "19:00",
+          "plaats": "Villeneuve d'Ascq",
+          "type": "sociaal",
+          "bron": "https://www.cercleneerlandais.com/info-kookatelier.html"
+        },
+        {
+          "titel": "Sinterklaasfeest",
+          "datum": "2026-12-06",
+          "tijd": "vanaf 15:00",
+          "plaats": "Lille",
+          "type": "sociaal",
+          "bron": "https://www.cercleneerlandais.com/aanmelden-sinterklaasfeest.html"
+        },
+        {
+          "titel": "Sinterkerstborrel met quiz",
+          "datum": "2026-12-17",
+          "tijd": "19:00",
+          "plaats": "Lille, plaats nog te bevestigen",
+          "type": "sociaal",
+          "bron": "https://www.cercleneerlandais.com/sinterkerstborrel.html"
+        }
+      ],
       "contact": "info@cercleneerlandais.com",
       "rubriek": "regionaal"
     },

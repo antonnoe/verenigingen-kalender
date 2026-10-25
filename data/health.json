@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-10-23T07:12:57.172Z",
+  "generated_at": "2026-10-25T11:34:39.107Z",
   "ok": false,
   "status": "degraded",
-  "laatst_bijgewerkt": "2026-10-23",
+  "laatst_bijgewerkt": "2026-10-25",
   "volgende_update": "2026-10-26",
-  "totaal_events": 52,
-  "bronnen_totaal": 10,
-  "bronnen_ok": 9,
+  "totaal_events": 58,
+  "bronnen_totaal": 11,
+  "bronnen_ok": 10,
   "bronnen_down": 1,
   "bronnen_verdacht": 0,
   "kapotte_koppelingen": [
@@ -28,7 +28,7 @@
   "observaties": [],
   "nieuws": {
     "status": "ok",
-    "items": 36,
+    "items": 37,
     "bronnen_down": 0
   },
   "bronnen": [
@@ -39,7 +39,7 @@
       "status": "ok",
       "events": 16,
       "stale": false,
-      "laatste_succes": "2026-10-23",
+      "laatste_succes": "2026-10-25",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -49,9 +49,9 @@
       "naam": "NEDAZUR",
       "type": "ical",
       "status": "ok",
-      "events": 5,
+      "events": 7,
       "stale": false,
-      "laatste_succes": "2026-10-23",
+      "laatste_succes": "2026-10-25",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -63,7 +63,7 @@
       "status": "ok",
       "events": 5,
       "stale": false,
-      "laatste_succes": "2026-10-23",
+      "laatste_succes": "2026-10-25",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -75,7 +75,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-10-23",
+      "laatste_succes": "2026-10-25",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -104,7 +104,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-10-23",
+      "laatste_succes": "2026-10-25",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -116,7 +116,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-10-23",
+      "laatste_succes": "2026-10-25",
       "url": "https://ernparis.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -128,8 +128,20 @@
       "status": "ok",
       "events": 3,
       "stale": false,
-      "laatste_succes": "2026-10-23",
+      "laatste_succes": "2026-10-25",
       "url": "https://www.lotgenoten.fr/",
+      "fout": null,
+      "diagnose": null
+    },
+    {
+      "id": "cercle-neerlandais-lille",
+      "naam": "Cercle Néerlandais",
+      "type": "web-parser",
+      "status": "ok",
+      "events": 4,
+      "stale": false,
+      "laatste_succes": "2026-10-25",
+      "url": "https://www.cercleneerlandais.com/",
       "fout": null,
       "diagnose": null
     },
@@ -140,7 +152,7 @@
       "status": "ok",
       "events": 3,
       "stale": false,
-      "laatste_succes": "2026-10-23",
+      "laatste_succes": "2026-10-25",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -152,7 +164,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-10-23",
+      "laatste_succes": "2026-10-25",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null

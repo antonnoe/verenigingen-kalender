@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-23T07:12:57.169Z",
-  "totaal": 36,
+  "generated_at": "2026-10-25T11:34:39.104Z",
+  "totaal": 37,
   "bronnen": [
     {
       "id": "nlvp",
@@ -42,7 +42,7 @@
       "id": "lotgenoten",
       "naam": "LOTgenoten",
       "status": "ok",
-      "items": 4,
+      "items": 5,
       "spam_geweerd": 0,
       "feed": "https://www.lotgenoten.fr/feed/",
       "diagnose": null
@@ -140,6 +140,38 @@
   ],
   "items": [
     {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-10-24",
+      "titel": "29 november – Sinterklaasfeest",
+      "link": "https://nlvp.fr/29-november-sinterklaasfeest/",
+      "excerpt": "Goed nieuws uit Spanje !!! De Nederlandse vereniging heeft namelijk de volgende brief van Sinterklaas ontvangen : Lieve kinderen van Parijs en omgeving, Mijn Pieten hebben mij verteld dat jullie heel lief zijn geweest dit jaar. Geweldig ! Daarom heb ik besloten met een omweg…"
+    },
+    {
+      "bron_id": "nlvp",
+      "bron_naam": "NLVP",
+      "datum": "2026-10-24",
+      "titel": "19 November : Wijnavond",
+      "link": "https://nlvp.fr/19-november-wijnavond/",
+      "excerpt": "Op donderdag 19 november komt de Beaujolais nouveau weer op tafel. Zoals vorig jaar gaan we de beaujolais samen proeven in het cafe Basile. Ieder lid krijgt het eerste glas aangeboden door onze vereniging op afgifte van een bonnetje Voor het bonnetje kunt u zich wenden tot…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-24",
+      "titel": "Stemmen voor de eerste kamer in het buitenland",
+      "link": "https://www.lotgenoten.fr/stemmen-voor-de-eerste-kamer-in-het-buitenland/",
+      "excerpt": "Op 17 maart 2027 zijn er weer verkiezingen in Nederland. Wat misschien niet iedereen weet, is dat wij als Nederlanders in het buitenland ook indirect invloed kunnen uitoefenen op de samenstelling van de Eerste Kamer. Dat doen we door te stemmen voor het kiescollege…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-23",
+      "titel": "Airbnb verandert de regels: geen afwas meer doen of vuilnis buitenzetten",
+      "link": "https://www.lotgenoten.fr/airbnb-verandert-de-regels-geen-afwas-meer-doen-of-vuilnis-buitenzetten/",
+      "excerpt": "Wie een vakantiehuis via Airbnb huurt, hoeft binnenkort niet meer verplicht de afwas te doen of het vuilnis naar buiten te brengen. Vanaf 20 november 2026 voert het verhuurplatform nieuwe regels in voor verhuurders. Daarmee wil Airbnb het verblijf voor gasten aangenamer maken…"
+    },
+    {
       "bron_id": "bourgondische-zaken",
       "bron_naam": "Bourgondische Zaken",
       "datum": "2026-10-22",
@@ -183,17 +215,9 @@
       "bron_id": "nlvp",
       "bron_naam": "NLVP",
       "datum": "2026-10-17",
-      "titel": "29 november – Sinterklaasfeest",
-      "link": "https://nlvp.fr/29-november-sinterklaasfeest/",
-      "excerpt": "Goed nieuws uit Spanje !!! De Nederlandse vereniging heeft namelijk de volgende brief van Sinterklaas ontvangen : Lieve kinderen van Parijs en omgeving, Mijn Pieten hebben mij verteld dat jullie heel lief zijn geweest dit jaar. Geweldig ! Daarom heb ik besloten met een omweg…"
-    },
-    {
-      "bron_id": "nlvp",
-      "bron_naam": "NLVP",
-      "datum": "2026-10-17",
       "titel": "25 oktober – Koffieochtend",
       "link": "https://nlvp.fr/25-oktober-koffieochtend/",
-      "excerpt": "Zondag 25 oktober is het weer tijd voor koffie in café-brasserie Au Père Tranquille. Hét perfecte moment om onder het genot van een lekkere kop koffie even te kletsen met andere Nederlanders. Een mooie gelegenheid om oude bekenden terug te zien, verhalen uit te wisselen of…"
+      "excerpt": "Zondag 25 oktober is het weer tijd voor onze maandelijkse koffieochtend bij Au Père Tranquille. Schuif gezellig aan voor een goede kop koffie, leuke gesprekken en vertrouwde gezichten. We zitten zoals gebruikelijk op de eerste etage, van 10.30 tot 12.00 uur. Iedereen is van…"
     },
     {
       "bron_id": "atelier-neerlandais",
@@ -242,14 +266,6 @@
       "titel": "Winter-opening Jardin de Sculptures, Fayence",
       "link": "https://www.a-n-m.nl/nieuws/winter-opening-jardin-de-sculptures-fayence",
       "excerpt": "De zomers zijn altijd warm in Zuid Frankrijk maar de afgelopen zomer steeg het kwik langdurig wel heel enthousiast. Het gevolg was, dat de Jardin de Sculptures, na twee succesvolle expositie..."
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-07",
-      "titel": "Hulp in huis of tuinman in Frankrijk: minder sociale lasten vanaf 80 jaar",
-      "link": "https://www.lotgenoten.fr/hulp-in-huis-of-tuinman-in-frankrijk-minder-sociale-lasten-vanaf-80-jaar-en-andere-voordelen-voor-ouderen/",
-      "excerpt": "Door: infofrankrijk.com Heeft u een hulp in huis of een tuinman via het CESU-systeem? Tot voor kort betaalde u vanaf 70 jaar automatisch minder werkgeverslasten. Sinds de aangifte over juli 2026 ligt die grens op 80 jaar. In dit artikel leest u wat er is veranderd, wat er…"
     },
     {
       "bron_id": "nedazur",
@@ -362,14 +378,6 @@
       "titel": "Johan de Witt Stichting: Geruchten en Reputatie in de Diplomatie, 27 november",
       "link": "https://atelierneerlandais.com/johan-de-witt-stichting-nieuwe-perspectieven-op-de-zeventiende-eeuw-27-november/",
       "excerpt": "Ter gelegenheid van het tienjarig bestaan ​​van de Johan de Witt Stichting (Huygens Instituut Amsterdam), komen jonge wetenschappers uit Nederland en Frankrijk samen in Parijs om actueel onderzoek te presenteren over politiek en diplomatie, correspondentie, geruchten en…"
-    },
-    {
-      "bron_id": "nlvp",
-      "bron_naam": "NLVP",
-      "datum": "2026-09-06",
-      "titel": "27 september – Koffieochtend",
-      "link": "https://nlvp.fr/27-september-koffieochtend/",
-      "excerpt": "Goed nieuws! De maandelijkse koffieochtenden zijn weer begonnen. Hét perfecte moment om onder het genot van een lekkere kop koffie even te kletsen met andere Nederlanders. Van 10.30 tot 12.00 uur Een mooie gelegenheid om oude bekenden terug te zien, verhalen uit te wisselen…"
     },
     {
       "bron_id": "ern-paris",
