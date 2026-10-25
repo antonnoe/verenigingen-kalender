@@ -884,23 +884,6 @@
       "events": []
     },
     {
-      "id": "france-advies",
-      "naam": "France Advies",
-      "afkorting": "France Advies",
-      "regio": "Landelijk",
-      "website": "https://www.franceadvies.fr",
-      "agenda_url": null,
-      "ical_url": null,
-      "platform": null,
-      "fanf_lid": false,
-      "status": "actief",
-      "agenda_toegankelijkheid": "geen_online_agenda",
-      "contact": "franceadvies@gmail.com",
-      "opmerking": "Voor Nederlanders en Vlamingen die ondersteuning nodig hebben bij praktische problemen in Frankrijk. Advies is volledig gratis. Audit 25-10-2026: site gaf HTTP 502 bij twee pogingen; niet beoordeeld.",
-      "rubriek": "hulporganisatie",
-      "events": []
-    },
-    {
       "id": "nederlands-ondersteuningsfonds",
       "naam": "Nederlands Ondersteuningsfonds",
       "afkorting": "Ondersteuningsfonds",
