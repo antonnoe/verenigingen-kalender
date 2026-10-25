@@ -2,12 +2,12 @@
   "meta": {
     "laatst_bijgewerkt": "2026-10-25",
     "volgende_update": "2026-10-26",
-    "bronnen_gecontroleerd": 10,
-    "bronnen_met_events": 11,
-    "totaal_events": 58,
-    "gefilterde_items": 3,
+    "bronnen_gecontroleerd": 11,
+    "bronnen_met_events": 13,
+    "totaal_events": 62,
+    "gefilterde_items": 2,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 1
+    "warnings": 2
   },
   "verenigingen": [
     {
@@ -41,14 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-10-25",
-          "titel": "Mood/comfortfood en Mindfulness",
-          "plaats": "36 Av. de la Gare Nissan lez Enserune",
-          "tijd": "14:00-16:00",
-          "type": "informatief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-10-27",
           "titel": "Bijpraatlunch Aigne",
@@ -213,7 +205,7 @@
         {
           "datum": "2026-11-28",
           "titel": "Oranje Borrel",
-          "plaats": "Var -volgt zo spoedig mogelijk",
+          "plaats": "Saint Raphaël",
           "tijd": "17:00-19:00",
           "type": "informatief",
           "bron": "https://www.nedazur.org/_ical/public.ics"
@@ -377,7 +369,32 @@
           "plaats": "Camping Le Clou, Coux-et-Bigaroque"
         }
       ],
-      "events": [],
+      "events": [
+        {
+          "titel": "Kerststukjes maken met Kerstengelen",
+          "datum": "2026-12-16",
+          "tijd": "niet vermeld",
+          "plaats": "plaats niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/agenda#2026-12/1509"
+        },
+        {
+          "titel": "Kerstwandeling en aansluitend kerstlunch",
+          "datum": "2026-12-26",
+          "tijd": "niet vermeld",
+          "plaats": "Le Clou",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/agenda#2026-12/1510"
+        },
+        {
+          "titel": "Nieuwjaarsreceptie",
+          "datum": "2027-01-14",
+          "tijd": "17:00-23:00",
+          "plaats": "plaats nog te bevestigen",
+          "type": "sociaal",
+          "bron": "https://www.latulipe.net/nl/agenda#2027-01/1507"
+        }
+      ],
       "rubriek": "regionaal"
     },
     {
@@ -621,7 +638,24 @@
       "agenda_toegankelijkheid": "webpagina",
       "contact": null,
       "opmerking": "Publieke lijst 'Planning DBCRA <jaar>' op dbcra.nl/nederlandse-club-lyon (jaar in de kop). Alleen datum en titel; tijd en plaats volgen via persoonlijke uitnodiging en de datums zijn volgens de pagina nog niet definitief, daarom staat 'datum onder voorbehoud' bij de titel. Gelezen door een deterministische parser.",
-      "events": [],
+      "events": [
+        {
+          "titel": "Sinterklaas (datum onder voorbehoud)",
+          "datum": "2026-12-03",
+          "tijd": "niet vermeld",
+          "plaats": "plaats nog te bevestigen",
+          "type": "sociaal",
+          "bron": "https://dbcra.nl/nederlandse-club-lyon/"
+        },
+        {
+          "titel": "DBCRA Kerstdiner (datum onder voorbehoud)",
+          "datum": "2026-12-17",
+          "tijd": "niet vermeld",
+          "plaats": "plaats nog te bevestigen",
+          "type": "sociaal",
+          "bron": "https://dbcra.nl/nederlandse-club-lyon/"
+        }
+      ],
       "rubriek": "zakelijk"
     },
     {

@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-25T11:34:39.104Z",
+  "generated_at": "2026-10-25T20:20:35.030Z",
   "totaal": 37,
   "bronnen": [
     {
@@ -41,11 +41,16 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "ok",
+      "status": "down",
       "items": 5,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "fetch failed"
+      }
     },
     {
       "id": "neerlandia-toulouse",
