@@ -43,7 +43,7 @@ Controle per vereniging, in deze volgorde, en stop zodra iets werkt:
 5. Alleen Facebook of niets: label klopt, niet scrapen, wel noteren.
 
 Uitkomst audit 25-10-2026 (details in het veld `opmerking` per bronrecord):
-- Bouwen (er zijn gestructureerde gegevens): latulipe (publieke JSON-feed `leden.latulipe.net/api/agenda.json.php`, maand via parameter, vervangt de 404-URL's), dbcra (lijst "Planning DBCRA 2026" op dbcra.nl/nederlandse-club-lyon, jaar in de kop, geen tijd of plaats).
+- Gebouwd op 25-10-2026: latulipe (JSON-feed `leden.latulipe.net/api/agenda.json.php?month=YYYY-MM`, 4 maanden, terugkerende reeksen met `series_id` blijven buiten de events want die staan in `terugkerende_activiteiten`) en dbcra (lijst "Planning DBCRA <jaar>", jaar uit de kop, tijd en plaats ontbreken, titel krijgt "(datum onder voorbehoud)"). Beide staan in `DETERMINISTISCHE_HANDLERS`: een nieuwe parser daar registreren en in `WEB_BRONNEN` met `handler` zetten.
 - Eerst onderzoeken: bourgondische-zaken (agendabourgogne.nl laadt client-side, onderliggende API zoeken).
 - Label klopt, geen events: aneas, cmunf, nederlands-ondersteuningsfonds, nvso, praatje, clcv (iCal leeg), fanf (alleen doorlopende lessen).
 - Niet beoordeeld: france-advies (HTTP 502), facebook-bronnen (nvm-montpellier, crefnec-combrailles) en bronnen zonder website (nzgf, pays-de-gex, perpignan, club-normandie).
