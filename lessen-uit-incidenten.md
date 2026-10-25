@@ -1,3 +1,7 @@
 # Lessen uit incidenten
 
+- LOTgenoten (afgeleid uit het sessierapport, niet de oorspronkelijke tekst): bron stond op /agenda/ en gaf health "ok" met 0 events, terwijl de aankomende activiteiten op de startpagina staan. Een bron met 0 events is geen "ok" maar een waarschuwing.
+- LOTgenoten: alleen het blok "Aankomende 'LOT'genoten Evenementen" telt; huizen te koop en overgenomen artikelen zijn geen evenementen. Per evenement het eigen bericht volgen, eventlink is dat bericht, het blok "Verwante berichten" onderaan wegknippen.
+- LOTgenoten: datum is verplicht, tijd niet. Ontbreekt het jaar, dan de eerstvolgende toekomstige datum; is de datum na ophalen nog onvolledig (bijvoorbeeld "..nov 1700 uur", Monpazier), dan overslaan en loggen, nooit gokken.
+- LOTgenoten: de server blokkeerde sinds 21-10-2026 datacenter-IP's (ECONNREFUSED). Niet om een blokkade heen werken (geen proxy, geen andere route); live test dan als openstaand melden. Verkeer minimaal: startpagina één keer per run, daarna alleen de berichten van aankomende evenementen, geen extra retries, user-agent "Mozilla/5.0 (compatible; VerenigingenKalender/1.0)".
 - Cercle Néerlandais: bron zonder agendapagina, losse activiteitenpagina's die de startpagina als tegels linkt. Het jaar staat nergens en wordt afgeleid uit de weekdag (eerstvolgende jaar binnen 12 maanden waarin dag+maand op die weekdag valt); lukt dat niet, dan wordt het evenement overgeslagen en gelogd, nooit gegokt. 0 evenementen terwijl de pagina's wel gelinkt zijn geeft een waarschuwing in health.json, geen "ok".
