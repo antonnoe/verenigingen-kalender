@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-10-25",
-    "volgende_update": "2026-10-26",
+    "laatst_bijgewerkt": "2026-10-26",
+    "volgende_update": "2026-10-28",
     "bronnen_gecontroleerd": 11,
     "bronnen_met_events": 13,
-    "totaal_events": 62,
-    "gefilterde_items": 2,
+    "totaal_events": 61,
+    "gefilterde_items": 3,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 2
+    "warnings": 0
   },
   "verenigingen": [
     {
@@ -310,14 +310,6 @@
       "opmerking": "Publiceert events per maand als blogposts",
       "events": [
         {
-          "datum": "2026-10-25",
-          "titel": "Koffieochtend",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://nlvp.fr/25-oktober-koffieochtend/"
-        },
-        {
           "datum": "2026-11-29",
           "titel": "Sinterklaasfeest",
           "plaats": "niet vermeld",
@@ -506,7 +498,7 @@
         {
           "datum": "2026-11-19",
           "titel": "Borrelmiddag Tarn/Garonne Moissac",
-          "plaats": "Ced & Alex L'Atelier, 6 Place Roger Delthil, Moissac",
+          "plaats": "Ced & Alex LAtelier, 6 Place Roger Delthil in Moissac",
           "tijd": "15:00-18:00",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/nieuw-borrelmiddag-voor-de-zuiderlijke-lotgenoten-tarn-et-garonne/"

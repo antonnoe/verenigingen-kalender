@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-25T20:20:35.030Z",
-  "totaal": 37,
+  "generated_at": "2026-10-26T07:26:52.795Z",
+  "totaal": 38,
   "bronnen": [
     {
       "id": "nlvp",
@@ -41,16 +41,11 @@
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
-      "status": "down",
-      "items": 5,
-      "stale": true,
+      "status": "ok",
+      "items": 6,
+      "spam_geweerd": 0,
       "feed": "https://www.lotgenoten.fr/feed/",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      }
+      "diagnose": null
     },
     {
       "id": "neerlandia-toulouse",
@@ -144,6 +139,22 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-25",
+      "titel": "Te koop: LEUK FAUTEUILTJE",
+      "link": "https://www.lotgenoten.fr/te-koop-leuk-fauteuiltje/",
+      "excerpt": "Dit leuke stoeltje staat ons een beetje in de weg. Mag inclusief kussentjes voor €50 worden opgehaald in Sainte-Livrade-sur-Lot. T:0031 6 21451614"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-25",
+      "titel": "Volledige hulp bij al je administratie!!",
+      "link": "https://www.lotgenoten.fr/volledige-hulp-bij-al-je-administratie/",
+      "excerpt": "Heb je hulp nodig bij je administratie? Misschien kan ik je helpen! Communiceren en/of tussenpersoon zijn met franse overheidsdiensten (belasting, pensioenfonds, gemeente etc.), vakmannen, verzekeringen, notaris, of je buren…, Importeren van je voertuig, Bouwvergunning en…"
+    },
     {
       "bron_id": "nlvp",
       "bron_naam": "NLVP",
@@ -255,14 +266,6 @@
       "titel": "Actie: 50% korting op het lidmaatschap 2026",
       "link": "https://www.nedazur.org/nieuws/actie-50-korting-op-het-lidmaatschap-2026",
       "excerpt": "Het lidmaatschap geeft u toegang tot alle activiteiten en evenementen die door de Nederlandse Club worden georganiseerd, al dan niet tegen betaling van een speciaal voor leden vastgesteld bedrag...."
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-09",
-      "titel": "vergelijken in Frankrijk",
-      "link": "https://www.lotgenoten.fr/vergelijken-in-frankrijk/",
-      "excerpt": "Door: infofrankrijk.com Franse vergelijkers zonder verkooppraatjes. U krijgt eerst een korte Nederlandse uitleg en gaat daarna rechtstreeks naar een onafhankelijke consumentenorganisatie of publieke dienst. Bijvoorbeeld, de mutuelle, brillenglazen, internet, gas en…"
     },
     {
       "bron_id": "anm",

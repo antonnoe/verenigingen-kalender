@@ -1,35 +1,20 @@
 {
-  "generated_at": "2026-10-25T20:20:35.033Z",
-  "ok": false,
-  "status": "degraded",
-  "laatst_bijgewerkt": "2026-10-25",
-  "volgende_update": "2026-10-26",
-  "totaal_events": 62,
+  "generated_at": "2026-10-26T07:26:52.797Z",
+  "ok": true,
+  "status": "ok",
+  "laatst_bijgewerkt": "2026-10-26",
+  "volgende_update": "2026-10-28",
+  "totaal_events": 61,
   "bronnen_totaal": 12,
-  "bronnen_ok": 11,
-  "bronnen_down": 1,
+  "bronnen_ok": 12,
+  "bronnen_down": 0,
   "bronnen_verdacht": 0,
-  "kapotte_koppelingen": [
-    {
-      "id": "lotgenoten",
-      "naam": "LOTgenoten",
-      "type": "web-scraping",
-      "url": "https://www.lotgenoten.fr/",
-      "fout": "fetch failed",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      },
-      "laatste_succes": "2026-10-25"
-    }
-  ],
+  "kapotte_koppelingen": [],
   "observaties": [],
   "nieuws": {
-    "status": "degraded",
-    "items": 37,
-    "bronnen_down": 1
+    "status": "ok",
+    "items": 38,
+    "bronnen_down": 0
   },
   "bronnen": [
     {
@@ -39,7 +24,7 @@
       "status": "ok",
       "events": 15,
       "stale": false,
-      "laatste_succes": "2026-10-25",
+      "laatste_succes": "2026-10-26",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -51,7 +36,7 @@
       "status": "ok",
       "events": 7,
       "stale": false,
-      "laatste_succes": "2026-10-25",
+      "laatste_succes": "2026-10-26",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -63,7 +48,7 @@
       "status": "ok",
       "events": 5,
       "stale": false,
-      "laatste_succes": "2026-10-25",
+      "laatste_succes": "2026-10-26",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -73,9 +58,9 @@
       "naam": "NLVP",
       "type": "wordpress-api",
       "status": "ok",
-      "events": 2,
+      "events": 1,
       "stale": false,
-      "laatste_succes": "2026-10-25",
+      "laatste_succes": "2026-10-26",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -87,7 +72,7 @@
       "status": "ok",
       "events": 3,
       "stale": false,
-      "laatste_succes": "2026-10-25",
+      "laatste_succes": "2026-10-26",
       "url": "https://www.latulipe.net/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -99,7 +84,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-10-25",
+      "laatste_succes": "2026-10-26",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -111,7 +96,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-10-25",
+      "laatste_succes": "2026-10-26",
       "url": "https://ernparis.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -120,18 +105,13 @@
       "id": "lotgenoten",
       "naam": "LOTgenoten",
       "type": "web-scraping",
-      "status": "down",
+      "status": "ok",
       "events": 3,
-      "stale": true,
-      "laatste_succes": "2026-10-25",
+      "stale": false,
+      "laatste_succes": "2026-10-26",
       "url": "https://www.lotgenoten.fr/",
-      "fout": "fetch failed",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      }
+      "fout": null,
+      "diagnose": null
     },
     {
       "id": "cercle-neerlandais-lille",
@@ -140,7 +120,7 @@
       "status": "ok",
       "events": 4,
       "stale": false,
-      "laatste_succes": "2026-10-25",
+      "laatste_succes": "2026-10-26",
       "url": "https://www.cercleneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -152,7 +132,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-10-25",
+      "laatste_succes": "2026-10-26",
       "url": "https://dbcra.nl/nederlandse-club-lyon/",
       "fout": null,
       "diagnose": null
@@ -164,7 +144,7 @@
       "status": "ok",
       "events": 3,
       "stale": false,
-      "laatste_succes": "2026-10-25",
+      "laatste_succes": "2026-10-26",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -176,7 +156,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-10-25",
+      "laatste_succes": "2026-10-26",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null
