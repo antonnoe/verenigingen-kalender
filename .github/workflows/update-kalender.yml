@@ -109,3 +109,25 @@ jobs:
           gh issue create \
             --title "🔴 Kalender update FATAAL GECRASHT — ${DATUM}" \
             --body "$(echo -e "$BODY")"
+
+      - name: Sluit oudere meldingen
+        # Alleen na een nieuwe melding van deze run (anders blijft alles open), alleen
+        # meldingen van github-actions zelf, nooit een melding met reacties. Faalt deze
+        # stap, dan blokkeert dat niets: de nieuwe melding staat er al.
+        if: always() && (steps.update.outputs.exit_code == '1' || steps.update.outputs.exit_code == '2')
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          VANDAAG=$(date +%Y-%m-%d)
+          gh issue list --state open --limit 200 --json number,title,author,comments,createdAt > open.json
+          RESULT=$(jq -c --arg vandaag "$VANDAAG" -f .github/scripts/oudere-meldingen.jq open.json)
+          echo "Selectie: $RESULT"
+          NIEUW=$(echo "$RESULT" | jq -r '.nieuw // empty')
+          if [ -z "$NIEUW" ]; then
+            echo "Geen melding van deze run gevonden, niets gesloten."
+            exit 0
+          fi
+          for N in $(echo "$RESULT" | jq -r '.sluiten[]'); do
+            gh issue close "$N" --reason "not planned" --comment "Vervangen door #${NIEUW}." || echo "Sluiten van #${N} mislukt (genegeerd)"
+          done
