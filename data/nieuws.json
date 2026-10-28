@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-26T07:26:52.795Z",
-  "totaal": 38,
+  "generated_at": "2026-10-28T07:06:56.703Z",
+  "totaal": 39,
   "bronnen": [
     {
       "id": "nlvp",
@@ -60,7 +60,7 @@
       "id": "nvlr",
       "naam": "NVLR",
       "status": "ok",
-      "items": 3,
+      "items": 4,
       "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
@@ -139,6 +139,30 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-10-28",
+      "titel": "Uitzicht op woensdag 28 oktober",
+      "link": "https://ernparis.fr/uitzicht-op-woensdag-28-oktober/",
+      "excerpt": "Ruth van der Waall-Schaeffer Schaamte"
+    },
+    {
+      "bron_id": "nvlr",
+      "bron_naam": "NVLR",
+      "datum": "2026-10-27",
+      "titel": "Webinars bij de FANF",
+      "link": "https://www.nvlr.eu/nieuws/webinars-bij-de-fanf",
+      "excerpt": "Er komen weer nieuwe webinars bij de FANF. Online te volgen via deze link. Binnenkort, Bouwen en verbouwen in Frankrijk, waar op te letten Tijdstip: 24 november van 19.00u -21.00u Spreker: Eugéne..."
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-26",
+      "titel": "Mede LOTgenoten Joachim, Mel, Kevin en Britt in de krant aangaande Transavia",
+      "link": "https://www.lotgenoten.fr/mede-lotgenoten-joachim-mel-kevin-en-britt-in-de-krant-aangaande-transavia/",
+      "excerpt": "Transavia stopt met vlucht naar Franse plaats: Het was zo makkelijk REGIO De vlucht tussen Rotterdam en Bergerac verdwijnt na 27 maart 2027 uit het aanbod van Transavia. Nederlandse ondernemers in de Franse regios Dordogne en Lot vrezen dat gasten daardoor minder makkelijk…"
+    },
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
@@ -250,14 +274,6 @@
       "titel": "Uitzicht op woensdag 14 oktober",
       "link": "https://ernparis.fr/uitzicht-op-woensdag-8-juli-2/",
       "excerpt": "Ruth van der Waall-Schaeffer Wat of wie?"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-14",
-      "titel": "Te koop: Privéwoning, zwembad, gastenverblijf en panoramisch uitzicht nabij Cahors €379.000",
-      "link": "https://www.lotgenoten.fr/te-koop-privewoning-met-vier-slaapkamers-zwembad-gastenverblijf-en-panoramisch-uitzicht-nabij-cahors/",
-      "excerpt": "Huis te koop in lieu-dit Brouelles, MAXOU Lot Verscholen in het hart van een prachtige Franse vallei biedt dit huis een uniek en adembenemend uitzicht op het landschap. Hier wordt u elke dag wakker met het gefluit van de vele vogels, geniet u van de rust van de omliggende en…"
     },
     {
       "bron_id": "nedazur",
@@ -386,14 +402,6 @@
       "titel": "Johan de Witt Stichting: Geruchten en Reputatie in de Diplomatie, 27 november",
       "link": "https://atelierneerlandais.com/johan-de-witt-stichting-nieuwe-perspectieven-op-de-zeventiende-eeuw-27-november/",
       "excerpt": "Ter gelegenheid van het tienjarig bestaan ​​van de Johan de Witt Stichting (Huygens Instituut Amsterdam), komen jonge wetenschappers uit Nederland en Frankrijk samen in Parijs om actueel onderzoek te presenteren over politiek en diplomatie, correspondentie, geruchten en…"
-    },
-    {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-09-06",
-      "titel": "Zondag 6 mei – ds Henk Spoelstra",
-      "link": "https://ernparis.fr/zondag-6-mei-ds-henk-spoelstra/",
-      "excerpt": ""
     },
     {
       "bron_id": "atelier-neerlandais",

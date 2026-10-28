@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-10-26",
-    "volgende_update": "2026-10-28",
+    "laatst_bijgewerkt": "2026-10-28",
+    "volgende_update": "2026-10-30",
     "bronnen_gecontroleerd": 11,
     "bronnen_met_events": 13,
-    "totaal_events": 61,
-    "gefilterde_items": 3,
+    "totaal_events": 58,
+    "gefilterde_items": 6,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 0
   },
@@ -41,14 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-10-27",
-          "titel": "Bijpraatlunch Aigne",
-          "plaats": "Restaurant Lo Cagarol, Aigne.",
-          "tijd": "12:00-15:00",
-          "type": "sportief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-10-28",
           "titel": "Pétanque in Tourbes",
@@ -251,14 +243,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@a-n-m.com",
       "events": [
-        {
-          "datum": "2026-10-27",
-          "titel": "ANM Bridge",
-          "plaats": "Le Muy",
-          "tijd": "14:30-20:30",
-          "type": "informatief",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
         {
           "datum": "2026-10-31",
           "titel": "PROEF! Kunst en wijn 2026",
@@ -480,14 +464,6 @@
       ],
       "events": [
         {
-          "datum": "2026-10-30",
-          "titel": "Borrelavond/maaltijd Villeneuve/Lot",
-          "plaats": "LA TABLE DU MARCHÉ, 18-22 rue Lakanal, 47300 Villeneuve sur Lot",
-          "tijd": "17:00",
-          "type": "sociaal",
-          "bron": "https://www.lotgenoten.fr/lotgenotenavond-in-villeneuve-sur-lot/"
-        },
-        {
           "datum": "2026-11-08",
           "titel": "Borrelmiddag/daghap st Martin/Redon Lot op Bouysset",
           "plaats": "Bouysset, Saint Martin le Redon",
@@ -498,7 +474,7 @@
         {
           "datum": "2026-11-19",
           "titel": "Borrelmiddag Tarn/Garonne Moissac",
-          "plaats": "Ced & Alex LAtelier, 6 Place Roger Delthil in Moissac",
+          "plaats": "Ced & Alex L'Atelier, 6 Place Roger Delthil, Moissac",
           "tijd": "15:00-18:00",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/nieuw-borrelmiddag-voor-de-zuiderlijke-lotgenoten-tarn-et-garonne/"
