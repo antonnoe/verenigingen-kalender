@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-10-28T07:06:56.706Z",
+  "generated_at": "2026-10-30T07:06:23.055Z",
   "ok": true,
   "status": "ok",
-  "laatst_bijgewerkt": "2026-10-28",
-  "volgende_update": "2026-10-30",
-  "totaal_events": 58,
+  "laatst_bijgewerkt": "2026-10-30",
+  "volgende_update": "2026-11-02",
+  "totaal_events": 72,
   "bronnen_totaal": 12,
   "bronnen_ok": 12,
   "bronnen_down": 0,
@@ -12,9 +12,9 @@
   "kapotte_koppelingen": [],
   "observaties": [],
   "nieuws": {
-    "status": "ok",
+    "status": "degraded",
     "items": 39,
-    "bronnen_down": 0
+    "bronnen_down": 1
   },
   "bronnen": [
     {
@@ -22,9 +22,9 @@
       "naam": "NVLR",
       "type": "ical",
       "status": "ok",
-      "events": 14,
+      "events": 12,
       "stale": false,
-      "laatste_succes": "2026-10-28",
+      "laatste_succes": "2026-10-30",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -34,9 +34,9 @@
       "naam": "NEDAZUR",
       "type": "ical",
       "status": "ok",
-      "events": 7,
+      "events": 8,
       "stale": false,
-      "laatste_succes": "2026-10-28",
+      "laatste_succes": "2026-10-30",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -48,7 +48,7 @@
       "status": "ok",
       "events": 4,
       "stale": false,
-      "laatste_succes": "2026-10-28",
+      "laatste_succes": "2026-10-30",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -60,7 +60,7 @@
       "status": "ok",
       "events": 1,
       "stale": false,
-      "laatste_succes": "2026-10-28",
+      "laatste_succes": "2026-10-30",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -72,7 +72,7 @@
       "status": "ok",
       "events": 3,
       "stale": false,
-      "laatste_succes": "2026-10-28",
+      "laatste_succes": "2026-10-30",
       "url": "https://www.latulipe.net/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -84,7 +84,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-10-28",
+      "laatste_succes": "2026-10-30",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -96,7 +96,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-10-28",
+      "laatste_succes": "2026-10-30",
       "url": "https://ernparis.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -106,9 +106,9 @@
       "naam": "LOTgenoten",
       "type": "web-scraping",
       "status": "ok",
-      "events": 2,
+      "events": 3,
       "stale": false,
-      "laatste_succes": "2026-10-28",
+      "laatste_succes": "2026-10-30",
       "url": "https://www.lotgenoten.fr/",
       "fout": null,
       "diagnose": null
@@ -120,7 +120,7 @@
       "status": "ok",
       "events": 4,
       "stale": false,
-      "laatste_succes": "2026-10-28",
+      "laatste_succes": "2026-10-30",
       "url": "https://www.cercleneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -132,7 +132,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-10-28",
+      "laatste_succes": "2026-10-30",
       "url": "https://dbcra.nl/nederlandse-club-lyon/",
       "fout": null,
       "diagnose": null
@@ -142,9 +142,9 @@
       "naam": "Neerlandia Toulouse",
       "type": "web-scraping",
       "status": "ok",
-      "events": 3,
+      "events": 17,
       "stale": false,
-      "laatste_succes": "2026-10-28",
+      "laatste_succes": "2026-10-30",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -156,7 +156,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-10-28",
+      "laatste_succes": "2026-10-30",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null

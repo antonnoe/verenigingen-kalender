@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-10-28T07:06:56.703Z",
+  "generated_at": "2026-10-30T07:06:23.051Z",
   "totaal": 39,
   "bronnen": [
     {
@@ -68,11 +68,16 @@
     {
       "id": "nedazur",
       "naam": "NEDAZUR",
-      "status": "ok",
+      "status": "down",
       "items": 5,
-      "spam_geweerd": 0,
+      "stale": true,
       "feed": "https://www.nedazur.org/nieuws",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "verplaatst",
+        "oorzaak": "Pagina of feed bestaat niet meer (HTTP 404/410) — de vereniging heeft haar site-inrichting gewijzigd.",
+        "advies": "GEEN scriptbug. Zoek de nieuwe agenda-URL op de site van de vereniging en pas de bronconfiguratie aan.",
+        "technisch": "HTTP 404 bij https://www.nedazur.org/nieuws"
+      }
     },
     {
       "id": "anm",
@@ -140,6 +145,22 @@
   ],
   "items": [
     {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-29",
+      "titel": "Huis te huur, langere tijd, in de Lot, mei tot november 2027",
+      "link": "https://www.lotgenoten.fr/huis-te-huur-langere-tijd-in-de-lot-mei-tot-november-2027/",
+      "excerpt": "Wij zijn Dick en Marianne en wonen 16 jaar in Frankrijk. Wij hebben 13 jaar een camping gerund, ook in de Lot en sinds 3 jaar zijn we gepensioneerd. Onze passie is reizen en als alles volgens plan verloopt, willen we in de periode tussen mei-november 2027 een reis van 5 à 6…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-29",
+      "titel": "Aziatische hoornaar (Vespa velutina) in de winter…",
+      "link": "https://www.lotgenoten.fr/aziatische-hoornaar-vespa-velutina-in-de-winter/",
+      "excerpt": "De koningin verlaat het oude nest en zoekt een beschutte plek om te overwinteren. In de loop van de herfst produceert het nest nieuwe koninginnen en mannetjes. De jonge koninginnen paren met de mannetjes. Daarna verlaten de jonge koninginnen het nest en gaan ze op zoek naar…"
+    },
+    {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
       "datum": "2026-10-28",
@@ -153,7 +174,7 @@
       "datum": "2026-10-27",
       "titel": "Webinars bij de FANF",
       "link": "https://www.nvlr.eu/nieuws/webinars-bij-de-fanf",
-      "excerpt": "Er komen weer nieuwe webinars bij de FANF. Online te volgen via deze link. Binnenkort, Bouwen en verbouwen in Frankrijk, waar op te letten Tijdstip: 24 november van 19.00u -21.00u Spreker: Eugéne..."
+      "excerpt": "Er komt weer een nieuw webinar bij de FANF. Zie de nieuwsbrief via deze link. Binnenkort, Bouwen en verbouwen in Frankrijk, waar op te letten Tijdstip: 24 november van 19.00u -21.00u Spreker:..."
     },
     {
       "bron_id": "lotgenoten",
@@ -204,14 +225,6 @@
       "excerpt": "Op 17 maart 2027 zijn er weer verkiezingen in Nederland. Wat misschien niet iedereen weet, is dat wij als Nederlanders in het buitenland ook indirect invloed kunnen uitoefenen op de samenstelling van de Eerste Kamer. Dat doen we door te stemmen voor het kiescollege…"
     },
     {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-23",
-      "titel": "Airbnb verandert de regels: geen afwas meer doen of vuilnis buitenzetten",
-      "link": "https://www.lotgenoten.fr/airbnb-verandert-de-regels-geen-afwas-meer-doen-of-vuilnis-buitenzetten/",
-      "excerpt": "Wie een vakantiehuis via Airbnb huurt, hoeft binnenkort niet meer verplicht de afwas te doen of het vuilnis naar buiten te brengen. Vanaf 20 november 2026 voert het verhuurplatform nieuwe regels in voor verhuurders. Daarmee wil Airbnb het verblijf voor gasten aangenamer maken…"
-    },
-    {
       "bron_id": "bourgondische-zaken",
       "bron_naam": "Bourgondische Zaken",
       "datum": "2026-10-22",
@@ -234,14 +247,6 @@
       "titel": "Oranje Borrel commissieleden gezocht",
       "link": "https://www.nedazur.org/nieuws/oranje-borrel-commissieleden-gezocht",
       "excerpt": "Voor de Oranjeborrelcommissie zoeken wij nog versterking. Vind je het leuk om te helpen met het organiseren van borrels meld je dan aan via: Contact@nedazur.org."
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-20",
-      "titel": "Door omstandigheden te koop van mede-LOTgenoot, mooie bungalow in Condezaygues €290.000 z. makelaar",
-      "link": "https://www.lotgenoten.fr/door-omstandigheden-te-koop-van-mede-lotgenoot-mooie-bungalow-in-condezaygues-e290-000-z-makelaar/",
-      "excerpt": "Het totale grondoppervlak is 1450 m2. Het huis is een bungalow met 4 slaapkamers. Het huis is gunstig gelegen, 1,4 km van het centrum van Libos waar donderdag de grootste weekmark van de Lot en Garonne gehouden wordt. Ook is op 2 km afstand een winkelcentrum met een Brico,…"
     },
     {
       "bron_id": "nedazur",
