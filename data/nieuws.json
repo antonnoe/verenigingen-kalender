@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-02T07:07:07.809Z",
-  "totaal": 38,
+  "generated_at": "2026-11-02T17:21:49.799Z",
+  "totaal": 36,
   "bronnen": [
     {
       "id": "nlvp",
@@ -24,7 +24,7 @@
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
       "status": "ok",
-      "items": 5,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
       "diagnose": null
@@ -60,7 +60,7 @@
       "id": "nvlr",
       "naam": "NVLR",
       "status": "ok",
-      "items": 3,
+      "items": 2,
       "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
@@ -68,16 +68,11 @@
     {
       "id": "nedazur",
       "naam": "NEDAZUR",
-      "status": "down",
-      "items": 5,
-      "stale": true,
-      "feed": "https://www.nedazur.org/nieuws",
-      "diagnose": {
-        "categorie": "verplaatst",
-        "oorzaak": "Pagina of feed bestaat niet meer (HTTP 404/410) — de vereniging heeft haar site-inrichting gewijzigd.",
-        "advies": "GEEN scriptbug. Zoek de nieuwe agenda-URL op de site van de vereniging en pas de bronconfiguratie aan.",
-        "technisch": "HTTP 404 bij https://www.nedazur.org/nieuws"
-      }
+      "status": "ok",
+      "items": 6,
+      "spam_geweerd": 0,
+      "feed": "https://www.nedazur.org/mijn-dnc/nieuws",
+      "diagnose": null
     },
     {
       "id": "anm",
@@ -201,6 +196,14 @@
       "excerpt": "Ruth van der Waall-Schaeffer Schaamte"
     },
     {
+      "bron_id": "nedazur",
+      "bron_naam": "NEDAZUR",
+      "datum": "2026-10-28",
+      "titel": "Vrijwilligers gezocht",
+      "link": "https://www.nedazur.org/mijn-dnc/nieuws/28233-vrijwilligers-gezocht",
+      "excerpt": "Samen houden we de Nederlandse Club bruisend! Een gezellige Oranje Borrel, een stadswandeling, een klaverjasavond of een andere leuke activiteit: het begint met leden die een handje helpen. En dat..."
+    },
+    {
       "bron_id": "nvlr",
       "bron_naam": "NVLR",
       "datum": "2026-10-27",
@@ -245,7 +248,7 @@
       "bron_naam": "NEDAZUR",
       "datum": "2026-10-21",
       "titel": "Pieten gezocht voor aankomst van Sinterklaas 29 november",
-      "link": "https://www.nedazur.org/nieuws/pieten-gezocht-voor-aankomst-van-sinterklaas-29-november",
+      "link": "https://www.nedazur.org/mijn-dnc/nieuws/pieten-gezocht-voor-aankomst-van-sinterklaas-29-november",
       "excerpt": "Wij zijn dringend op zoek naar vrijwilligers en enthousiaste mensen die het leuk vinden om zich in een Pietenpak te hijsen en zo het Sinterklaasfeest voor de kinderen tot een groot succes te..."
     },
     {
@@ -253,7 +256,7 @@
       "bron_naam": "NEDAZUR",
       "datum": "2026-10-21",
       "titel": "Oranje Borrel commissieleden gezocht",
-      "link": "https://www.nedazur.org/nieuws/oranje-borrel-commissieleden-gezocht",
+      "link": "https://www.nedazur.org/mijn-dnc/nieuws/oranje-borrel-commissieleden-gezocht",
       "excerpt": "Voor de Oranjeborrelcommissie zoeken wij nog versterking. Vind je het leuk om te helpen met het organiseren van borrels meld je dan aan via: Contact@nedazur.org."
     },
     {
@@ -261,7 +264,7 @@
       "bron_naam": "NEDAZUR",
       "datum": "2026-10-19",
       "titel": "Redactiemedewerkers gezocht",
-      "link": "https://www.nedazur.org/nieuws/redactiemedewerkers-gezocht",
+      "link": "https://www.nedazur.org/mijn-dnc/nieuws/redactiemedewerkers-gezocht",
       "excerpt": "Wij zoeken enthousiaste redactiemedewerkers die willen bijdragen aan ons Holland Côte d'Azur magazine. Wil je er meer over weten? Neem dan contact op met Connie Soetens via Secretaris@Nedazur.org."
     },
     {
@@ -285,7 +288,7 @@
       "bron_naam": "NEDAZUR",
       "datum": "2026-10-13",
       "titel": "Actie: 50% korting op het lidmaatschap 2026",
-      "link": "https://www.nedazur.org/nieuws/actie-50-korting-op-het-lidmaatschap-2026",
+      "link": "https://www.nedazur.org/mijn-dnc/nieuws/actie-50-korting-op-het-lidmaatschap-2026",
       "excerpt": "Het lidmaatschap geeft u toegang tot alle activiteiten en evenementen die door de Nederlandse Club worden georganiseerd, al dan niet tegen betaling van een speciaal voor leden vastgesteld bedrag...."
     },
     {
@@ -309,7 +312,7 @@
       "bron_naam": "NEDAZUR",
       "datum": "2026-10-05",
       "titel": "Nieuw Bestuur",
-      "link": "https://www.nedazur.org/nieuws/nieuw-bestuur",
+      "link": "https://www.nedazur.org/mijn-dnc/nieuws/nieuw-bestuur",
       "excerpt": "Op maandag 28 september 2026 is tijdens een Buitengewone Algemene Ledenvergadering een nieuw bestuur voor DNC gekozen. Met zeven kandidaten voor zeven functies werd het bestuur bij acclamatie..."
     },
     {
@@ -423,30 +426,6 @@
       "titel": "Boeklancering: Capitalism’s Favorite Child, 20 november",
       "link": "https://atelierneerlandais.com/boeklancering-capitalisms-favorite-child-24-juni/",
       "excerpt": "Het Atelier Néerlandais verwelkomt AN-lid Ben Wubs en zijn co-auteur Pierre-Yves Donzé voor de boeklancering van Capitalisms Favorite Child . Het boek biedt een nieuw perspectief op de bedrijfsgeschiedenis van de mode-industrie, van het midden van de negentiende eeuw tot…"
-    },
-    {
-      "bron_id": "atelier-neerlandais",
-      "bron_naam": "Atelier Néerlandais",
-      "datum": "2026-09-03",
-      "titel": "FOTODOK: A Wider Gaze, 6 – 15 november",
-      "link": "https://atelierneerlandais.com/fotodok-a-wide-gaze-6-15-november/",
-      "excerpt": "Van 6 t/m 15 november presenteert FOTODOK op uitnodiging van de Nederlandse ambassade in Frankrijk de groepstentoonstelling A Wider Gaze in Atelier Néerlandais in Parijs. Deze tentoonstelling opent in de aanloop naar de prestigieuze fotobeurs Paris Photo. De makers…"
-    },
-    {
-      "bron_id": "atelier-neerlandais",
-      "bron_naam": "Atelier Néerlandais",
-      "datum": "2026-09-03",
-      "titel": "Mondriaan Fonds: The Space between Breaths, 21-25 oktober",
-      "link": "https://atelierneerlandais.com/art-basel-x-mondriaanfonds-21-25-oktober/",
-      "excerpt": "Tijdens de week van Art Basel Paris presenteren het Mondriaan Fonds en de Nederlandse ambassade in Frankrijk The Space between Breaths . Het is een tentoonstelling van Nederlandse hedendaagse kunstenaars, samengesteld door curator Julia Geerlings. Zij toont een selectie van…"
-    },
-    {
-      "bron_id": "nvlr",
-      "bron_naam": "NVLR",
-      "datum": "2026-09-03",
-      "titel": "Et Voilà",
-      "link": "https://www.nvlr.eu/nieuws/et-voila",
-      "excerpt": "Et Voilà nummer 02 is uit! Check uw brievenbus of lees het magazine hier."
     }
   ]
 }
