@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-10-30T07:06:23.051Z",
-  "totaal": 39,
+  "generated_at": "2026-11-02T07:07:07.809Z",
+  "totaal": 38,
   "bronnen": [
     {
       "id": "nlvp",
@@ -24,7 +24,7 @@
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
       "status": "ok",
-      "items": 6,
+      "items": 5,
       "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
       "diagnose": null
@@ -60,7 +60,7 @@
       "id": "nvlr",
       "naam": "NVLR",
       "status": "ok",
-      "items": 4,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
@@ -83,7 +83,7 @@
       "id": "anm",
       "naam": "ANM",
       "status": "ok",
-      "items": 2,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://www.a-n-m.nl/nieuws",
       "diagnose": null
@@ -147,6 +147,38 @@
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
+      "datum": "2026-11-01",
+      "titel": "Ook supermarktketen E.Leclerc verlaagt de prijs van diesel.",
+      "link": "https://www.lotgenoten.fr/ook-supermarktketen-e-leclerc-verlaagt-de-prijs-van-diesel/",
+      "excerpt": "Bron: franceinfo.fr Vanaf zondag 1 november gaat de literprijs bij alle 742 tankstations van de keten met 21 tot 28 cent omlaag. Eerder maakte TotalEnergies al een prijsverlaging bekend. De verlaging is mogelijk dankzij het vrijgeven van strategische brandstofvoorraden…"
+    },
+    {
+      "bron_id": "anm",
+      "bron_naam": "ANM",
+      "datum": "2026-11-01",
+      "titel": "Evaluatieverslag: ANM-evenement PROEF!",
+      "link": "https://www.a-n-m.nl/nieuws/evaluatieverslag-anm-evenement-proef",
+      "excerpt": "Datum evenement: Zaterdag 31 oktober 2026 Locatie: Beeldentuin van Marianne Lapidaire & Maison des Vins (Tina van Asch) 1. Samenvatting Het evenement PROEF! is zeer succesvol verlopen. Door te..."
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-31",
+      "titel": "Wonen in Frankrijk? Dit verandert er in 2027 aan je CAK-bijdrage",
+      "link": "https://www.lotgenoten.fr/34931-2/",
+      "excerpt": "Nederlanders die met pensioen zijn en in Frankrijk wonen, betalen maandelijks een bijdrage aan het CAK voor hun zorg in het woonland. De hoogte daarvan hangt onder meer af van de zogenoemde woonlandfactor. De minister van Volksgezondheid, Welzijn en Sport heeft de factoren…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-10-31",
+      "titel": "Wat veranderd er in november?",
+      "link": "https://www.lotgenoten.fr/wat-veranderd-er-in-november/",
+      "excerpt": "De herfst draait op volle toeren en november brengt traditiegetrouw een reeks nieuwe maatregelen met zich mee. Vanaf deze maand krijgen zowel consumenten, automobilisten als huurders te maken met aangepaste regels. Van een stijgende energierekening tot strenge bescherming…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
       "datum": "2026-10-29",
       "titel": "Huis te huur, langere tijd, in de Lot, mei tot november 2027",
       "link": "https://www.lotgenoten.fr/huis-te-huur-langere-tijd-in-de-lot-mei-tot-november-2027/",
@@ -179,22 +211,6 @@
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
-      "datum": "2026-10-26",
-      "titel": "Mede LOTgenoten Joachim, Mel, Kevin en Britt in de krant aangaande Transavia",
-      "link": "https://www.lotgenoten.fr/mede-lotgenoten-joachim-mel-kevin-en-britt-in-de-krant-aangaande-transavia/",
-      "excerpt": "Transavia stopt met vlucht naar Franse plaats: Het was zo makkelijk REGIO De vlucht tussen Rotterdam en Bergerac verdwijnt na 27 maart 2027 uit het aanbod van Transavia. Nederlandse ondernemers in de Franse regios Dordogne en Lot vrezen dat gasten daardoor minder makkelijk…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-25",
-      "titel": "Te koop: LEUK FAUTEUILTJE",
-      "link": "https://www.lotgenoten.fr/te-koop-leuk-fauteuiltje/",
-      "excerpt": "Dit leuke stoeltje staat ons een beetje in de weg. Mag inclusief kussentjes voor €50 worden opgehaald in Sainte-Livrade-sur-Lot. T:0031 6 21451614"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
       "datum": "2026-10-25",
       "titel": "Volledige hulp bij al je administratie!!",
       "link": "https://www.lotgenoten.fr/volledige-hulp-bij-al-je-administratie/",
@@ -215,14 +231,6 @@
       "titel": "19 November : Wijnavond",
       "link": "https://nlvp.fr/19-november-wijnavond/",
       "excerpt": "Op donderdag 19 november komt de Beaujolais nouveau weer op tafel. Zoals vorig jaar gaan we de beaujolais samen proeven in het cafe Basile. Ieder lid krijgt het eerste glas aangeboden door onze vereniging op afgifte van een bonnetje Voor het bonnetje kunt u zich wenden tot…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-24",
-      "titel": "Stemmen voor de eerste kamer in het buitenland",
-      "link": "https://www.lotgenoten.fr/stemmen-voor-de-eerste-kamer-in-het-buitenland/",
-      "excerpt": "Op 17 maart 2027 zijn er weer verkiezingen in Nederland. Wat misschien niet iedereen weet, is dat wij als Nederlanders in het buitenland ook indirect invloed kunnen uitoefenen op de samenstelling van de Eerste Kamer. Dat doen we door te stemmen voor het kiescollege…"
     },
     {
       "bron_id": "bourgondische-zaken",
@@ -265,14 +273,6 @@
       "excerpt": "Zondag 25 oktober is het weer tijd voor onze maandelijkse koffieochtend bij Au Père Tranquille. Schuif gezellig aan voor een goede kop koffie, leuke gesprekken en vertrouwde gezichten. We zitten zoals gebruikelijk op de eerste etage, van 10.30 tot 12.00 uur. Iedereen is van…"
     },
     {
-      "bron_id": "atelier-neerlandais",
-      "bron_naam": "Atelier Néerlandais",
-      "datum": "2026-10-15",
-      "titel": "Atelier Néerlandais netwerk-event @DDW",
-      "link": "https://atelierneerlandais.com/atelier-neerlandais-netwerk-event-ddw-2/",
-      "excerpt": "Op 17 oktober a.s. organiseert het Atelier Néerlandais een netwerk-event tijdens de Dutch Design Week in Eindhoven. Dit is een kans om andere makers, ondernemers en creatievelingen te ontmoeten en te ontdekken wat het Atelier Néerlandais voor jou kan betekenen. Kom vooral…"
-    },
-    {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
       "datum": "2026-10-14",
@@ -287,6 +287,14 @@
       "titel": "Actie: 50% korting op het lidmaatschap 2026",
       "link": "https://www.nedazur.org/nieuws/actie-50-korting-op-het-lidmaatschap-2026",
       "excerpt": "Het lidmaatschap geeft u toegang tot alle activiteiten en evenementen die door de Nederlandse Club worden georganiseerd, al dan niet tegen betaling van een speciaal voor leden vastgesteld bedrag...."
+    },
+    {
+      "bron_id": "atelier-neerlandais",
+      "bron_naam": "Atelier Néerlandais",
+      "datum": "2026-10-12",
+      "titel": "Atelier Néerlandais netwerk-event @DDW",
+      "link": "https://atelierneerlandais.com/atelier-neerlandais-netwerk-event-ddw-2/",
+      "excerpt": "Op 17 oktober a.s. organiseert het Atelier Néerlandais een netwerk-event tijdens de Dutch Design Week in Eindhoven. Dit is een kans om andere makers, ondernemers en creatievelingen te ontmoeten en te ontdekken wat het Atelier Néerlandais voor jou kan betekenen. Kom vooral…"
     },
     {
       "bron_id": "anm",
@@ -439,22 +447,6 @@
       "titel": "Et Voilà",
       "link": "https://www.nvlr.eu/nieuws/et-voila",
       "excerpt": "Et Voilà nummer 02 is uit! Check uw brievenbus of lees het magazine hier."
-    },
-    {
-      "bron_id": "atelier-neerlandais",
-      "bron_naam": "Atelier Néerlandais",
-      "datum": "2026-09-02",
-      "titel": "Parcours Bijoux, 1 – 31 oktober",
-      "link": "https://atelierneerlandais.com/parcours-bijoux-1-31-octobre/",
-      "excerpt": "Van 1 tot en met 31 oktober nodigt Parcours Bijoux bezoekers uit om Parijs vanuit een nieuw perspectief te verkennen en sieraden niet slechts als draagbare objecten te zien, maar als volwaardig artistiek medium. Voor deze nieuwe editie neemt Atelier Néerlandais deel als…"
-    },
-    {
-      "bron_id": "nvlr",
-      "bron_naam": "NVLR",
-      "datum": "2026-08-31",
-      "titel": "Dubbele nationaliteit",
-      "link": "https://www.nvlr.eu/nieuws/dubbele-nationaliteit",
-      "excerpt": "DUBBELE NATIONALITEIT Op donderdag 3 september organiseert de Stichting Nederlanders Buiten Nederland (SNBN) in Nieuwspoort in Den Haag de derde Dag van de Nederlanders buiten Nederland, van 09.30..."
     }
   ]
 }
