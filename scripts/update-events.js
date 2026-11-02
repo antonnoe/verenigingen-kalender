@@ -79,7 +79,7 @@ const NIEUWS_BRONNEN = {
   // type 'congressus': verenigingsplatform zonder RSS maar met uniforme
   // /nieuws-pagina (publication-items met machine-leesbare datums)
   'nvlr':                { naam: 'NVLR',    type: 'congressus', feed: 'https://www.nvlr.eu/nieuws' },
-  'nedazur':             { naam: 'NEDAZUR', type: 'congressus', feed: 'https://www.nedazur.org/nieuws' },
+  'nedazur':             { naam: 'NEDAZUR', type: 'congressus', feed: 'https://www.nedazur.org/mijn-dnc/nieuws' },
   'anm':                 { naam: 'ANM',     type: 'congressus', feed: 'https://www.a-n-m.nl/nieuws' },
   // Aanvullende RSS-bronnen (geverifieerd juli 2026)
   'bourgondische-zaken': { naam: 'Bourgondische Zaken', type: 'rss', feed: 'https://bourgondischezaken.com/feed/' },
@@ -1111,7 +1111,8 @@ function parseCongressusNieuws(html, basisUrl) {
     var mExcerpt = blok.match(/<\/h3>\s*<p>([\s\S]*?)<\/p>/);
     var link = mTitel[1];
     if (link.indexOf('http') !== 0) {
-      link = basisUrl.replace(/\/nieuws\/?$/, '') + link;
+      // Echte URL-resolutie: werkt voor /nieuws (NVLR, ANM) en /mijn-dnc/nieuws (NEDAZUR)
+      link = new URL(link, basisUrl).href;
     }
     result.push({
       date: mTijd[1] + 'T12:00:00.000Z',
