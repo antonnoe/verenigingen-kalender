@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-02T17:21:49.799Z",
-  "totaal": 36,
+  "generated_at": "2026-11-04T07:06:37.609Z",
+  "totaal": 35,
   "bronnen": [
     {
       "id": "nlvp",
@@ -24,7 +24,7 @@
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
       "status": "ok",
-      "items": 3,
+      "items": 2,
       "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
       "diagnose": null
@@ -142,6 +142,14 @@
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
+      "datum": "2026-11-03",
+      "titel": "brocante ‘puces musicales’ Gourdon 15 november",
+      "link": "https://www.lotgenoten.fr/brocante-puces-musicales-gourdon-15-november/",
+      "excerpt": "Op 15 november 2026 organiseert de Association Athanor, in samenwerking met de Ecole de Musique Intercommunale Quercy-Bouriane uit Gourdon voor de tweede keer haar brocante ‘puces musicales’ in de Salle Pargueminiers (onder de cinema) in Gourdon. De Association Athanor is in…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
       "datum": "2026-11-01",
       "titel": "Ook supermarktketen E.Leclerc verlaagt de prijs van diesel.",
       "link": "https://www.lotgenoten.fr/ook-supermarktketen-e-leclerc-verlaagt-de-prijs-van-diesel/",
@@ -178,14 +186,6 @@
       "titel": "Huis te huur, langere tijd, in de Lot, mei tot november 2027",
       "link": "https://www.lotgenoten.fr/huis-te-huur-langere-tijd-in-de-lot-mei-tot-november-2027/",
       "excerpt": "Wij zijn Dick en Marianne en wonen 16 jaar in Frankrijk. Wij hebben 13 jaar een camping gerund, ook in de Lot en sinds 3 jaar zijn we gepensioneerd. Onze passie is reizen en als alles volgens plan verloopt, willen we in de periode tussen mei-november 2027 een reis van 5 à 6…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-29",
-      "titel": "Aziatische hoornaar (Vespa velutina) in de winter…",
-      "link": "https://www.lotgenoten.fr/aziatische-hoornaar-vespa-velutina-in-de-winter/",
-      "excerpt": "De koningin verlaat het oude nest en zoekt een beschutte plek om te overwinteren. In de loop van de herfst produceert het nest nieuwe koninginnen en mannetjes. De jonge koninginnen paren met de mannetjes. Daarna verlaten de jonge koninginnen het nest en gaan ze op zoek naar…"
     },
     {
       "bron_id": "ern-paris",
@@ -418,14 +418,6 @@
       "titel": "Johan de Witt Stichting: Geruchten en Reputatie in de Diplomatie, 27 november",
       "link": "https://atelierneerlandais.com/johan-de-witt-stichting-nieuwe-perspectieven-op-de-zeventiende-eeuw-27-november/",
       "excerpt": "Ter gelegenheid van het tienjarig bestaan ​​van de Johan de Witt Stichting (Huygens Instituut Amsterdam), komen jonge wetenschappers uit Nederland en Frankrijk samen in Parijs om actueel onderzoek te presenteren over politiek en diplomatie, correspondentie, geruchten en…"
-    },
-    {
-      "bron_id": "atelier-neerlandais",
-      "bron_naam": "Atelier Néerlandais",
-      "datum": "2026-09-04",
-      "titel": "Boeklancering: Capitalism’s Favorite Child, 20 november",
-      "link": "https://atelierneerlandais.com/boeklancering-capitalisms-favorite-child-24-juni/",
-      "excerpt": "Het Atelier Néerlandais verwelkomt AN-lid Ben Wubs en zijn co-auteur Pierre-Yves Donzé voor de boeklancering van Capitalisms Favorite Child . Het boek biedt een nieuw perspectief op de bedrijfsgeschiedenis van de mode-industrie, van het midden van de negentiende eeuw tot…"
     }
   ]
 }

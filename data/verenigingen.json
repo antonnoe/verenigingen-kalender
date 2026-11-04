@@ -1,10 +1,10 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-11-02",
-    "volgende_update": "2026-11-04",
+    "laatst_bijgewerkt": "2026-11-04",
+    "volgende_update": "2026-11-06",
     "bronnen_gecontroleerd": 11,
     "bronnen_met_events": 13,
-    "totaal_events": 73,
+    "totaal_events": 74,
     "gefilterde_items": 5,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 0
@@ -119,6 +119,14 @@
           "plaats": "36 Av. de la Gare Nissan lez Enserune",
           "tijd": "14:00-16:00",
           "type": "sportief",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2026-12-02",
+          "titel": "Bijpraatlunch Brugairolles",
+          "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
+          "tijd": "12:00-15:00",
+          "type": "sociaal",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
@@ -432,7 +440,7 @@
       "events": [
         {
           "datum": "2026-11-15",
-          "titel": "Kerkdienst (Kerk+YouTube)",
+          "titel": "Kerkdienst",
           "plaats": "172 boulevard Vincent Auriol 75013 Paris",
           "tijd": "09:45",
           "type": "kerkdienst",
