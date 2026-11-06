@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-11-04",
-    "volgende_update": "2026-11-06",
+    "laatst_bijgewerkt": "2026-11-06",
+    "volgende_update": "2026-11-09",
     "bronnen_gecontroleerd": 11,
     "bronnen_met_events": 13,
-    "totaal_events": 74,
-    "gefilterde_items": 5,
+    "totaal_events": 69,
+    "gefilterde_items": 2,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 0
   },
@@ -41,22 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-11-04",
-          "titel": "Bijpraatlunch Brugairolles",
-          "plaats": "restaurant &#34;Côté Resto&#34; in Domaine Gayda te Brugairolles (11300),",
-          "tijd": "12:00-15:00",
-          "type": "sociaal",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
-        {
-          "datum": "2026-11-04",
-          "titel": "ONIZ Kennismakingsbijeenkomst 4 november",
-          "plaats": "niet vermeld",
-          "tijd": "10:00-14:00",
-          "type": "informatief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-11-09",
           "titel": "Bijpraatlunch Ginestas",
@@ -168,6 +152,22 @@
           "tijd": "11:30-18:00",
           "type": "sociaal",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2027-05-16",
+          "titel": "Lezing positief denken",
+          "plaats": "42, avenue du Languedoc 11700 Azille",
+          "tijd": "14:00-16:00",
+          "type": "cultureel",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2027-06-13",
+          "titel": "Lezing Wat doet muziek met ons!",
+          "plaats": "42, avenue du Languedoc 11700 Azille",
+          "tijd": "14:00-16:00",
+          "type": "cultureel",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
         }
       ],
       "rubriek": "regionaal"
@@ -186,14 +186,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@nedazur.org",
       "events": [
-        {
-          "datum": "2026-11-04",
-          "titel": "Jeu de boules Sainte-Maxime",
-          "plaats": "Sainte-Maxime",
-          "tijd": "09:15-09:15",
-          "type": "sportief",
-          "bron": "https://www.nedazur.org/_ical/public.ics"
-        },
         {
           "datum": "2026-11-28",
           "titel": "Oranje Borrel",
@@ -268,11 +260,43 @@
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         },
         {
+          "datum": "2026-11-13",
+          "titel": "RAF Boules",
+          "plaats": "Flayosc",
+          "tijd": "14:00-17:00",
+          "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-18",
+          "titel": "Koor ANM-Vocale",
+          "plaats": "Fréjus",
+          "tijd": "13:00-17:00",
+          "type": "cultureel",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
           "datum": "2026-11-19",
           "titel": "Cultuurgroep",
-          "plaats": "Callas",
+          "plaats": "Aups",
           "tijd": "10:00-14:00",
           "type": "cultureel",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-24",
+          "titel": "ANM Bridge",
+          "plaats": "Le Muy",
+          "tijd": "14:30-20:30",
+          "type": "informatief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-26",
+          "titel": "ANM &#39;Thanksgiving&#39; golf",
+          "plaats": "La Motte",
+          "tijd": "10:00-15:00",
+          "type": "sportief",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         },
         {
@@ -281,6 +305,46 @@
           "plaats": "Hôtel L’Estirado, Les Adrets de L&#39;Esterel.",
           "tijd": "14:00-17:00",
           "type": "sociaal",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-11-27",
+          "titel": "RAF Boules",
+          "plaats": "Flayosc",
+          "tijd": "14:00-17:00",
+          "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-12-02",
+          "titel": "Koor ANM-Vocale",
+          "plaats": "n.n.b.",
+          "tijd": "13:00-17:00",
+          "type": "cultureel",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-12-04",
+          "titel": "Holland Apéro Provence (HAP) borrel",
+          "plaats": "Les Adrets-de-l&#39;Esterel",
+          "tijd": "17:00-19:00",
+          "type": "sociaal",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-12-11",
+          "titel": "RAF Boules",
+          "plaats": "Flayosc",
+          "tijd": "14:00-17:00",
+          "type": "sportief",
+          "bron": "https://www.a-n-m.nl/_ical/public.ics"
+        },
+        {
+          "datum": "2026-12-16",
+          "titel": "Koor ANM-Vocale",
+          "plaats": "n.n.b.",
+          "tijd": "13:00-17:00",
+          "type": "cultureel",
           "bron": "https://www.a-n-m.nl/_ical/public.ics"
         },
         {
@@ -532,14 +596,6 @@
       "events": [
         {
           "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-11-05",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr"
-        },
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-11-12",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
@@ -589,6 +645,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-12-24",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2026-12-31",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",
@@ -690,139 +754,35 @@
       "opmerking": "Agenda-pagina bevat jaarkalender en uitgewerkte event-blokken (AfterNetWork borrels, Koningsdag, wandelingen, leesclub, paspoort pop-up).",
       "events": [
         {
+          "datum": "2026-11-16",
+          "titel": "AfterNetWork borrel",
+          "plaats": "Le comptoir Saint Sernin, Toulouse centrum",
+          "tijd": "18:00-20:00",
+          "type": "zakelijk",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2026-11-25",
+          "titel": "ALV, borrel, boekenbeurs en etentje",
+          "plaats": "Café du Commerce, place Dupuy, Toulouse",
+          "tijd": "19:00",
+          "type": "bestuurlijk",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2026-12-06",
+          "titel": "Sinterklaasfeest",
+          "plaats": "salle Limayrac, Quartier la Terrasse, 22 rue Xavier Darasse, 31500 Toulouse",
+          "tijd": "15:00",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
           "datum": "2027-01-04",
           "titel": "Wandeling",
           "plaats": "niet vermeld",
           "tijd": "niet vermeld",
           "type": "sportief",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-01-29",
-          "titel": "Nieuwjaarsborrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-02-05",
-          "titel": "AfterNetwork borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "zakelijk",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-03-01",
-          "titel": "Wandeling",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-03-19",
-          "titel": "Leesclub",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-03-24",
-          "titel": "AfterNetWork borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "zakelijk",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-04-27",
-          "titel": "AfterNetWork borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "zakelijk",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-05-20",
-          "titel": "Koningsdag receptie",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-06-11",
-          "titel": "Leesclub",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-07-16",
-          "titel": "Zomers etentje",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-09-02",
-          "titel": "Leesclub",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-10-01",
-          "titel": "Rentree borrel",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-10-04",
-          "titel": "Wandeling",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-10-07",
-          "titel": "Leesclub",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-10-11",
-          "titel": "Appelpluk uitje",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-11-04",
-          "titel": "Leesclub",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "cultureel",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-11-25",
-          "titel": "ALV, boekenbeurs, borrel en etentje",
-          "plaats": "Café du Commerce, place Dupuy, Toulouse",
-          "tijd": "19:00",
-          "type": "bestuurlijk",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         }
       ],
@@ -1065,14 +1025,6 @@
       "events": [
         {
           "titel": "Maandelijkse ontmoeting met lunch",
-          "datum": "2026-11-05",
-          "tijd": "ca. 12:00 uur",
-          "plaats": "Restaurant l'Estela, Saint-Nexans",
-          "type": "sociaal",
-          "bron": "vast ritme (automatisch gegenereerd)"
-        },
-        {
-          "titel": "Maandelijkse ontmoeting met lunch",
           "datum": "2026-12-03",
           "tijd": "ca. 12:00 uur",
           "plaats": "Restaurant l'Estela, Saint-Nexans",
@@ -1106,6 +1058,14 @@
         {
           "titel": "Maandelijkse ontmoeting met diner",
           "datum": "2027-04-01",
+          "tijd": "ca. 18:00 uur",
+          "plaats": "Restaurant l'Estela, Saint-Nexans",
+          "type": "sociaal",
+          "bron": "vast ritme (automatisch gegenereerd)"
+        },
+        {
+          "titel": "Maandelijkse ontmoeting met diner",
+          "datum": "2027-05-06",
           "tijd": "ca. 18:00 uur",
           "plaats": "Restaurant l'Estela, Saint-Nexans",
           "type": "sociaal",

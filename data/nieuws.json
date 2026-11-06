@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-04T07:06:37.609Z",
-  "totaal": 35,
+  "generated_at": "2026-11-06T07:06:01.863Z",
+  "totaal": 37,
   "bronnen": [
     {
       "id": "nlvp",
@@ -60,7 +60,7 @@
       "id": "nvlr",
       "naam": "NVLR",
       "status": "ok",
-      "items": 2,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
@@ -78,7 +78,7 @@
       "id": "anm",
       "naam": "ANM",
       "status": "ok",
-      "items": 3,
+      "items": 4,
       "spam_geweerd": 0,
       "feed": "https://www.a-n-m.nl/nieuws",
       "diagnose": null
@@ -139,6 +139,22 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "nvlr",
+      "bron_naam": "NVLR",
+      "datum": "2026-11-04",
+      "titel": "Concert Horizons romantiques 28 november",
+      "link": "https://www.nvlr.eu/nieuws/concert-horizons-romantiques",
+      "excerpt": "Dit is een van de concerten die plaatsvinden in de abdij Fontfroide. Het concert op 28 november is echt de moeite waard om een bezoek aan te brengen. Klik op de link. Concert Horizons romantiques..."
+    },
+    {
+      "bron_id": "anm",
+      "bron_naam": "ANM",
+      "datum": "2026-11-04",
+      "titel": "Muziek-beoefenaars gezocht",
+      "link": "https://www.a-n-m.nl/nieuws/muziek-beoefenaars-gezocht",
+      "excerpt": "Op 15 oktober werd bij de cultuurgroep een geslaagde uitvoering verzorgd door “Podium Callas” met liederen en pianomuziek uit de afgelopen vier eeuwen. Voor het komende jaar zoeken Elise de Blok,..."
+    },
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",

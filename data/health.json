@@ -1,10 +1,10 @@
 {
-  "generated_at": "2026-11-04T07:06:37.613Z",
+  "generated_at": "2026-11-06T07:06:01.866Z",
   "ok": true,
   "status": "ok",
-  "laatst_bijgewerkt": "2026-11-04",
-  "volgende_update": "2026-11-06",
-  "totaal_events": 74,
+  "laatst_bijgewerkt": "2026-11-06",
+  "volgende_update": "2026-11-09",
+  "totaal_events": 69,
   "bronnen_totaal": 12,
   "bronnen_ok": 12,
   "bronnen_down": 0,
@@ -13,7 +13,7 @@
   "observaties": [],
   "nieuws": {
     "status": "ok",
-    "items": 35,
+    "items": 37,
     "bronnen_down": 0
   },
   "bronnen": [
@@ -24,7 +24,7 @@
       "status": "ok",
       "events": 16,
       "stale": false,
-      "laatste_succes": "2026-11-04",
+      "laatste_succes": "2026-11-06",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -34,9 +34,9 @@
       "naam": "NEDAZUR",
       "type": "ical",
       "status": "ok",
-      "events": 7,
+      "events": 6,
       "stale": false,
-      "laatste_succes": "2026-11-04",
+      "laatste_succes": "2026-11-06",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -46,9 +46,9 @@
       "naam": "ANM",
       "type": "ical",
       "status": "ok",
-      "events": 4,
+      "events": 13,
       "stale": false,
-      "laatste_succes": "2026-11-04",
+      "laatste_succes": "2026-11-06",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -60,7 +60,7 @@
       "status": "ok",
       "events": 1,
       "stale": false,
-      "laatste_succes": "2026-11-04",
+      "laatste_succes": "2026-11-06",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -72,7 +72,7 @@
       "status": "ok",
       "events": 3,
       "stale": false,
-      "laatste_succes": "2026-11-04",
+      "laatste_succes": "2026-11-06",
       "url": "https://www.latulipe.net/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -84,7 +84,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-11-04",
+      "laatste_succes": "2026-11-06",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -96,7 +96,7 @@
       "status": "ok",
       "events": 1,
       "stale": false,
-      "laatste_succes": "2026-11-04",
+      "laatste_succes": "2026-11-06",
       "url": "https://ernparis.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -108,7 +108,7 @@
       "status": "ok",
       "events": 3,
       "stale": false,
-      "laatste_succes": "2026-11-04",
+      "laatste_succes": "2026-11-06",
       "url": "https://www.lotgenoten.fr/",
       "fout": null,
       "diagnose": null
@@ -120,7 +120,7 @@
       "status": "ok",
       "events": 4,
       "stale": false,
-      "laatste_succes": "2026-11-04",
+      "laatste_succes": "2026-11-06",
       "url": "https://www.cercleneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -132,7 +132,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-11-04",
+      "laatste_succes": "2026-11-06",
       "url": "https://dbcra.nl/nederlandse-club-lyon/",
       "fout": null,
       "diagnose": null
@@ -142,9 +142,9 @@
       "naam": "Neerlandia Toulouse",
       "type": "web-scraping",
       "status": "ok",
-      "events": 17,
+      "events": 4,
       "stale": false,
-      "laatste_succes": "2026-11-04",
+      "laatste_succes": "2026-11-06",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -156,7 +156,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-11-04",
+      "laatste_succes": "2026-11-06",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null
