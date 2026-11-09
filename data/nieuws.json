@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-06T07:06:01.863Z",
-  "totaal": 37,
+  "generated_at": "2026-11-09T07:06:50.608Z",
+  "totaal": 38,
   "bronnen": [
     {
       "id": "nlvp",
@@ -87,7 +87,7 @@
       "id": "bourgondische-zaken",
       "naam": "Bourgondische Zaken",
       "status": "ok",
-      "items": 4,
+      "items": 5,
       "spam_geweerd": 0,
       "feed": "https://bourgondischezaken.com/feed/",
       "diagnose": null
@@ -140,6 +140,30 @@
   ],
   "items": [
     {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-11-08",
+      "titel": "GiFi: 67 winkels gesloten, schuld ruim 90 miljoen euro, bijna 2.000 banen op de tocht",
+      "link": "https://www.lotgenoten.fr/gifi-67-winkels-gesloten-schuld-ruim-90-miljoen-euro-bijna-2-000-banen-op-de-tocht/",
+      "excerpt": "8-11-26 32 GiFi-winkels worden Grand Frais: dit zijn de vestigingen die van naam veranderen De Franse koopjesketen GiFi krimpt verder. Een aantal winkels sluit definitief de deuren, maar andere vestigingen krijgen een nieuwe bestemming en worden omgebouwd tot supermarkthallen…"
+    },
+    {
+      "bron_id": "bourgondische-zaken",
+      "bron_naam": "Bourgondische Zaken",
+      "datum": "2026-11-08",
+      "titel": "Laatste loodjes voor de Bibracte Ultra!",
+      "link": "https://bourgondischezaken.com/laatste-loodjes-voor-de-bibracte-ultra/",
+      "excerpt": "Tekst & beeld: Maaike Lijding Op zaterdag 14 november staat Jip Valentijn aan de start van de 100 kilometer lange Bibracte Ultra. De afgelopen maanden heeft hij hard getraind om zo goed mogelijk voorbereid aan de start te verschijnen. We volgden Jip al eerder in BZ-magazine.…"
+    },
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-11-07",
+      "titel": "Zondag 7 februari – Kerkdienst (Kerk+YouTube)",
+      "link": "https://ernparis.fr/zondag-7-februari-kerkdienst-kerkyoutube/",
+      "excerpt": "Voorganger: ds. Aafke Zaal Ouderling van dienst: Dianne Valenciennes Organist: nnb. Collecte: nnb. Dienst in de kerk en via YouTube Aanvang 9:45"
+    },
+    {
       "bron_id": "nvlr",
       "bron_naam": "NVLR",
       "datum": "2026-11-04",
@@ -186,14 +210,6 @@
       "titel": "Wonen in Frankrijk? Dit verandert er in 2027 aan je CAK-bijdrage",
       "link": "https://www.lotgenoten.fr/34931-2/",
       "excerpt": "Nederlanders die met pensioen zijn en in Frankrijk wonen, betalen maandelijks een bijdrage aan het CAK voor hun zorg in het woonland. De hoogte daarvan hangt onder meer af van de zogenoemde woonlandfactor. De minister van Volksgezondheid, Welzijn en Sport heeft de factoren…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-31",
-      "titel": "Wat veranderd er in november?",
-      "link": "https://www.lotgenoten.fr/wat-veranderd-er-in-november/",
-      "excerpt": "De herfst draait op volle toeren en november brengt traditiegetrouw een reeks nieuwe maatregelen met zich mee. Vanaf deze maand krijgen zowel consumenten, automobilisten als huurders te maken met aangepaste regels. Van een stijgende energierekening tot strenge bescherming…"
     },
     {
       "bron_id": "lotgenoten",
@@ -294,6 +310,14 @@
     {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
+      "datum": "2026-10-17",
+      "titel": "Zondag 17 januari – Kerkdienst (Kerk+YouTube)",
+      "link": "https://ernparis.fr/zondag-17-januari-kerkdienst-kerkyoutube/",
+      "excerpt": "Voorganger: ds. Henrieke van Thije Ouderling van dienst: Rianne Courtin Organist: nnb. Collecte: nnb. Dienst in de kerk en via YouTube Aanvang 9:45"
+    },
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
       "datum": "2026-10-14",
       "titel": "Uitzicht op woensdag 14 oktober",
       "link": "https://ernparis.fr/uitzicht-op-woensdag-8-juli-2/",
@@ -362,22 +386,6 @@
       "titel": "Ledenexcursie Opus Gothique",
       "link": "https://bourgondischezaken.com/ledenexcursie-opus-gothique/",
       "excerpt": "VOL - alleen nog aanmelden voor wachtlijst Ga je mee naar Opus Gothique? Laat je betoveren door de gotische droom van Donald Russell en ontdek de bijzondere wereld van Opus Gothique. Ervaar deze inspirerende plek tijdens een exclusieve rondleiding voor BZ-leden, gevolgd door…"
-    },
-    {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-09-16",
-      "titel": "Uitzicht op woensdag 16 september",
-      "link": "https://ernparis.fr/uitzicht-op-woensdag-16-september/",
-      "excerpt": "Ruth van der Waall-Schaeffer Naar het noorden toezingen"
-    },
-    {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-09-15",
-      "titel": "Zondag 15 november – Kerkdienst (Kerk+YouTube)",
-      "link": "https://ernparis.fr/zondag-15-november-kerkdienst-kerkyoutube/",
-      "excerpt": "Voorganger: ds. Frits de Lange Ouderling van dienst: nnb. Organist: Hans Lammers Collecte: Restos du cœur Dienst in de kerk en via YouTube Aanvang 9:45"
     },
     {
       "bron_id": "nlvp",

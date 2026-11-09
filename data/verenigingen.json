@@ -1,11 +1,11 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-11-06",
-    "volgende_update": "2026-11-09",
+    "laatst_bijgewerkt": "2026-11-09",
+    "volgende_update": "2026-11-11",
     "bronnen_gecontroleerd": 11,
     "bronnen_met_events": 13,
-    "totaal_events": 69,
-    "gefilterde_items": 2,
+    "totaal_events": 71,
+    "gefilterde_items": 1,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 0
   },
@@ -45,7 +45,7 @@
           "datum": "2026-11-09",
           "titel": "Bijpraatlunch Ginestas",
           "plaats": "1 Pl. du Marché, 11120 Ginestas",
-          "tijd": "12:00-14:00",
+          "tijd": "12:30-15:00",
           "type": "informatief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -85,7 +85,7 @@
           "datum": "2026-11-24",
           "titel": "Bijpraatlunch Aigne",
           "plaats": "Restaurant Lo Cagarol, Aigne.",
-          "tijd": "12:00-15:00",
+          "tijd": "12:00-14:30",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -251,14 +251,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "contact@a-n-m.com",
       "events": [
-        {
-          "datum": "2026-11-06",
-          "titel": "Holland Apéro Provence (HAP) borrel",
-          "plaats": "Lorgues",
-          "tijd": "17:00-19:00",
-          "type": "sociaal",
-          "bron": "https://www.a-n-m.nl/_ical/public.ics"
-        },
         {
           "datum": "2026-11-13",
           "titel": "RAF Boules",
@@ -509,6 +501,38 @@
           "tijd": "09:45",
           "type": "kerkdienst",
           "bron": "https://ernparis.fr/agenda/"
+        },
+        {
+          "datum": "2026-12-06",
+          "titel": "Kerkdienst - Doop Elisa Mirjam Braakman",
+          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
+          "tijd": "09:45",
+          "type": "kerkdienst",
+          "bron": "https://ernparis.fr/agenda/"
+        },
+        {
+          "datum": "2026-12-25",
+          "titel": "Kerkdienst - Kerstmis",
+          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
+          "tijd": "09:45",
+          "type": "kerkdienst",
+          "bron": "https://ernparis.fr/agenda/"
+        },
+        {
+          "datum": "2027-01-17",
+          "titel": "Kerkdienst",
+          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
+          "tijd": "09:45",
+          "type": "kerkdienst",
+          "bron": "https://ernparis.fr/agenda/"
+        },
+        {
+          "datum": "2027-02-07",
+          "titel": "Kerkdienst",
+          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
+          "tijd": "09:45",
+          "type": "kerkdienst",
+          "bron": "https://ernparis.fr/agenda/"
         }
       ],
       "rubriek": "regionaal"
@@ -535,14 +559,6 @@
         }
       ],
       "events": [
-        {
-          "datum": "2026-11-08",
-          "titel": "Borrelmiddag/daghap st Martin/Redon Lot op Bouysset",
-          "plaats": "Bouysset, Saint Martin le Redon",
-          "tijd": "15:00",
-          "type": "sociaal",
-          "bron": "https://www.lotgenoten.fr/borrelmiddag-daghap-st-martin-redon-lot-op-bouysset/"
-        },
         {
           "datum": "2026-11-19",
           "titel": "Borrelmiddag Tarn/Garonne Moissac",
@@ -830,7 +846,7 @@
           "titel": "Sinterkerstborrel met quiz",
           "datum": "2026-12-17",
           "tijd": "19:00",
-          "plaats": "Lille, plaats nog te bevestigen",
+          "plaats": "Lille, NŪ - Lille 59000 - 93, avenue le Corbusier Bar à cocktail",
           "type": "sociaal",
           "bron": "https://www.cercleneerlandais.com/sinterkerstborrel.html"
         }
