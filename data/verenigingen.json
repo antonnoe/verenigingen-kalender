@@ -1,10 +1,10 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-11-09",
-    "volgende_update": "2026-11-11",
+    "laatst_bijgewerkt": "2026-11-11",
+    "volgende_update": "2026-11-13",
     "bronnen_gecontroleerd": 11,
     "bronnen_met_events": 13,
-    "totaal_events": 71,
+    "totaal_events": 70,
     "gefilterde_items": 1,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
     "warnings": 0
@@ -41,22 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-11-09",
-          "titel": "Bijpraatlunch Ginestas",
-          "plaats": "1 Pl. du Marché, 11120 Ginestas",
-          "tijd": "12:30-15:00",
-          "type": "informatief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
-        {
-          "datum": "2026-11-10",
-          "titel": "Chopin op Mallorca",
-          "plaats": "Bram",
-          "tijd": "10:30-16:00",
-          "type": "sociaal",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-11-11",
           "titel": "Bijpraatlunch regio Pézenas",
@@ -135,6 +119,14 @@
           "plaats": "niet vermeld",
           "tijd": "14:00-17:00",
           "type": "cultureel",
+          "bron": "https://www.nvlr.eu/_ical/public.ics"
+        },
+        {
+          "datum": "2027-01-16",
+          "titel": "Indische rijsttafel in la Livinière!",
+          "plaats": "5, Impasse de Parignoles 34210 La Livinière",
+          "tijd": "13:00-17:00",
+          "type": "sociaal",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
@@ -562,14 +554,14 @@
         {
           "datum": "2026-11-19",
           "titel": "Borrelmiddag Tarn/Garonne Moissac",
-          "plaats": "Ced & Alex L'Atelier, 6 Place Roger Delthil, Moissac",
+          "plaats": "Ced & Alex LAtelier, 6 Place Roger Delthil in Moissac",
           "tijd": "15:00-18:00",
           "type": "sociaal",
           "bron": "https://www.lotgenoten.fr/nieuw-borrelmiddag-voor-de-zuiderlijke-lotgenoten-tarn-et-garonne/"
         },
         {
           "datum": "2026-11-27",
-          "titel": "Borrelavond/maaltijd Villeneuve/Lot",
+          "titel": "Lotgenotenavond in Villeneuve sur Lot",
           "plaats": "LA TABLE DU MARCHÉ, 18-22 rue Lakanal, 47300 Villeneuve sur Lot",
           "tijd": "18:00",
           "type": "sociaal",

@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-09T07:06:50.608Z",
-  "totaal": 38,
+  "generated_at": "2026-11-11T07:06:11.258Z",
+  "totaal": 34,
   "bronnen": [
     {
       "id": "nlvp",
@@ -24,7 +24,7 @@
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
       "status": "ok",
-      "items": 2,
+      "items": 1,
       "spam_geweerd": 0,
       "feed": "https://atelierneerlandais.com/feed/",
       "diagnose": null
@@ -69,7 +69,7 @@
       "id": "nedazur",
       "naam": "NEDAZUR",
       "status": "ok",
-      "items": 6,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://www.nedazur.org/mijn-dnc/nieuws",
       "diagnose": null
@@ -139,6 +139,14 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "ern-paris",
+      "bron_naam": "ERN Paris",
+      "datum": "2026-11-11",
+      "titel": "Uitzicht op woensdag 11 november",
+      "link": "https://ernparis.fr/uitzicht-op-woensdag-11-november/",
+      "excerpt": "Ruth van der Waall-Schaeffer Een nieuwe wereld"
+    },
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
@@ -276,30 +284,6 @@
       "excerpt": "Op zaterdag 17 oktober organiseerde Bourgondische Zaken een rondleiding op het bouwproject Opus Gothique in Saint Léger de Fougeret. In het herfstnummer 2026 staat een artikel over deze bijzondere onderneming. De Amerikaanse paleontoloog Donald Russell, ook specialist in…"
     },
     {
-      "bron_id": "nedazur",
-      "bron_naam": "NEDAZUR",
-      "datum": "2026-10-21",
-      "titel": "Pieten gezocht voor aankomst van Sinterklaas 29 november",
-      "link": "https://www.nedazur.org/mijn-dnc/nieuws/pieten-gezocht-voor-aankomst-van-sinterklaas-29-november",
-      "excerpt": "Wij zijn dringend op zoek naar vrijwilligers en enthousiaste mensen die het leuk vinden om zich in een Pietenpak te hijsen en zo het Sinterklaasfeest voor de kinderen tot een groot succes te..."
-    },
-    {
-      "bron_id": "nedazur",
-      "bron_naam": "NEDAZUR",
-      "datum": "2026-10-21",
-      "titel": "Oranje Borrel commissieleden gezocht",
-      "link": "https://www.nedazur.org/mijn-dnc/nieuws/oranje-borrel-commissieleden-gezocht",
-      "excerpt": "Voor de Oranjeborrelcommissie zoeken wij nog versterking. Vind je het leuk om te helpen met het organiseren van borrels meld je dan aan via: Contact@nedazur.org."
-    },
-    {
-      "bron_id": "nedazur",
-      "bron_naam": "NEDAZUR",
-      "datum": "2026-10-19",
-      "titel": "Redactiemedewerkers gezocht",
-      "link": "https://www.nedazur.org/mijn-dnc/nieuws/redactiemedewerkers-gezocht",
-      "excerpt": "Wij zoeken enthousiaste redactiemedewerkers die willen bijdragen aan ons Holland Côte d'Azur magazine. Wil je er meer over weten? Neem dan contact op met Connie Soetens via Secretaris@Nedazur.org."
-    },
-    {
       "bron_id": "nlvp",
       "bron_naam": "NLVP",
       "datum": "2026-10-17",
@@ -372,14 +356,6 @@
       "excerpt": ""
     },
     {
-      "bron_id": "ern-paris",
-      "bron_naam": "ERN Paris",
-      "datum": "2026-09-30",
-      "titel": "Uitzicht op woensdag 30 september",
-      "link": "https://ernparis.fr/uitzicht-op-woensdag-30-september/",
-      "excerpt": "Ruth van der Waall-Schaeffer Heilige momenten"
-    },
-    {
       "bron_id": "bourgondische-zaken",
       "bron_naam": "Bourgondische Zaken",
       "datum": "2026-09-20",
@@ -434,14 +410,6 @@
       "titel": "Terugblik op de BZ-dag 2026 in Larochemillay",
       "link": "https://bourgondischezaken.com/bz-dag-op-8-augustus-2026/",
       "excerpt": "Wat later dan gepland, maar niet minder enthousiast: een korte terugblik op de BZ-dag van dit jaar, met indrukken van enkele deelnemers. We waren te gast in de oude school van Larochemillay. Gids Christiaan en zijn assistente Evelyne namen ons mee op een boeiende wandeling.…"
-    },
-    {
-      "bron_id": "atelier-neerlandais",
-      "bron_naam": "Atelier Néerlandais",
-      "datum": "2026-09-11",
-      "titel": "Johan de Witt Stichting: Geruchten en Reputatie in de Diplomatie, 27 november",
-      "link": "https://atelierneerlandais.com/johan-de-witt-stichting-nieuwe-perspectieven-op-de-zeventiende-eeuw-27-november/",
-      "excerpt": "Ter gelegenheid van het tienjarig bestaan ​​van de Johan de Witt Stichting (Huygens Instituut Amsterdam), komen jonge wetenschappers uit Nederland en Frankrijk samen in Parijs om actueel onderzoek te presenteren over politiek en diplomatie, correspondentie, geruchten en…"
     }
   ]
 }
