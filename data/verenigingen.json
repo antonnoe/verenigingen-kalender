@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-11-11",
-    "volgende_update": "2026-11-13",
+    "laatst_bijgewerkt": "2026-11-13",
+    "volgende_update": "2026-11-16",
     "bronnen_gecontroleerd": 11,
     "bronnen_met_events": 13,
-    "totaal_events": 70,
-    "gefilterde_items": 1,
+    "totaal_events": 69,
+    "gefilterde_items": 0,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 0
+    "warnings": 6
   },
   "verenigingen": [
     {
@@ -41,14 +41,6 @@
       "agenda_toegankelijkheid": "volledig_publiek",
       "contact": "secretaris@nvlr.eu",
       "events": [
-        {
-          "datum": "2026-11-11",
-          "titel": "Bijpraatlunch regio Pézenas",
-          "plaats": "Le Grand Café, 1, Av. de Cassan, 34320 Roujan.",
-          "tijd": "11:30-15:00",
-          "type": "informatief",
-          "bron": "https://www.nvlr.eu/_ical/public.ics"
-        },
         {
           "datum": "2026-11-15",
           "titel": "THEATERVOORSTELLING &#34;Blue Note in the Theatre&#34;",
@@ -604,14 +596,6 @@
       "events": [
         {
           "titel": "Café Jeudi — virtueel samenzijn",
-          "datum": "2026-11-12",
-          "tijd": "18:00-19:30",
-          "plaats": "Online (Google Meet, link op het forum)",
-          "type": "sociaal",
-          "bron": "https://www.nederlanders.fr"
-        },
-        {
-          "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-11-19",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
@@ -661,6 +645,14 @@
         {
           "titel": "Café Jeudi — virtueel samenzijn",
           "datum": "2026-12-31",
+          "tijd": "18:00-19:30",
+          "plaats": "Online (Google Meet, link op het forum)",
+          "type": "sociaal",
+          "bron": "https://www.nederlanders.fr"
+        },
+        {
+          "titel": "Café Jeudi — virtueel samenzijn",
+          "datum": "2027-01-07",
           "tijd": "18:00-19:30",
           "plaats": "Online (Google Meet, link op het forum)",
           "type": "sociaal",

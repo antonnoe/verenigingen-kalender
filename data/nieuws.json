@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-11T07:06:11.258Z",
-  "totaal": 34,
+  "generated_at": "2026-11-13T07:07:24.101Z",
+  "totaal": 31,
   "bronnen": [
     {
       "id": "nlvp",
       "naam": "NLVP",
       "status": "ok",
-      "items": 6,
+      "items": 5,
       "spam_geweerd": 0,
       "feed": "https://nlvp.fr/feed/",
       "diagnose": null
@@ -87,7 +87,7 @@
       "id": "bourgondische-zaken",
       "naam": "Bourgondische Zaken",
       "status": "ok",
-      "items": 5,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://bourgondischezaken.com/feed/",
       "diagnose": null
@@ -104,11 +104,16 @@
     {
       "id": "praatje",
       "naam": "Praatje",
-      "status": "ok",
+      "status": "down",
       "items": 0,
-      "spam_geweerd": 0,
+      "stale": false,
       "feed": "https://praatje.fr/feed/",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "netwerk",
+        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
+        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
+        "technisch": "fetch failed"
+      }
     },
     {
       "id": "cmunf",
@@ -139,6 +144,22 @@
     }
   ],
   "items": [
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-11-12",
+      "titel": "Transavia Bergerac/Rotterdam 12 nov 26",
+      "link": "https://www.lotgenoten.fr/transavia-bergerac-rotterdam-12-nov-26/",
+      "excerpt": "Beste mede LOTgenoten, Vandaag kreeg ik een zeer uitgebreide mail van vliegveld Bergerac aangaande de route van Transavia, Rotterdam/Bergerac. Men vroeg mij om jullie een publieksraadpleging (in het Nederlands) aan te rijken ten einde beter te begrijpen welke concrete…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-11-12",
+      "titel": "auto winterklaar maken: winterbanden verplicht in 29 gemeenten",
+      "link": "https://www.lotgenoten.fr/auto-winterklaar-maken-winterbanden-verplicht-in-29-gemeenten/",
+      "excerpt": "Automobilisten die in de winter naar berggebieden in de Franse Pyreneeën rijden, moeten hun auto voorzien van winterbanden of vierseizoenenbanden. Ook sneeuwkettingen of sneeuwsokken zijn toegestaan. De verplichting geldt van 1 november tot en met 31 maart in bepaalde…"
+    },
     {
       "bron_id": "ern-paris",
       "bron_naam": "ERN Paris",
@@ -190,14 +211,6 @@
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
-      "datum": "2026-11-03",
-      "titel": "brocante ‘puces musicales’ Gourdon 15 november",
-      "link": "https://www.lotgenoten.fr/brocante-puces-musicales-gourdon-15-november/",
-      "excerpt": "Op 15 november 2026 organiseert de Association Athanor, in samenwerking met de Ecole de Musique Intercommunale Quercy-Bouriane uit Gourdon voor de tweede keer haar brocante ‘puces musicales’ in de Salle Pargueminiers (onder de cinema) in Gourdon. De Association Athanor is in…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
       "datum": "2026-11-01",
       "titel": "Ook supermarktketen E.Leclerc verlaagt de prijs van diesel.",
       "link": "https://www.lotgenoten.fr/ook-supermarktketen-e-leclerc-verlaagt-de-prijs-van-diesel/",
@@ -218,14 +231,6 @@
       "titel": "Wonen in Frankrijk? Dit verandert er in 2027 aan je CAK-bijdrage",
       "link": "https://www.lotgenoten.fr/34931-2/",
       "excerpt": "Nederlanders die met pensioen zijn en in Frankrijk wonen, betalen maandelijks een bijdrage aan het CAK voor hun zorg in het woonland. De hoogte daarvan hangt onder meer af van de zogenoemde woonlandfactor. De minister van Volksgezondheid, Welzijn en Sport heeft de factoren…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-29",
-      "titel": "Huis te huur, langere tijd, in de Lot, mei tot november 2027",
-      "link": "https://www.lotgenoten.fr/huis-te-huur-langere-tijd-in-de-lot-mei-tot-november-2027/",
-      "excerpt": "Wij zijn Dick en Marianne en wonen 16 jaar in Frankrijk. Wij hebben 13 jaar een camping gerund, ook in de Lot en sinds 3 jaar zijn we gepensioneerd. Onze passie is reizen en als alles volgens plan verloopt, willen we in de periode tussen mei-november 2027 een reis van 5 à 6…"
     },
     {
       "bron_id": "ern-paris",
@@ -250,14 +255,6 @@
       "titel": "Webinars bij de FANF",
       "link": "https://www.nvlr.eu/nieuws/webinars-bij-de-fanf",
       "excerpt": "Er komt weer een nieuw webinar bij de FANF. Zie de nieuwsbrief via deze link. Binnenkort, Bouwen en verbouwen in Frankrijk, waar op te letten Tijdstip: 24 november van 19.00u -21.00u Spreker:..."
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-25",
-      "titel": "Volledige hulp bij al je administratie!!",
-      "link": "https://www.lotgenoten.fr/volledige-hulp-bij-al-je-administratie/",
-      "excerpt": "Heb je hulp nodig bij je administratie? Misschien kan ik je helpen! Communiceren en/of tussenpersoon zijn met franse overheidsdiensten (belasting, pensioenfonds, gemeente etc.), vakmannen, verzekeringen, notaris, of je buren…, Importeren van je voertuig, Bouwvergunning en…"
     },
     {
       "bron_id": "nlvp",
@@ -356,6 +353,14 @@
       "excerpt": ""
     },
     {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-09-29",
+      "titel": "vliegroute Rotterdam – Bergerac nieuws 10-11-26",
+      "link": "https://www.lotgenoten.fr/behoud-de-vliegroute-rotterdam-bergerac/",
+      "excerpt": "Uit ici.fr: 10-11-26 Half zoveel vluchten vanaf de enige commerciële luchthaven van de Dordogne in 2027 De luchthaven van Bergerac krijgt volgend jaar een flinke aderlating te verwerken. In 2027 wordt het aantal vluchten gehalveerd ten opzichte van 2026. Toch beschouwen de…"
+    },
+    {
       "bron_id": "bourgondische-zaken",
       "bron_naam": "Bourgondische Zaken",
       "datum": "2026-09-20",
@@ -386,30 +391,6 @@
       "titel": "64e Internationale Tentoonstelling van Beeldende Kunst",
       "link": "https://www.nvlr.eu/nieuws/64e-internationale-tentoonstelling-van-beeldende-kunst",
       "excerpt": "Om in je agenda te vermelden: 64e Salon des Arts Plastiques in het Palais des Congrès in Béziers van 3 tot 10 oktober 2026. De eregast is Jean-Luc BEAUFILS, die al meer dan 50 jaar belangrijk werk..."
-    },
-    {
-      "bron_id": "bourgondische-zaken",
-      "bron_naam": "Bourgondische Zaken",
-      "datum": "2026-09-13",
-      "titel": "Bosbouw in de Morvan",
-      "link": "https://bourgondischezaken.com/bosbouw-in-de-morvan/",
-      "excerpt": "Sinds de jaren zeventig is het bos in de Morvan aan het veranderen. In de afgelopen vijftig jaar zijn er steeds meer gemengde loofbossen gekapt om plaats te maken voor plantages van naaldbomen. In BZ 84, het herfstmagazine van 2026, lees je meer over de schadelijke gevolgen…"
-    },
-    {
-      "bron_id": "nlvp",
-      "bron_naam": "NLVP",
-      "datum": "2026-09-12",
-      "titel": "20 september – De Camino lopen",
-      "link": "https://nlvp.fr/20-september-de-camino-lopen/",
-      "excerpt": "Op zondag 20 september gaan we een stukje van de Camino lopen. Iedereen kent wel de Camino, de weg naar Santiago de Compostela. Maar wist u dat de noordelijke wandelroute Parijs doorkruist ? Discrete schelpjes op de grond wijzen de pelgrims en wandelaars de weg, en het lijkt…"
-    },
-    {
-      "bron_id": "bourgondische-zaken",
-      "bron_naam": "Bourgondische Zaken",
-      "datum": "2026-09-12",
-      "titel": "Terugblik op de BZ-dag 2026 in Larochemillay",
-      "link": "https://bourgondischezaken.com/bz-dag-op-8-augustus-2026/",
-      "excerpt": "Wat later dan gepland, maar niet minder enthousiast: een korte terugblik op de BZ-dag van dit jaar, met indrukken van enkele deelnemers. We waren te gast in de oude school van Larochemillay. Gids Christiaan en zijn assistente Evelyne namen ons mee op een boeiende wandeling.…"
     }
   ]
 }

@@ -1,20 +1,91 @@
 {
-  "generated_at": "2026-11-11T07:06:11.260Z",
-  "ok": true,
-  "status": "ok",
-  "laatst_bijgewerkt": "2026-11-11",
-  "volgende_update": "2026-11-13",
-  "totaal_events": 70,
+  "generated_at": "2026-11-13T07:07:24.103Z",
+  "ok": false,
+  "status": "degraded",
+  "laatst_bijgewerkt": "2026-11-13",
+  "volgende_update": "2026-11-16",
+  "totaal_events": 69,
   "bronnen_totaal": 12,
-  "bronnen_ok": 12,
-  "bronnen_down": 0,
+  "bronnen_ok": 7,
+  "bronnen_down": 5,
   "bronnen_verdacht": 0,
-  "kapotte_koppelingen": [],
+  "kapotte_koppelingen": [
+    {
+      "id": "atelier-neerlandais",
+      "naam": "Atelier Néerlandais",
+      "type": "web-scraping",
+      "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
+      "fout": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages",
+      "diagnose": {
+        "categorie": "ai",
+        "oorzaak": "De AI-extractiedienst (Anthropic API) gaf een fout of was overbelast.",
+        "advies": "Tijdelijk; volgende run herstelt dit meestal vanzelf. Check anders de API-key en het tegoed.",
+        "technisch": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages"
+      },
+      "laatste_succes": "2026-11-11"
+    },
+    {
+      "id": "ern-paris",
+      "naam": "ERN Paris",
+      "type": "web-scraping",
+      "url": "https://ernparis.fr/agenda/",
+      "fout": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages",
+      "diagnose": {
+        "categorie": "ai",
+        "oorzaak": "De AI-extractiedienst (Anthropic API) gaf een fout of was overbelast.",
+        "advies": "Tijdelijk; volgende run herstelt dit meestal vanzelf. Check anders de API-key en het tegoed.",
+        "technisch": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages"
+      },
+      "laatste_succes": "2026-11-11"
+    },
+    {
+      "id": "lotgenoten",
+      "naam": "LOTgenoten",
+      "type": "web-scraping",
+      "url": "https://www.lotgenoten.fr/",
+      "fout": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages",
+      "diagnose": {
+        "categorie": "ai",
+        "oorzaak": "De AI-extractiedienst (Anthropic API) gaf een fout of was overbelast.",
+        "advies": "Tijdelijk; volgende run herstelt dit meestal vanzelf. Check anders de API-key en het tegoed.",
+        "technisch": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages"
+      },
+      "laatste_succes": "2026-11-11"
+    },
+    {
+      "id": "neerlandia-toulouse",
+      "naam": "Neerlandia Toulouse",
+      "type": "web-scraping",
+      "url": "https://www.neerlandia.fr/index.php/nl/agenda",
+      "fout": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages",
+      "diagnose": {
+        "categorie": "ai",
+        "oorzaak": "De AI-extractiedienst (Anthropic API) gaf een fout of was overbelast.",
+        "advies": "Tijdelijk; volgende run herstelt dit meestal vanzelf. Check anders de API-key en het tegoed.",
+        "technisch": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages"
+      },
+      "laatste_succes": "2026-11-11"
+    },
+    {
+      "id": "fanf",
+      "naam": "FANF",
+      "type": "web-scraping",
+      "url": "https://www.fanf.fr/activiteiten/lijst",
+      "fout": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages",
+      "diagnose": {
+        "categorie": "ai",
+        "oorzaak": "De AI-extractiedienst (Anthropic API) gaf een fout of was overbelast.",
+        "advies": "Tijdelijk; volgende run herstelt dit meestal vanzelf. Check anders de API-key en het tegoed.",
+        "technisch": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages"
+      },
+      "laatste_succes": "2026-11-11"
+    }
+  ],
   "observaties": [],
   "nieuws": {
-    "status": "ok",
-    "items": 34,
-    "bronnen_down": 0
+    "status": "degraded",
+    "items": 31,
+    "bronnen_down": 1
   },
   "bronnen": [
     {
@@ -22,9 +93,9 @@
       "naam": "NVLR",
       "type": "ical",
       "status": "ok",
-      "events": 15,
+      "events": 14,
       "stale": false,
-      "laatste_succes": "2026-11-11",
+      "laatste_succes": "2026-11-13",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -36,7 +107,7 @@
       "status": "ok",
       "events": 6,
       "stale": false,
-      "laatste_succes": "2026-11-11",
+      "laatste_succes": "2026-11-13",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -48,7 +119,7 @@
       "status": "ok",
       "events": 12,
       "stale": false,
-      "laatste_succes": "2026-11-11",
+      "laatste_succes": "2026-11-13",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -60,7 +131,7 @@
       "status": "ok",
       "events": 1,
       "stale": false,
-      "laatste_succes": "2026-11-11",
+      "laatste_succes": "2026-11-13",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -72,7 +143,7 @@
       "status": "ok",
       "events": 3,
       "stale": false,
-      "laatste_succes": "2026-11-11",
+      "laatste_succes": "2026-11-13",
       "url": "https://www.latulipe.net/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -81,37 +152,52 @@
       "id": "atelier-neerlandais",
       "naam": "Atelier Néerlandais",
       "type": "web-scraping",
-      "status": "ok",
+      "status": "down",
       "events": 2,
-      "stale": false,
+      "stale": true,
       "laatste_succes": "2026-11-11",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
-      "fout": null,
-      "diagnose": null
+      "fout": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages",
+      "diagnose": {
+        "categorie": "ai",
+        "oorzaak": "De AI-extractiedienst (Anthropic API) gaf een fout of was overbelast.",
+        "advies": "Tijdelijk; volgende run herstelt dit meestal vanzelf. Check anders de API-key en het tegoed.",
+        "technisch": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages"
+      }
     },
     {
       "id": "ern-paris",
       "naam": "ERN Paris",
       "type": "web-scraping",
-      "status": "ok",
+      "status": "down",
       "events": 5,
-      "stale": false,
+      "stale": true,
       "laatste_succes": "2026-11-11",
       "url": "https://ernparis.fr/agenda/",
-      "fout": null,
-      "diagnose": null
+      "fout": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages",
+      "diagnose": {
+        "categorie": "ai",
+        "oorzaak": "De AI-extractiedienst (Anthropic API) gaf een fout of was overbelast.",
+        "advies": "Tijdelijk; volgende run herstelt dit meestal vanzelf. Check anders de API-key en het tegoed.",
+        "technisch": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages"
+      }
     },
     {
       "id": "lotgenoten",
       "naam": "LOTgenoten",
       "type": "web-scraping",
-      "status": "ok",
+      "status": "down",
       "events": 2,
-      "stale": false,
+      "stale": true,
       "laatste_succes": "2026-11-11",
       "url": "https://www.lotgenoten.fr/",
-      "fout": null,
-      "diagnose": null
+      "fout": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages",
+      "diagnose": {
+        "categorie": "ai",
+        "oorzaak": "De AI-extractiedienst (Anthropic API) gaf een fout of was overbelast.",
+        "advies": "Tijdelijk; volgende run herstelt dit meestal vanzelf. Check anders de API-key en het tegoed.",
+        "technisch": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages"
+      }
     },
     {
       "id": "cercle-neerlandais-lille",
@@ -120,7 +206,7 @@
       "status": "ok",
       "events": 4,
       "stale": false,
-      "laatste_succes": "2026-11-11",
+      "laatste_succes": "2026-11-13",
       "url": "https://www.cercleneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -132,7 +218,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-11-11",
+      "laatste_succes": "2026-11-13",
       "url": "https://dbcra.nl/nederlandse-club-lyon/",
       "fout": null,
       "diagnose": null
@@ -141,25 +227,35 @@
       "id": "neerlandia-toulouse",
       "naam": "Neerlandia Toulouse",
       "type": "web-scraping",
-      "status": "ok",
+      "status": "down",
       "events": 4,
-      "stale": false,
+      "stale": true,
       "laatste_succes": "2026-11-11",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
-      "fout": null,
-      "diagnose": null
+      "fout": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages",
+      "diagnose": {
+        "categorie": "ai",
+        "oorzaak": "De AI-extractiedienst (Anthropic API) gaf een fout of was overbelast.",
+        "advies": "Tijdelijk; volgende run herstelt dit meestal vanzelf. Check anders de API-key en het tegoed.",
+        "technisch": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages"
+      }
     },
     {
       "id": "fanf",
       "naam": "FANF",
       "type": "web-scraping",
-      "status": "ok",
+      "status": "down",
       "events": 0,
       "stale": false,
       "laatste_succes": "2026-11-11",
       "url": "https://www.fanf.fr/activiteiten/lijst",
-      "fout": null,
-      "diagnose": null
+      "fout": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages",
+      "diagnose": {
+        "categorie": "ai",
+        "oorzaak": "De AI-extractiedienst (Anthropic API) gaf een fout of was overbelast.",
+        "advies": "Tijdelijk; volgende run herstelt dit meestal vanzelf. Check anders de API-key en het tegoed.",
+        "technisch": "Claude API: HTTP 400 bij https://api.anthropic.com/v1/messages"
+      }
     }
   ]
 }
