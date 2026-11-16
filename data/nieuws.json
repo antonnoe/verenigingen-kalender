@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-11-13T07:07:24.101Z",
-  "totaal": 31,
+  "generated_at": "2026-11-16T07:11:41.445Z",
+  "totaal": 28,
   "bronnen": [
     {
       "id": "nlvp",
       "naam": "NLVP",
       "status": "ok",
-      "items": 5,
+      "items": 3,
       "spam_geweerd": 0,
       "feed": "https://nlvp.fr/feed/",
       "diagnose": null
@@ -14,11 +14,16 @@
     {
       "id": "latulipe",
       "naam": "La Tulipe",
-      "status": "ok",
+      "status": "down",
       "items": 0,
-      "spam_geweerd": 0,
+      "stale": false,
       "feed": "https://www.latulipe.net/?format=feed&type=rss",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "formaat",
+        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
+        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
+        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
+      }
     },
     {
       "id": "atelier-neerlandais",
@@ -60,7 +65,7 @@
       "id": "nvlr",
       "naam": "NVLR",
       "status": "ok",
-      "items": 3,
+      "items": 2,
       "spam_geweerd": 0,
       "feed": "https://www.nvlr.eu/nieuws",
       "diagnose": null
@@ -104,25 +109,25 @@
     {
       "id": "praatje",
       "naam": "Praatje",
-      "status": "down",
+      "status": "ok",
       "items": 0,
-      "stale": false,
+      "spam_geweerd": 0,
       "feed": "https://praatje.fr/feed/",
-      "diagnose": {
-        "categorie": "netwerk",
-        "oorzaak": "Site van de vereniging tijdelijk onbereikbaar (netwerk/DNS/timeout).",
-        "advies": "Geen actie nodig; volgende run probeert het opnieuw. Houdt dit aan na 3 runs: site is echt offline.",
-        "technisch": "fetch failed"
-      }
+      "diagnose": null
     },
     {
       "id": "cmunf",
       "naam": "CMUnf",
-      "status": "ok",
+      "status": "down",
       "items": 0,
-      "spam_geweerd": 0,
+      "stale": false,
       "feed": "https://cmunf.fr/nieuws?format=feed&type=rss",
-      "diagnose": null
+      "diagnose": {
+        "categorie": "formaat",
+        "oorzaak": "Bron is bereikbaar maar levert een ander gegevensformaat dan voorheen — vrijwel zeker een gewijzigde site-inrichting.",
+        "advies": "GEEN scriptbug. Bekijk de bron handmatig en pas de bronconfiguratie of parser aan.",
+        "technisch": "Feed levert geen geldige RSS/XML — formaat gewijzigd"
+      }
     },
     {
       "id": "fanf",
@@ -147,10 +152,26 @@
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
+      "datum": "2026-11-15",
+      "titel": "DJ Snake lanceert suikervrije frisdrank dankzij innovatie uit Lot-et-Garonne",
+      "link": "https://www.lotgenoten.fr/dj-snake-lanceert-suikervrije-frisdrank-dankzij-innovatie-uit-lot-et-garonne/",
+      "excerpt": "De wereldberoemde dj DJ Snake heeft begin november 2026 een nieuwe frisdrank op de markt gebracht onder de naam OUI. De drank bevat geen suiker en dankt zijn smaak aan een bijzondere uitvinding uit Lot-et-Garonne: Süvi, een natuurlijke suikervervanger die na zeven jaar…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-11-15",
+      "titel": "Wat houdt de Franse consument bezig (Que Choisir)?",
+      "link": "https://www.lotgenoten.fr/wat-houdt-de-franse-consument-bezig-que-choisir/",
+      "excerpt": "Zondag 15 november 2026 Door: Gerard DOlivat De Franse consument heeft deze week weer voldoende redenen om zijn portemonnee stevig vast te houden. Van de benzinepomp tot de zorgverzekering en van webwinkels tot spectaculaire aanbiedingen: goedkoop blijkt een betrekkelijk…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
       "datum": "2026-11-12",
       "titel": "Transavia Bergerac/Rotterdam 12 nov 26",
       "link": "https://www.lotgenoten.fr/transavia-bergerac-rotterdam-12-nov-26/",
-      "excerpt": "Beste mede LOTgenoten, Vandaag kreeg ik een zeer uitgebreide mail van vliegveld Bergerac aangaande de route van Transavia, Rotterdam/Bergerac. Men vroeg mij om jullie een publieksraadpleging (in het Nederlands) aan te rijken ten einde beter te begrijpen welke concrete…"
+      "excerpt": "Beste mede LOTgenoten, Vandaag kreeg ik een zeer uitgebreide mail van vliegveld Bergerac aangaande de route van Transavia, Rotterdam/Bergerac. Men vroeg mij om jullie een publieksraadpleging (in het Nederlands) aan te reiken ten einde beter te begrijpen welke concrete…"
     },
     {
       "bron_id": "lotgenoten",
@@ -167,14 +188,6 @@
       "titel": "Uitzicht op woensdag 11 november",
       "link": "https://ernparis.fr/uitzicht-op-woensdag-11-november/",
       "excerpt": "Ruth van der Waall-Schaeffer Een nieuwe wereld"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-11-08",
-      "titel": "GiFi: 67 winkels gesloten, schuld ruim 90 miljoen euro, bijna 2.000 banen op de tocht",
-      "link": "https://www.lotgenoten.fr/gifi-67-winkels-gesloten-schuld-ruim-90-miljoen-euro-bijna-2-000-banen-op-de-tocht/",
-      "excerpt": "8-11-26 32 GiFi-winkels worden Grand Frais: dit zijn de vestigingen die van naam veranderen De Franse koopjesketen GiFi krimpt verder. Een aantal winkels sluit definitief de deuren, maar andere vestigingen krijgen een nieuwe bestemming en worden omgebouwd tot supermarkthallen…"
     },
     {
       "bron_id": "bourgondische-zaken",
@@ -223,14 +236,6 @@
       "titel": "Evaluatieverslag: ANM-evenement PROEF!",
       "link": "https://www.a-n-m.nl/nieuws/evaluatieverslag-anm-evenement-proef",
       "excerpt": "Datum evenement: Zaterdag 31 oktober 2026 Locatie: Beeldentuin van Marianne Lapidaire & Maison des Vins (Tina van Asch) 1. Samenvatting Het evenement PROEF! is zeer succesvol verlopen. Door te..."
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-10-31",
-      "titel": "Wonen in Frankrijk? Dit verandert er in 2027 aan je CAK-bijdrage",
-      "link": "https://www.lotgenoten.fr/34931-2/",
-      "excerpt": "Nederlanders die met pensioen zijn en in Frankrijk wonen, betalen maandelijks een bijdrage aan het CAK voor hun zorg in het woonland. De hoogte daarvan hangt onder meer af van de zogenoemde woonlandfactor. De minister van Volksgezondheid, Welzijn en Sport heeft de factoren…"
     },
     {
       "bron_id": "ern-paris",
@@ -358,7 +363,7 @@
       "datum": "2026-09-29",
       "titel": "vliegroute Rotterdam – Bergerac nieuws 10-11-26",
       "link": "https://www.lotgenoten.fr/behoud-de-vliegroute-rotterdam-bergerac/",
-      "excerpt": "Uit ici.fr: 10-11-26 Half zoveel vluchten vanaf de enige commerciële luchthaven van de Dordogne in 2027 De luchthaven van Bergerac krijgt volgend jaar een flinke aderlating te verwerken. In 2027 wordt het aantal vluchten gehalveerd ten opzichte van 2026. Toch beschouwen de…"
+      "excerpt": "Beste mede LOTgenoten, Vandaag kreeg ik een zeer uitgebreide mail van vliegveld Bergerac aangaande de route van Transavia, Rotterdam/Bergerac. Men vroeg mij om jullie een publieksraadpleging (in het Nederlands) aan te reiken ten einde beter te begrijpen welke concrete…"
     },
     {
       "bron_id": "bourgondische-zaken",
@@ -367,30 +372,6 @@
       "titel": "Ledenexcursie Opus Gothique",
       "link": "https://bourgondischezaken.com/ledenexcursie-opus-gothique/",
       "excerpt": "VOL - alleen nog aanmelden voor wachtlijst Ga je mee naar Opus Gothique? Laat je betoveren door de gotische droom van Donald Russell en ontdek de bijzondere wereld van Opus Gothique. Ervaar deze inspirerende plek tijdens een exclusieve rondleiding voor BZ-leden, gevolgd door…"
-    },
-    {
-      "bron_id": "nlvp",
-      "bron_naam": "NLVP",
-      "datum": "2026-09-14",
-      "titel": "18 oktober – Speurtocht in de Tuilerieën",
-      "link": "https://nlvp.fr/13-september-speurtocht-in-de-tuilerieen/",
-      "excerpt": "Op zondag 18 oktober organiseren we een speurtocht in de Jardin des Tuileries. Het wordt niet alleen een gezellige wandeling in dit prachtige historische park midden in Parijs. Al “speurend” ontdekt U bijzondere monumenten, sculpturen en architectonische elementen. U hebt…"
-    },
-    {
-      "bron_id": "nlvp",
-      "bron_naam": "NLVP",
-      "datum": "2026-09-14",
-      "titel": "3 oktober – Haringparty te Parijs",
-      "link": "https://nlvp.fr/3-oktober-haringparty-te-parijs-2/",
-      "excerpt": "Op zaterdag 3 oktober vanaf 19:00 uur organiseert de NLVP weer de jaarlijkse Haringparty in Brasserie “Le Louis Philippe”, 66 Quai de l’Hôtel de Ville, 75004 Paris. Traditiegetrouw vieren we dit op exact dezelfde dag als in Leiden. Daar herdenken ze op 3 oktober dat er in…"
-    },
-    {
-      "bron_id": "nvlr",
-      "bron_naam": "NVLR",
-      "datum": "2026-09-14",
-      "titel": "64e Internationale Tentoonstelling van Beeldende Kunst",
-      "link": "https://www.nvlr.eu/nieuws/64e-internationale-tentoonstelling-van-beeldende-kunst",
-      "excerpt": "Om in je agenda te vermelden: 64e Salon des Arts Plastiques in het Palais des Congrès in Béziers van 3 tot 10 oktober 2026. De eregast is Jean-Luc BEAUFILS, die al meer dan 50 jaar belangrijk werk..."
     }
   ]
 }
