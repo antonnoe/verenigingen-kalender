@@ -1,9 +1,9 @@
 {
   "nvlr": {
-    "lat": 43.6,
-    "lon": 3.87,
-    "radius_km": 120,
-    "locatie_label": "Languedoc-Roussillon"
+    "lat": 43.24,
+    "lon": 1.31,
+    "radius_km": 140,
+    "locatie_label": "Narbonne tot Pau"
   },
   "nedazur": {
     "lat": 43.7,
