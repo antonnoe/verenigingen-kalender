@@ -1,13 +1,13 @@
 {
   "meta": {
-    "laatst_bijgewerkt": "2026-11-16",
-    "volgende_update": "2026-11-18",
+    "laatst_bijgewerkt": "2026-11-18",
+    "volgende_update": "2026-11-20",
     "bronnen_gecontroleerd": 11,
     "bronnen_met_events": 13,
-    "totaal_events": 66,
-    "gefilterde_items": 2,
+    "totaal_events": 81,
+    "gefilterde_items": 3,
     "methode": "Automatisch via GitHub Action (iCal feeds + Claude AI web-extractie)",
-    "warnings": 3
+    "warnings": 0
   },
   "verenigingen": [
     {
@@ -51,17 +51,17 @@
         },
         {
           "datum": "2026-11-24",
-          "titel": "Bijpraatlunch Aigne",
+          "titel": "Bijpraatlunch in La Caunette",
           "plaats": "Restaurant Lo Cagarol, Aigne.",
           "tijd": "12:00-14:30",
-          "type": "sportief",
+          "type": "sociaal",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
         {
           "datum": "2026-11-25",
-          "titel": "Wandeling:",
-          "plaats": "niet vermeld",
-          "tijd": "09:45-15:00",
+          "titel": "Stadswandeling Saint-Pons-de-Thomières",
+          "plaats": "Rue Saint Martin, Saint-Pons-de-Thomières",
+          "tijd": "10:00-15:00",
           "type": "sportief",
           "bron": "https://www.nvlr.eu/_ical/public.ics"
         },
@@ -175,22 +175,14 @@
           "titel": "Oranje Borrel",
           "plaats": "Saint Raphaël",
           "tijd": "17:00-19:00",
-          "type": "informatief",
-          "bron": "https://www.nedazur.org/_ical/public.ics"
-        },
-        {
-          "datum": "2026-11-28",
-          "titel": "Cleveringabijeenkomst 2026",
-          "plaats": "Mougins",
-          "tijd": "11:00-15:00",
-          "type": "sportief",
+          "type": "zakelijk",
           "bron": "https://www.nedazur.org/_ical/public.ics"
         },
         {
           "datum": "2026-11-29",
           "titel": "Aankomst van Sinterklaas",
           "plaats": "Cagnes-sur-Mer",
-          "tijd": "14:00-14:00",
+          "tijd": "14:00-18:00",
           "type": "cultureel",
           "bron": "https://www.nedazur.org/_ical/public.ics"
         },
@@ -207,6 +199,22 @@
           "titel": "Golfwedstrijd Golf Bluegreen Sainte-Maxime",
           "plaats": "Sainte-Maxime",
           "tijd": "09:00-09:00",
+          "type": "sportief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2026-12-19",
+          "titel": "Oranje Borrel | Kersteditie",
+          "plaats": "Alpes-Maritimes",
+          "tijd": "14:00-17:00",
+          "type": "informatief",
+          "bron": "https://www.nedazur.org/_ical/public.ics"
+        },
+        {
+          "datum": "2027-01-16",
+          "titel": "Nieuwjaarsreceptie",
+          "plaats": "Mougins",
+          "tijd": "11:30-14:30",
           "type": "sportief",
           "bron": "https://www.nedazur.org/_ical/public.ics"
         },
@@ -344,8 +352,8 @@
         {
           "datum": "2026-11-29",
           "titel": "Sinterklaasfeest",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
+          "plaats": "Collège Néerlandais Fondation Juliana Cité Internationale Universitaire de Paris 61 Boulevard Jourdan 75014 Paris",
+          "tijd": "13:30-16:30",
           "type": "sociaal",
           "bron": "https://nlvp.fr/29-november-sinterklaasfeest/"
         }
@@ -471,16 +479,8 @@
       "opmerking": "Nederlandse Protestantse Kerk, 172 boulevard Vincent Auriol, 75013 Paris. Diensten ook via YouTube.",
       "events": [
         {
-          "datum": "2026-12-06",
-          "titel": "Kerkdienst - Doop Elisa Mirjam Braakman",
-          "plaats": "172 boulevard Vincent Auriol 75013 Paris",
-          "tijd": "09:45",
-          "type": "kerkdienst",
-          "bron": "https://ernparis.fr/agenda/"
-        },
-        {
           "datum": "2026-12-25",
-          "titel": "Kerkdienst - Kerstmis",
+          "titel": "Kerstmis - Kerkdienst",
           "plaats": "172 boulevard Vincent Auriol 75013 Paris",
           "tijd": "09:45",
           "type": "kerkdienst",
@@ -537,7 +537,7 @@
         },
         {
           "datum": "2026-11-27",
-          "titel": "Lotgenotenavond in Villeneuve sur Lot",
+          "titel": "Borrelavond/maaltijd Villeneuve/Lot",
           "plaats": "LA TABLE DU MARCHÉ, 18-22 rue Lakanal, 47300 Villeneuve sur Lot",
           "tijd": "18:00",
           "type": "sociaal",
@@ -738,27 +738,147 @@
       "opmerking": "Agenda-pagina bevat jaarkalender en uitgewerkte event-blokken (AfterNetWork borrels, Koningsdag, wandelingen, leesclub, paspoort pop-up).",
       "events": [
         {
-          "datum": "2026-11-25",
-          "titel": "ALV, borrel, boekenbeurs en etentje",
+          "datum": "2027-01-04",
+          "titel": "Wandeling",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-01-29",
+          "titel": "Nieuwjaarsborrel",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-02-05",
+          "titel": "AfterNetwork borrel",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "zakelijk",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-03-01",
+          "titel": "Wandeling",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-03-19",
+          "titel": "Leesclub",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-03-24",
+          "titel": "AfterNetWork borrel",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "zakelijk",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-04-27",
+          "titel": "AfterNetWork borrel",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "zakelijk",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-05-20",
+          "titel": "Koningsdag receptie",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-06-11",
+          "titel": "Leesclub",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-07-16",
+          "titel": "Zomers etentje",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-09-02",
+          "titel": "Leesclub",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-10-01",
+          "titel": "Rentree borrel",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-10-04",
+          "titel": "Wandeling",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sportief",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-10-07",
+          "titel": "Leesclub",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-10-11",
+          "titel": "Appelpluk uitje",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "sociaal",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-11-04",
+          "titel": "Leesclub",
+          "plaats": "niet vermeld",
+          "tijd": "niet vermeld",
+          "type": "cultureel",
+          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
+        },
+        {
+          "datum": "2027-11-25",
+          "titel": "ALV, boekenbeurs",
           "plaats": "Café du Commerce, place Dupuy, Toulouse",
           "tijd": "19:00",
           "type": "bestuurlijk",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         },
         {
-          "datum": "2026-12-06",
+          "datum": "2027-12-06",
           "titel": "Sinterklaasfeest",
           "plaats": "salle Limayrac, Quartier la Terrasse, 22 rue Xavier Darasse, 31500 Toulouse",
           "tijd": "15:00",
           "type": "sociaal",
-          "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
-        },
-        {
-          "datum": "2027-01-04",
-          "titel": "Wandeling",
-          "plaats": "niet vermeld",
-          "tijd": "niet vermeld",
-          "type": "sportief",
           "bron": "https://www.neerlandia.fr/index.php/nl/agenda"
         }
       ],

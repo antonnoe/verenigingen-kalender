@@ -1,35 +1,20 @@
 {
-  "generated_at": "2026-11-16T07:11:41.448Z",
-  "ok": false,
-  "status": "degraded",
-  "laatst_bijgewerkt": "2026-11-16",
-  "volgende_update": "2026-11-18",
-  "totaal_events": 66,
+  "generated_at": "2026-11-18T07:06:28.566Z",
+  "ok": true,
+  "status": "ok",
+  "laatst_bijgewerkt": "2026-11-18",
+  "volgende_update": "2026-11-20",
+  "totaal_events": 81,
   "bronnen_totaal": 12,
-  "bronnen_ok": 11,
-  "bronnen_down": 1,
+  "bronnen_ok": 12,
+  "bronnen_down": 0,
   "bronnen_verdacht": 0,
-  "kapotte_koppelingen": [
-    {
-      "id": "latulipe",
-      "naam": "La Tulipe",
-      "type": "web-parser",
-      "url": "https://www.latulipe.net/nl/agenda",
-      "fout": "HTTP 403 bij https://leden.latulipe.net/api/agenda.json.php?month=2027-02",
-      "diagnose": {
-        "categorie": "geblokkeerd",
-        "oorzaak": "Toegang geweigerd (HTTP 401/403/429) — de site blokkeert geautomatiseerde toegang of beperkt het tempo.",
-        "advies": "GEEN scriptbug. Vraag de vereniging om een iCal-feed, of accepteer dat deze bron wegvalt.",
-        "technisch": "HTTP 403 bij https://leden.latulipe.net/api/agenda.json.php?month=2027-02"
-      },
-      "laatste_succes": "2026-11-13"
-    }
-  ],
+  "kapotte_koppelingen": [],
   "observaties": [],
   "nieuws": {
-    "status": "degraded",
-    "items": 28,
-    "bronnen_down": 2
+    "status": "ok",
+    "items": 29,
+    "bronnen_down": 0
   },
   "bronnen": [
     {
@@ -39,7 +24,7 @@
       "status": "ok",
       "events": 14,
       "stale": false,
-      "laatste_succes": "2026-11-16",
+      "laatste_succes": "2026-11-18",
       "url": "https://www.nvlr.eu/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -49,9 +34,9 @@
       "naam": "NEDAZUR",
       "type": "ical",
       "status": "ok",
-      "events": 6,
+      "events": 7,
       "stale": false,
-      "laatste_succes": "2026-11-16",
+      "laatste_succes": "2026-11-18",
       "url": "https://www.nedazur.org/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -63,7 +48,7 @@
       "status": "ok",
       "events": 11,
       "stale": false,
-      "laatste_succes": "2026-11-16",
+      "laatste_succes": "2026-11-18",
       "url": "https://www.a-n-m.nl/_ical/public.ics",
       "fout": null,
       "diagnose": null
@@ -75,7 +60,7 @@
       "status": "ok",
       "events": 1,
       "stale": false,
-      "laatste_succes": "2026-11-16",
+      "laatste_succes": "2026-11-18",
       "url": "https://nlvp.fr",
       "fout": null,
       "diagnose": null
@@ -84,18 +69,13 @@
       "id": "latulipe",
       "naam": "La Tulipe",
       "type": "web-parser",
-      "status": "down",
+      "status": "ok",
       "events": 3,
-      "stale": true,
-      "laatste_succes": "2026-11-13",
+      "stale": false,
+      "laatste_succes": "2026-11-18",
       "url": "https://www.latulipe.net/nl/agenda",
-      "fout": "HTTP 403 bij https://leden.latulipe.net/api/agenda.json.php?month=2027-02",
-      "diagnose": {
-        "categorie": "geblokkeerd",
-        "oorzaak": "Toegang geweigerd (HTTP 401/403/429) — de site blokkeert geautomatiseerde toegang of beperkt het tempo.",
-        "advies": "GEEN scriptbug. Vraag de vereniging om een iCal-feed, of accepteer dat deze bron wegvalt.",
-        "technisch": "HTTP 403 bij https://leden.latulipe.net/api/agenda.json.php?month=2027-02"
-      }
+      "fout": null,
+      "diagnose": null
     },
     {
       "id": "atelier-neerlandais",
@@ -104,7 +84,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-11-16",
+      "laatste_succes": "2026-11-18",
       "url": "https://atelierneerlandais.com/kalender/, https://atelierneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -114,9 +94,9 @@
       "naam": "ERN Paris",
       "type": "web-scraping",
       "status": "ok",
-      "events": 4,
+      "events": 3,
       "stale": false,
-      "laatste_succes": "2026-11-16",
+      "laatste_succes": "2026-11-18",
       "url": "https://ernparis.fr/agenda/",
       "fout": null,
       "diagnose": null
@@ -128,7 +108,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-11-16",
+      "laatste_succes": "2026-11-18",
       "url": "https://www.lotgenoten.fr/",
       "fout": null,
       "diagnose": null
@@ -140,7 +120,7 @@
       "status": "ok",
       "events": 4,
       "stale": false,
-      "laatste_succes": "2026-11-16",
+      "laatste_succes": "2026-11-18",
       "url": "https://www.cercleneerlandais.com/",
       "fout": null,
       "diagnose": null
@@ -152,7 +132,7 @@
       "status": "ok",
       "events": 2,
       "stale": false,
-      "laatste_succes": "2026-11-16",
+      "laatste_succes": "2026-11-18",
       "url": "https://dbcra.nl/nederlandse-club-lyon/",
       "fout": null,
       "diagnose": null
@@ -162,9 +142,9 @@
       "naam": "Neerlandia Toulouse",
       "type": "web-scraping",
       "status": "ok",
-      "events": 3,
+      "events": 18,
       "stale": false,
-      "laatste_succes": "2026-11-16",
+      "laatste_succes": "2026-11-18",
       "url": "https://www.neerlandia.fr/index.php/nl/agenda",
       "fout": null,
       "diagnose": null
@@ -176,7 +156,7 @@
       "status": "ok",
       "events": 0,
       "stale": false,
-      "laatste_succes": "2026-11-16",
+      "laatste_succes": "2026-11-18",
       "url": "https://www.fanf.fr/activiteiten/lijst",
       "fout": null,
       "diagnose": null
