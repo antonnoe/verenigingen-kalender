@@ -1,6 +1,6 @@
 {
-  "generated_at": "2026-11-18T07:06:28.563Z",
-  "totaal": 29,
+  "generated_at": "2026-11-20T07:06:27.453Z",
+  "totaal": 28,
   "bronnen": [
     {
       "id": "nlvp",
@@ -87,7 +87,7 @@
       "id": "bourgondische-zaken",
       "naam": "Bourgondische Zaken",
       "status": "ok",
-      "items": 3,
+      "items": 2,
       "spam_geweerd": 0,
       "feed": "https://bourgondischezaken.com/feed/",
       "diagnose": null
@@ -142,6 +142,30 @@
     {
       "bron_id": "lotgenoten",
       "bron_naam": "LOTgenoten",
+      "datum": "2026-11-19",
+      "titel": "Meewerkende partner, wet veranderd",
+      "link": "https://www.lotgenoten.fr/meewerkende-partner-wet-veranderd/",
+      "excerpt": "Meewerkende partners moeten voor 31 december de knoop doorhakken In tienduizenden Franse bakkerijen, bouwbedrijven, winkels en kleine ondernemingen staat de komende weken een ingrijpende administratieve en financiële verschuiving op stapel. Op 31 december 2026 loopt een…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-11-18",
+      "titel": "2026: onze eerste oogst als eigenaren van Château Cantelauze Duravel.",
+      "link": "https://www.lotgenoten.fr/2026-onze-eerste-oogst-als-eigenaren-van-chateau-cantelauze-duravel/",
+      "excerpt": "Toen we Château Cantelauze Duravel kochten, wisten we dat de oogst van 2026 onze eerste zou zijn. Maar het weten en het daadwerkelijk meemaken zijn twee heel verschillende dingen. We vielen van de ene verwondering in de andere — jaargang 2026 is er een om nooit te vergeten.…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
+      "datum": "2026-11-18",
+      "titel": "rapport Bilan TOERISTISCHE BALANS SEIZOEN 2026",
+      "link": "https://www.lotgenoten.fr/rapport-bilan-toeristische-balans-seizoen-2026/",
+      "excerpt": "De belangrijkste cijfers van het seizoen 2026 6,9 miljoen overnachtingen van januari tot en met september -8% ten opzichte van 2025 49% van de toeristische ondernemers is gemiddeld tevreden Een landelijk beeld van het toeristische seizoen Op landelijk niveau laat de eerste…"
+    },
+    {
+      "bron_id": "lotgenoten",
+      "bron_naam": "LOTgenoten",
       "datum": "2026-11-16",
       "titel": "‘heksen en druïden festival’ Masquières 28 nov",
       "link": "https://www.lotgenoten.fr/heksen-en-druiden-festival-masquieres-28-nov/",
@@ -170,22 +194,6 @@
       "titel": "Wat houdt de Franse consument bezig (Que Choisir)?",
       "link": "https://www.lotgenoten.fr/wat-houdt-de-franse-consument-bezig-que-choisir/",
       "excerpt": "Zondag 15 november 2026 Door: Gerard DOlivat De Franse consument heeft deze week weer voldoende redenen om zijn portemonnee stevig vast te houden. Van de benzinepomp tot de zorgverzekering en van webwinkels tot spectaculaire aanbiedingen: goedkoop blijkt een betrekkelijk…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-11-12",
-      "titel": "auto winterklaar maken: winterbanden verplicht in 29 gemeenten",
-      "link": "https://www.lotgenoten.fr/auto-winterklaar-maken-winterbanden-verplicht-in-29-gemeenten/",
-      "excerpt": "Automobilisten die in de winter naar berggebieden in de Franse Pyreneeën rijden, moeten hun auto voorzien van winterbanden of vierseizoenenbanden. Ook sneeuwkettingen of sneeuwsokken zijn toegestaan. De verplichting geldt van 1 november tot en met 31 maart in bepaalde…"
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-11-12",
-      "titel": "Transavia Bergerac/Rotterdam 12 nov 26",
-      "link": "https://www.lotgenoten.fr/transavia-bergerac-rotterdam-12-nov-26/",
-      "excerpt": "Beste mede LOTgenoten, Vandaag kreeg ik een zeer uitgebreide mail van vliegveld Bergerac aangaande de route van Transavia, Rotterdam/Bergerac. Men vroeg mij om jullie een publieksraadpleging (in het Nederlands) aan te reiken ten einde beter te begrijpen welke concrete…"
     },
     {
       "bron_id": "ern-paris",
@@ -354,22 +362,6 @@
       "titel": "Zondag 4 oktober – Kees Posthumus",
       "link": "https://ernparis.fr/zondag-4-oktober-kees-posthumus/",
       "excerpt": ""
-    },
-    {
-      "bron_id": "lotgenoten",
-      "bron_naam": "LOTgenoten",
-      "datum": "2026-09-29",
-      "titel": "vliegroute Rotterdam – Bergerac nieuws 10-11-26",
-      "link": "https://www.lotgenoten.fr/behoud-de-vliegroute-rotterdam-bergerac/",
-      "excerpt": "Beste mede LOTgenoten, Vandaag kreeg ik een zeer uitgebreide mail van vliegveld Bergerac aangaande de route van Transavia, Rotterdam/Bergerac. Men vroeg mij om jullie een publieksraadpleging (in het Nederlands) aan te reiken ten einde beter te begrijpen welke concrete…"
-    },
-    {
-      "bron_id": "bourgondische-zaken",
-      "bron_naam": "Bourgondische Zaken",
-      "datum": "2026-09-20",
-      "titel": "Ledenexcursie Opus Gothique",
-      "link": "https://bourgondischezaken.com/ledenexcursie-opus-gothique/",
-      "excerpt": "VOL - alleen nog aanmelden voor wachtlijst Ga je mee naar Opus Gothique? Laat je betoveren door de gotische droom van Donald Russell en ontdek de bijzondere wereld van Opus Gothique. Ervaar deze inspirerende plek tijdens een exclusieve rondleiding voor BZ-leden, gevolgd door…"
     }
   ]
 }
